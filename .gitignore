@@ -12,12 +12,19 @@ build/
 xcuserdata
 *.xccheckout
 *.moved-aside
+<<<<<<< HEAD
 *.xcuserstate
 
 DerivedData
 *.hmap
 *.ipa
 *.xcbkptlist
+=======
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+>>>>>>> 408ce26504d63aff89dff4425624c72f644103f5
 
 # CocoaPods
 #
