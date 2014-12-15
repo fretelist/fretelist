@@ -321,34 +321,44 @@
     PFUser *user = [PFUser user];
     PFObject *usuario = [PFObject objectWithClassName:@"Usuario"];
     
+    // Show an alert if user or password fields are left in blank
+    if (self.signUpEmailTextField.text.length == 0 || self.signUpPsswdTextField.text.length == 0) {
+//        NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+        UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Preencha os campos em branco!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [errorAlertView show];
+    }
+    
     user.username = self.signUpEmailTextField.text;
     user.password = self.signUpPsswdTextField.text;
-//    user.email = self.signUpEmailTextField.text;
-    [usuario setObject:self.signUpNameTextField.text forKey:@"name"];
-    [usuario setObject:self.signUpEmailTextField.text forKey:@"email"];
-    [usuario setObject:self.signUpPsswdTextField.text forKey:@"password"];
-    [usuario setObject:self.signUpBdayTextField.text forKey:@"bday"];
-    [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
-    [usuario setObject:self.signUpStateTextField.text forKey:@"state"];
-    [usuario setObject:self.signUpCountryTextField.text forKey:@"country"];
-    if (self.signUpGenderSegmented.selectedSegmentIndex == 0) {
-        [usuario setObject:@"feminino" forKey:@"gender"];
-    } else {
-        [usuario setObject:@"masculino" forKey:@"gender"];
-    }
-    [usuario save];
     
-    
-    [user setObject:self.signUpBdayTextField.text forKey:@"bday"];
-    [user setObject:self.signUpCityTextField.text forKey:@"city"];
-    [user setObject:self.signUpStateTextField.text forKey:@"state"];
-    [user setObject:self.signUpCountryTextField.text forKey:@"country"];
-    
-   
     
     // Show an alert for success or error
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
+            
+            
+            //    user.email = self.signUpEmailTextField.text;
+            [usuario setObject:self.signUpNameTextField.text forKey:@"name"];
+            [usuario setObject:self.signUpEmailTextField.text forKey:@"email"];
+            [usuario setObject:self.signUpPsswdTextField.text forKey:@"password"];
+            [usuario setObject:self.signUpBdayTextField.text forKey:@"bday"];
+            [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
+            [usuario setObject:self.signUpStateTextField.text forKey:@"state"];
+            [usuario setObject:self.signUpCountryTextField.text forKey:@"country"];
+            if (self.signUpGenderSegmented.selectedSegmentIndex == 0) {
+                [usuario setObject:@"feminino" forKey:@"gender"];
+            } else {
+                [usuario setObject:@"masculino" forKey:@"gender"];
+            }
+            [usuario save];
+            
+            
+            [user setObject:self.signUpBdayTextField.text forKey:@"bday"];
+            [user setObject:self.signUpCityTextField.text forKey:@"city"];
+            [user setObject:self.signUpStateTextField.text forKey:@"state"];
+            [user setObject:self.signUpCountryTextField.text forKey:@"country"];
+            
+
             
            
             
@@ -367,7 +377,7 @@
             
             
             
-        } else {
+        } else if(self.signUpNameTextField.text.length == 0) {
             //Something bad has ocurred
             NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];

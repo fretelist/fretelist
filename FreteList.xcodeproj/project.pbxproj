@@ -45,7 +45,7 @@
 		6C3248E318EDBF2A00F7FE8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3248BF18EDBF2A00F7FE8C /* Foundation.framework */; };
 		6C3248E418EDBF2A00F7FE8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3248C318EDBF2A00F7FE8C /* UIKit.framework */; };
 		6C3248EC18EDBF2A00F7FE8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C3248EA18EDBF2A00F7FE8C /* InfoPlist.strings */; };
-		6C3248EE18EDBF2A00F7FE8C /* tenhoDescontoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3248ED18EDBF2A00F7FE8C /* tenhoDescontoTests.m */; };
+		6C3248EE18EDBF2A00F7FE8C /* FreteListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3248ED18EDBF2A00F7FE8C /* FreteListTests.m */; };
 		6C37BD1B18F736010096D8E3 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C37BD1A18F736010096D8E3 /* Users.m */; };
 		6C54CA561A1EA422002671B3 /* DealsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C54CA551A1EA422002671B3 /* DealsListViewController.m */; };
 		6C702AF919017A03000FB43A /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C702AF819017A03000FB43A /* GoogleMaps.framework */; };
@@ -107,7 +107,7 @@
 		6C28B03118F83FB000B3EC49 /* TelaInicialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaInicialViewController.m; sourceTree = "<group>"; };
 		6C28B03318F8411300B3EC49 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6C28B03418F8411300B3EC49 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		6C3248BC18EDBF2A00F7FE8C /* tenhoDesconto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tenhoDesconto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3248BC18EDBF2A00F7FE8C /* FreteList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreteList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3248BF18EDBF2A00F7FE8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6C3248C118EDBF2A00F7FE8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6C3248C318EDBF2A00F7FE8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -120,11 +120,11 @@
 		6C3248D218EDBF2A00F7FE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		6C3248D518EDBF2A00F7FE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		6C3248DA18EDBF2A00F7FE8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6C3248E018EDBF2A00F7FE8C /* tenhoDescontoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tenhoDescontoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3248E018EDBF2A00F7FE8C /* FreteListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreteListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3248E118EDBF2A00F7FE8C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6C3248E918EDBF2A00F7FE8C /* tenhoDescontoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tenhoDescontoTests-Info.plist"; sourceTree = "<group>"; };
+		6C3248E918EDBF2A00F7FE8C /* FreteListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreteListTests-Info.plist"; sourceTree = "<group>"; };
 		6C3248EB18EDBF2A00F7FE8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6C3248ED18EDBF2A00F7FE8C /* tenhoDescontoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tenhoDescontoTests.m; sourceTree = "<group>"; };
+		6C3248ED18EDBF2A00F7FE8C /* FreteListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreteListTests.m; sourceTree = "<group>"; };
 		6C37BD1918F736010096D8E3 /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
 		6C37BD1A18F736010096D8E3 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		6C54CA541A1EA422002671B3 /* DealsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealsListViewController.h; sourceTree = "<group>"; };
@@ -195,8 +195,8 @@
 		6C3248B318EDBF2A00F7FE8C = {
 			isa = PBXGroup;
 			children = (
-				6C3248C518EDBF2A00F7FE8C /* tenhoDesconto */,
-				6C3248E718EDBF2A00F7FE8C /* tenhoDescontoTests */,
+				6C3248C518EDBF2A00F7FE8C /* FreteList */,
+				6C3248E718EDBF2A00F7FE8C /* FreteListTests */,
 				6C3248BE18EDBF2A00F7FE8C /* Frameworks */,
 				6C3248BD18EDBF2A00F7FE8C /* Products */,
 			);
@@ -205,8 +205,8 @@
 		6C3248BD18EDBF2A00F7FE8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C3248BC18EDBF2A00F7FE8C /* tenhoDesconto.app */,
-				6C3248E018EDBF2A00F7FE8C /* tenhoDescontoTests.xctest */,
+				6C3248BC18EDBF2A00F7FE8C /* FreteList.app */,
+				6C3248E018EDBF2A00F7FE8C /* FreteListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6C3248C518EDBF2A00F7FE8C /* tenhoDesconto */ = {
+		6C3248C518EDBF2A00F7FE8C /* FreteList */ = {
 			isa = PBXGroup;
 			children = (
 				6C3248CE18EDBF2A00F7FE8C /* AppDelegate.h */,
@@ -257,7 +257,7 @@
 				6C3248DA18EDBF2A00F7FE8C /* Images.xcassets */,
 				6C3248C618EDBF2A00F7FE8C /* Supporting Files */,
 			);
-			path = tenhoDesconto;
+			path = FreteList;
 			sourceTree = "<group>";
 		};
 		6C3248C618EDBF2A00F7FE8C /* Supporting Files */ = {
@@ -272,19 +272,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6C3248E718EDBF2A00F7FE8C /* tenhoDescontoTests */ = {
+		6C3248E718EDBF2A00F7FE8C /* FreteListTests */ = {
 			isa = PBXGroup;
 			children = (
-				6C3248ED18EDBF2A00F7FE8C /* tenhoDescontoTests.m */,
+				6C3248ED18EDBF2A00F7FE8C /* FreteListTests.m */,
 				6C3248E818EDBF2A00F7FE8C /* Supporting Files */,
 			);
-			path = tenhoDescontoTests;
+			path = FreteListTests;
 			sourceTree = "<group>";
 		};
 		6C3248E818EDBF2A00F7FE8C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6C3248E918EDBF2A00F7FE8C /* tenhoDescontoTests-Info.plist */,
+				6C3248E918EDBF2A00F7FE8C /* FreteListTests-Info.plist */,
 				6C3248EA18EDBF2A00F7FE8C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -346,9 +346,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6C3248BB18EDBF2A00F7FE8C /* tenhoDesconto */ = {
+		6C3248BB18EDBF2A00F7FE8C /* FreteList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C3248F118EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "tenhoDesconto" */;
+			buildConfigurationList = 6C3248F118EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "FreteList" */;
 			buildPhases = (
 				6C3248B818EDBF2A00F7FE8C /* Sources */,
 				6C3248B918EDBF2A00F7FE8C /* Frameworks */,
@@ -358,14 +358,14 @@
 			);
 			dependencies = (
 			);
-			name = tenhoDesconto;
+			name = FreteList;
 			productName = tenhoDesconto;
-			productReference = 6C3248BC18EDBF2A00F7FE8C /* tenhoDesconto.app */;
+			productReference = 6C3248BC18EDBF2A00F7FE8C /* FreteList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6C3248DF18EDBF2A00F7FE8C /* tenhoDescontoTests */ = {
+		6C3248DF18EDBF2A00F7FE8C /* FreteListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C3248F418EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "tenhoDescontoTests" */;
+			buildConfigurationList = 6C3248F418EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "FreteListTests" */;
 			buildPhases = (
 				6C3248DC18EDBF2A00F7FE8C /* Sources */,
 				6C3248DD18EDBF2A00F7FE8C /* Frameworks */,
@@ -376,9 +376,9 @@
 			dependencies = (
 				6C3248E618EDBF2A00F7FE8C /* PBXTargetDependency */,
 			);
-			name = tenhoDescontoTests;
+			name = FreteListTests;
 			productName = tenhoDescontoTests;
-			productReference = 6C3248E018EDBF2A00F7FE8C /* tenhoDescontoTests.xctest */;
+			productReference = 6C3248E018EDBF2A00F7FE8C /* FreteListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -388,7 +388,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = tenhoDesconto;
+				ORGANIZATIONNAME = FreteList;
 				TargetAttributes = {
 					6C3248BB18EDBF2A00F7FE8C = {
 						DevelopmentTeam = F4V48FFS39;
@@ -398,7 +398,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6C3248B718EDBF2A00F7FE8C /* Build configuration list for PBXProject "tenhoDesconto" */;
+			buildConfigurationList = 6C3248B718EDBF2A00F7FE8C /* Build configuration list for PBXProject "FreteList" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -411,8 +411,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6C3248BB18EDBF2A00F7FE8C /* tenhoDesconto */,
-				6C3248DF18EDBF2A00F7FE8C /* tenhoDescontoTests */,
+				6C3248BB18EDBF2A00F7FE8C /* FreteList */,
+				6C3248DF18EDBF2A00F7FE8C /* FreteListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -470,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3248EE18EDBF2A00F7FE8C /* tenhoDescontoTests.m in Sources */,
+				6C3248EE18EDBF2A00F7FE8C /* FreteListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +479,7 @@
 /* Begin PBXTargetDependency section */
 		6C3248E618EDBF2A00F7FE8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6C3248BB18EDBF2A00F7FE8C /* tenhoDesconto */;
+			target = 6C3248BB18EDBF2A00F7FE8C /* FreteList */;
 			targetProxy = 6C3248E518EDBF2A00F7FE8C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -610,13 +610,13 @@
 					"$(PROJECT_DIR)/parse-library-1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tenhoDesconto/tenhoDesconto-Prefix.pch";
-				INFOPLIST_FILE = "tenhoDesconto/tenhoDesconto-Info.plist";
+				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/FreteListTests/FreteListTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2/GoogleMaps.framework/GoogleMaps",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FreteList;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -636,13 +636,13 @@
 					"$(PROJECT_DIR)/parse-library-1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tenhoDesconto/tenhoDesconto-Prefix.pch";
-				INFOPLIST_FILE = "tenhoDesconto/tenhoDesconto-Info.plist";
+				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/FreteListTests/FreteListTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2/GoogleMaps.framework/GoogleMaps",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FreteList;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -658,13 +658,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tenhoDesconto/tenhoDesconto-Prefix.pch";
+				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "tenhoDescontoTests/tenhoDescontoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "tenhoDescontoTests/FreteListTests-Info.plist";
+				PRODUCT_NAME = FreteListTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -680,9 +680,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tenhoDesconto/tenhoDesconto-Prefix.pch";
-				INFOPLIST_FILE = "tenhoDescontoTests/tenhoDescontoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
+				INFOPLIST_FILE = "tenhoDescontoTests/FreteListTests-Info.plist";
+				PRODUCT_NAME = FreteListTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -691,7 +691,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6C3248B718EDBF2A00F7FE8C /* Build configuration list for PBXProject "tenhoDesconto" */ = {
+		6C3248B718EDBF2A00F7FE8C /* Build configuration list for PBXProject "FreteList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C3248EF18EDBF2A00F7FE8C /* Debug */,
@@ -700,7 +700,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C3248F118EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "tenhoDesconto" */ = {
+		6C3248F118EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "FreteList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C3248F218EDBF2A00F7FE8C /* Debug */,
@@ -709,7 +709,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C3248F418EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "tenhoDescontoTests" */ = {
+		6C3248F418EDBF2A00F7FE8C /* Build configuration list for PBXNativeTarget "FreteListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C3248F518EDBF2A00F7FE8C /* Debug */,

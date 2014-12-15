@@ -19,10 +19,10 @@
 //
     
     
-    [Parse setApplicationId:@"njWR0ICmr9BUKOYwV6bNc5OERgtWEP7OdHYp6uYH"
-                  clientKey:@"aBtZOsTuilvOXOgWghTiKzT5vlmn45NQAjBX0bGx"];
+    [Parse setApplicationId:@"SugGbA8zng2b8C3dH5SCgHwV5Anock00tj2N3vyn"
+                  clientKey:@"xcLyhMCdN1OVwVRDCayNhxBsfREDyDr25tdwPv1A"];
     
-    [GMSServices provideAPIKey:@"AIzaSyC6SaZZvFgJCrHhR8mp3xX1CXLzVWVLneA"];
+    //[GMSServices provideAPIKey:@"AIzaSyC6SaZZvFgJCrHhR8mp3xX1CXLzVWVLneA"];
 //
     
     // Register for Push Notitications, if running iOS 8

@@ -51,7 +51,7 @@
 - (void)loadOfertas
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Categories"];
-    [query orderByDescending:@"Name"];
+    [query orderByAscending:@"categories"];
     
     
     
