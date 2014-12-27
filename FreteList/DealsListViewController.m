@@ -184,7 +184,15 @@
     }
 }
 
+#pragma mark - Actions
 
+
+- (IBAction)showFilter:(id)sender {
+    
+    UIViewController *filterView = [self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
+    
+    [self presentViewController:filterView animated:YES completion:nil];
+}
 @end
 
 

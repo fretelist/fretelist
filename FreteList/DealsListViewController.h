@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet PFImageView *paidOfferImageView;
 @property (weak, nonatomic) IBOutlet UIView *paidOfferView;
 
+- (IBAction)showFilter:(id)sender;
+
 @end

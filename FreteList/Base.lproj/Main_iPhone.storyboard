@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Categorias-->
         <scene sceneID="K9P-ws-7Or">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Ei3-tt-ZMI" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="J9b-8T-EMG"/>
+                    <tabBarItem key="tabBarItem" title="Categorias" image="home" id="J9b-8T-EMG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kfh-k5-m0W">
                         <autoresizingMask key="autoresizingMask"/>
@@ -171,7 +171,7 @@
             </objects>
             <point key="canvasLocation" x="1083" y="-492"/>
         </scene>
-        <!--Ofertas-->
+        <!--Fretes-->
         <scene sceneID="1HY-bp-L45">
             <objects>
                 <tableViewController id="TpO-rx-I3D" customClass="DealsListViewController" sceneMemberID="viewController">
@@ -255,9 +255,12 @@
                             <outlet property="delegate" destination="TpO-rx-I3D" id="3O9-cv-dld"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ofertas" id="iqD-Cx-gwW">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="FOc-BG-va6">
+                    <navigationItem key="navigationItem" title="Fretes" id="iqD-Cx-gwW">
+                        <barButtonItem key="rightBarButtonItem" image="filter_20x16" style="done" id="FOc-BG-va6">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showFilter:" destination="TpO-rx-I3D" id="WXr-ln-G2h"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
@@ -320,6 +323,37 @@
             </objects>
             <point key="canvasLocation" x="1970" y="-471"/>
         </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="Gxb-cs-BW5">
+            <objects>
+                <viewController storyboardIdentifier="filterView" id="NUg-Gj-8eF" customClass="FilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g5e-x1-Tak"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQy-ry-yZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ehN-mf-qjP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIi-rB-lso">
+                                <rect key="frame" x="16" y="20" width="46" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="0.53238923469999999" blue="0.19323714550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissFilter:" destination="NUg-Gj-8eF" eventType="touchUpInside" id="WQj-IX-ovj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HO7-xX-fBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="-471"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="QkZ-zP-rR8">
             <objects>
@@ -335,9 +369,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUh-yb-Ixp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white_with_logo_bg" translatesAutoresizingMaskIntoConstraints="NO" id="XwY-se-XWU">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aka-5B-SG8">
                                         <rect key="frame" x="91" y="360" width="155" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -375,6 +406,9 @@
                                             <action selector="performLogin:" destination="pSL-mr-JIk" eventType="touchUpInside" id="LsV-R5-eDq"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="freteList_splash" translatesAutoresizingMaskIntoConstraints="NO" id="azF-7x-Uwh">
+                                        <rect key="frame" x="40" y="100" width="240" height="128"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -541,7 +575,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HQA-Dh-rhM" kind="relationship" relationship="viewControllers" id="B5d-j6-RAm"/>
                         <segue destination="Ei3-tt-ZMI" kind="relationship" relationship="viewControllers" id="1mX-bb-RDe"/>
                         <segue destination="wQ2-mF-VNE" kind="relationship" relationship="viewControllers" id="oMW-jU-LH5"/>
                         <segue destination="VwN-vu-0zx" kind="relationship" relationship="viewControllers" id="p8g-kS-mwf"/>
@@ -582,19 +615,23 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FO7-nW-gQD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white_with_logo_bg" translatesAutoresizingMaskIntoConstraints="NO" id="1W6-jX-gr8">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-J4-3Pk">
-                                        <rect key="frame" x="180" y="406" width="103" height="51"/>
-                                        <state key="normal" image="signUpButton"/>
+                                        <rect key="frame" x="166" y="406" width="103" height="51"/>
+                                        <state key="normal" title="Cadastre-se">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="QLW-Gu-4LS" kind="push" id="fUv-0e-L2s"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="freteList_splash" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Zt-thu">
+                                        <rect key="frame" x="40" y="100" width="240" height="128"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcS-ao-BA7">
-                                        <rect key="frame" x="37" y="406" width="103" height="51"/>
-                                        <state key="normal" image="login"/>
+                                        <rect key="frame" x="51" y="406" width="56" height="51"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="pSL-mr-JIk" kind="push" id="J1o-Sr-aDW"/>
                                         </connections>
@@ -611,12 +648,12 @@
             </objects>
             <point key="canvasLocation" x="-737" y="436"/>
         </scene>
-        <!--Contact-->
+        <!--Contato-->
         <scene sceneID="MNN-rF-nZS">
             <objects>
                 <navigationController definesPresentationContext="YES" id="hZc-nL-Gr2" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Contact" image="comment_full" id="wIJ-lN-N7o"/>
+                    <tabBarItem key="tabBarItem" title="Contato" image="comment_full" id="wIJ-lN-N7o"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uK1-WO-9mE">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -628,11 +665,11 @@
             </objects>
             <point key="canvasLocation" x="437" y="2254"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Busca-->
         <scene sceneID="GFr-dN-ikf">
             <objects>
                 <navigationController definesPresentationContext="YES" id="wQ2-mF-VNE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="qzx-Qy-cAV"/>
+                    <tabBarItem key="tabBarItem" title="Busca" image="search_38" id="qzx-Qy-cAV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="44N-aj-Cil">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -686,7 +723,7 @@
             </objects>
             <point key="canvasLocation" x="1105" y="1312"/>
         </scene>
-        <!--Contact-->
+        <!--Contato-->
         <scene sceneID="sDZ-5T-c92">
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="kqp-Fy-auh" sceneMemberID="viewController">
@@ -762,8 +799,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact Us" image="comment_full" id="bHz-OU-Fty"/>
-                    <navigationItem key="navigationItem" title="Contact" id="7R0-lE-rPn">
+                    <tabBarItem key="tabBarItem" title="Contato" image="comment_full" id="bHz-OU-Fty"/>
+                    <navigationItem key="navigationItem" title="Contato" id="7R0-lE-rPn">
                         <barButtonItem key="rightBarButtonItem" title="Enviar" id="HY2-dR-PVB"/>
                     </navigationItem>
                 </viewController>
@@ -771,12 +808,12 @@
             </objects>
             <point key="canvasLocation" x="1075" y="2284"/>
         </scene>
-        <!--My Account-->
+        <!--Minha Conta-->
         <scene sceneID="SUU-tV-sTQ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="VwN-vu-0zx" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="My Account" image="config" id="JyM-c2-qwW"/>
+                    <tabBarItem key="tabBarItem" title="Minha Conta" image="config" id="JyM-c2-qwW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pc6-F5-fSp">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -788,7 +825,7 @@
             </objects>
             <point key="canvasLocation" x="733" y="428"/>
         </scene>
-        <!--My Account-->
+        <!--Minha Conta-->
         <scene sceneID="gHE-fX-GVJ">
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="Jdx-fu-SnG" customClass="MyAccountViewController" sceneMemberID="viewController">
@@ -931,7 +968,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Account" image="config" id="HC8-s2-xQo"/>
-                    <navigationItem key="navigationItem" title="My Account" id="sSd-Y9-w8x">
+                    <navigationItem key="navigationItem" title="Minha Conta" id="sSd-Y9-w8x">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="PiJ-hL-nMI">
                             <connections>
                                 <action selector="performCancel:" destination="Jdx-fu-SnG" id="LPd-JC-Vwa"/>
@@ -1002,12 +1039,12 @@
         <image name="cartao_button" width="80" height="80"/>
         <image name="comment_full" width="24" height="22"/>
         <image name="config" width="26" height="26"/>
+        <image name="filter_20x16" width="20" height="16"/>
+        <image name="freteList_splash" width="1447" height="908"/>
         <image name="home" width="26" height="26"/>
         <image name="location48" width="48" height="48"/>
-        <image name="login" width="108" height="52"/>
         <image name="map" width="20" height="30"/>
-        <image name="signUpButton" width="108" height="52"/>
-        <image name="white_with_logo_bg" width="320" height="568"/>
+        <image name="search_38" width="38" height="38"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
