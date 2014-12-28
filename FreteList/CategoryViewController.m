@@ -34,6 +34,8 @@
 //    [[self navigationItem] setBackBarButtonItem:btn];
     
     
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -126,7 +128,6 @@
     title.text = [categoriesObject objectForKey:@"categories"];
     
     
-    
     //Offer Photo
     PFFile *thumbnail = [categoriesObject objectForKey:@"categoryPhoto"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:99];
@@ -150,6 +151,12 @@
     [self performSegueWithIdentifier:@"deals" sender:self];
     
 }
+
+
+
+
+#pragma mark - My Actions
+
 
 
 

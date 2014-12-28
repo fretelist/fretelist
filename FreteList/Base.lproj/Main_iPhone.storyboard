@@ -138,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="categoryCells" id="ncf-c6-7JO" customClass="PFTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCells" id="ncf-c6-7JO" customClass="PFTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ncf-c6-7JO" id="NvD-gB-1A8">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -161,7 +161,9 @@
                             <outlet property="delegate" destination="YJ5-7H-nHG" id="bi1-UW-SY6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categorias" id="2Go-Uy-9KX"/>
+                    <navigationItem key="navigationItem" title="Categorias" id="2Go-Uy-9KX">
+                        <barButtonItem key="rightBarButtonItem" image="info20" id="y23-Qw-O2d"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <segue destination="TpO-rx-I3D" kind="push" identifier="deals" id="k5E-zT-0YO"/>
@@ -256,7 +258,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Fretes" id="iqD-Cx-gwW">
-                        <barButtonItem key="rightBarButtonItem" image="filter_20x16" style="done" id="FOc-BG-va6">
+                        <barButtonItem key="rightBarButtonItem" image="filter_20x20" style="done" id="FOc-BG-va6">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showFilter:" destination="TpO-rx-I3D" id="WXr-ln-G2h"/>
@@ -1049,9 +1051,10 @@
         <image name="cartao_button" width="80" height="80"/>
         <image name="comment_full" width="24" height="22"/>
         <image name="config" width="26" height="26"/>
-        <image name="filter_20x16" width="20" height="16"/>
+        <image name="filter_20x20" width="20" height="20"/>
         <image name="freteList_splash" width="1447" height="908"/>
         <image name="home" width="26" height="26"/>
+        <image name="info20" width="20" height="20"/>
         <image name="location48" width="48" height="48"/>
         <image name="map" width="20" height="30"/>
         <image name="search_38" width="38" height="38"/>
