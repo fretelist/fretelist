@@ -75,7 +75,7 @@
     if (self) {
         
         // The className to query on
-        self.parseClassName = @"Offers";
+        self.parseClassName = @"Freights";
         
         // The key of the PFObject to display in the label of the default cell style
         //self.textKey = @"Name";
@@ -93,11 +93,11 @@
 
 - (PFQuery *)queryForTable
 {
-    //Creates a relation based on a clicked cell at CategoryViewController and what the Relation is pointing at on Parse
-    PFRelation *dealsRelation = [self.clickedCell relationForKey:@"catRelation"];
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    [query orderByAscending:@"freightName"];
     
     
-    return [dealsRelation query];
+    return query;
 }
 
 
@@ -115,36 +115,36 @@
     //Offer Title
     //cell.textLabel.text = [object objectForKey:@"categories"];
     UILabel* title = (UILabel*)[cell viewWithTag:101];
-    title.text = [object objectForKey:@"companyName"];
+    title.text = [object objectForKey:@"freightName"];
     //cell.textLabel.text = [object objectForKey:@"companyName"];
     
     //Offer Subtitle
     UILabel *subTitle = (UILabel*)[cell viewWithTag:102];
-    subTitle.text = [object objectForKey:@"deal_description"];
+    subTitle.text = [object objectForKey:@"freightDescription"];
     
     //Offer Address
     UILabel* address = (UILabel*)[cell viewWithTag:103];
-    address.text = [object objectForKey:@"address"];
+    address.text = [object objectForKey:@"freightTitle"];
     
     //Offer Area
     UILabel* companyArea = (UILabel*)[cell viewWithTag:104];
-    companyArea.text = [object objectForKey:@"companyArea"];
+    companyArea.text = [object objectForKey:@"freightArea"];
     
     //Offer City
     UILabel* companyCity = (UILabel*)[cell viewWithTag:105];
-    companyCity.text = [object objectForKey:@"companyCity"];
+    companyCity.text = [object objectForKey:@"freightCity"];
     
     //Offer State
     UILabel* companyState = (UILabel*)[cell viewWithTag:106];
-    companyState.text = [object objectForKey:@"companyState"];
+    companyState.text = [object objectForKey:@"freightState"];
     
     //Offer Telephone
     UILabel* companyTelephone = (UILabel*)[cell viewWithTag:107];
-    companyTelephone.text = [object objectForKey:@"companyTelephone"];
+    companyTelephone.text = [object objectForKey:@"freightTelephone1"];
     
     //Offer Opening Time
     UILabel* companyOpening = (UILabel*)[cell viewWithTag:108];
-    companyOpening.text = [object objectForKey:@"companyOpening"];
+    companyOpening.text = [object objectForKey:@"freightOpening"];
 
     
     
