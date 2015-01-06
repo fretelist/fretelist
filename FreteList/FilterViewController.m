@@ -24,6 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.motoFreightButton.layer.borderWidth = 0.5f;
+    self.motoFreightButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    
+    self.sTruckButton.layer.borderWidth = 0.5f;
+    self.sTruckButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    
+    self.mTruckButton.layer.borderWidth = 0.5f;
+    self.mTruckButton.layer.borderColor = [[UIColor blackColor] CGColor];
 }
 
 
