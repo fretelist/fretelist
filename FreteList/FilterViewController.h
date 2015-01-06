@@ -11,11 +11,23 @@
 @interface FilterViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *motoFreightButton;
+
 @property (weak, nonatomic) IBOutlet UIButton *sTruckButton;
 @property (weak, nonatomic) IBOutlet UIButton *mTruckButton;
+@property (weak, nonatomic) IBOutlet UIButton *lTruckButton;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *sLorryButton;
+@property (weak, nonatomic) IBOutlet UIButton *mLorryButton;
+@property (weak, nonatomic) IBOutlet UIButton *lLorryButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *truckButton;
+@property (weak, nonatomic) IBOutlet UIButton *carButton;
+
+
+//Freight Types
+@property (weak, nonatomic) IBOutlet UIButton *privateButton;
+@property (weak, nonatomic) IBOutlet UIButton *corporateButton;
 
 - (IBAction)dismissFilter:(id)sender;
 

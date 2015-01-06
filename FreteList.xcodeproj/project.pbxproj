@@ -618,6 +618,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FreteListTests/FreteListTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2/GoogleMaps.framework/GoogleMaps",
@@ -644,6 +645,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FreteListTests/FreteListTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2/GoogleMaps.framework/GoogleMaps",

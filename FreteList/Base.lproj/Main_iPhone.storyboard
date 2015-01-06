@@ -421,7 +421,7 @@
                                 <rect key="frame" x="143" y="164" width="60" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Open Trucks">
+                                <state key="normal" title="Trucks">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -443,24 +443,16 @@
                                 <rect key="frame" x="29" y="217" width="24" height="24"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GW-y2-xpF">
-                                <rect key="frame" x="22" y="255" width="85" height="25"/>
+                                <rect key="frame" x="28" y="255" width="110" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="L Lorry"/>
+                                <state key="normal" title="Private"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDH-7U-pJm">
-                                <rect key="frame" x="136" y="255" width="60" height="25"/>
+                                <rect key="frame" x="182" y="255" width="110" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Open Trucks">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFM-TY-C7g">
-                                <rect key="frame" x="225" y="255" width="60" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Cars">
+                                <state key="normal" title="Corporate">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -468,9 +460,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="carButton" destination="LUF-0h-VJ9" id="qcU-8x-UM1"/>
+                        <outlet property="corporateButton" destination="fDH-7U-pJm" id="jvz-14-k1V"/>
+                        <outlet property="lLorryButton" destination="CiN-h2-ePd" id="Cno-ZQ-30n"/>
+                        <outlet property="lTruckButton" destination="ui2-5e-fHF" id="cEq-HU-shv"/>
+                        <outlet property="mLorryButton" destination="BOp-mK-2QK" id="kC5-dD-hQo"/>
                         <outlet property="mTruckButton" destination="EFZ-9G-en8" id="Wpl-XA-hLq"/>
                         <outlet property="motoFreightButton" destination="bPC-Mm-20T" id="mYs-ST-f4B"/>
+                        <outlet property="privateButton" destination="6GW-y2-xpF" id="xS1-pp-KLy"/>
+                        <outlet property="sLorryButton" destination="7TN-71-Vrx" id="Sw2-vp-h9h"/>
                         <outlet property="sTruckButton" destination="eZY-DK-b2Q" id="LTx-Du-tE5"/>
+                        <outlet property="truckButton" destination="Ie7-Gy-ZrQ" id="jMN-LR-or0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HO7-xX-fBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
