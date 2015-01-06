@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="YJ5-7H-nHG" kind="relationship" relationship="rootViewController" id="c9l-HW-Fgc"/>
+                        <segue destination="TpO-rx-I3D" kind="relationship" relationship="rootViewController" id="Otc-Eb-2Al"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ied-vm-NLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,50 +129,6 @@
             </objects>
             <point key="canvasLocation" x="1635" y="-1265"/>
         </scene>
-        <!--Categorias-->
-        <scene sceneID="2Yk-e1-FeG">
-            <objects>
-                <tableViewController id="YJ5-7H-nHG" customClass="CategoryViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WJP-9g-9X9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCells" id="ncf-c6-7JO" customClass="PFTableViewCell">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ncf-c6-7JO" id="NvD-gB-1A8">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="98" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyB-go-OLQ">
-                                            <rect key="frame" x="72" y="11" width="217" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" tag="99" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljg-Qd-mc1" customClass="PFImageView">
-                                            <rect key="frame" x="8" y="2" width="40" height="40"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="YJ5-7H-nHG" id="sNL-Js-Ihm"/>
-                            <outlet property="delegate" destination="YJ5-7H-nHG" id="bi1-UW-SY6"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Categorias" id="2Go-Uy-9KX">
-                        <barButtonItem key="rightBarButtonItem" image="info20" id="y23-Qw-O2d"/>
-                    </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <connections>
-                        <segue destination="TpO-rx-I3D" kind="push" identifier="deals" id="k5E-zT-0YO"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z8u-f7-DcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1083" y="-492"/>
-        </scene>
         <!--Fretes-->
         <scene sceneID="1HY-bp-L45">
             <objects>
@@ -275,7 +231,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w75-FV-dKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517" y="-471"/>
+            <point key="canvasLocation" x="1127" y="-471"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="SPE-VI-gYv">
@@ -324,7 +280,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVC-0x-mjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="-471"/>
+            <point key="canvasLocation" x="1586" y="-461"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="Gxb-cs-BW5">
@@ -476,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HO7-xX-fBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2387" y="-471"/>
+            <point key="canvasLocation" x="2059" y="-471"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="QkZ-zP-rR8">
