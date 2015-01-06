@@ -30,5 +30,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *corporateButton;
 
 - (IBAction)dismissFilter:(id)sender;
+- (IBAction)filter:(id)sender;
 
 @end

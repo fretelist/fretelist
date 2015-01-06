@@ -7,6 +7,7 @@
 //
 
 #import "FilterViewController.h"
+#import <Parse/Parse.h>
 
 @interface FilterViewController ()
 
@@ -77,4 +78,26 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)filter:(id)sender {
+    
+    
+    
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
