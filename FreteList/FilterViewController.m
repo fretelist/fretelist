@@ -74,6 +74,107 @@
 }
 */
 
+- (IBAction)filterMotoFreights:(id)sender {
+    
+    if (self.motoFreightButton.selected) {
+        [self.motoFreightButton setSelected:NO];
+    }
+    else {
+       [self.motoFreightButton setSelected:YES];
+    }
+}
+
+- (IBAction)filterSTrucks:(id)sender {
+    
+    if (self.sTruckButton.selected) {
+        [self.sTruckButton setSelected:NO];
+    }
+    else {
+        [self.sTruckButton setSelected:YES];
+    }
+    
+}
+
+- (IBAction)filterMtrucks:(id)sender {
+    
+    
+    if (self.mTruckButton.selected) {
+        [self.mTruckButton setSelected:NO];
+    }
+    else {
+        [self.mTruckButton setSelected:YES];
+    }
+
+    
+    
+}
+
+- (IBAction)filterLtrucks:(id)sender {
+    
+    if (self.lTruckButton.selected) {
+        [self.lTruckButton setSelected:NO];
+    }
+    else {
+        [self.lTruckButton setSelected:YES];
+    }
+    
+}
+
+- (IBAction)filterSlorry:(id)sender {
+    
+    if (self.sLorryButton.selected) {
+        [self.sLorryButton setSelected:NO];
+    }
+    else {
+        [self.sLorryButton setSelected:YES];
+    }
+    
+}
+
+- (IBAction)filterMlorry:(id)sender {
+    
+    if (self.mLorryButton.selected) {
+        [self.mLorryButton setSelected:NO];
+    }
+    else {
+        [self.mLorryButton setSelected:YES];
+    }
+    
+    
+}
+
+- (IBAction)filterLlorry:(id)sender {
+    
+    if (self.lLorryButton.selected) {
+        [self.lLorryButton setSelected:NO];
+    }
+    else {
+        [self.lLorryButton setSelected:YES];
+    }
+}
+
+- (IBAction)filterTrucks:(id)sender {
+    
+    if (self.truckButton.selected) {
+        [self.truckButton setSelected:NO];
+    }
+    else {
+        [self.truckButton setSelected:YES];
+    }
+}
+
+- (IBAction)filterCars:(id)sender {
+    
+    if (self.carButton.selected) {
+        [self.carButton setSelected:NO];
+    }
+    else {
+        [self.carButton setSelected:YES];
+    }
+}
+
+
+
 - (IBAction)dismissFilter:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -81,7 +182,7 @@
 
 - (IBAction)filter:(id)sender {
     
-    
+    NSLog(@"%@",self.motoFreightButton);
     
 }
 @end
