@@ -10,6 +10,8 @@
 
 @interface FilterViewController : UIViewController
 
+@property(nonatomic, strong) NSArray *filterArray;
+
 @property (weak, nonatomic) IBOutlet UIButton *motoFreightButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *sTruckButton;
@@ -28,6 +30,19 @@
 //Freight Types
 @property (weak, nonatomic) IBOutlet UIButton *privateButton;
 @property (weak, nonatomic) IBOutlet UIButton *corporateButton;
+
+//Button Actions
+- (IBAction)filterMotoFreights:(id)sender;
+- (IBAction)filterSTrucks:(id)sender;
+- (IBAction)filterMtrucks:(id)sender;
+- (IBAction)filterLtrucks:(id)sender;
+- (IBAction)filterSlorry:(id)sender;
+- (IBAction)filterMlorry:(id)sender;
+- (IBAction)filterLlorry:(id)sender;
+- (IBAction)filterTrucks:(id)sender;
+- (IBAction)filterCars:(id)sender;
+
+
 
 - (IBAction)dismissFilter:(id)sender;
 - (IBAction)filter:(id)sender;
