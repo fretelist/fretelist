@@ -151,7 +151,7 @@
 
     
     //Offer Photo
-    PFFile *thumbnail = [object objectForKey:@"offerPhoto"];
+    PFFile *thumbnail = [object objectForKey:@"freightPhoto"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
     thumbnailImageView.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
     thumbnailImageView.file = thumbnail;
