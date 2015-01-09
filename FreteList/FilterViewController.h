@@ -41,6 +41,8 @@
 - (IBAction)filterLlorry:(id)sender;
 - (IBAction)filterTrucks:(id)sender;
 - (IBAction)filterCars:(id)sender;
+- (IBAction)filterPrivate:(id)sender;
+- (IBAction)filterCorporate:(id)sender;
 
 
 

@@ -173,6 +173,28 @@
     }
 }
 
+- (IBAction)filterPrivate:(id)sender {
+    
+    if (self.privateButton.selected) {
+        [self.privateButton setSelected:NO];
+    }
+    else {
+        [self.privateButton setSelected:YES];
+    }
+    
+}
+
+- (IBAction)filterCorporate:(id)sender {
+    
+    if (self.corporateButton.selected) {
+        [self.corporateButton setSelected:NO];
+    }
+    else {
+        [self.corporateButton setSelected:YES];
+    }
+    
+}
+
 
 
 - (IBAction)dismissFilter:(id)sender {
