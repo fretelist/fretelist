@@ -65,6 +65,8 @@
     if (self.catArray == nil) {
         self.catArray = [[NSMutableArray alloc]init];
     }
+    
+    //Check strings for each button, that will be added to catArray
     for (NSString *features in self.catArray) {
         if ([features isEqualToString:@"Cars"])  {
             self.carButton.selected = YES;

@@ -15,6 +15,8 @@
 @property(nonatomic, strong) PFObject *clickedDeal;
 @property (weak, nonatomic) IBOutlet PFImageView *paidOfferImageView;
 @property (weak, nonatomic) IBOutlet UIView *paidOfferView;
+
+// Created an Array for featuredCategories
 @property (nonatomic, strong) NSArray *featCategories;
 
 - (IBAction)showFilter:(id)sender;

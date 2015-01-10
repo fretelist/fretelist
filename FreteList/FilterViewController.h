@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//Set of instructions to pass Features Categories I selected
 @protocol sendFeatures <NSObject>
 
 -(void)sendFeaturesToMainController:(NSArray*)arrayOfFeatures;
@@ -16,8 +17,10 @@
 
 @interface FilterViewController : UIViewController
 
+//Create a delegate property to pass the protocol
 @property(nonatomic, assign) id delegate;
 
+//Creates de Array of Categories I will select
 @property(nonatomic, strong) NSArray *filterArray;
 
 @property (weak, nonatomic) IBOutlet UIButton *motoFreightButton;
@@ -39,7 +42,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *privateButton;
 @property (weak, nonatomic) IBOutlet UIButton *corporateButton;
 
-//
+//Creates the NSMutableArray property for categories I may select or not
 @property (nonatomic, strong)NSMutableArray *catArray;
 
 //Button Actions

@@ -89,6 +89,7 @@
         // Whether the built-in pagination is enabled
         self.paginationEnabled = YES;
         
+        //Initialize the array for categories I will filter
         self.featCategories = [[NSArray alloc]init];
     }
     return self;
@@ -101,6 +102,7 @@
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query orderByAscending:@"freightName"];
     
+    //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
         [query whereKey:@"categories" containedIn:self.featCategories];
         
@@ -206,8 +208,10 @@
 
 - (IBAction)showFilter:(id)sender {
     
+    //Cast FilterViewController
     FilterViewController *filterView = (FilterViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
     
+    //Init with an empty array, as I have not selected anything yet
     filterView.catArray = [[NSMutableArray alloc] initWithArray:self.featCategories];
     filterView.delegate = self;
     
