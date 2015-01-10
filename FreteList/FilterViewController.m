@@ -68,13 +68,45 @@
     
     //Check strings for each button, that will be added to catArray
     for (NSString *features in self.catArray) {
-        if ([features isEqualToString:@"Cars"])  {
-            self.carButton.selected = YES;
+        if ([features isEqualToString:@"Moto Freight"])  {
+            self.motoFreightButton.selected = YES;
+        }
+        
+        if ([features isEqualToString:@"S Trucks"])  {
+            self.sTruckButton.selected = YES;
+        }
+        
+        if ([features isEqualToString:@"M Trucks"])  {
+            self.mTruckButton.selected = YES;
+        }
+        
+        if ([features isEqualToString:@"L Trucks"])  {
+            self.lTruckButton.selected = YES;
         }
         
         if ([features isEqualToString:@"S Lorry"])  {
             self.sLorryButton.selected = YES;
         }
+        
+        if ([features isEqualToString:@"M Lorry"])  {
+            self.mLorryButton.selected = YES;
+        }
+        
+        if ([features isEqualToString:@"L Lorry"])  {
+            self.lLorryButton.selected = YES;
+        }
+        
+        if ([features isEqualToString:@"Trucks"])  {
+            self.truckButton.selected = YES;
+        }
+        
+        if ([features isEqualToString:@"Cars"])  {
+            self.carButton.selected = YES;
+        }
+        
+        
+        
+        
     }
     
     
@@ -98,34 +130,22 @@
 
 - (IBAction)filterMotoFreights:(id)sender {
     
-    if (self.motoFreightButton.selected) {
-        [self.motoFreightButton setSelected:NO];
-    }
-    else {
-       [self.motoFreightButton setSelected:YES];
-    }
+    [self checkFeature:@"Moto Freight"];
+    self.motoFreightButton.selected = !self.motoFreightButton.selected;
 }
 
 - (IBAction)filterSTrucks:(id)sender {
     
-    if (self.sTruckButton.selected) {
-        [self.sTruckButton setSelected:NO];
-    }
-    else {
-        [self.sTruckButton setSelected:YES];
-    }
+    [self checkFeature:@"S Trucks"];
+    self.sTruckButton.selected = !self.sTruckButton.selected;
     
 }
 
 - (IBAction)filterMtrucks:(id)sender {
     
     
-    if (self.mTruckButton.selected) {
-        [self.mTruckButton setSelected:NO];
-    }
-    else {
-        [self.mTruckButton setSelected:YES];
-    }
+    [self checkFeature:@"M Trucks"];
+    self.mTruckButton.selected = !self.mTruckButton.selected;
 
     
     
@@ -133,12 +153,8 @@
 
 - (IBAction)filterLtrucks:(id)sender {
     
-    if (self.lTruckButton.selected) {
-        [self.lTruckButton setSelected:NO];
-    }
-    else {
-        [self.lTruckButton setSelected:YES];
-    }
+    [self checkFeature:@"L Trucks"];
+    self.lTruckButton.selected = !self.lTruckButton.selected;
     
 }
 
@@ -153,34 +169,21 @@
 
 - (IBAction)filterMlorry:(id)sender {
     
-    if (self.mLorryButton.selected) {
-        [self.mLorryButton setSelected:NO];
-    }
-    else {
-        [self.mLorryButton setSelected:YES];
-    }
-    
+    [self checkFeature:@"M Lorry"];
+    self.mLorryButton.selected = !self.mLorryButton.selected;
     
 }
 
 - (IBAction)filterLlorry:(id)sender {
     
-    if (self.lLorryButton.selected) {
-        [self.lLorryButton setSelected:NO];
-    }
-    else {
-        [self.lLorryButton setSelected:YES];
-    }
+    [self checkFeature:@"L Lorry"];
+    self.lLorryButton.selected = !self.lLorryButton.selected;
 }
 
 - (IBAction)filterTrucks:(id)sender {
     
-    if (self.truckButton.selected) {
-        [self.truckButton setSelected:NO];
-    }
-    else {
-        [self.truckButton setSelected:YES];
-    }
+    [self checkFeature:@"Trucks"];
+    self.truckButton.selected = !self.truckButton.selected;
 }
 
 - (IBAction)filterCars:(id)sender {
@@ -192,17 +195,14 @@
 
 - (IBAction)filterPrivate:(id)sender {
     
-    if (self.privateButton.selected) {
-        [self.privateButton setSelected:NO];
-    }
-    else {
-        [self.privateButton setSelected:YES];
-    }
+    [self checkFeature:@"Private"];
+    self.privateButton.selected = !self.privateButton.selected;
     
 }
 
 - (IBAction)filterCorporate:(id)sender {
     
+    [self checkFeature:@"Corporate"];
     self.corporateButton.selected = !self.corporateButton.selected;
     
 }
@@ -211,6 +211,7 @@
 
 - (IBAction)dismissFilter:(id)sender {
     
+    //[self.delegate sendFeaturesToMainController:[NSArray arrayWithArray:self.catArray]];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
