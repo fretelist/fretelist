@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol sendFeatures <NSObject>
+
+-(void)sendFeaturesToMainController:(NSArray*)arrayOfFeatures;
+
+@end
+
 @interface FilterViewController : UIViewController
+
+@property(nonatomic, assign) id delegate;
 
 @property(nonatomic, strong) NSArray *filterArray;
 
@@ -31,6 +39,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *privateButton;
 @property (weak, nonatomic) IBOutlet UIButton *corporateButton;
 
+//
+@property (nonatomic, strong)NSMutableArray *catArray;
+
 //Button Actions
 - (IBAction)filterMotoFreights:(id)sender;
 - (IBAction)filterSTrucks:(id)sender;
@@ -48,5 +59,6 @@
 
 - (IBAction)dismissFilter:(id)sender;
 - (IBAction)filter:(id)sender;
+-(void)checkFeature:(NSString *)feature;
 
 @end

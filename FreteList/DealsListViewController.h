@@ -7,13 +7,15 @@
 //
 
 #import <Parse/Parse.h>
+#import "FilterViewController.h"
 
-@interface DealsListViewController : PFQueryTableViewController
+@interface DealsListViewController : PFQueryTableViewController<sendFeatures>
 
 @property(nonatomic, strong) PFObject *clickedCell;
 @property(nonatomic, strong) PFObject *clickedDeal;
 @property (weak, nonatomic) IBOutlet PFImageView *paidOfferImageView;
 @property (weak, nonatomic) IBOutlet UIView *paidOfferView;
+@property (nonatomic, strong) NSArray *featCategories;
 
 - (IBAction)showFilter:(id)sender;
 

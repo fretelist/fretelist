@@ -8,6 +8,7 @@
 
 #import "DealsListViewController.h"
 #import "DetailViewController.h"
+#import "FilterViewController.h"
 
 @interface DealsListViewController ()
 
@@ -59,6 +60,8 @@
     
     
     
+    
+    
         
     
 }
@@ -85,6 +88,8 @@
         
         // Whether the built-in pagination is enabled
         self.paginationEnabled = YES;
+        
+        self.featCategories = [[NSArray alloc]init];
     }
     return self;
 }
@@ -96,12 +101,24 @@
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query orderByAscending:@"freightName"];
     
+    if ([self.featCategories count] > 0) {
+        [query whereKey:@"categories" containedIn:self.featCategories];
+        
+    }
+    
+    
     
     return query;
 }
 
 
-
+-(void) sendFeaturesToMainController:(NSArray *)arrayOfFeatures{
+    
+    self.featCategories = arrayOfFeatures;
+    [self loadObjects];
+    [self.tableView reloadData];
+    
+}
 
 -(PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
     
@@ -189,9 +206,17 @@
 
 - (IBAction)showFilter:(id)sender {
     
-    UIViewController *filterView = [self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
+    FilterViewController *filterView = (FilterViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
+    
+    filterView.catArray = [[NSMutableArray alloc] initWithArray:self.featCategories];
+    filterView.delegate = self;
     
     [self presentViewController:filterView animated:YES completion:nil];
+    
+    
+    
+    
+    
 }
 @end
 

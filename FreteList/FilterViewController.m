@@ -13,7 +13,9 @@
 
 @end
 
-@implementation FilterViewController
+@implementation FilterViewController{
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -58,6 +60,24 @@
     
     self.corporateButton.layer.borderWidth = 0.5f;
     self.corporateButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    
+    //
+    if (self.catArray == nil) {
+        self.catArray = [[NSMutableArray alloc]init];
+    }
+    for (NSString *features in self.catArray) {
+        if ([features isEqualToString:@"Cars"])  {
+            self.carButton.selected = YES;
+        }
+        
+        if ([features isEqualToString:@"S Lorry"])  {
+            self.sLorryButton.selected = YES;
+        }
+    }
+    
+    
+    
+    
 }
 
 
@@ -122,12 +142,10 @@
 
 - (IBAction)filterSlorry:(id)sender {
     
-    if (self.sLorryButton.selected) {
-        [self.sLorryButton setSelected:NO];
-    }
-    else {
-        [self.sLorryButton setSelected:YES];
-    }
+    [self checkFeature:@"S Lorry"];
+    self.sLorryButton.selected = !self.sLorryButton.selected;
+    
+    
     
 }
 
@@ -165,12 +183,9 @@
 
 - (IBAction)filterCars:(id)sender {
     
-    if (self.carButton.selected) {
-        [self.carButton setSelected:NO];
-    }
-    else {
-        [self.carButton setSelected:YES];
-    }
+    [self checkFeature:@"Cars"];
+    self.carButton.selected = !self.carButton.selected;
+
 }
 
 - (IBAction)filterPrivate:(id)sender {
@@ -186,12 +201,7 @@
 
 - (IBAction)filterCorporate:(id)sender {
     
-    if (self.corporateButton.selected) {
-        [self.corporateButton setSelected:NO];
-    }
-    else {
-        [self.corporateButton setSelected:YES];
-    }
+    self.corporateButton.selected = !self.corporateButton.selected;
     
 }
 
@@ -204,9 +214,21 @@
 
 - (IBAction)filter:(id)sender {
     
-    NSLog(@"%@",self.motoFreightButton);
+    //Sends 
+    [self.delegate sendFeaturesToMainController:[NSArray arrayWithArray:self.catArray]];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)checkFeature:(NSString *)feature{
+    
+    if ([self.catArray containsObject:feature]) {
+        [self.catArray removeObject:feature];
+    } else {
+        [self.catArray addObject:feature];
+    }
     
 }
+
 @end
 
 
