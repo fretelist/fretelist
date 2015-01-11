@@ -12,6 +12,7 @@
 @protocol sendFeatures <NSObject>
 
 -(void)sendFeaturesToMainController:(NSArray*)arrayOfFeatures;
+-(void)sendTypesToMainController:(NSArray*)arrayOfTypes;
 
 @end
 
@@ -45,6 +46,9 @@
 //Creates the NSMutableArray property for categories I may select or not
 @property (nonatomic, strong)NSMutableArray *catArray;
 
+//Creates the NSMutableArray property for categories I may select or not
+@property (nonatomic, strong)NSMutableArray *typesArray;
+
 //Button Actions
 - (IBAction)filterMotoFreights:(id)sender;
 - (IBAction)filterSTrucks:(id)sender;
@@ -63,5 +67,6 @@
 - (IBAction)dismissFilter:(id)sender;
 - (IBAction)filter:(id)sender;
 -(void)checkFeature:(NSString *)feature;
+-(void)checkType: (NSString *)typeFreight;
 
 @end

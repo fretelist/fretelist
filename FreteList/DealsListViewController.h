@@ -19,6 +19,9 @@
 // Created an Array for featuredCategories
 @property (nonatomic, strong) NSArray *featCategories;
 
+//Create an Array for freight types
+@property (nonatomic, strong) NSArray *featTypes;
+
 - (IBAction)showFilter:(id)sender;
 
 @end

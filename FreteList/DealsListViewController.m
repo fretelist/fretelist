@@ -91,6 +91,9 @@
         
         //Initialize the array for categories I will filter
         self.featCategories = [[NSArray alloc]init];
+        
+        //Initialize the array for types I will filter
+        self.featTypes = [[NSArray alloc]init];
     }
     return self;
 }
@@ -108,6 +111,9 @@
         
     }
     
+    if ([self.featTypes count] > 0) {
+        [query whereKey:@"" containedIn:self.featTypes];
+    }
     
     
     return query;
@@ -120,6 +126,11 @@
     [self loadObjects];
     [self.tableView reloadData];
     
+}
+
+-(void)sendTypesToMainController:(NSArray *)arrayOfTypes{
+    [self loadObjects];
+    [self.tableView reloadData];
 }
 
 -(PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
@@ -213,6 +224,9 @@
     
     //Init with an empty array, as I have not selected anything yet
     filterView.catArray = [[NSMutableArray alloc] initWithArray:self.featCategories];
+    filterView.delegate = self;
+    
+    filterView.typesArray = [[NSMutableArray alloc] initWithArray:self.featTypes];
     filterView.delegate = self;
     
     [self presentViewController:filterView animated:YES completion:nil];

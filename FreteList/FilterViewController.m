@@ -26,8 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    
+    //Create each button's borders
     self.motoFreightButton.layer.borderWidth = 0.5f;
     self.motoFreightButton.layer.borderColor = [[UIColor blackColor] CGColor];
     
@@ -61,9 +62,14 @@
     self.corporateButton.layer.borderWidth = 0.5f;
     self.corporateButton.layer.borderColor = [[UIColor blackColor] CGColor];
     
-    //
+    //If the Array of categories is empty, initialize it
     if (self.catArray == nil) {
         self.catArray = [[NSMutableArray alloc]init];
+    }
+    
+    //If the Array of types is empty, initialize it
+    if (self.typesArray == nil) {
+        self.typesArray = [[NSMutableArray alloc]init];
     }
     
     //Check strings for each button, that will be added to catArray
@@ -104,9 +110,18 @@
             self.carButton.selected = YES;
         }
         
+    }
+    
+   
+    //Check strings for each button, that will be added to typesArray
+    for (NSString *types in self.typesArray) {
+        if ([types isEqualToString:@"Corporate"]) {
+            self.corporateButton.selected = YES;
+        }
         
-        
-        
+        if ([types isEqualToString:@"Private"]) {
+            self.privateButton.selected = YES;
+        }
     }
     
     
@@ -195,14 +210,14 @@
 
 - (IBAction)filterPrivate:(id)sender {
     
-    [self checkFeature:@"Private"];
+    [self checkType:@"Private"];
     self.privateButton.selected = !self.privateButton.selected;
     
 }
 
 - (IBAction)filterCorporate:(id)sender {
     
-    [self checkFeature:@"Corporate"];
+    [self checkType:@"Corporate"];
     self.corporateButton.selected = !self.corporateButton.selected;
     
 }
@@ -230,6 +245,15 @@
         [self.catArray addObject:feature];
     }
     
+}
+
+-(void)checkType:(NSString *)typeFreight{
+    
+    if ([self.typesArray containsObject:typeFreight]) {
+        [self.typesArray removeObject:typeFreight];
+    }else {
+        [self.typesArray addObject:typeFreight];
+    }
 }
 
 @end
