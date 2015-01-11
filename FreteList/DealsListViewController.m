@@ -112,7 +112,7 @@
     }
     
     if ([self.featTypes count] > 0) {
-        [query whereKey:@"" containedIn:self.featTypes];
+        [query whereKey:@"freightType" containedIn:self.featTypes];
     }
     
     
@@ -129,6 +129,7 @@
 }
 
 -(void)sendTypesToMainController:(NSArray *)arrayOfTypes{
+    self.featTypes = arrayOfTypes;
     [self loadObjects];
     [self.tableView reloadData];
 }

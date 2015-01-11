@@ -234,6 +234,7 @@
     
     //Sends 
     [self.delegate sendFeaturesToMainController:[NSArray arrayWithArray:self.catArray]];
+    [self.delegate sendTypesToMainController:[NSArray arrayWithArray:self.typesArray]];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
