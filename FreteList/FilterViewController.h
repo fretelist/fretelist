@@ -43,6 +43,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *privateButton;
 @property (weak, nonatomic) IBOutlet UIButton *corporateButton;
 
+//View Type
+@property (weak, nonatomic) IBOutlet UIButton *viewFreights;
+@property (weak, nonatomic) IBOutlet UIButton *viewUsersRequests;
+
+
 //Creates the NSMutableArray property for categories I may select or not
 @property (nonatomic, strong)NSMutableArray *catArray;
 

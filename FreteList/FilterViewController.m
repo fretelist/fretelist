@@ -62,6 +62,15 @@
     self.corporateButton.layer.borderWidth = 0.5f;
     self.corporateButton.layer.borderColor = [[UIColor blackColor] CGColor];
     
+    //[self.corporateButton setFrame:CGRectMake(28.0, 346.0, 110.0, 25.0)];
+    //self.corporateButton.layer.cornerRadius = 10.0f;
+    
+    self.viewFreights.layer.borderWidth = 0.5f;
+    self.viewFreights.layer.borderColor = [[UIColor blackColor] CGColor];
+    
+    self.viewUsersRequests.layer.borderWidth = 0.5f;
+    self.viewUsersRequests.layer.borderColor = [[UIColor blackColor] CGColor];
+    
     //If the Array of categories is empty, initialize it
     if (self.catArray == nil) {
         self.catArray = [[NSMutableArray alloc]init];
@@ -142,6 +151,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 - (IBAction)filterMotoFreights:(id)sender {
     

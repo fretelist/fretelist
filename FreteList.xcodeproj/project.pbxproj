@@ -52,7 +52,6 @@
 		6C702AFA19018E2B000FB43A /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2538C61900242E009E7386 /* libc++.dylib */; };
 		6C702AFE19018F66000FB43A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C702AFD19018F66000FB43A /* MapKit.framework */; };
 		6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */; };
-		6C79EEDF18F44A7300C8DA24 /* CartoesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79EEDE18F44A7300C8DA24 /* CartoesTableViewController.m */; };
 		6C7FA0F11A154DF600E8E298 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7FA0F01A154DF600E8E298 /* CategoryViewController.m */; };
 		6CA6030219DF7F3100A09EAC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030119DF7F3100A09EAC /* Parse.framework */; };
 		6CA6030419DF7F4100A09EAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030319DF7F4100A09EAC /* Bolts.framework */; };
@@ -135,8 +134,6 @@
 		6C702AFD19018F66000FB43A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6C79EEDA18F44A3A00C8DA24 /* Cartoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cartoes.h; sourceTree = "<group>"; };
 		6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cartoes.m; sourceTree = "<group>"; };
-		6C79EEDD18F44A7300C8DA24 /* CartoesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartoesTableViewController.h; sourceTree = "<group>"; };
-		6C79EEDE18F44A7300C8DA24 /* CartoesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoesTableViewController.m; sourceTree = "<group>"; };
 		6C7FA0EF1A154DF600E8E298 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		6C7FA0F01A154DF600E8E298 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		6CA6030119DF7F3100A09EAC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1/Parse.framework"; sourceTree = "<group>"; };
@@ -318,8 +315,6 @@
 		6C79EEE218F44D7D00C8DA24 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6C79EEDD18F44A7300C8DA24 /* CartoesTableViewController.h */,
-				6C79EEDE18F44A7300C8DA24 /* CartoesTableViewController.m */,
 				6C28B02D18F83F4C00B3EC49 /* CadastroViewController.h */,
 				6C28B02E18F83F4C00B3EC49 /* CadastroViewController.m */,
 				6C28B03018F83FB000B3EC49 /* TelaInicialViewController.h */,
@@ -468,7 +463,6 @@
 				6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */,
 				6C28B03218F83FB000B3EC49 /* TelaInicialViewController.m in Sources */,
 				6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */,
-				6C79EEDF18F44A7300C8DA24 /* CartoesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
