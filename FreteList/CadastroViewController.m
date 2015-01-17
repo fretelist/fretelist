@@ -260,9 +260,9 @@
                     
                 } else {
                     
-                    if ([self.signUpGenderSegmented becomeFirstResponder]) {
+                    if ([self.signUpStateSegmented becomeFirstResponder]) {
                         
-                        [self.signUpGenderSegmented resignFirstResponder];
+                        [self.signUpStateSegmented resignFirstResponder];
                         
                         [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
                         
@@ -345,7 +345,7 @@
             [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
             [usuario setObject:self.signUpStateTextField.text forKey:@"state"];
             [usuario setObject:self.signUpCountryTextField.text forKey:@"country"];
-            if (self.signUpGenderSegmented.selectedSegmentIndex == 0) {
+            if (self.signUpStateSegmented.selectedSegmentIndex == 0) {
                 [usuario setObject:@"feminino" forKey:@"gender"];
             } else {
                 [usuario setObject:@"masculino" forKey:@"gender"];

@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *signUpPsswdTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signUpBdayTextField;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *signUpGenderSegmented;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *signUpStateSegmented;
 
 @property (weak, nonatomic) IBOutlet UITextField *signUpCityTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signUpStateTextField;
