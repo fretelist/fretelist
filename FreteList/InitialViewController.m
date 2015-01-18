@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 tenhoDesconto. All rights reserved.
 //
 
-#import "TelaInicialViewController.h"
+#import "InitialViewController.h"
 #import "MapViewController.h"
 
-@interface TelaInicialViewController ()
+@interface InitialViewController ()
 
 @end
 
-@implementation TelaInicialViewController
+@implementation InitialViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

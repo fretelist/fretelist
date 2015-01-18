@@ -4,12 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Categorias-->
+        <!--Freight List-->
         <scene sceneID="K9P-ws-7Or">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Ei3-tt-ZMI" sceneMemberID="viewController">
+                <navigationController title="Freight List" definesPresentationContext="YES" id="Ei3-tt-ZMI" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Categorias" image="home" id="J9b-8T-EMG"/>
+                    <tabBarItem key="tabBarItem" title="Fretes" image="home" id="J9b-8T-EMG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kfh-k5-m0W">
                         <autoresizingMask key="autoresizingMask"/>
@@ -837,10 +837,10 @@
             </objects>
             <point key="canvasLocation" x="-1245" y="428"/>
         </scene>
-        <!--Tela Inicial View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="3rG-ph-VqR">
             <objects>
-                <viewController id="bl5-AO-xfk" customClass="TelaInicialViewController" sceneMemberID="viewController">
+                <viewController id="bl5-AO-xfk" customClass="InitialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0uK-RB-iSv"/>
                         <viewControllerLayoutGuide type="bottom" id="Zuk-1f-KF8"/>

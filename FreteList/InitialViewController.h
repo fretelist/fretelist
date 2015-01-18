@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TelaInicialViewController : UIViewController
+@interface InitialViewController : UIViewController
 
 @end

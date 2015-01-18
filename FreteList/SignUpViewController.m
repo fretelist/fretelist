@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 tenhoDesconto. All rights reserved.
 //
 
-#import "CadastroViewController.h"
+#import "SignUpViewController.h"
 #import "HomeViewController.h"
 #import "VehiclesViewController.h"
 
