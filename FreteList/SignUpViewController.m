@@ -10,11 +10,11 @@
 #import "HomeViewController.h"
 #import "VehiclesViewController.h"
 
-@interface CadastroViewController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation CadastroViewController
+@implementation SignUpViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
