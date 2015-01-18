@@ -311,6 +311,7 @@
     // Instanciate user class and its atributes
     PFUser *user = [PFUser user];
     PFObject *usuario = [PFObject objectWithClassName:@"Usuario"];
+    PFObject *freights = [PFObject objectWithClassName:@"Freights"];
     
     // Show an alert if user or password fields are left in blank
     if (self.signUpEmailTextField.text.length == 0 || self.signUpPsswdTextField.text.length == 0) {
@@ -319,66 +320,138 @@
         [errorAlertView show];
     }
     
-    user.username = self.signUpEmailTextField.text;
-    user.password = self.signUpPsswdTextField.text;
+//    // Peform signup for normal users
+    if (self.userTypeSegmented.selectedSegmentIndex == 0) {
+//
+        // Create a User for normal users
+        user.username = self.signUpEmailTextField.text;
+        user.password = self.signUpPsswdTextField.text;
+        user.email = self.signUpEmailTextField.text;
     
-    
-    // Show an alert for success or error
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
+        // Show an alert for success or error
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
             
-            
-            //    user.email = self.signUpEmailTextField.text;
-            [usuario setObject:self.signUpNameTextField.text forKey:@"name"];
-            [usuario setObject:self.signUpEmailTextField.text forKey:@"email"];
-            [usuario setObject:self.signUpPsswdTextField.text forKey:@"password"];
-            [usuario setObject:self.signUpBdayTextField.text forKey:@"bday"];
-            [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
-            [usuario setObject:self.signUpStateTextField.text forKey:@"state"];
-            [usuario setObject:self.signUpCountryTextField.text forKey:@"country"];
-            
-            VehiclesViewController *truckTypes = [[VehiclesViewController alloc]init];
-            
-            if (truckTypes.sLorrySegmented.selectedSegmentIndex == 0) {
-                [usuario setObject:@"feminino" forKey:@"gender"];
-            } else {
-                [usuario setObject:@"masculino" forKey:@"gender"];
+                //    user.email = self.signUpEmailTextField.text;
+                [usuario setObject:self.signUpNameTextField.text forKey:@"name"];
+                [usuario setObject:self.signUpEmailTextField.text forKey:@"email"];
+                [usuario setObject:self.signUpPsswdTextField.text forKey:@"password"];
+                [usuario setObject:self.signUpTelephoneTextField.text forKey:@"telephone"];
+                [usuario setObject:self.signUpCel1TextField.text forKey:@"mobile1"];
+                [usuario setObject:self.signUpCel2TextField.text forKey:@"mobile2"];
+                [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
+                
+                
+                //            [user setObject:self.signUpBdayTextField.text forKey:@"bday"];
+                //            [user setObject:self.signUpCityTextField.text forKey:@"city"];
+                //            [user setObject:self.signUpStateTextField.text forKey:@"state"];
+                //            [user setObject:self.signUpCountryTextField.text forKey:@"country"];
+                
+                
+                // Set previously selected segmented on its class
+                if (self.userTypeSegmented.selectedSegmentIndex == 0) {
+                    [usuario setObject:@"Cliente" forKey:@"freightUserType"];
+                }
+                
+                [usuario save];
+                
+                
+                // Show Alert for success
+                UIAlertView* successAlertView = [[UIAlertView alloc]
+                                                 initWithTitle:@"Sucesso"
+                                                 message:@"Verifique o seu e-mail e confirme o seu cadastro!"
+                                                 delegate:nil
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil, nil];
+                
+                [successAlertView show];
+                
+                
+                
+                [self.navigationController  popToRootViewControllerAnimated:YES];
+                
+                
+                
+            } else if(self.signUpNameTextField.text.length == 0) {
+                //Something bad has ocurred
+                NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+                UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [errorAlertView show];
             }
-            [usuario save];
-            
-            
-            [user setObject:self.signUpBdayTextField.text forKey:@"bday"];
-            [user setObject:self.signUpCityTextField.text forKey:@"city"];
-            [user setObject:self.signUpStateTextField.text forKey:@"state"];
-            [user setObject:self.signUpCountryTextField.text forKey:@"country"];
-            
+        }];
 
-            
-           
-            
-            UIAlertView* successAlertView = [[UIAlertView alloc]
-                                             initWithTitle:@"Sucesso"
-                                             message:@"Verifique o seu e-mail e confirme o seu cadastro!"
-                                             delegate:nil
-                                             cancelButtonTitle:@"Ok"
-                                             otherButtonTitles:nil, nil];
-            
-            [successAlertView show];
-            
-            
-            
-            [self.navigationController  popToRootViewControllerAnimated:YES];
-            
-            
-            
-        } else if(self.signUpNameTextField.text.length == 0) {
-            //Something bad has ocurred
-            NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
-            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-            [errorAlertView show];
-        }
-    }];
+        
+        
+        
 
+    }
+    
+    
+    // Peform SignUp for Freights
+    if (self.userTypeSegmented.selectedSegmentIndex == 1) {
+        
+        //Create a user for Freights
+        user.username = self.signUpEmailTextField.text;
+        user.password = self.signUpEmailTextField.text;
+        user.email = self.signUpEmailTextField.text;
+        
+        // Write freight Keys and SignUp
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            
+            if (!error) {
+                
+                // Set previously selected segmented into its Class
+                
+                if (self.userTypeSegmented.selectedSegmentIndex == 1) {
+                    [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
+                }
+                
+                
+                // Set information for freights on its class
+                [freights setObject:self.signUpNameTextField.text forKey:@"freightName"];
+                [freights setObject:self.signUpEmailTextField.text forKey:@"freightEmail"];
+                [freights setObject:self.signUpTelephoneTextField.text forKey:@"freightTelephone"];
+                [freights setObject:self.signUpCel1TextField.text forKey:@"freightMobile1"];
+                [freights setObject:self.signUpCel1TextField.text forKey:@"freightMobile2"];
+                [freights setObject:self.signUpCityTextField.text forKey:@"freightCity"];
+                
+                if (self.userTypeSegmented.selectedSegmentIndex == 1) {
+                    [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
+                }
+
+                [freights save];
+                
+                
+                // Show Alert for success
+                UIAlertView* successAlertView = [[UIAlertView alloc]
+                                                 initWithTitle:@"Sucesso"
+                                                 message:@"Verifique o seu e-mail e confirme o seu cadastro!"
+                                                 delegate:nil
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil, nil];
+                
+                [successAlertView show];
+                
+                
+                
+                [self.navigationController  popToRootViewControllerAnimated:YES];
+                
+                
+                
+            } else if(self.signUpNameTextField.text.length == 0) {
+                //Something bad has ocurred
+                NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+                UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [errorAlertView show];
+                
+            }
+        }];
+        
+    }
+    
+    
+    
+    
     
     
     

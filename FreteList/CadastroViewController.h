@@ -12,6 +12,7 @@
 @interface CadastroViewController : UIViewController<UITextFieldDelegate, UIGestureRecognizerDelegate, PFSignUpViewControllerDelegate>
 
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *userTypeSegmented;
 
 @property (weak, nonatomic) IBOutlet UITextField *signUpNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signUpEmailTextField;

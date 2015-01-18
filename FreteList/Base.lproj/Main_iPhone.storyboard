@@ -741,6 +741,7 @@
                         <outlet property="signUpPsswdTextField" destination="F8i-bh-yWT" id="I0T-xz-tKT"/>
                         <outlet property="signUpScroll" destination="HUR-4a-R3I" id="Tga-bp-NbY"/>
                         <outlet property="signUpTelephoneTextField" destination="lEL-9w-kIi" id="UHr-M4-X9o"/>
+                        <outlet property="userTypeSegmented" destination="s5i-bj-0Tu" id="Rcf-zR-RhC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsO-mH-Qvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
