@@ -8,6 +8,7 @@
 
 #import "CadastroViewController.h"
 #import "HomeViewController.h"
+#import "VehiclesViewController.h"
 
 @interface CadastroViewController ()
 
@@ -44,9 +45,9 @@
     self.signUpNameTextField.delegate =
     self.signUpEmailTextField.delegate =
     self.signUpPsswdTextField.delegate =
-    self.signUpBdayTextField.delegate =
-    self.signUpStateTextField.delegate =
-    self.signUpCountryTextField.delegate =
+    self.signUpTelephoneTextField.delegate =
+    self.signUpCel1TextField.delegate =
+    self.signUpCel2TextField.delegate =
     self.signUpCityTextField.delegate = self;
     
     self.signUpGestureRecognizer.delegate = self;
@@ -90,7 +91,7 @@
             
             } else {
                 
-                if (textField == self.signUpBdayTextField) {
+                if (textField == self.signUpTelephoneTextField) {
                     
                     self.signUpScroll.scrollEnabled = YES;
                     
@@ -106,7 +107,7 @@
                             
                         } else {
                             
-                            if (textField == self.signUpStateTextField) {
+                            if (textField == self.signUpCel1TextField) {
                                 
                                 self.signUpScroll.scrollEnabled = YES;
                                 
@@ -114,7 +115,7 @@
                                 
                             } else {
                                 
-                                if (textField == self.signUpCountryTextField) {
+                                if (textField == self.signUpCel2TextField) {
                                     
                                     self.signUpScroll.scrollEnabled = YES;
                                     
@@ -164,39 +165,39 @@
             
             if (textField == self.signUpPsswdTextField) {
                 
-                [self.signUpBdayTextField becomeFirstResponder];
+                [self.signUpTelephoneTextField becomeFirstResponder];
                 
                 [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
                 
             } else {
                 
-                if (textField == self.signUpBdayTextField) {
+                if (textField == self.signUpTelephoneTextField) {
                     
-                    [self.signUpCityTextField becomeFirstResponder];
+                    [self.signUpCel1TextField becomeFirstResponder];
                     
                     [self.signUpScroll setContentOffset:CGPointMake(0.0, 70.0) animated:YES];
                     
                 } else {
                         
-                    if (textField == self.signUpCityTextField) {
+                    if (textField == self.signUpCel1TextField) {
                             
-                        [self.signUpStateTextField becomeFirstResponder];
+                        [self.signUpCel2TextField becomeFirstResponder];
                             
                         [self.signUpScroll setContentOffset:CGPointMake(0.0, 160.0) animated:YES];
                             
                     } else {
                             
-                        if (textField == self.signUpStateTextField) {
+                        if (textField == self.signUpCel2TextField) {
                                 
-                            [self.signUpCountryTextField becomeFirstResponder];
+                            [self.signUpCityTextField becomeFirstResponder];
                                 
                             [self.signUpScroll setContentOffset:CGPointMake(0.0, 160.0) animated:YES];
                                 
                         } else {
                                 
-                            if (textField == self.signUpCountryTextField) {
+                            if (textField == self.signUpCityTextField) {
                                     
-                                [self.signUpCountryTextField resignFirstResponder];
+                                [self.signUpCityTextField resignFirstResponder];
                                     
                                 [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
                                     
@@ -252,48 +253,38 @@
                 
             } else {
                 
-                if ([self.signUpBdayTextField becomeFirstResponder]) {
+                if ([self.signUpTelephoneTextField becomeFirstResponder]) {
                     
-                    [self.signUpBdayTextField resignFirstResponder];
+                    [self.signUpTelephoneTextField resignFirstResponder];
                     
                     [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
                     
                 } else {
                     
-                    if ([self.signUpStateSegmented becomeFirstResponder]) {
+                    if ([self.signUpCel1TextField becomeFirstResponder]) {
                         
-                        [self.signUpStateSegmented resignFirstResponder];
+                        [self.signUpCel1TextField resignFirstResponder];
                         
                         [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
                         
                     } else {
                         
-                        if ([self.signUpCityTextField becomeFirstResponder]) {
+                        if ([self.signUpCel2TextField becomeFirstResponder]) {
                             
-                            [self.signUpCityTextField resignFirstResponder];
+                            [self.signUpCel2TextField resignFirstResponder];
                             
                             [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
                             
                         } else {
                             
-                            if ([self.signUpStateTextField becomeFirstResponder]) {
+                            if ([self.signUpCityTextField becomeFirstResponder]) {
                                 
-                                [self.signUpStateTextField resignFirstResponder];
+                                [self.signUpCityTextField resignFirstResponder];
                                 
                                 [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
                                 
                             } else {
                                 
-                                if ([self.signUpCountryTextField becomeFirstResponder]) {
-                                    
-                                    [self.signUpCountryTextField resignFirstResponder];
-                                    
-                                    [self.signUpScroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
-                                    
-                                } else {
-                                    
-                                    
-                                }
                                 
                             }
                             
@@ -345,7 +336,10 @@
             [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
             [usuario setObject:self.signUpStateTextField.text forKey:@"state"];
             [usuario setObject:self.signUpCountryTextField.text forKey:@"country"];
-            if (self.signUpStateSegmented.selectedSegmentIndex == 0) {
+            
+            VehiclesViewController *truckTypes = [[VehiclesViewController alloc]init];
+            
+            if (truckTypes.sLorrySegmented.selectedSegmentIndex == 0) {
                 [usuario setObject:@"feminino" forKey:@"gender"];
             } else {
                 [usuario setObject:@"masculino" forKey:@"gender"];
