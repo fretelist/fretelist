@@ -342,17 +342,13 @@
                 [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
                 
                 
-                //            [user setObject:self.signUpBdayTextField.text forKey:@"bday"];
-                //            [user setObject:self.signUpCityTextField.text forKey:@"city"];
-                //            [user setObject:self.signUpStateTextField.text forKey:@"state"];
-                //            [user setObject:self.signUpCountryTextField.text forKey:@"country"];
-                
-                
                 // Set previously selected segmented on its class
                 if (self.userTypeSegmented.selectedSegmentIndex == 0) {
                     [usuario setObject:@"Cliente" forKey:@"freightUserType"];
                 }
                 
+                
+                // Save it into its class
                 [usuario save];
                 
                 
@@ -367,7 +363,7 @@
                 [successAlertView show];
                 
                 
-                
+                // Back to root
                 [self.navigationController  popToRootViewControllerAnimated:YES];
                 
                 
@@ -418,7 +414,18 @@
                 if (self.userTypeSegmented.selectedSegmentIndex == 1) {
                     [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
                 }
+                
+                VehiclesViewController *vehicleTypes = [[VehiclesViewController alloc]init];
+                
+                if (vehicleTypes.sLorrySegmented.selectedSegmentIndex == 0) {
+                    [freights setObject:@"S Lorry" forKey:@"categories"];
+                }
+                
+                if (vehicleTypes.mLorrySegmented.selectedSegmentIndex == 0) {
+                    [freights setObject:@"M Lorry" forKey:@"categories"];
+                }
 
+                // Save it into its class
                 [freights save];
                 
                 
@@ -433,7 +440,7 @@
                 [successAlertView show];
                 
                 
-                
+                // Back to root
                 [self.navigationController  popToRootViewControllerAnimated:YES];
                 
                 
