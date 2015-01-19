@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import "FilterViewController.h"
 
-@interface DealsListViewController : PFQueryTableViewController<sendFeatures>
+@interface FreightListViewController : PFQueryTableViewController<sendFeatures>
 
 @property(nonatomic, strong) PFObject *clickedCell;
 @property(nonatomic, strong) PFObject *clickedDeal;

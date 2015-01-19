@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 tenhoDesconto. All rights reserved.
 //
 
-#import "DealsListViewController.h"
+#import "FreightListViewController.h"
 #import "DetailViewController.h"
 #import "FilterViewController.h"
 
-@interface DealsListViewController ()
+@interface FreightListViewController ()
 
 @end
 
-@implementation DealsListViewController
+@implementation FreightListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
