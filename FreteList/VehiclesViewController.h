@@ -12,7 +12,6 @@
 @interface VehiclesViewController : PFQueryTableViewController
 
 
-
 - (IBAction)saveVehicleTypes:(id)sender;
 
 @end

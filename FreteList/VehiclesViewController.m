@@ -7,6 +7,7 @@
 //
 
 #import "VehiclesViewController.h"
+#import "CategoriesCell.h"
 
 @interface VehiclesViewController ()
 
@@ -48,18 +49,24 @@
     // Do any additional setup after loading the view.
     
     self.navigationController.navigationBar.hidden = NO;
+   
     
     
     
 }
 
 
+
+
 #pragma mark - PFQuery
 
 -(PFQuery *)queryForTable{
     
+    // Create a query
     PFQuery *categoriesQuery = [PFQuery queryWithClassName:self.parseClassName];
     
+    
+    //Order it
     [categoriesQuery orderByAscending:@"categories"];
     
     return categoriesQuery;
@@ -69,25 +76,41 @@
 
 -(PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
     
+    //Identify the cell
     static NSString *simpleTableIdentifier = @"CategoriesCell";
     
-    PFTableViewCell *cateogriesCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    //Create a cell object
+    PFTableViewCell *categoriesCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (cateogriesCell == nil) {
-        cateogriesCell = [[PFTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    if (categoriesCell == nil) {
+        categoriesCell = [[PFTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    UILabel* freightType = (UILabel*)[cateogriesCell viewWithTag:200];
+    //Fetch the lable object string
+    UILabel* freightType = (UILabel*)[categoriesCell viewWithTag:200];
     freightType.text = [object objectForKey:@"categories"];
     
-    return cateogriesCell;
+    return categoriesCell;
     
 }
 
--(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return YES;
+    
+    //Set the button visible when the cell is touched
+    
+        
+    
+//    CategoriesCell *customCell = (CategoriesCell*)[tableView cellForRowAtIndexPath:indexPath];
+//    customCell.checkMarkButton.hidden = !customCell.checkMarkButton.hidden;
+    
+    
+    
+    //Store which cell/truck type was selected
+    
+    
 }
+
 
 /*
 #pragma mark - Navigation
@@ -109,7 +132,6 @@
     // ..do something here
     
     //Dismiss the viewController
-    
     [self dismissViewControllerAnimated:YES completion:nil];
     
     
