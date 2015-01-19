@@ -132,7 +132,7 @@
         <!--Fretes-->
         <scene sceneID="1HY-bp-L45">
             <objects>
-                <tableViewController id="TpO-rx-I3D" customClass="DealsListViewController" sceneMemberID="viewController">
+                <tableViewController id="TpO-rx-I3D" customClass="FreightListViewController" sceneMemberID="viewController">
                     <tableView key="view" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="270" sectionHeaderHeight="22" sectionFooterHeight="22" id="06A-ra-2kD">
                         <rect key="frame" x="0.0" y="64" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
