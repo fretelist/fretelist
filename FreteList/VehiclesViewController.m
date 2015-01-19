@@ -80,15 +80,17 @@
     static NSString *simpleTableIdentifier = @"CategoriesCell";
     
     //Create a cell object
-    PFTableViewCell *categoriesCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    CategoriesCell *categoriesCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (categoriesCell == nil) {
-        categoriesCell = [[PFTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        categoriesCell = [[CategoriesCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+    CategoriesCell *label = [[CategoriesCell alloc]init];
+    
     //Fetch the lable object string
-    UILabel* freightType = (UILabel*)[categoriesCell viewWithTag:200];
-    freightType.text = [object objectForKey:@"categories"];
+    label.categoriesLabel = (UILabel*)[categoriesCell viewWithTag:200];
+    label.categoriesLabel.text = [object objectForKey:@"categories"];
     
     return categoriesCell;
     
@@ -97,15 +99,23 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
+    //Identify the cell
+    static NSString *simpleTableIdentifier = @"CategoriesCell";
+    
+    //Create a cell object
+    CategoriesCell *categoriesCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (categoriesCell == nil) {
+        categoriesCell = [[CategoriesCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    
     //Set the button visible when the cell is touched
-    
+    CategoriesCell *customCell = [[CategoriesCell alloc]init];
+    //customCell.checkMarkButton = (UILabel*)[categoriesCell viewWithTag:300];
+    customCell.checkMarkButton.hidden = !customCell.checkMarkButton.hidden;
         
-    
-//    CategoriesCell *customCell = (CategoriesCell*)[tableView cellForRowAtIndexPath:indexPath];
-//    customCell.checkMarkButton.hidden = !customCell.checkMarkButton.hidden;
-    
-    
-    
+        
     //Store which cell/truck type was selected
     
     

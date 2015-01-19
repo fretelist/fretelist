@@ -10,7 +10,8 @@
 
 @interface CategoriesCell : PFTableViewCell
 
-@property(nonatomic, strong)UIButton *checkMarkButton;
-@property(nonatomic, strong)UILabel *categoriesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *categoriesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *checkMarkButton;
+
 
 @end
