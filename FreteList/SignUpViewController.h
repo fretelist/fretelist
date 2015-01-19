@@ -34,6 +34,7 @@
 
 
 - (IBAction)performSignUp:(id)sender;
+- (IBAction)registerYourVehicle:(id)sender;
 
 
 

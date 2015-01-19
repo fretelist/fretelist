@@ -709,7 +709,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="u93-UH-35k" kind="push" id="AZv-9Z-jZS"/>
+                                            <action selector="registerYourVehicle:" destination="QLW-Gu-4LS" eventType="touchUpInside" id="WiD-Oh-WDM"/>
+                                            <segue destination="9ho-7i-uW1" kind="modal" identifier="vehicleType" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="hTC-NP-lgb"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pd3-JK-6NT">
@@ -747,57 +748,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsO-mH-Qvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-325" y="830"/>
-        </scene>
-        <!--Veículos-->
-        <scene sceneID="6xi-ca-jSd">
-            <objects>
-                <viewController title="Veículos" id="u93-UH-35k" customClass="VehiclesViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NAF-KM-m6W"/>
-                        <viewControllerLayoutGuide type="bottom" id="dqT-rO-PqF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fHR-km-PQO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S Lorry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLl-9p-NZi">
-                                <rect key="frame" x="16" y="88" width="80" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-Km-jHb">
-                                <rect key="frame" x="181" y="81" width="123" height="29"/>
-                                <segments>
-                                    <segment title="Sim"/>
-                                    <segment title="Não"/>
-                                </segments>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="UzE-qh-m3H">
-                                <rect key="frame" x="181" y="117" width="123" height="29"/>
-                                <segments>
-                                    <segment title="Sim"/>
-                                    <segment title="Não"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="M Lorry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEc-BD-Sg3">
-                                <rect key="frame" x="16" y="124" width="80" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bii-ZQ-xNT"/>
-                    <connections>
-                        <outlet property="mLorrySegmented" destination="UzE-qh-m3H" id="HC1-xy-hG0"/>
-                        <outlet property="sLorrySegmented" destination="eX7-Km-jHb" id="Bvu-VO-yop"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kuh-Wu-Goe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="63" y="1123"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DW4-Ti-xCS">
@@ -901,6 +851,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Tl-bt-Ius" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="437" y="2254"/>
+        </scene>
+        <!--Vehicles View Controller-->
+        <scene sceneID="9H1-Yv-bhC">
+            <objects>
+                <tableViewController id="9ho-7i-uW1" customClass="VehiclesViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8cc-UT-15b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wbS-gh-zDC">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wbS-gh-zDC" id="OoH-Wn-qL7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9ho-7i-uW1" id="HXv-dO-HuN"/>
+                            <outlet property="delegate" destination="9ho-7i-uW1" id="WGB-kl-YKO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="JG1-6f-Fg7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XbO-1K-kl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="1102"/>
         </scene>
         <!--Busca-->
         <scene sceneID="GFr-dN-ikf">

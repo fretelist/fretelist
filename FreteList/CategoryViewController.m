@@ -7,7 +7,7 @@
 //
 
 #import "CategoryViewController.h"
-#import "DealsListViewController.h"
+#import "FreightListViewController.h"
 
 @interface CategoryViewController ()
 
@@ -169,7 +169,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"deals"]) {
-        DealsListViewController *destinationDeals = segue.destinationViewController;
+        FreightListViewController *destinationDeals = segue.destinationViewController;
         destinationDeals.clickedCell = self.touchedCell;
 
     }

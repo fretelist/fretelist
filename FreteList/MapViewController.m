@@ -10,7 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
-#import "CadastroViewController.h"
+#import "SignUpViewController.h"
 #import <MapKit/MapKit.h>
 #import "DetailViewController.h"
 

@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = NO;
     
@@ -302,6 +303,15 @@
     
 }
 
+
+- (IBAction)registerYourVehicle:(id)sender {
+    
+    [self performSegueWithIdentifier:@"vehicleType" sender:self];
+    
+    
+}
+
+
 #pragma mark - Parse
 
 // Peform SignUp
@@ -465,6 +475,8 @@
     
     
 }
+
+
 @end
 
 

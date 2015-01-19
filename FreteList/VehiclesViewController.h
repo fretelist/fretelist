@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface VehiclesViewController : UIViewController
+@interface VehiclesViewController : PFQueryTableViewController
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sLorrySegmented;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *mLorrySegmented;
