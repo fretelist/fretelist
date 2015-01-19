@@ -328,7 +328,7 @@
         user.password = self.signUpPsswdTextField.text;
         user.email = self.signUpEmailTextField.text;
     
-        // Show an alert for success or error
+        // Show an alert for success or error - Write user Keys to Parse
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
             
@@ -415,6 +415,7 @@
                     [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
                 }
                 
+                // Set vehicle type information
                 VehiclesViewController *vehicleTypes = [[VehiclesViewController alloc]init];
                 
                 if (vehicleTypes.sLorrySegmented.selectedSegmentIndex == 0) {
