@@ -429,15 +429,9 @@
                 }
                 
                 // Set vehicle type information
-                VehiclesViewController *vehicleTypes = [[VehiclesViewController alloc]init];
                 
-                if (vehicleTypes.sLorrySegmented.selectedSegmentIndex == 0) {
-                    [freights setObject:@"S Lorry" forKey:@"categories"];
-                }
                 
-                if (vehicleTypes.mLorrySegmented.selectedSegmentIndex == 0) {
-                    [freights setObject:@"M Lorry" forKey:@"categories"];
-                }
+                //.. save vehicle types information to Parse on its related freight company
 
                 // Save it into its class
                 [freights save];

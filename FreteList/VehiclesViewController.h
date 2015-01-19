@@ -11,8 +11,8 @@
 
 @interface VehiclesViewController : PFQueryTableViewController
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *sLorrySegmented;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *mLorrySegmented;
 
+
+- (IBAction)saveVehicleTypes:(id)sender;
 
 @end

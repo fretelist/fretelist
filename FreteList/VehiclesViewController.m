@@ -54,14 +54,35 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated{
+#pragma mark - PFQuery
+
+-(PFQuery *)queryForTable{
     
+    PFQuery *categoriesQuery = [PFQuery queryWithClassName:self.parseClassName];
     
+    [categoriesQuery orderByAscending:@"categories"];
     
-    //self.navigationController.navigationBar.hidden = NO;
+    return categoriesQuery;
 }
 
-#pragma mark - PFQueryTableViewController 
+#pragma mark - PFQueryTableViewController delegate
+
+-(PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
+    
+    static NSString *simpleTableIdentifier = @"CategoriesCell";
+    
+    PFTableViewCell *cateogriesCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cateogriesCell == nil) {
+        cateogriesCell = [[PFTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    UILabel* freightType = (UILabel*)[cateogriesCell viewWithTag:200];
+    freightType.text = [object objectForKey:@"categories"];
+    
+    return cateogriesCell;
+    
+}
 
 -(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -78,4 +99,54 @@
 }
 */
 
+
+#pragma mark - My Actions
+
+- (IBAction)saveVehicleTypes:(id)sender {
+    
+    //Cast it to SignUpView Controller
+    
+    // ..do something here
+    
+    //Dismiss the viewController
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
