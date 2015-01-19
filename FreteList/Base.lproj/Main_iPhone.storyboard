@@ -710,7 +710,7 @@
                                         </state>
                                         <connections>
                                             <action selector="registerYourVehicle:" destination="QLW-Gu-4LS" eventType="touchUpInside" id="WiD-Oh-WDM"/>
-                                            <segue destination="9ho-7i-uW1" kind="modal" identifier="vehicleType" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="hTC-NP-lgb"/>
+                                            <segue destination="a7Y-VP-Oh8" kind="modal" identifier="vehicleType" modalTransitionStyle="crossDissolve" id="5pp-3R-ARE"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pd3-JK-6NT">
@@ -852,12 +852,12 @@
             </objects>
             <point key="canvasLocation" x="437" y="2254"/>
         </scene>
-        <!--Vehicles View Controller-->
+        <!--Cadastro de Veículos-->
         <scene sceneID="9H1-Yv-bhC">
             <objects>
-                <tableViewController id="9ho-7i-uW1" customClass="VehiclesViewController" sceneMemberID="viewController">
+                <tableViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="pageSheet" id="9ho-7i-uW1" customClass="VehiclesViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8cc-UT-15b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -873,11 +873,22 @@
                             <outlet property="delegate" destination="9ho-7i-uW1" id="WGB-kl-YKO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JG1-6f-Fg7"/>
+                    <navigationItem key="navigationItem" title="Cadastro de Veículos" id="JG1-6f-Fg7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="esa-fQ-ZHe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ivv-ep-zGd">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbO-1K-kl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="1102"/>
+            <point key="canvasLocation" x="583" y="1391"/>
         </scene>
         <!--Busca-->
         <scene sceneID="GFr-dN-ikf">
@@ -893,7 +904,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlw-zs-ARE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="1320"/>
+            <point key="canvasLocation" x="1127" y="1320"/>
         </scene>
         <!--Search-->
         <scene sceneID="Ydf-WA-pHr">
@@ -935,7 +946,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKL-LB-9hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="1312"/>
+            <point key="canvasLocation" x="1637" y="1312"/>
         </scene>
         <!--Contato-->
         <scene sceneID="sDZ-5T-c92">
@@ -1188,6 +1199,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZP-YN-Rbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1161" y="410"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IwG-60-a5v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7Y-VP-Oh8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sqP-bk-oy7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9ho-7i-uW1" kind="relationship" relationship="rootViewController" id="QDb-co-30E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ui4-0c-uNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="1391"/>
         </scene>
     </scenes>
     <resources>

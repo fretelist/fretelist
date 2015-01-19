@@ -46,9 +46,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationController.navigationBar.hidden = NO;
+    
+    
+    
 }
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    
+    
+    //self.navigationController.navigationBar.hidden = NO;
+}
+
+#pragma mark - PFQueryTableViewController 
+
+-(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+}
 
 /*
 #pragma mark - Navigation
