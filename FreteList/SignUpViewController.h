@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *userTypeSegmented;
 
+//TextFields
 @property (weak, nonatomic) IBOutlet UITextField *signUpNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signUpEmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signUpPsswdTextField;
@@ -24,17 +25,28 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *signUpPickerState;
 
-//@property (weak, nonatomic) IBOutlet UITextField *signUpStateTextField;
-//@property (weak, nonatomic) IBOutlet UITextField *signUpBdayTextField;
-//@property (weak, nonatomic) IBOutlet UISegmentedControl *signUpStateSegmented;
+//Labels
+@property (weak, nonatomic) IBOutlet UILabel *signUpTelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *signUpCel1Label;
+@property (weak, nonatomic) IBOutlet UILabel *signUpCel2Label;
+@property (weak, nonatomic) IBOutlet UILabel *signUpCityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *signUpStateLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *signUpAddVehicle;
+
+
+
+//Other elements
 @property (weak, nonatomic) IBOutlet UIScrollView *signUpScroll;
-
 @property (nonatomic, strong) UITapGestureRecognizer *signUpGestureRecognizer;
+@property (weak, nonatomic) IBOutlet UIPickerView *signUpStatePicker;
 
 
+
+//Actions
 - (IBAction)performSignUp:(id)sender;
 - (IBAction)registerYourVehicle:(id)sender;
+- (IBAction)animateFields:(id)sender;
 
 
 
