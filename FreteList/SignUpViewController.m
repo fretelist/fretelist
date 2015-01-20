@@ -311,7 +311,7 @@
     
     // Fades out TextFields according to selection
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {
-        [UIView animateWithDuration:1.0
+        [UIView animateWithDuration:0.5
                               delay:0.0
                             options:UIViewAnimationOptionTransitionCrossDissolve
                          animations:^{
@@ -330,21 +330,23 @@
                              
                              //Change the Model value
                              self.signUpCityLabel.layer.position = CGPointMake(self.signUpCityLabel.layer.position.x, 313.0);
+                             self.signUpCityTextField.layer.position = CGPointMake(self.signUpCityTextField.layer.position.x, 313.0);
                              
-                             CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+                             CABasicAnimation *animationCity = [CABasicAnimation animationWithKeyPath:@"position.y"];
                              
                              // Now specify the fromValue for the animation because
                              // the current model value is already the correct toValue
-                             animation.fromValue = @(originalCityY);
-                             animation.toValue = @313.0;
-                             animation.duration = 0.5;
-                             animation.fillMode = kCAFillModeForwards;
-                             animation.removedOnCompletion = NO;
+                             animationCity.fromValue = @(originalCityY);
+                             animationCity.toValue = @313.0;
+                             animationCity.duration = 1.0;
+                             animationCity.fillMode = kCAFillModeForwards;
+                             animationCity.removedOnCompletion = NO;
                              
                              // Use the name of the animated property as key
                              // to override the implicit animation
-                             [self.signUpCityLabel.layer addAnimation:animation
+                             [self.signUpCityLabel.layer addAnimation:animationCity
                                                   forKey:@"position"];
+                             [self.signUpCityTextField.layer addAnimation:animationCity forKey:@"position"];
 
                         
                              
