@@ -655,6 +655,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cidade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFU-bR-sge">
+                                        <rect key="frame" x="20" y="421" width="88" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cel. 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8v-1w-uyM">
                                         <rect key="frame" x="20" y="383" width="88" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
@@ -676,13 +682,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-Qz-YcO">
-                                        <rect key="frame" x="148" y="415" width="152" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lEL-9w-kIi">
+                                        <rect key="frame" x="148" y="295" width="152" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lEL-9w-kIi">
-                                        <rect key="frame" x="148" y="295" width="152" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-Qz-YcO">
+                                        <rect key="frame" x="148" y="415" width="152" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -697,9 +703,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Py-BG-ecl">
-                                        <rect key="frame" x="92" y="429" width="208" height="162"/>
-                                    </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-8H-8TC">
                                         <rect key="frame" x="20" y="128" width="280" height="43"/>
                                         <state key="normal" title="Cadastres seus veículos agora">
@@ -715,12 +718,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cidade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFU-bR-sge">
-                                        <rect key="frame" x="20" y="421" width="88" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Py-BG-ecl">
+                                        <rect key="frame" x="163" y="478" width="123" height="50"/>
+                                    </pickerView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -742,7 +742,7 @@
                         <outlet property="signUpCel2Label" destination="e8v-1w-uyM" id="pj0-w8-TDG"/>
                         <outlet property="signUpCel2TextField" destination="Pd3-JK-6NT" id="P1q-uW-bYM"/>
                         <outlet property="signUpCityLabel" destination="QFU-bR-sge" id="RlA-Pf-bbR"/>
-                        <outlet property="signUpCityTextField" destination="oSx-Qz-YcO" id="FrB-Xc-FDq"/>
+                        <outlet property="signUpCityTextField" destination="oSx-Qz-YcO" id="6RX-BY-Fb6"/>
                         <outlet property="signUpEmailTextField" destination="aSk-Yp-MRD" id="fhX-CJ-83R"/>
                         <outlet property="signUpNameTextField" destination="Imv-JG-IXT" id="igK-Dn-Qis"/>
                         <outlet property="signUpPickerState" destination="3Py-BG-ecl" id="X7N-RM-3KF"/>
@@ -757,7 +757,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsO-mH-Qvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-325" y="830"/>
+            <point key="canvasLocation" x="-325" y="901"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DW4-Ti-xCS">

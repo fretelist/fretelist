@@ -60,7 +60,7 @@
     
 
     // Triggers textFields Fade out
-    [self performAnimation:self];
+    //[self performAnimation:self];
     
 }
 
@@ -325,30 +325,59 @@
                              self.signUpCel2TextField.alpha = 0.0;
                              self.signUpAddVehicle.hidden = YES;
                              
+                             
                              //Save the original value position for cityLabel
                              CGFloat originalCityY = self.signUpCityLabel.layer.position.y;
+                             CGFloat originalStateY = self.signUpStateLabel.layer.position.y;
+                             
                              
                              //Change the Model value
                              self.signUpCityLabel.layer.position = CGPointMake(self.signUpCityLabel.layer.position.x, 313.0);
                              self.signUpCityTextField.layer.position = CGPointMake(self.signUpCityTextField.layer.position.x, 313.0);
+                             self.signUpStateLabel.layer.position = CGPointMake(self.signUpStateLabel.layer.position.x, 353.0);
+                             self.signUpStatePicker.layer.position = CGPointMake(self.signUpStatePicker.layer.position.x, 353.0);
+                             
                              
                              CABasicAnimation *animationCity = [CABasicAnimation animationWithKeyPath:@"position.y"];
+                             CABasicAnimation *animationState = [CABasicAnimation animationWithKeyPath:@"position.y"];
+                             CABasicAnimation *animationStatePicker = [CABasicAnimation animationWithKeyPath:@"position.y"];
                              
                              // Now specify the fromValue for the animation because
                              // the current model value is already the correct toValue
                              animationCity.fromValue = @(originalCityY);
                              animationCity.toValue = @313.0;
+                             
+                             animationState.fromValue = @(originalStateY);
+                             animationState.toValue = @353.0;
+                             
+                             animationState.fromValue = @(originalStateY);
+                             animationState.toValue = @353.0;
+                             
                              animationCity.duration = 1.0;
                              animationCity.fillMode = kCAFillModeForwards;
                              animationCity.removedOnCompletion = NO;
+                             
+                             animationState.duration = 1.0;
+                             animationState.fillMode = kCAFillModeForwards;
+                             animationState.removedOnCompletion = NO;
+                             
+                             animationStatePicker.duration = 1.0;
+                             animationStatePicker.fillMode = kCAFillModeForwards;
+                             animationStatePicker.removedOnCompletion = NO;
                              
                              // Use the name of the animated property as key
                              // to override the implicit animation
                              [self.signUpCityLabel.layer addAnimation:animationCity
                                                   forKey:@"position"];
                              [self.signUpCityTextField.layer addAnimation:animationCity forKey:@"position"];
+                             
+                             [self.signUpStateLabel.layer addAnimation:animationState forKey:@"position"];
+                             
+                             [self.signUpStatePicker.layer addAnimation:animationState forKey:@"position"];
+                             
+                             
 
-                        
+                             
                              
                              
                              
@@ -366,6 +395,105 @@
                          }];
         
     }
+    
+    if (self.userTypeSegmented.selectedSegmentIndex == 1) {
+        
+    
+
+        
+        [UIView animateWithDuration:0.5
+                              delay:0.0
+                            options:UIViewAnimationOptionTransitionCrossDissolve
+                         animations:^{
+                             
+                             // Fades out all fields and labels related to Companies
+                             self.signUpTelLabel.alpha = 1.0;
+                             self.signUpCel1Label.alpha = 1.0;
+                             self.signUpCel2Label.alpha = 1.0;
+                             self.signUpTelephoneTextField.alpha = 1.0;
+                             self.signUpCel1TextField.alpha = 1.0;
+                             self.signUpCel2TextField.alpha = 1.0;
+                             self.signUpAddVehicle.hidden = NO;
+                             
+                             
+                             //Save the original value position for cityLabel
+                             CGFloat originalCityY = self.signUpCityLabel.layer.position.y;
+                             CGFloat originalStateY = self.signUpStateLabel.layer.position.y;
+                             
+                             
+                             //Change the Model value
+                             self.signUpCityLabel.layer.position = CGPointMake(self.signUpCityLabel.layer.position.x, 421.0);
+                             self.signUpCityTextField.layer.position = CGPointMake(self.signUpCityTextField.layer.position.x, 421.0);
+                             self.signUpStateLabel.layer.position = CGPointMake(self.signUpStateLabel.layer.position.x, 464.0);
+                             self.signUpStatePicker.layer.position = CGPointMake(self.signUpStatePicker.layer.position.x, 464.0);
+                             
+                             
+                             CABasicAnimation *animationCity = [CABasicAnimation animationWithKeyPath:@"BackToPosition.y"];
+                             CABasicAnimation *animationState = [CABasicAnimation animationWithKeyPath:@"BackToPosition.y"];
+                             CABasicAnimation *animationStatePicker = [CABasicAnimation animationWithKeyPath:@"BackToPosition.y"];
+                             
+                             // Now specify the fromValue for the animation because
+                             // the current model value is already the correct toValue
+                             animationCity.fromValue = @(originalCityY);
+                             animationCity.toValue = @421.0;
+                             
+                             animationState.fromValue = @(originalStateY);
+                             animationState.toValue = @421.0;
+                             
+                             animationState.fromValue = @(originalStateY);
+                             animationState.toValue = @464.0;
+                             
+                             animationCity.duration = 1.0;
+                             animationCity.fillMode = kCAFillModeForwards;
+                             animationCity.removedOnCompletion = NO;
+                             
+                             animationState.duration = 1.0;
+                             animationState.fillMode = kCAFillModeForwards;
+                             animationState.removedOnCompletion = NO;
+                             
+                             animationStatePicker.duration = 1.0;
+                             animationStatePicker.fillMode = kCAFillModeForwards;
+                             animationStatePicker.removedOnCompletion = NO;
+                             
+                             // Use the name of the animated property as key
+                             // to override the implicit animation
+                             [self.signUpCityLabel.layer addAnimation:animationCity
+                                                               forKey:@"position"];
+                             [self.signUpCityTextField.layer addAnimation:animationCity forKey:@"BackToPosition"];
+                             
+                             [self.signUpStateLabel.layer addAnimation:animationState forKey:@"BackToPosition"];
+                             
+                             [self.signUpStatePicker.layer addAnimation:animationState forKey:@"BackToPosition"];
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             //                             self.signUpStateLabel.frame = StateFrame;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                             //..[Do something here]
+                             
+                             
+                             
+                             
+                             
+                         }];
+
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
 }
 
 
@@ -383,8 +511,6 @@
     
     
     // Perform animation according to selection
-    
-
     
     
 }
