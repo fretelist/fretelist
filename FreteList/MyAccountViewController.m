@@ -24,9 +24,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -48,24 +51,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//  self.accountScroll.scrollEnabled = YES;
-    
+
+    // Set cancel button disabled - enable only if edit is pressed
     [self.cancelBarButtonItem setEnabled:NO];
     [self.cancelBarButtonItem setTintColor:[UIColor clearColor]];
-  
-    PFQuery *query = [PFQuery queryWithClassName:@"User"];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        // Do something with the returned PFObject.
-        
-        self.accountNameTextField.text = [object objectForKey:@"name"];
-        self.accountEmailTextField.text = [object objectForKey:@"email"];
-        self.accountPsswdTextField.text = [object objectForKey:@"password"];
-        self.accountCityTextField.text = [object objectForKey:@"city"];
-        self.accountStateTextField.text = [object objectForKey:@"state"];
-        self.accountCountryTextField.text = [object objectForKey:@"country"];
-        
-        NSLog(@"%@", object);
-    }];
+    
+    
+    // Fetch Current User's information
+    NSString *displayName = [[PFUser currentUser] objectForKey:@"name"];
+    NSString *displayEmail = [[PFUser currentUser] objectForKey:@"email"];
+    NSString *displayPassword = [[PFUser currentUser] objectForKey:@"password"];
+    NSString *displayVehicleType = [[PFUser currentUser] objectForKey:@"vehicleType"];
+    NSString *displayCity = [[PFUser currentUser] objectForKey:@"city"];
+    //do States picker
+    //NSString *displayState = [[PFUser currentUser] objectForKey:@"state"];
+    
+    self.accountNameTextField.text = displayName;
+    self.accountEmailTextField.text = displayEmail;
+    self.accountPsswdTextField.text = displayPassword;
+    self.accountVehicleTypeTextField.text = displayVehicleType;
+    self.accountCityTextField.text = displayCity;
+    
+    //do States picker
+    //self.accountStateTextField.text = displayState;
+    
+    
+    
+    
+    
+
     
     //Enable SaveButton
     self.editBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Editar" style:UIBarButtonItemStylePlain target:self action:@selector(performEditing:)];
@@ -96,9 +110,10 @@
     self.accountNameTextField.enabled =
     self.accountEmailTextField.enabled =
     self.accountPsswdTextField.enabled =
+    self.accountVehicleTypeTextField.enabled =
     self.accountCityTextField.enabled =
-    self.accountStateTextField.enabled =
-    self.accountCountryTextField.enabled = YES;
+    self.accountStateTextField.enabled = YES;
+    
     
     //Show Cancel Button
     [self.cancelBarButtonItem setEnabled:YES];
@@ -125,9 +140,10 @@
     self.accountNameTextField.enabled =
     self.accountEmailTextField.enabled =
     self.accountPsswdTextField.enabled =
+    self.accountVehicleTypeTextField.enabled =
     self.accountCityTextField.enabled =
-    self.accountStateTextField.enabled =
-    self.accountCountryTextField.enabled = NO;
+    self.accountStateTextField.enabled = NO;
+    
     
     [self.cancelBarButtonItem setEnabled:NO];
     [self.cancelBarButtonItem setTintColor:[UIColor clearColor]];
@@ -162,9 +178,9 @@
     if ([self.accountNameTextField.text length]||
                [self.accountEmailTextField.text length]||
                [self.accountPsswdTextField.text length]||
+               [self.accountVehicleTypeTextField.text length]||
                [self.accountCityTextField.text length]||
-               [self.accountStateTextField.text length]||
-               [self.accountCountryTextField.text length] == 0){
+               [self.accountStateTextField.text length] == 0){
         
         //If any field is empty
         UIAlertView *emptyAlert = [[UIAlertView alloc]initWithTitle:@"Alerta:"

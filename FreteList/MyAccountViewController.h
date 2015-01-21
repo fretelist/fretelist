@@ -15,12 +15,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *accountEmailTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *accountPsswdTextField;
+@property (weak, nonatomic) IBOutlet UITextField *accountVehicleTypeTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *accountCityTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *accountStateTextField;
-
-@property (weak, nonatomic) IBOutlet UITextField *accountCountryTextField;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *accountScroll;
 

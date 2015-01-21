@@ -50,90 +50,11 @@
     self.ofertasProximas.dataSource = self;
     self.navigationController.navigationBarHidden = NO;
     
-   //    CLLocationCoordinate2D position;
-    
-//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-//                                                            longitude:151.20
-//                                                                 zoom:6];
-//    
-//    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 108, 320, 208) camera:camera];
-//    
-//    mapView_.myLocationEnabled = YES;
-//    self.view = mapView_;
-//    
-////    [self.view addSubview:self.mapFrame];
-////    
-//    // Creates a marker in the center of the map.
-//    GMSMarker *marker = [[GMSMarker alloc] init];
-//    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-//    marker.title = @"Sydney";
-//    marker.snippet = @"Australia";
-//    marker.map = mapView_;
-
-    
-    
-
-//
-//    GMSCameraUpdate *camera = [GMSCameraUpdate setTarget:position];
-//
-//    
-//    // Create a GMSCameraPosition that tells the map to display the
-    
-
-    
-    
-   
-    
-
-////    
-//    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
-//        NSLog(@"User is currently at %f, %f", geoPoint.latitude, geoPoint.longitude);
-//        
-//        [self.user setObject:geoPoint forKey:@"currentLocation"];
-//        [self.user saveInBackground];
-//        [self.map1 setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude),MKCoordinateSpanMake(0.01, 0.01))];
-//
-//        [self refreshMap:nil];
-//    }];
-
     
     
     
     
 }
-
-//-(void)loadView{
-    
-    //CGRectMake(0, 108, 320, 208)
-   
-
-    
-    
-//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-//                                                            longitude:151.20
-//                                                                 zoom:6];
-    
-//    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 108, 320, 208) camera:camera];
-    
-//    mapView_.myLocationEnabled = YES;
-//    self.map1 = mapView_;
-    
-//    [self.view addSubview:self.map1];
-    
-    // Creates a marker in the center of the map.
-//    GMSMarker *marker = [[GMSMarker alloc] init];
-//    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-//    marker.title = @"Sydney";
-//    marker.snippet = @"Australia";
-//    marker.map = mapView_;
-
-    
-        
-    
-    
-    
-    
-//}
 
 
 
@@ -144,8 +65,6 @@
     [self loadOfertas];
     
     
-    
-
     
 }
 
