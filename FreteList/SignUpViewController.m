@@ -513,7 +513,7 @@
     
     // Instanciate user class and its atributes
     PFUser *user = [PFUser user];
-    PFObject *freights = [PFObject objectWithClassName:@"Freights"];
+    //PFObject *freights = [PFObject objectWithClassName:@"Freights"];
     
     // Show an alert if user or password fields are left in blank
     if (self.signUpEmailTextField.text.length == 0 || self.signUpPsswdTextField.text.length == 0) {
@@ -547,7 +547,7 @@
     // Set Freight users
     if (self.userTypeSegmented.selectedSegmentIndex == 1) {
         
-        [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
+        [user setObject:@"Prestador de Serv." forKey:@"freightUserType"];
         
         
     }

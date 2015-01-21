@@ -60,6 +60,7 @@
 		6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF6B331A218D5400A2B0DF /* SearchViewController.m */; };
 		6CEEE6741A4F6AB200173A2B /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEEE6731A4F6AB200173A2B /* FilterViewController.m */; };
 		6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF14D451A12A88200F2A4BD /* OfferViewController.m */; };
+		6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */; };
 		BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +150,8 @@
 		6CEEE6731A4F6AB200173A2B /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		6CF14D441A12A88200F2A4BD /* OfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferViewController.h; sourceTree = "<group>"; };
 		6CF14D451A12A88200F2A4BD /* OfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferViewController.m; sourceTree = "<group>"; };
+		6CFA657A1A705AC400F2BFE0 /* FreightCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreightCustomCell.h; sourceTree = "<group>"; };
+		6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightCustomCell.m; sourceTree = "<group>"; };
 		BD4EB7B71A6D6BCF0025237F /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
 		BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -307,6 +310,8 @@
 				6C2663B718F87E910004373D /* Ofertas.m */,
 				BD4EB7B71A6D6BCF0025237F /* CategoriesCell.h */,
 				BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */,
+				6CFA657A1A705AC400F2BFE0 /* FreightCustomCell.h */,
+				6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				6CB0FE021A6B242100BE9B61 /* VehiclesViewController.m in Sources */,
 				6C152B361A20DA7B009C759E /* DetailViewController.m in Sources */,
 				6C22B13E190716740094F4A1 /* MapViewController.m in Sources */,
+				6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */,
 				6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */,
 				6C54CA561A1EA422002671B3 /* FreightListViewController.m in Sources */,
 				6C7FA0F11A154DF600E8E298 /* CategoryViewController.m in Sources */,

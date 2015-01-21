@@ -7,6 +7,7 @@
 //
 
 #import "InitialViewController.h"
+#import "FreightListViewController.h"
 #import "MapViewController.h"
 
 @interface InitialViewController ()
@@ -44,10 +45,13 @@
         
         UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         //HomeViewController *home = [storyboard instantiateViewControllerWithIdentifier:@"HomeTab"];
-        MapViewController *closeOffers = [storyboard instantiateViewControllerWithIdentifier:@"HomeTab"];
+        UITabBarController *freightList = [storyboard instantiateViewControllerWithIdentifier:@"HomeTab"];
         
         
-        [self  presentViewController:closeOffers animated:YES completion:nil];
+        
+        [self  presentViewController:freightList animated:YES completion:nil];
+        
+        
         
     } else {
         // show the signup or login screen
@@ -74,6 +78,8 @@
 {
 //     Get the new view controller using [segue destinationViewController].
 //     Pass the selected object to the new view controller.
+    
+    
     
     
 }

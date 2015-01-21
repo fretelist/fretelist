@@ -9,6 +9,7 @@
 #import "FreightListViewController.h"
 #import "DetailViewController.h"
 #import "FilterViewController.h"
+#import "FreightCustomCell.h"
 
 @interface FreightListViewController ()
 
@@ -78,7 +79,7 @@
     if (self) {
         
         // The className to query on
-        self.parseClassName = @"Freights";
+        self.parseClassName = @"_User";
         
         // The key of the PFObject to display in the label of the default cell style
         //self.textKey = @"Name";
@@ -103,7 +104,10 @@
 - (PFQuery *)queryForTable
 {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    [query orderByAscending:@"freightName"];
+    [query orderByAscending:@"name"];
+    
+    [query whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
+    
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
@@ -138,55 +142,25 @@
     
     static NSString *simpleTableIdentifier = @"DealsCell";
     
-    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    FreightCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[FreightCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
     //Offer Title
-    //cell.textLabel.text = [object objectForKey:@"categories"];
-    UILabel* title = (UILabel*)[cell viewWithTag:101];
-    title.text = [object objectForKey:@"freightName"];
-    //cell.textLabel.text = [object objectForKey:@"companyName"];
+    cell.labelName.text = [object objectForKey:@"name"];
+    cell.labelDescription.text = [object objectForKey:@"freightDescription"];
+    cell.labelCity.text = [object objectForKey:@"city"];
+    cell.labelState.text = [object objectForKey:@"freightState"];
+    cell.labelState.text = [object objectForKey:@"telephone"];
     
-    //Offer Subtitle
-    UILabel *subTitle = (UILabel*)[cell viewWithTag:102];
-    subTitle.text = [object objectForKey:@"freightDescription"];
-    
-    //Offer Address
-    UILabel* address = (UILabel*)[cell viewWithTag:103];
-    address.text = [object objectForKey:@"freightTitle"];
-    
-    //Offer Area
-    UILabel* companyArea = (UILabel*)[cell viewWithTag:104];
-    companyArea.text = [object objectForKey:@"freightArea"];
-    
-    //Offer City
-    UILabel* companyCity = (UILabel*)[cell viewWithTag:105];
-    companyCity.text = [object objectForKey:@"freightCity"];
-    
-    //Offer State
-    UILabel* companyState = (UILabel*)[cell viewWithTag:106];
-    companyState.text = [object objectForKey:@"freightState"];
-    
-    //Offer Telephone
-    UILabel* companyTelephone = (UILabel*)[cell viewWithTag:107];
-    companyTelephone.text = [object objectForKey:@"freightTelephone1"];
-    
-    //Offer Opening Time
-    UILabel* companyOpening = (UILabel*)[cell viewWithTag:108];
-    companyOpening.text = [object objectForKey:@"freightOpening"];
-
-    
-    
-
     
     //Offer Photo
-    PFFile *thumbnail = [object objectForKey:@"freightPhoto"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
+//    PFFile *thumbnail = [object objectForKey:@"freightPhoto"];
+//    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+//    thumbnailImageView.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
+//    thumbnailImageView.file = thumbnail;
+//    [thumbnailImageView loadInBackground];
     //
     
     return cell;
