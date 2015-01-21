@@ -507,10 +507,22 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    
+    //segue.destinationViewController
+}
+
 - (IBAction)animateFields:(id)sender {
     
     
-    // Perform animation according to selection
+    // Perform action according to selection
+    if (self.userTypeSegmented.selectedSegmentIndex == 0) {
+        [self.signUpNextBtn setTitle:@"Finish"];
+    } else {
+        [self.signUpNextBtn setTitle:@"Next"];
+    }
+    
     
     
 }
@@ -520,11 +532,10 @@
 
 // Peform SignUp
 
-- (IBAction)performSignUp:(id)sender {
+- (PFUser*)setUpFreightUser:(id)sender {
     
     // Instanciate user class and its atributes
     PFUser *user = [PFUser user];
-    PFObject *usuario = [PFObject objectWithClassName:@"Usuario"];
     PFObject *freights = [PFObject objectWithClassName:@"Freights"];
     
     // Show an alert if user or password fields are left in blank
@@ -534,65 +545,24 @@
         [errorAlertView show];
     }
     
+    
+    // Create a User for normal users
+    user.username = self.signUpEmailTextField.text;
+    user.password = self.signUpPsswdTextField.text;
+    user.email = self.signUpEmailTextField.text;
+    
+    //    user.email = self.signUpEmailTextField.text;
+    [user setObject:self.signUpNameTextField.text forKey:@"name"];
+    [user setObject:self.signUpTelephoneTextField.text forKey:@"telephone"];
+    [user setObject:self.signUpCel1TextField.text forKey:@"mobile1"];
+    [user setObject:self.signUpCel2TextField.text forKey:@"mobile2"];
+    [user setObject:self.signUpCityTextField.text forKey:@"city"];
+    
 //    // Peform signup for normal users
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {
-//
-        // Create a User for normal users
-        user.username = self.signUpEmailTextField.text;
-        user.password = self.signUpPsswdTextField.text;
-        user.email = self.signUpEmailTextField.text;
-    
-        // Show an alert for success or error - Write user Keys to Parse
-        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!error) {
-            
-                //    user.email = self.signUpEmailTextField.text;
-                [usuario setObject:self.signUpNameTextField.text forKey:@"name"];
-                [usuario setObject:self.signUpEmailTextField.text forKey:@"email"];
-                [usuario setObject:self.signUpPsswdTextField.text forKey:@"password"];
-                [usuario setObject:self.signUpTelephoneTextField.text forKey:@"telephone"];
-                [usuario setObject:self.signUpCel1TextField.text forKey:@"mobile1"];
-                [usuario setObject:self.signUpCel2TextField.text forKey:@"mobile2"];
-                [usuario setObject:self.signUpCityTextField.text forKey:@"city"];
-                
-                
-                // Set previously selected segmented on its class
-                if (self.userTypeSegmented.selectedSegmentIndex == 0) {
-                    [usuario setObject:@"Cliente" forKey:@"freightUserType"];
-                }
-                
-                
-                // Save it into its class
-                [usuario save];
-                
-                
-                // Show Alert for success
-                UIAlertView* successAlertView = [[UIAlertView alloc]
-                                                 initWithTitle:@"Sucesso"
-                                                 message:@"Verifique o seu e-mail e confirme o seu cadastro!"
-                                                 delegate:nil
-                                                 cancelButtonTitle:@"Ok"
-                                                 otherButtonTitles:nil, nil];
-                
-                [successAlertView show];
-                
-                
-                // Back to root
-                [self.navigationController  popToRootViewControllerAnimated:YES];
-                
-                
-                
-            } else if(self.signUpNameTextField.text.length == 0) {
-                //Something bad has ocurred
-                NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
-                UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-                [errorAlertView show];
-            }
-        }];
-
-        
-        
-        
+      
+        // Set previously selected segmented on its class
+        [user setObject:@"Cliente" forKey:@"freightUserType"];
 
     }
     
@@ -600,42 +570,34 @@
     // Peform SignUp for Freights
     if (self.userTypeSegmented.selectedSegmentIndex == 1) {
         
-        //Create a user for Freights
-        user.username = self.signUpEmailTextField.text;
-        user.password = self.signUpEmailTextField.text;
-        user.email = self.signUpEmailTextField.text;
+        [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
         
-        // Write freight Keys and SignUp
-        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            
-            if (!error) {
-                
-                // Set previously selected segmented into its Class
-                
-                if (self.userTypeSegmented.selectedSegmentIndex == 1) {
-                    [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
-                }
-                
-                
-                // Set information for freights on its class
-                [freights setObject:self.signUpNameTextField.text forKey:@"freightName"];
-                [freights setObject:self.signUpEmailTextField.text forKey:@"freightEmail"];
-                [freights setObject:self.signUpTelephoneTextField.text forKey:@"freightTelephone"];
-                [freights setObject:self.signUpCel1TextField.text forKey:@"freightMobile1"];
-                [freights setObject:self.signUpCel1TextField.text forKey:@"freightMobile2"];
-                [freights setObject:self.signUpCityTextField.text forKey:@"freightCity"];
-                
-                if (self.userTypeSegmented.selectedSegmentIndex == 1) {
-                    [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
-                }
-                
-                // Set vehicle type information
-                
-                
-                //.. save vehicle types information to Parse on its related freight company
+        
+    }
+    
+    
+    
+    
+    
+    return user;
+    
+    
+    
+    
+}
 
-                // Save it into its class
-                [freights save];
+
+- (IBAction)directUser:(id)sender {
+    
+    PFUser *user = [self setUpFreightUser:sender];
+    
+    // Show an alert for success or error - Write user Keys to Parse
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            
+            // Check the type of user
+            if (self.userTypeSegmented.selectedSegmentIndex == 0) {
                 
                 
                 // Show Alert for success
@@ -648,33 +610,36 @@
                 
                 [successAlertView show];
                 
+
                 
-                // Back to root
+                
+                //Back to root
                 [self.navigationController  popToRootViewControllerAnimated:YES];
                 
                 
+            } else {
                 
-            } else if(self.signUpNameTextField.text.length == 0) {
-                //Something bad has ocurred
-                NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
-                UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-                [errorAlertView show];
+                UINavigationController *vehicleTypeCheck = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleTypeController"];
+                
+                VehiclesViewController *vehicleType = (VehiclesViewController*)[vehicleTypeCheck.viewControllers objectAtIndex:0];
+                vehicleType .freightUser = user;
+                
+                [self presentViewController:vehicleTypeCheck animated:YES completion:nil];
                 
             }
-        }];
-        
-    }
-    
-    
-    
-    
-    
-    
-    
+            
+            
+            
+            
+        } else if(self.signUpNameTextField.text.length == 0) {
+            //Something bad has ocurred
+            NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+        }
+    }];
     
 }
-
-
 @end
 
 

@@ -11,7 +11,8 @@
 
 @interface VehiclesViewController : PFQueryTableViewController
 
-
+@property(nonatomic, strong)PFUser *freightUser;
+@property(nonatomic, strong)NSMutableArray *categoriesSelected;
 - (IBAction)saveVehicleTypes:(id)sender;
 
 @end

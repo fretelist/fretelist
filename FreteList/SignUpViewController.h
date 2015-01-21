@@ -40,13 +40,15 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *signUpScroll;
 @property (nonatomic, strong) UITapGestureRecognizer *signUpGestureRecognizer;
 @property (weak, nonatomic) IBOutlet UIPickerView *signUpStatePicker;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *signUpNextBtn;
 
 
 //Actions
 - (IBAction)performSignUp:(id)sender;
 - (IBAction)registerYourVehicle:(id)sender;
 - (IBAction)animateFields:(id)sender;
+
+- (IBAction)directUser:(id)sender;
 
 
 

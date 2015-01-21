@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 FreteList. All rights reserved.
 //
 
+#import "InitialViewController.h"
 #import "VehiclesViewController.h"
 #import "CategoriesCell.h"
 
@@ -38,6 +39,9 @@
         
         // Whether the built-in pagination is enabled
         self.paginationEnabled = YES;
+        
+        self.categoriesSelected = [[NSMutableArray alloc]init];
+        
     }
     
     return self;
@@ -98,25 +102,26 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    //Identify the cell
-    static NSString *simpleTableIdentifier = @"CategoriesCell";
+    PFObject *categorySelected = [self.objects objectAtIndex:indexPath.row];
     
     //Create a cell object
-    CategoriesCell *categoriesCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    CategoriesCell *categoriesCell =(CategoriesCell*)[tableView cellForRowAtIndexPath:indexPath];
+
     
-    if (categoriesCell == nil) {
-        categoriesCell = [[CategoriesCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    if ([self.categoriesSelected containsObject:categorySelected]) {
+        
+        categoriesCell.accessoryType = UITableViewCellAccessoryNone;
+        [self.categoriesSelected removeObject:categorySelected];
+        
+    } else {
+        
+        categoriesCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        
+        [self.categoriesSelected addObject:categorySelected];
     }
     
     
-    //Set the button visible when the cell is touched
-    CategoriesCell *customCell = [[CategoriesCell alloc]init];
-    //customCell.checkMarkButton = (UILabel*)[categoriesCell viewWithTag:300];
-    customCell.checkMarkButton.hidden = !customCell.checkMarkButton.hidden;
-        
-        
-    //Store which cell/truck type was selected
+
     
     
 }
@@ -139,10 +144,45 @@
     
     //Cast it to SignUpView Controller
     
-    // ..do something here
+    self.freightUser[@"vehicleType"] = self.categoriesSelected;
     
-    //Dismiss the viewController
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.freightUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // Show Alert for success
+            UIAlertView* successAlertView = [[UIAlertView alloc]
+                                             initWithTitle:@"Sucesso"
+                                             message:@"Verifique o seu e-mail e confirme o seu cadastro!"
+                                             delegate:nil
+                                             cancelButtonTitle:@"Ok"
+                                             otherButtonTitles:nil, nil];
+            
+            [successAlertView show];
+            
+            //Present the LoginViewController
+            InitialViewController *vehicleTypeCheck = (InitialViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+            
+            
+            [self presentViewController:vehicleTypeCheck animated:YES completion:nil];
+
+
+
+        } else {
+            
+            // Show Alert for success
+            UIAlertView* successAlertView = [[UIAlertView alloc]
+                                             initWithTitle:@"Error"
+                                             message:@"user-info"
+                                             delegate:nil
+                                             cancelButtonTitle:@"Ok"
+                                             otherButtonTitles:nil, nil];
+            
+            [successAlertView show];
+
+            
+        }
+    }];
+    
+    
     
     
 }

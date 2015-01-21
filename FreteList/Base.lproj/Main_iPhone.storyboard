@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -710,7 +710,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerYourVehicle:" destination="QLW-Gu-4LS" eventType="touchUpInside" id="WiD-Oh-WDM"/>
-                                            <segue destination="a7Y-VP-Oh8" kind="modal" identifier="vehicleType" modalTransitionStyle="crossDissolve" id="5pp-3R-ARE"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pd3-JK-6NT">
@@ -719,7 +718,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Py-BG-ecl">
-                                        <rect key="frame" x="163" y="478" width="123" height="50"/>
+                                        <rect key="frame" x="163" y="426" width="123" height="100"/>
                                     </pickerView>
                                 </subviews>
                             </scrollView>
@@ -727,10 +726,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="3TK-Tp-Z3g">
-                        <barButtonItem key="rightBarButtonItem" title="Enviar" id="7rj-8H-7yD">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="7rj-8H-7yD">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="performSignUp:" destination="QLW-Gu-4LS" id="pde-eI-Jau"/>
+                                <action selector="directUser:" destination="QLW-Gu-4LS" id="kbn-g3-FhQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -745,6 +744,7 @@
                         <outlet property="signUpCityTextField" destination="oSx-Qz-YcO" id="6RX-BY-Fb6"/>
                         <outlet property="signUpEmailTextField" destination="aSk-Yp-MRD" id="fhX-CJ-83R"/>
                         <outlet property="signUpNameTextField" destination="Imv-JG-IXT" id="igK-Dn-Qis"/>
+                        <outlet property="signUpNextBtn" destination="7rj-8H-7yD" id="hpy-fH-tm1"/>
                         <outlet property="signUpPickerState" destination="3Py-BG-ecl" id="X7N-RM-3KF"/>
                         <outlet property="signUpPsswdTextField" destination="F8i-bh-yWT" id="I0T-xz-tKT"/>
                         <outlet property="signUpScroll" destination="HUR-4a-R3I" id="Tga-bp-NbY"/>
@@ -800,7 +800,7 @@
         <!--Initial View Controller-->
         <scene sceneID="3rG-ph-VqR">
             <objects>
-                <viewController id="bl5-AO-xfk" customClass="InitialViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bl5-AO-xfk" customClass="InitialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0uK-RB-iSv"/>
                         <viewControllerLayoutGuide type="bottom" id="Zuk-1f-KF8"/>
@@ -882,18 +882,10 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE7-RH-cyg">
-                                            <rect key="frame" x="270" y="11" width="42" height="21"/>
-                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoriesLabel" destination="uO5-C8-LTS" id="LeC-zU-LZr"/>
-                                    <outlet property="checkMarkButton" destination="rE7-RH-cyg" id="Gsn-cH-X2j"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1235,8 +1227,9 @@
         <!--Navigation Controller-->
         <scene sceneID="IwG-60-a5v">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7Y-VP-Oh8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="VehicleTypeController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a7Y-VP-Oh8" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EWR-z1-cfg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sqP-bk-oy7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1248,7 +1241,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ui4-0c-uNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51" y="1391"/>
+            <point key="canvasLocation" x="85" y="1250"/>
         </scene>
     </scenes>
     <resources>
