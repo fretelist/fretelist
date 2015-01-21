@@ -32,19 +32,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *signUpCityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *signUpStateLabel;
 
+//Buttons
 @property (weak, nonatomic) IBOutlet UIButton *signUpAddVehicle;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *signUpNextBtn;
 
 
 //Other elements
 @property (weak, nonatomic) IBOutlet UIScrollView *signUpScroll;
 @property (nonatomic, strong) UITapGestureRecognizer *signUpGestureRecognizer;
 @property (weak, nonatomic) IBOutlet UIPickerView *signUpStatePicker;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *signUpNextBtn;
+
 
 
 //Actions
-- (IBAction)performSignUp:(id)sender;
+
 - (IBAction)registerYourVehicle:(id)sender;
 - (IBAction)animateFields:(id)sender;
 

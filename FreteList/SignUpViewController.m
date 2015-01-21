@@ -57,7 +57,10 @@
     
     [self.signUpScroll addGestureRecognizer:self.signUpGestureRecognizer];
     
-    
+    //Set Button according to userType
+    if (self.userTypeSegmented.selectedSegmentIndex == 0) {
+        [self.signUpNextBtn setTitle:@"Send"];
+    }
 
     // Triggers textFields Fade out
     //[self performAnimation:self];
@@ -375,31 +378,19 @@
                              
                              [self.signUpStatePicker.layer addAnimation:animationState forKey:@"position"];
                              
-                             
-
-                             
-                             
-                             
-                             
-                             
 //                             self.signUpStateLabel.frame = StateFrame;
                          }
                          completion:^(BOOL finished) {
                             
                              //..[Do something here]
                              
-                             
-                             
-                             
+                          
                              
                          }];
         
     }
     
     if (self.userTypeSegmented.selectedSegmentIndex == 1) {
-        
-    
-
         
         [UIView animateWithDuration:0.5
                               delay:0.0
@@ -464,30 +455,16 @@
                              [self.signUpStateLabel.layer addAnimation:animationState forKey:@"BackToPosition"];
                              
                              [self.signUpStatePicker.layer addAnimation:animationState forKey:@"BackToPosition"];
+                      
                              
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             //                             self.signUpStateLabel.frame = StateFrame;
                          }
                          completion:^(BOOL finished) {
                              
                              //..[Do something here]
-                             
-                             
-                             
-                             
+                      
                              
                          }];
-
-        
-        
-        
-        
+      
     }
     
     
@@ -518,7 +495,7 @@
     
     // Perform action according to selection
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {
-        [self.signUpNextBtn setTitle:@"Finish"];
+        [self.signUpNextBtn setTitle:@"Send"];
     } else {
         [self.signUpNextBtn setTitle:@"Next"];
     }
@@ -546,19 +523,19 @@
     }
     
     
-    // Create a User for normal users
+    // Create a User for normal users or freight companies
     user.username = self.signUpEmailTextField.text;
     user.password = self.signUpPsswdTextField.text;
     user.email = self.signUpEmailTextField.text;
     
-    //    user.email = self.signUpEmailTextField.text;
+
     [user setObject:self.signUpNameTextField.text forKey:@"name"];
     [user setObject:self.signUpTelephoneTextField.text forKey:@"telephone"];
     [user setObject:self.signUpCel1TextField.text forKey:@"mobile1"];
     [user setObject:self.signUpCel2TextField.text forKey:@"mobile2"];
     [user setObject:self.signUpCityTextField.text forKey:@"city"];
     
-//    // Peform signup for normal users
+    // Set normal users
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {
       
         // Set previously selected segmented on its class
@@ -567,7 +544,7 @@
     }
     
     
-    // Peform SignUp for Freights
+    // Set Freight users
     if (self.userTypeSegmented.selectedSegmentIndex == 1) {
         
         [freights setObject:@"Prestador de Serv." forKey:@"freightUserType"];
@@ -577,13 +554,9 @@
     
     
     
-    
-    
     return user;
     
-    
-    
-    
+
 }
 
 
@@ -596,7 +569,7 @@
         if (!error) {
             
             
-            // Check the type of user
+            // Success for normal users
             if (self.userTypeSegmented.selectedSegmentIndex == 0) {
                 
                 
@@ -616,8 +589,9 @@
                 //Back to root
                 [self.navigationController  popToRootViewControllerAnimated:YES];
                 
-                
+                // else is a freight company, send to select a vehicle type
             } else {
+                
                 
                 UINavigationController *vehicleTypeCheck = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleTypeController"];
                 
@@ -629,9 +603,9 @@
             }
             
             
-            
-            
+        // If something is wrong, show an alert
         } else if(self.signUpNameTextField.text.length == 0) {
+            
             //Something bad has ocurred
             NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
