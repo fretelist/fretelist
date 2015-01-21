@@ -1091,18 +1091,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aniversário" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2e-Jb-Nwj">
-                                        <rect key="frame" x="20" y="259" width="86" height="23"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sexo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWe-DR-eDf">
-                                        <rect key="frame" x="20" y="299" width="41" height="23"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="País" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfO-lt-FlV">
                                         <rect key="frame" x="20" y="419" width="33" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
@@ -1128,16 +1116,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRa-HZ-5s8">
                                         <rect key="frame" x="92" y="172" width="208" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D37-xA-J6w">
-                                        <rect key="frame" x="196" y="252" width="104" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubW-dh-t0H">
-                                        <rect key="frame" x="196" y="292" width="104" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1198,11 +1176,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="accountBdayTextField" destination="D37-xA-J6w" id="3uz-KC-OKe"/>
                         <outlet property="accountCityTextField" destination="YO3-fo-ynF" id="CyE-yH-GAA"/>
                         <outlet property="accountCountryTextField" destination="Tf8-FD-fAh" id="n3X-Cc-Kbw"/>
                         <outlet property="accountEmailTextField" destination="nRa-HZ-5s8" id="HM3-jA-qPY"/>
-                        <outlet property="accountGenderTextField" destination="ubW-dh-t0H" id="BfZ-8C-CHQ"/>
                         <outlet property="accountNameTextField" destination="hqX-Ks-QWh" id="toT-Lt-lni"/>
                         <outlet property="accountPsswdTextField" destination="9xO-3P-Jfc" id="vcH-43-NhT"/>
                         <outlet property="accountScroll" destination="hlI-NT-eko" id="7Sc-Dl-A0z"/>

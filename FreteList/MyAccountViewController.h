@@ -16,10 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *accountPsswdTextField;
 
-@property (weak, nonatomic) IBOutlet UITextField *accountBdayTextField;
-
-@property (weak, nonatomic) IBOutlet UITextField *accountGenderTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *accountCityTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *accountStateTextField;

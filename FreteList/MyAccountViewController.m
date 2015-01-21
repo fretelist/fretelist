@@ -38,7 +38,6 @@
     
     [self.accountScroll setContentSize:CGSizeMake(320.0, 680.0)];
     [self.accountScroll setContentSize:CGSizeMake(320.0, 680.0)];
-    
     [self.accountScroll setContentOffset:CGPointMake(0.0, 0.0)];
     
 }
@@ -54,15 +53,13 @@
     [self.cancelBarButtonItem setEnabled:NO];
     [self.cancelBarButtonItem setTintColor:[UIColor clearColor]];
   
-    PFQuery *query = [PFQuery queryWithClassName:@"Usuario"];
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         // Do something with the returned PFObject.
         
         self.accountNameTextField.text = [object objectForKey:@"name"];
         self.accountEmailTextField.text = [object objectForKey:@"email"];
         self.accountPsswdTextField.text = [object objectForKey:@"password"];
-        self.accountBdayTextField.text = [object objectForKey:@"bday"];
-        self.accountGenderTextField.text = [object objectForKey:@"gender"];
         self.accountCityTextField.text = [object objectForKey:@"city"];
         self.accountStateTextField.text = [object objectForKey:@"state"];
         self.accountCountryTextField.text = [object objectForKey:@"country"];
@@ -79,12 +76,6 @@
     //Place into navigation Bar
     self.navigationItem.rightBarButtonItems = self.extraButtons;
     
-
-//    self.accountEmailTextField.text = [NSString stringWithFormat:@"%@",[profile objectForKey:@"email"]];
-   
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-//    [self.accountScroll setFrame:CGRectMake(0.0, 0.0, 0.0, 1300.0)];
     
 }
 
@@ -105,8 +96,6 @@
     self.accountNameTextField.enabled =
     self.accountEmailTextField.enabled =
     self.accountPsswdTextField.enabled =
-    self.accountBdayTextField.enabled =
-    self.accountGenderTextField.enabled =
     self.accountCityTextField.enabled =
     self.accountStateTextField.enabled =
     self.accountCountryTextField.enabled = YES;
@@ -136,8 +125,6 @@
     self.accountNameTextField.enabled =
     self.accountEmailTextField.enabled =
     self.accountPsswdTextField.enabled =
-    self.accountBdayTextField.enabled =
-    self.accountGenderTextField.enabled =
     self.accountCityTextField.enabled =
     self.accountStateTextField.enabled =
     self.accountCountryTextField.enabled = NO;
@@ -175,8 +162,6 @@
     if ([self.accountNameTextField.text length]||
                [self.accountEmailTextField.text length]||
                [self.accountPsswdTextField.text length]||
-               [self.accountBdayTextField.text length]||
-               [self.accountGenderTextField.text length]||
                [self.accountCityTextField.text length]||
                [self.accountStateTextField.text length]||
                [self.accountCountryTextField.text length] == 0){
@@ -205,9 +190,6 @@
         
     }
 
-    
-   
-    
     
 }
 
