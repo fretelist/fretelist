@@ -87,46 +87,37 @@
         
         NSString *regexString = [NSString stringWithFormat:@"%@",self.search.text];
         
-        PFQuery *categoryQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
-        [categoryQuery whereKey:@"categories" matchesRegex:regexString modifiers:@"i"];
+        // regex only works for string fields - do a Search on vehicleType
+//        PFQuery *categoryQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+//        [categoryQuery whereKey:@"vehicleType" matchesRegex:regexString modifiers:@"i"];
         
         
-        PFQuery *nameQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
-        [nameQuery whereKey:@"freightName" matchesRegex:regexString modifiers:@"i"];
+        PFQuery *nameQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+        [nameQuery whereKey:@"name" matchesRegex:regexString modifiers:@"i"];
         
         
-        PFQuery *addressQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
-        [addressQuery whereKey:@"address" matchesRegex:regexString modifiers:@"i"];
-        
-        PFQuery *companyCityQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
-        [companyCityQuery whereKey:@"freightCity" matchesRegex:regexString modifiers:@"i"];
+        PFQuery *companyCityQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+        [companyCityQuery whereKey:@"city" matchesRegex:regexString modifiers:@"i"];
 
         
-        PFQuery *companyAreaQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
-        [companyAreaQuery whereKey:@"freightArea" matchesRegex:regexString modifiers:@"i"];
-        
-        PFQuery *benefitCardQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
-        [benefitCardQuery whereKey:@"freightType" matchesRegex:regexString modifiers:@"i"];
+        PFQuery *companyStateQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+        [companyStateQuery whereKey:@"state" matchesRegex:regexString modifiers:@"i"];
 
         
-        PFQuery *companyStateQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
-        [companyStateQuery whereKey:@"freightState" matchesRegex:regexString modifiers:@"i"];
-
-        
-        PFQuery *descriptionQuery = [[PFQuery alloc] initWithClassName:@"Freights"];
+        PFQuery *descriptionQuery = [[PFQuery alloc] initWithClassName:@"_User"];
         [descriptionQuery whereKey:@"freightDescription" matchesRegex:regexString modifiers:@"i"];
         
         
         NSLog(@"%@", self.search.text);
     
     
-    PFQuery *searchQuery = [PFQuery orQueryWithSubqueries:@[categoryQuery,nameQuery, addressQuery,companyCityQuery,companyAreaQuery,benefitCardQuery,companyStateQuery, descriptionQuery]];
+    PFQuery *searchQuery = [PFQuery orQueryWithSubqueries:@[nameQuery,companyCityQuery,companyStateQuery, descriptionQuery]];
        
         return  searchQuery;
     }
     
     
-    return [[PFQuery alloc] initWithClassName:@"Freights"];
+    return [[PFQuery alloc] initWithClassName:@"_User"];
 }
 
 -(PFTableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
@@ -140,7 +131,7 @@
     
     //PFObject *categoriesObject = [PFObject objectWithClassName:@"Categories"];
     
-    cell.textLabel.text = [object objectForKey:@"freightName"];
+    cell.textLabel.text = [object objectForKey:@"name"];
     
     return cell;
     

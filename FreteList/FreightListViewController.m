@@ -151,8 +151,8 @@
     cell.labelName.text = [object objectForKey:@"name"];
     cell.labelDescription.text = [object objectForKey:@"freightDescription"];
     cell.labelCity.text = [object objectForKey:@"city"];
-    cell.labelState.text = [object objectForKey:@"freightState"];
-    cell.labelState.text = [object objectForKey:@"telephone"];
+    cell.labelState.text = [object objectForKey:@"state"];
+    cell.labelTelephone.text = [object objectForKey:@"telephone"];
     
     
     //Offer Photo

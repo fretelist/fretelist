@@ -57,20 +57,20 @@
     [self.cancelBarButtonItem setTintColor:[UIColor clearColor]];
     
     
-    // Fetch Current User's information
-    NSString *displayName = [[PFUser currentUser] objectForKey:@"name"];
-    NSString *displayEmail = [[PFUser currentUser] objectForKey:@"email"];
-    NSString *displayPassword = [[PFUser currentUser] objectForKey:@"password"];
-    NSString *displayVehicleType = [[PFUser currentUser] objectForKey:@"vehicleType"];
-    NSString *displayCity = [[PFUser currentUser] objectForKey:@"city"];
+//    // Fetch Current User's information
+//    NSString *displayName = [[PFUser currentUser] objectForKey:@"name"];
+//    NSString *displayEmail = [[PFUser currentUser] objectForKey:@"email"];
+//    NSString *displayPassword = [[PFUser currentUser] objectForKey:@"password"];
+//    NSString *displayVehicleType = [[PFUser currentUser] objectForKey:@"vehicleType"];
+//    NSString *displayCity = [[PFUser currentUser] objectForKey:@"city"];
     //do States picker
     //NSString *displayState = [[PFUser currentUser] objectForKey:@"state"];
     
-    self.accountNameTextField.text = displayName;
-    self.accountEmailTextField.text = displayEmail;
-    self.accountPsswdTextField.text = displayPassword;
-    self.accountVehicleTypeTextField.text = displayVehicleType;
-    self.accountCityTextField.text = displayCity;
+//    self.accountNameTextField.text = displayName;
+//    self.accountEmailTextField.text = displayEmail;
+//    self.accountPsswdTextField.text = displayPassword;
+//    self.accountVehicleTypeTextField.text = displayVehicleType;
+//    self.accountCityTextField.text = displayCity;
     
     //do States picker
     //self.accountStateTextField.text = displayState;
