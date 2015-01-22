@@ -47,6 +47,8 @@
 @property (nonatomic, strong) NSArray *userArray;
 @property (nonatomic, strong) NSArray *freightUserArray;
 
+//Strings
+@property (nonatomic, strong) NSString *pickerSelectedString;
 
 //Actions
 

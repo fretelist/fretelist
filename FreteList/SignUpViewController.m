@@ -98,6 +98,18 @@
     return [self.pickerData objectAtIndex:row];
 }
 
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
+//        self.pickerData = [self.pickerData objectAtIndex:row];
+//    
+       //self.pickerSelectedString = [self.pickerData objectAtIndex:row];
+        NSLog(@"Selected State: %@",[NSString stringWithFormat:@"%@",self.pickerData]);
+    
+    
+    
+    
+}
+
 #pragma mark - UITextFieldDelegate
 
 // Triggered when the user starts typing
@@ -526,6 +538,7 @@
         
         //Initialize Picker data for Normal Users
         self.pickerData = self.userArray;
+//        [self.signUpStatePicker selectedRowInComponent:0];
         [self.signUpStatePicker reloadAllComponents];
         
         
@@ -534,6 +547,7 @@
         [self.signUpNextBtn setTitle:@"Next"];
         
         self.pickerData = self.freightUserArray;
+//        [self.signUpStatePicker selectedRowInComponent:0];
         [self.signUpStatePicker reloadAllComponents];
         
     }
@@ -571,6 +585,7 @@
     [user setObject:self.signUpCel1TextField.text forKey:@"mobile1"];
     [user setObject:self.signUpCel2TextField.text forKey:@"mobile2"];
     [user setObject:self.signUpCityTextField.text forKey:@"city"];
+    [user setObject:[NSString stringWithFormat:@"%ld",(long)[self.signUpStatePicker selectedRowInComponent:0]] forKey:@"State"];
     
     // Set normal users
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {
