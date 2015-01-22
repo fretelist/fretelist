@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "FilterViewController.h"
 #import "FreightCustomCell.h"
+#import "VehicleTypeFilterViewController.h"
 
 @interface FreightListViewController ()
 
@@ -111,7 +112,7 @@
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
-        [query whereKey:@"categories" containedIn:self.featCategories];
+        [query whereKey:@"categories" containsAllObjectsInArray:self.featCategories];
         
     }
     
@@ -123,14 +124,15 @@
     return query;
 }
 
-
--(void) sendFeaturesToMainController:(NSArray *)arrayOfFeatures{
+-(void)sendVehicleTypeFiltersToMainController:(NSArray *)arrayOfVehicleTypes{
     
-    self.featCategories = arrayOfFeatures;
+    self.featCategories = arrayOfVehicleTypes;
     [self loadObjects];
     [self.tableView reloadData];
     
 }
+
+
 
 -(void)sendTypesToMainController:(NSArray *)arrayOfTypes{
     self.featTypes = arrayOfTypes;
@@ -195,22 +197,71 @@
 - (IBAction)showFilter:(id)sender {
     
     //Cast FilterViewController
-    FilterViewController *filterView = (FilterViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
+//    FilterViewController *filterView = (FilterViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
+//    
+//    //Init with an empty array, as I have not selected anything yet
+//    filterView.catArray = [[NSMutableArray alloc] initWithArray:self.featCategories];
+//    filterView.delegate = self;
+//    
+//    filterView.typesArray = [[NSMutableArray alloc] initWithArray:self.featTypes];
+//    filterView.delegate = self;
+//    
+//    [self presentViewController:filterView animated:YES completion:nil];
     
-    //Init with an empty array, as I have not selected anything yet
-    filterView.catArray = [[NSMutableArray alloc] initWithArray:self.featCategories];
-    filterView.delegate = self;
     
-    filterView.typesArray = [[NSMutableArray alloc] initWithArray:self.featTypes];
-    filterView.delegate = self;
+    UIActionSheet *filterOptions = [[UIActionSheet alloc]initWithTitle:@"Filter"
+                                                            delegate:self
+                                                    cancelButtonTitle:@"Close"
+                                                destructiveButtonTitle:@"Clear Filters"
+                                                    otherButtonTitles:@"Filter Vehicle Type",@"Company Type", nil];
     
-    [self presentViewController:filterView animated:YES completion:nil];
-    
-    
-    
+    [filterOptions showInView:self.view];
     
     
 }
+
+
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    switch (buttonIndex) {
+        case 0:{
+            
+            
+            
+            break;
+        }
+            
+        case 1:{
+            
+            //Cast FilterViewController
+            UINavigationController *navigationView = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleTypeFilterNav" ];
+            
+            VehicleTypeFilterViewController *filterView = (VehicleTypeFilterViewController*)[navigationView.viewControllers objectAtIndex:0];
+            
+            
+            //Init with an empty array, as I have not selected anything yet
+                        
+            filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featTypes];
+            filterView.delegate = self;
+            
+            [self presentViewController:navigationView animated:YES completion:nil];
+            
+            
+            break;
+        }
+        default:
+            break;
+    }
+    
+}
+
+
+
+
+
+
+
 @end
 
 

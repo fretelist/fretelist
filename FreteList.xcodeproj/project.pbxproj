@@ -56,6 +56,7 @@
 		6CA6030219DF7F3100A09EAC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030119DF7F3100A09EAC /* Parse.framework */; };
 		6CA6030419DF7F4100A09EAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030319DF7F4100A09EAC /* Bolts.framework */; };
 		6CB0FE021A6B242100BE9B61 /* VehiclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0FE011A6B242100BE9B61 /* VehiclesViewController.m */; };
+		6CDAF9561A71B00B002D1D7A /* VehicleTypeFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */; };
 		6CDF6B311A21390F00A2B0DF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF6B301A21390F00A2B0DF /* Icon.png */; };
 		6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF6B331A218D5400A2B0DF /* SearchViewController.m */; };
 		6CEEE6741A4F6AB200173A2B /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEEE6731A4F6AB200173A2B /* FilterViewController.m */; };
@@ -143,6 +144,8 @@
 		6CA6030319DF7F4100A09EAC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
 		6CB0FE001A6B242100BE9B61 /* VehiclesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehiclesViewController.h; sourceTree = "<group>"; };
 		6CB0FE011A6B242100BE9B61 /* VehiclesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehiclesViewController.m; sourceTree = "<group>"; };
+		6CDAF9541A71B00B002D1D7A /* VehicleTypeFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleTypeFilterViewController.h; sourceTree = "<group>"; };
+		6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleTypeFilterViewController.m; sourceTree = "<group>"; };
 		6CDF6B301A21390F00A2B0DF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		6CDF6B321A218D5400A2B0DF /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		6CDF6B331A218D5400A2B0DF /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -352,6 +355,8 @@
 				6CF14D451A12A88200F2A4BD /* OfferViewController.m */,
 				6CEEE6721A4F6AB200173A2B /* FilterViewController.h */,
 				6CEEE6731A4F6AB200173A2B /* FilterViewController.m */,
+				6CDAF9541A71B00B002D1D7A /* VehicleTypeFilterViewController.h */,
+				6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */,
 				6CB0FE001A6B242100BE9B61 /* VehiclesViewController.h */,
 				6CB0FE011A6B242100BE9B61 /* VehiclesViewController.m */,
 			);
@@ -461,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CDAF9561A71B00B002D1D7A /* VehicleTypeFilterViewController.m in Sources */,
 				6C28B03518F8411300B3EC49 /* LoginViewController.m in Sources */,
 				6C3248D018EDBF2A00F7FE8C /* AppDelegate.m in Sources */,
 				6C28B02F18F83F4C00B3EC49 /* SignUpViewController.m in Sources */,

@@ -7,9 +7,10 @@
 //
 
 #import <Parse/Parse.h>
-#import "FilterViewController.h"
+#import "VehicleTypeFilterViewController.h"
 
-@interface FreightListViewController : PFQueryTableViewController<sendFeatures>
+@interface FreightListViewController : PFQueryTableViewController<vehicleTypeFilterDelegate,UIActionSheetDelegate>
+
 
 @property(nonatomic, strong) PFObject *clickedCell;
 @property(nonatomic, strong) PFObject *clickedDeal;
