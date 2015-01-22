@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 tenhoDesconto. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "SignUpViewController.h"
 #import "HomeViewController.h"
 #import "VehiclesViewController.h"
@@ -37,12 +38,16 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
+    // Keep showing navigation
     self.navigationController.navigationBarHidden = NO;
     
+    //Enable Scroll
     self.signUpScroll.scrollEnabled = YES;
     
+    //Set scroll size
     self.signUpScroll.contentSize = CGSizeMake(0.0, 416.0); // 416
     
+    //Set delegates for TextFields
     self.signUpNameTextField.delegate =
     self.signUpEmailTextField.delegate =
     self.signUpPsswdTextField.delegate =
@@ -51,22 +56,47 @@
     self.signUpCel2TextField.delegate =
     self.signUpCityTextField.delegate = self;
     
+    //Set gesture so the user can tap on screen and dismiss the keyboard
     self.signUpGestureRecognizer.delegate = self;
-    
     self.signUpGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(signUpHideKeyboard:)];
-    
     [self.signUpScroll addGestureRecognizer:self.signUpGestureRecognizer];
     
-    //Set Button according to userType
-    if (self.userTypeSegmented.selectedSegmentIndex == 0) {
-        [self.signUpNextBtn setTitle:@"Send"];
-    }
+    //Connect Picker's data
+    self.signUpStatePicker.delegate = self;
+    self.signUpStatePicker.dataSource = self;
+
+    self.userArray = @[@"AC",@"AL",@"AM",@"AP",@"BA",@"CE",@"DF",@"ES",@"GO",@"MA",@"MS",@"MT",@"MG",@"PA",@"PR",@"PE",@"PI",@"RJ",@"RN",@"RS",@"RO",@"RR",@"SC",@"SP",@"SE",@"TO"];
+    
+    self.freightUserArray = @[@"RJ",@"SP"];
+    
+    [self animateFields:self];
+    
+    
 
     // Triggers textFields Fade out
     //[self performAnimation:self];
     
 }
 
+
+
+#pragma mark - UIPickerViewDelegate
+// Number of columns of data
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+// Number of rows of data
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
+    return [self.pickerData count];
+}
+
+// The Data to return for the row and component(column) that's being passed in
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    return [self.pickerData objectAtIndex:row];
+}
 
 #pragma mark - UITextFieldDelegate
 
@@ -230,7 +260,6 @@
 }
 
 #pragma Mark - My Actions
-
 
 // Hide Keyboard when Tapped
 -(void) signUpHideKeyboard: (id) sender {
@@ -468,9 +497,6 @@
     }
     
     
-    
-    
-    
 }
 
 
@@ -495,11 +521,22 @@
     
     // Perform action according to selection
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {
+        
         [self.signUpNextBtn setTitle:@"Send"];
+        
+        //Initialize Picker data for Normal Users
+        self.pickerData = self.userArray;
+        [self.signUpStatePicker reloadAllComponents];
+        
+        
     } else {
+        
         [self.signUpNextBtn setTitle:@"Next"];
+        
+        self.pickerData = self.freightUserArray;
+        [self.signUpStatePicker reloadAllComponents];
+        
     }
-    
     
     
 }

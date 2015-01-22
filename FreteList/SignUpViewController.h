@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface SignUpViewController : UIViewController<UITextFieldDelegate, UIGestureRecognizerDelegate, PFSignUpViewControllerDelegate>
+@interface SignUpViewController : UIViewController<UITextFieldDelegate, UIGestureRecognizerDelegate, PFSignUpViewControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *userTypeSegmented;
@@ -42,6 +42,10 @@
 @property (nonatomic, strong) UITapGestureRecognizer *signUpGestureRecognizer;
 @property (weak, nonatomic) IBOutlet UIPickerView *signUpStatePicker;
 
+//Arrays
+@property (nonatomic, strong) NSArray *pickerData;
+@property (nonatomic, strong) NSArray *userArray;
+@property (nonatomic, strong) NSArray *freightUserArray;
 
 
 //Actions
