@@ -100,12 +100,10 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
-//        self.pickerData = [self.pickerData objectAtIndex:row];
-//    
-       //self.pickerSelectedString = [self.pickerData objectAtIndex:row];
-        NSLog(@"Selected State: %@",[NSString stringWithFormat:@"%@",self.pickerData]);
+    //Store the selected State in a String Variable
+    self.pickerSelectedString = [self.pickerData objectAtIndex:row];
     
-    
+    NSLog(@"Selected State: %@",[NSString stringWithFormat:@"%@",self.pickerSelectedString]);
     
     
 }
@@ -585,7 +583,7 @@
     [user setObject:self.signUpCel1TextField.text forKey:@"mobile1"];
     [user setObject:self.signUpCel2TextField.text forKey:@"mobile2"];
     [user setObject:self.signUpCityTextField.text forKey:@"city"];
-    [user setObject:[NSString stringWithFormat:@"%ld",(long)[self.signUpStatePicker selectedRowInComponent:0]] forKey:@"State"];
+    [user setObject:self.pickerSelectedString forKey:@"state"];
     
     // Set normal users
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {

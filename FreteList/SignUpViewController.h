@@ -43,7 +43,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *signUpStatePicker;
 
 //Arrays
-@property (nonatomic, strong) NSArray *pickerData;
+@property (nonatomic, strong) NSMutableArray *pickerData;
 @property (nonatomic, strong) NSArray *userArray;
 @property (nonatomic, strong) NSArray *freightUserArray;
 

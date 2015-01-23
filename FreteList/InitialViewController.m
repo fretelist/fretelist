@@ -8,6 +8,7 @@
 
 #import "InitialViewController.h"
 #import "FreightListViewController.h"
+#import "SignUpViewController.h"
 #import "MapViewController.h"
 
 @interface InitialViewController ()
@@ -37,6 +38,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    UINavigationController *initialNavigation = [[UINavigationController alloc]init];
+    
+    
     
     
     PFUser *currentUser = [PFUser currentUser];
@@ -71,18 +76,36 @@
 }
 
 
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-//     Get the new view controller using [segue destinationViewController].
-//     Pass the selected object to the new view controller.
+#pragma mark - My Actions
+
+- (IBAction)btnSignUp:(id)sender {
+    
+    UINavigationController *signUpNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"SignUpControllerNav"];
+    
+//    SignUpViewController *signUpView = (SignUpViewController*)[signUpNav.viewControllers objectAtIndex:0];
     
     
+    [self presentViewController:signUpNav animated:YES completion:nil];
     
     
 }
+
+
+#pragma mark - Navigation
+
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+////     Get the new view controller using [segue destinationViewController].
+////     Pass the selected object to the new view controller.
+//    
+//        
+//        
+//    
+//    
+//}
+
 
 
 @end

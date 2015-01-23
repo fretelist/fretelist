@@ -10,4 +10,6 @@
 
 @interface InitialViewController : UIViewController
 
+- (IBAction)btnSignUp:(id)sender;
+
 @end
