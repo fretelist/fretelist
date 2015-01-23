@@ -10,6 +10,7 @@
 #import "SignUpViewController.h"
 #import "HomeViewController.h"
 #import "VehiclesViewController.h"
+#import "InitialViewController.h"
 
 @interface SignUpViewController ()
 
@@ -535,7 +536,7 @@
         [self.signUpNextBtn setTitle:@"Send"];
         
         //Initialize Picker data for Normal Users
-        self.pickerData = self.userArray;
+        self.pickerData = [NSMutableArray arrayWithArray:self.userArray] ;
 //        [self.signUpStatePicker selectedRowInComponent:0];
         [self.signUpStatePicker reloadAllComponents];
         
@@ -544,7 +545,7 @@
         
         [self.signUpNextBtn setTitle:@"Next"];
         
-        self.pickerData = self.freightUserArray;
+        self.pickerData = [NSMutableArray arrayWithArray:self.freightUserArray];
 //        [self.signUpStatePicker selectedRowInComponent:0];
         [self.signUpStatePicker reloadAllComponents];
         
@@ -612,6 +613,14 @@
 
 - (IBAction)directUser:(id)sender {
     
+    
+    if (self.signUpEmailTextField.text.length == 0 || self.signUpPsswdTextField.text.length == 0) {
+        
+        UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Preencha os campos em branco!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [errorAlertView show];
+    }
+    
+    
     PFUser *user = [self setUpFreightUser:sender];
     
     // Show an alert for success or error - Write user Keys to Parse
@@ -633,28 +642,31 @@
                 
                 [successAlertView show];
                 
-
+                
+                //Present the LoginViewController
+                InitialViewController *loginScreen = (InitialViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
                 
                 
-                //Back to root
-                [self.navigationController  popToRootViewControllerAnimated:YES];
+                [self presentViewController:loginScreen animated:YES completion:nil];
                 
                 // else is a freight company, send to select a vehicle type
             } else {
                 
-                
+                //Instantiate the navigation
                 UINavigationController *vehicleTypeCheck = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleTypeController"];
                 
+                // Check the vehicle type for the specific user
                 VehiclesViewController *vehicleType = (VehiclesViewController*)[vehicleTypeCheck.viewControllers objectAtIndex:0];
                 vehicleType .freightUser = user;
                 
+                // Present categories to be chosen
                 [self presentViewController:vehicleTypeCheck animated:YES completion:nil];
                 
             }
             
             
         // If something is wrong, show an alert
-        } else if(self.signUpNameTextField.text.length == 0) {
+        } else {
             
             //Something bad has ocurred
             NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
@@ -662,6 +674,14 @@
             [errorAlertView show];
         }
     }];
+    
+}
+
+- (IBAction)btnCancelSignUp:(id)sender {
+    
+    // Cancel the signup by dismissing the view Controller
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
     
 }
 @end

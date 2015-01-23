@@ -769,6 +769,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="3TK-Tp-Z3g">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="hDf-ZL-Uhm">
+                            <connections>
+                                <action selector="btnCancelSignUp:" destination="QLW-Gu-4LS" id="buJ-qj-FZs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="7rj-8H-7yD">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

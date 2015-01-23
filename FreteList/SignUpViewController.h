@@ -56,6 +56,7 @@
 - (IBAction)animateFields:(id)sender;
 
 - (IBAction)directUser:(id)sender;
+- (IBAction)btnCancelSignUp:(id)sender;
 
 
 
