@@ -107,12 +107,15 @@
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query orderByAscending:@"name"];
     
+    [query includeKey:@"categories"];
+    
     [query whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
     
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
-        [query whereKey:@"categories" containsAllObjectsInArray:self.featCategories];
+        [query whereKey:@"vehicleType" containedIn:self.featCategories];
+//        [query whereKey:@"vehicleType" containsAllObjectsInArray:self.featCategories];
         
     }
     
@@ -126,9 +129,15 @@
 
 -(void)sendVehicleTypeFiltersToMainController:(NSArray *)arrayOfVehicleTypes{
     
-    self.featCategories = arrayOfVehicleTypes;
+    self.featCategories = [arrayOfVehicleTypes copy];
+    
+        NSLog(@"Vehicle type filter selected in freight list: %@",self.featCategories);
+    
+    
     [self loadObjects];
     [self.tableView reloadData];
+    
+    
     
 }
 
@@ -196,18 +205,6 @@
 
 - (IBAction)showFilter:(id)sender {
     
-    //Cast FilterViewController
-//    FilterViewController *filterView = (FilterViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
-//    
-//    //Init with an empty array, as I have not selected anything yet
-//    filterView.catArray = [[NSMutableArray alloc] initWithArray:self.featCategories];
-//    filterView.delegate = self;
-//    
-//    filterView.typesArray = [[NSMutableArray alloc] initWithArray:self.featTypes];
-//    filterView.delegate = self;
-//    
-//    [self presentViewController:filterView animated:YES completion:nil];
-    
     
     UIActionSheet *filterOptions = [[UIActionSheet alloc]initWithTitle:@"Filter"
                                                             delegate:self
@@ -242,7 +239,7 @@
             
             //Init with an empty array, as I have not selected anything yet
                         
-            filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featTypes];
+            filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featCategories];
             filterView.delegate = self;
             
             [self presentViewController:navigationView animated:YES completion:nil];
