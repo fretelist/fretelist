@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface InitialViewController : UIViewController
+- (IBAction)btnLogin:(id)sender;
 
 - (IBAction)btnSignUp:(id)sender;
 

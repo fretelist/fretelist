@@ -620,7 +620,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dwV-iF-xYq"/>
+                    <navigationItem key="navigationItem" id="dwV-iF-xYq">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="FfN-5X-63C">
+                            <connections>
+                                <action selector="cancelLogin:" destination="pSL-mr-JIk" id="Veb-rW-h97"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="loginScrollView" destination="fUh-yb-Ixp" id="6SH-3F-X9S"/>
@@ -842,7 +848,23 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jt8-3Q-A8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1245" y="428"/>
+            <point key="canvasLocation" x="-1149" y="524"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iQr-Tp-wce">
+            <objects>
+                <navigationController storyboardIdentifier="LoginControllerNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jAB-uZ-U2c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WMu-97-TqL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pSL-mr-JIk" kind="relationship" relationship="rootViewController" id="Qm3-dv-Ve9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf1-s5-nM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828" y="-156"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="3rG-ph-VqR">
@@ -877,7 +899,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pSL-mr-JIk" kind="push" id="J1o-Sr-aDW"/>
+                                            <action selector="btnLogin:" destination="bl5-AO-xfk" eventType="touchUpInside" id="mPz-uY-flM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -890,7 +912,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pU8-gZ-kjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-737" y="436"/>
+            <point key="canvasLocation" x="-653" y="524"/>
         </scene>
         <!--Contato-->
         <scene sceneID="MNN-rF-nZS">
