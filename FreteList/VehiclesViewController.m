@@ -144,7 +144,12 @@
     
     //Cast it to SignUpView Controller
     
-    self.freightUser[@"vehicleType"] = self.categoriesSelected;
+    
+    for (PFObject *obj in self.categoriesSelected) {
+        [self.freightUser addObject:obj forKey:@"vehicleType"];
+    }
+    
+    //self.freightUser[@"vehicleType"] = self.categoriesSelected;
     
     [self.freightUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {

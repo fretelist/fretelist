@@ -114,7 +114,8 @@
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
-        [query whereKey:@"categories" containedIn:self.featCategories];
+        PFObject *category = [self.featCategories objectAtIndex:0];
+        [query whereKey:@"categories" equalTo:category];
         
     }
     

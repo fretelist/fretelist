@@ -117,6 +117,17 @@
     return NO;
 }
 
+- (int) array:(NSArray *)array indexForObject:(PFObject *)object
+{
+    int index = 0;
+    for (int i = 0; i<array.count; i++) {
+        if([[array[i] objectId] isEqual:[object objectId]]){
+            index = i;
+        }
+    }
+    return index;
+}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -126,10 +137,11 @@
     PFTableViewCell *categoriesCell =(PFTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
     
     
-    if ([self.vehicleTypeFilter containsObject:categorySelected]) {
+    if ([self array:self.vehicleTypeFilter containsPFObjectById:categorySelected]){
         
         categoriesCell.accessoryType = UITableViewCellAccessoryNone;
-        [self.vehicleTypeFilter removeObject:categorySelected];
+        int index = [self array:self.vehicleTypeFilter indexForObject:categorySelected];
+        [self.vehicleTypeFilter removeObjectAtIndex:index];
         
     } else {
         
