@@ -180,7 +180,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    // Recognizes touched Deal
+    // Recognizes touched Freight
     self.clickedDeal = [self objectAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"detail" sender:self];
     
