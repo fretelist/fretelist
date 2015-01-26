@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"Vehicle type filter selected: %@",self.vehicleTypeFilter);
     // Do any additional setup after loading the view.
 }
 
@@ -42,7 +44,8 @@
         // Whether the built-in pagination is enabled
         self.paginationEnabled = YES;
         
-        self.vehicleTypeFilter = [[NSMutableArray alloc]init];
+        //we should not init the filter type.
+        //self.vehicleTypeFilter = [[NSMutableArray alloc]init];
         
     }
     
@@ -93,15 +96,25 @@
     //Fetch the lable object string
     categoriesCell.textLabel.text = [object objectForKey:@"categories"];
     
-    if ([self.vehicleTypeFilter containsObject:object]) {
+    if ([self array:self.vehicleTypeFilter containsPFObjectById:object]){
         
         categoriesCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        
     
     }
     
     return categoriesCell;
     
+}
+
+- (BOOL) array:(NSArray *)array containsPFObjectById:(PFObject *)object
+{
+    //Check if the object's objectId matches the objectId of any member of the array.
+    for (PFObject *arrayObject in array){
+        if ([[arrayObject objectId] isEqual:[object objectId]]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 

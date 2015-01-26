@@ -584,7 +584,7 @@
     [user setObject:self.signUpCel1TextField.text forKey:@"mobile1"];
     [user setObject:self.signUpCel2TextField.text forKey:@"mobile2"];
     [user setObject:self.signUpCityTextField.text forKey:@"city"];
-    [user setObject:self.pickerSelectedString forKey:@"state"];
+    //[user setObject:self.pickerSelectedString forKey:@"state"];
     
     // Set normal users
     if (self.userTypeSegmented.selectedSegmentIndex == 0) {
