@@ -24,6 +24,7 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *gestureRecognizer;
 
+- (IBAction)cancelLogin:(id)sender;
 
 - (IBAction)performLogin:(id)sender;
 

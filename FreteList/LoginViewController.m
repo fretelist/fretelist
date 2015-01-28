@@ -110,7 +110,6 @@
 
 #pragma Mark - My Actions
 
-
 // Hide Keyboard when Tapped
 -(void) hideKeyboard: (id) sender {
     
@@ -127,6 +126,12 @@
 }
 
 // Perform Login when send button is pressed
+- (IBAction)cancelLogin:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 - (IBAction)performLogin:(id)sender {
     
     // Peforms login whith what was typed in both textFields

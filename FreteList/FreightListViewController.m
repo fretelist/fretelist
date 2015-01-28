@@ -107,12 +107,19 @@
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query orderByAscending:@"name"];
     
+    [query includeKey:@"categories"];
+    
     [query whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
     
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
+<<<<<<< HEAD
         [query whereKey:@"categories" equalTo:[self.featCategories objectAtIndex:0]];
+=======
+        [query whereKey:@"vehicleType" containedIn:self.featCategories];
+//        [query whereKey:@"vehicleType" containsAllObjectsInArray:self.featCategories];
+>>>>>>> bd0ac094ed20de6a239dec8ec69033149f07b60e
         
     }
     
@@ -126,10 +133,20 @@
 
 -(void)sendVehicleTypeFiltersToMainController:(NSArray *)arrayOfVehicleTypes{
     
+<<<<<<< HEAD
     self.featCategories = arrayOfVehicleTypes;
     NSLog(@"FilterCat: %@",self.featCategories);
+=======
+    self.featCategories = [arrayOfVehicleTypes copy];
+    
+        NSLog(@"Vehicle type filter selected in freight list: %@",self.featCategories);
+    
+    
+>>>>>>> bd0ac094ed20de6a239dec8ec69033149f07b60e
     [self loadObjects];
     [self.tableView reloadData];
+    
+    
     
 }
 
@@ -172,7 +189,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    // Recognizes touched Deal
+    // Recognizes touched Freight
     self.clickedDeal = [self objectAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"detail" sender:self];
     
@@ -196,18 +213,6 @@
 
 
 - (IBAction)showFilter:(id)sender {
-    
-    //Cast FilterViewController
-//    FilterViewController *filterView = (FilterViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"filterView" ];
-//    
-//    //Init with an empty array, as I have not selected anything yet
-//    filterView.catArray = [[NSMutableArray alloc] initWithArray:self.featCategories];
-//    filterView.delegate = self;
-//    
-//    filterView.typesArray = [[NSMutableArray alloc] initWithArray:self.featTypes];
-//    filterView.delegate = self;
-//    
-//    [self presentViewController:filterView animated:YES completion:nil];
     
     
     UIActionSheet *filterOptions = [[UIActionSheet alloc]initWithTitle:@"Filter"
@@ -242,7 +247,11 @@
             
             
             //Init with an empty array, as I have not selected anything yet
+<<<<<<< HEAD
             
+=======
+                        
+>>>>>>> bd0ac094ed20de6a239dec8ec69033149f07b60e
             filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featCategories];
             filterView.delegate = self;
             

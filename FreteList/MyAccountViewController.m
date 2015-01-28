@@ -99,7 +99,11 @@
     
     [PFUser logOut];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UINavigationController *backToInitNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self presentViewController:backToInitNav animated:YES completion:nil];
 }
 
 - (void)performEditing:(id)sender {

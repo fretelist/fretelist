@@ -59,7 +59,9 @@
         
         
     } else {
-        // show the signup or login screen
+        // show Initial view
+        
+        
     }
 
     
@@ -78,6 +80,19 @@
 
 
 #pragma mark - My Actions
+
+- (IBAction)btnLogin:(id)sender {
+    
+
+    UINavigationController *loginNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"LoginControllerNav"];
+    
+    //    SignUpViewController *signUpView = (SignUpViewController*)[signUpNav.viewControllers objectAtIndex:0];
+    
+    
+    [self presentViewController:loginNav animated:YES completion:nil];
+    
+    
+}
 
 - (IBAction)btnSignUp:(id)sender {
     
