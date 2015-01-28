@@ -112,7 +112,7 @@
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
-        [query whereKey:@"categories" containsAllObjectsInArray:self.featCategories];
+        [query whereKey:@"categories" equalTo:[self.featCategories objectAtIndex:0]];
         
     }
     
@@ -127,6 +127,7 @@
 -(void)sendVehicleTypeFiltersToMainController:(NSArray *)arrayOfVehicleTypes{
     
     self.featCategories = arrayOfVehicleTypes;
+    NSLog(@"FilterCat: %@",self.featCategories);
     [self loadObjects];
     [self.tableView reloadData];
     
@@ -241,9 +242,12 @@
             
             
             //Init with an empty array, as I have not selected anything yet
-                        
-            filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featTypes];
+            
+            filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featCategories];
             filterView.delegate = self;
+            
+//            filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featTypes];
+//            filterView.delegate = self;
             
             [self presentViewController:navigationView animated:YES completion:nil];
             

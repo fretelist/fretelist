@@ -16,5 +16,6 @@
 @property(nonatomic, weak) IBOutlet UILabel *labelState;
 @property(nonatomic, weak) IBOutlet UILabel *labelTelephone;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelType;
 
 @end

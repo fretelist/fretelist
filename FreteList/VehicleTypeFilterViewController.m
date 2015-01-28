@@ -93,7 +93,11 @@
     //Fetch the lable object string
     categoriesCell.textLabel.text = [object objectForKey:@"categories"];
     
+    NSLog(@"VehicleType: %@",self.vehicleTypeFilter);
+    NSLog(@"Object: %@",object);
+    
     if ([self.vehicleTypeFilter containsObject:object]) {
+    
         
         categoriesCell.accessoryType = UITableViewCellAccessoryCheckmark;
         
