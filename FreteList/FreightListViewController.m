@@ -11,6 +11,7 @@
 #import "FilterViewController.h"
 #import "FreightCustomCell.h"
 #import "VehicleTypeFilterViewController.h"
+#import "CompanyTypeFilterViewController.h"
 
 @interface FreightListViewController ()
 
@@ -96,6 +97,8 @@
         
         //Initialize the array for types I will filter
         self.featTypes = [[NSArray alloc]init];
+        
+        self.companyType = @"";
     }
     return self;
 }
@@ -111,11 +114,17 @@
     
     [query whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
     
+    if (![self.companyType isEqualToString:@""]) {
+        
+        [query whereKey:@"companyType" equalTo:self.companyType];
+    }
+    
+    
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
     if ([self.featCategories count] > 0) {
+        
         [query whereKey:@"vehicleType" containedIn:self.featCategories];
-//        [query whereKey:@"vehicleType" containsAllObjectsInArray:self.featCategories];
         
     }
     
@@ -129,16 +138,24 @@
 
 -(void)sendVehicleTypeFiltersToMainController:(NSArray *)arrayOfVehicleTypes{
     
+
     self.featCategories = [arrayOfVehicleTypes copy];
-    
-        NSLog(@"Vehicle type filter selected in freight list: %@",self.featCategories);
-    
-    
+
     [self loadObjects];
+    
     [self.tableView reloadData];
     
     
     
+}
+
+-(void)sendCompanyTypeFiltersToMainController:(NSString *)companyTypes{
+    
+    self.companyType = companyTypes;
+    
+    [self loadObjects];
+    
+    [self.tableView reloadData];
 }
 
 
@@ -224,6 +241,11 @@
     switch (buttonIndex) {
         case 0:{
             
+            self.featCategories = [[NSArray alloc]init];
+            self.companyType = @"";
+            
+            [self loadObjects];
+            [self.tableView reloadData];
             
             
             break;
@@ -238,12 +260,35 @@
             
             
             //Init with an empty array, as I have not selected anything yet
-                        
+
             filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featCategories];
             filterView.delegate = self;
             
+//            filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.featTypes];
+//            filterView.delegate = self;
+            
             [self presentViewController:navigationView animated:YES completion:nil];
             
+            
+            break;
+        }
+            
+        case 2:{
+            
+            //Cast FilterViewController
+            UINavigationController *navigationView = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"CompanyTypeFilterNav" ];
+            
+           CompanyTypeFilterViewController *filterView = (CompanyTypeFilterViewController*)[navigationView.viewControllers objectAtIndex:0];
+            
+            
+            //Init with an empty array, as I have not selected anything yet
+            
+            filterView.companyTypeSelected = self.companyType;
+            filterView.delegate = self;
+            
+            
+            [self presentViewController:navigationView animated:YES completion:nil];
+
             
             break;
         }
@@ -252,9 +297,6 @@
     }
     
 }
-
-
-
 
 
 

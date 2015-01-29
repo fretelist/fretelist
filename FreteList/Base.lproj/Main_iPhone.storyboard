@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -187,6 +187,12 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6j-0V-LCw">
+                                            <rect key="frame" x="166" y="114" width="134" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -195,6 +201,7 @@
                                     <outlet property="labelName" destination="Lz8-me-mQH" id="xwJ-OP-zTY"/>
                                     <outlet property="labelState" destination="Bph-1v-k31" id="9eJ-uQ-qly"/>
                                     <outlet property="labelTelephone" destination="Oo1-ot-mBo" id="HKW-i4-tHF"/>
+                                    <outlet property="labelType" destination="f6j-0V-LCw" id="yJA-uT-ZyS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -221,7 +228,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w75-FV-dKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111" y="-423"/>
+            <point key="canvasLocation" x="1111" y="-425"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="SPE-VI-gYv">
@@ -540,6 +547,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkx-CQ-GGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2446" y="-463"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="yf4-pw-GOg">
+            <objects>
+                <tableViewController id="hsL-8I-TJA" customClass="CompanyTypeFilterViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vwo-ia-m6l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="companyTypeCell" textLabel="T7M-10-gcn" style="IBUITableViewCellStyleDefault" id="AWC-JY-GqS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AWC-JY-GqS" id="Ab5-QP-k68">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T7M-10-gcn">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="hsL-8I-TJA" id="ZWU-5L-OSA"/>
+                            <outlet property="delegate" destination="hsL-8I-TJA" id="K6X-s0-A2M"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="BJR-92-CK2">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="BKb-M7-K83">
+                            <connections>
+                                <action selector="closeCompanyTypeFilter:" destination="hsL-8I-TJA" id="fSP-9f-1c7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Apply" id="ucA-e8-cok">
+                            <connections>
+                                <action selector="applyCompanyTypeFilter:" destination="hsL-8I-TJA" id="nxw-oq-eAX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wA9-AD-yQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="197"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u0p-Ix-Utl">
+            <objects>
+                <navigationController storyboardIdentifier="CompanyTypeFilterNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wSv-uY-aCQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ym6-cJ-xGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hsL-8I-TJA" kind="relationship" relationship="rootViewController" id="xH2-n7-mnv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGg-5D-jxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="197"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eSg-Gd-sDE">
