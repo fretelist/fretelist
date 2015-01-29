@@ -64,6 +64,7 @@
 		6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF14D451A12A88200F2A4BD /* OfferViewController.m */; };
 		6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */; };
 		BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */; };
+		BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059811A7A464300624119 /* ForgotPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,8 @@
 		6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightCustomCell.m; sourceTree = "<group>"; };
 		BD4EB7B71A6D6BCF0025237F /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
 		BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCell.m; sourceTree = "<group>"; };
+		BD5059801A7A464300624119 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		BD5059811A7A464300624119 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +343,8 @@
 				6C28B03118F83FB000B3EC49 /* InitialViewController.m */,
 				6C28B03318F8411300B3EC49 /* LoginViewController.h */,
 				6C28B03418F8411300B3EC49 /* LoginViewController.m */,
+				BD5059801A7A464300624119 /* ForgotPasswordViewController.h */,
+				BD5059811A7A464300624119 /* ForgotPasswordViewController.m */,
 				6C2663CF18F885090004373D /* HomeViewController.h */,
 				6C2663D018F885090004373D /* HomeViewController.m */,
 				6C1C9A8818FD874C000A80FB /* MyAccountViewController.h */,
@@ -489,6 +494,7 @@
 				6CEEE6741A4F6AB200173A2B /* FilterViewController.m in Sources */,
 				6C3248CC18EDBF2A00F7FE8C /* main.m in Sources */,
 				6C2663B818F87E910004373D /* Ofertas.m in Sources */,
+				BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */,
 				6C1C9A8A18FD874C000A80FB /* MyAccountViewController.m in Sources */,
 				6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */,
 				6C28B03218F83FB000B3EC49 /* InitialViewController.m in Sources */,
