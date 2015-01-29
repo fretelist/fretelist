@@ -65,6 +65,8 @@
 		6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */; };
 		BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */; };
 		BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059811A7A464300624119 /* ForgotPasswordViewController.m */; };
+		BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059841A7A972100624119 /* ContactUsViewController.m */; };
+		BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5059861A7A999600624119 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,9 @@
 		BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCell.m; sourceTree = "<group>"; };
 		BD5059801A7A464300624119 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		BD5059811A7A464300624119 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		BD5059831A7A972100624119 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		BD5059841A7A972100624119 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		BD5059861A7A999600624119 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */,
 				6C702AFE19018F66000FB43A /* MapKit.framework in Frameworks */,
 				6C2538BD190023E0009E7386 /* AVFoundation.framework in Frameworks */,
 				6C2663C018F883C20004373D /* AudioToolbox.framework in Frameworks */,
@@ -232,6 +238,7 @@
 		6C3248BE18EDBF2A00F7FE8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD5059861A7A999600624119 /* MessageUI.framework */,
 				6CA6030319DF7F4100A09EAC /* Bolts.framework */,
 				6CA6030119DF7F3100A09EAC /* Parse.framework */,
 				6C1EA05B19055E2900A82530 /* GoogleMaps.bundle */,
@@ -369,6 +376,8 @@
 				6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */,
 				6CB0FE001A6B242100BE9B61 /* VehiclesViewController.h */,
 				6CB0FE011A6B242100BE9B61 /* VehiclesViewController.m */,
+				BD5059831A7A972100624119 /* ContactUsViewController.h */,
+				BD5059841A7A972100624119 /* ContactUsViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -491,6 +500,7 @@
 				6CE7DD391A799D98007837D8 /* CompanyTypeFilterViewController.m in Sources */,
 				6C2663D118F885090004373D /* HomeViewController.m in Sources */,
 				6C37BD1B18F736010096D8E3 /* Users.m in Sources */,
+				BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */,
 				6CEEE6741A4F6AB200173A2B /* FilterViewController.m in Sources */,
 				6C3248CC18EDBF2A00F7FE8C /* main.m in Sources */,
 				6C2663B818F87E910004373D /* Ofertas.m in Sources */,
