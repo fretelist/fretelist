@@ -26,6 +26,8 @@
     
     self.search.delegate = self;
     
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,7 +73,7 @@
     
 //    [self.searchResults removeAllObjects];
     [self becomeFirstResponder];
-  
+    [self.search.text isEqualToString:@""];
     
     
 }
@@ -91,11 +93,11 @@
 //        PFQuery *categoryQuery = [[PFQuery alloc] initWithClassName:@"_User"];
 //        [categoryQuery whereKey:@"vehicleType" matchesRegex:regexString modifiers:@"i"];
         
-        
+ 
         PFQuery *nameQuery = [[PFQuery alloc] initWithClassName:@"_User"];
         [nameQuery whereKey:@"name" matchesRegex:regexString modifiers:@"i"];
-        
-        
+
+
         PFQuery *companyCityQuery = [[PFQuery alloc] initWithClassName:@"_User"];
         [companyCityQuery whereKey:@"city" matchesRegex:regexString modifiers:@"i"];
 
@@ -130,8 +132,16 @@
     }
     
     //PFObject *categoriesObject = [PFObject objectWithClassName:@"Categories"];
-    
+
+        
     cell.textLabel.text = [object objectForKey:@"name"];
+   
+//   if ([[nameObject objectForKey:@"freightUserType"] isEqualToString:@"Prestador de Serv."]) {
+    
+    
+    
+//    }
+    
     
     return cell;
     
