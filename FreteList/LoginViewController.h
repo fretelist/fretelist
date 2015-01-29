@@ -28,4 +28,6 @@
 
 - (IBAction)performLogin:(id)sender;
 
+- (IBAction)performPsswdReset:(id)sender;
+
 @end

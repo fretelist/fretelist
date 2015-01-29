@@ -7,6 +7,7 @@
 //
 
 #import "ForgotPasswordViewController.h"
+#import <Parse/Parse.h>
 
 @interface ForgotPasswordViewController ()
 
@@ -14,15 +15,22 @@
 
 @implementation ForgotPasswordViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.textFieldResetPassword.delegate = self;
+}
+
+
+
 
 /*
 #pragma mark - Navigation
@@ -34,4 +42,66 @@
 }
 */
 
+#pragma mark - UITextFieldDelegate
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+}
+
+#pragma mark - My Actions
+
+- (IBAction)cancelForgotPassword:(id)sender {
+    
+    //Dismiss the keyboard
+    [self resignFirstResponder];
+    
+    //Cancel Forgot Password
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
+
+- (IBAction)resetPassword:(id)sender {
+    
+    // Send a reset link to user
+    [PFUser requestPasswordResetForEmailInBackground:self.textFieldResetPassword.text block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            
+            //Show an alert about success
+            UIAlertView *resetSuccess = [[UIAlertView alloc]initWithTitle:@"Sucesso"
+                                                                 message:@"Confira o seu e-mail e obtenha uma nova senha!"
+                                                                delegate:self
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles: nil];
+            
+            [resetSuccess show];
+            
+            //Dismiss View
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
+        }else{
+            
+            //Show an alert about error
+            UIAlertView *resetError = [[UIAlertView alloc]initWithTitle:@"Erro"
+                                                                  message:@"Tente Novamente!"
+                                                                 delegate:self
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles: nil];
+            [resetError show];
+        }
+        
+    }];
+    
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
