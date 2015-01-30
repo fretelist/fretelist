@@ -103,7 +103,15 @@
     [user setObject:self.txtFieldCel2.text forKey:@"mobile2"];
     [user setObject:self.txtFieldCity.text forKey:@"city"];
     [user setObject:@"Prestador de Serv." forKey:@"freightUserType"];
-    //[user setObject:self.pickerSelectedString forKey:@"state"];
+    
+    // Set State
+    if (self.segmentedState.selectedSegmentIndex == 0) {
+        [user setObject:@"RJ" forKey:@"state"];
+    }
+    
+    if (self.segmentedState.selectedSegmentIndex == 1) {
+        [user setObject:@"SP" forKey:@"state"];
+    }
     
     // Set normal users
     if (self.segmentedCompanyType.selectedSegmentIndex == 0) {
