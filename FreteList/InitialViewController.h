@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InitialViewController : UIViewController
+@interface InitialViewController : UIViewController<UIAlertViewDelegate>
 - (IBAction)btnLogin:(id)sender;
 
 - (IBAction)btnSignUp:(id)sender;

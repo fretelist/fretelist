@@ -10,6 +10,7 @@
 #import "FreightListViewController.h"
 #import "SignUpViewController.h"
 #import "MapViewController.h"
+#import "VehiclesViewController.h"
 
 @interface InitialViewController ()
 
@@ -77,7 +78,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+#pragma mark - AlertView Delegates
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"NO");
+            break;
+        
+        case 1:{
+            NSLog(@"YES");
+            
+            UINavigationController *companyRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"SignUpControllerNav"];
+            
+            [self presentViewController:companyRegistration animated:YES completion:nil];
+            
+            break;
+        }
+        default:
+            break;
+            
+    }
+    
+    
+}
 
 #pragma mark - My Actions
 
@@ -96,12 +120,19 @@
 
 - (IBAction)btnSignUp:(id)sender {
     
-    UINavigationController *signUpNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"SignUpControllerNav"];
-    
-//    SignUpViewController *signUpView = (SignUpViewController*)[signUpNav.viewControllers objectAtIndex:0];
     
     
-    [self presentViewController:signUpNav animated:YES completion:nil];
+    UIAlertView *userType = [[UIAlertView alloc]initWithTitle:@"FreteList"
+                                                      message:@"Are you a freight company?"
+                                                    delegate:self
+                                            cancelButtonTitle:@"No"
+                                            otherButtonTitles:@"Yes", nil];
+    
+    [userType show];
+
+    
+    
+    
     
     
 }

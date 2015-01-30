@@ -53,6 +53,7 @@
 		6C702AFE19018F66000FB43A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C702AFD19018F66000FB43A /* MapKit.framework */; };
 		6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */; };
 		6C7FA0F11A154DF600E8E298 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7FA0F01A154DF600E8E298 /* CategoryViewController.m */; };
+		6C9A09341A7C43960033E895 /* FreighCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */; };
 		6CA6030219DF7F3100A09EAC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030119DF7F3100A09EAC /* Parse.framework */; };
 		6CA6030419DF7F4100A09EAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030319DF7F4100A09EAC /* Bolts.framework */; };
 		6CB0FE021A6B242100BE9B61 /* VehiclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0FE011A6B242100BE9B61 /* VehiclesViewController.m */; };
@@ -144,6 +145,8 @@
 		6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cartoes.m; sourceTree = "<group>"; };
 		6C7FA0EF1A154DF600E8E298 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		6C7FA0F01A154DF600E8E298 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		6C9A09321A7C43960033E895 /* FreighCompanyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreighCompanyTableViewController.h; sourceTree = "<group>"; };
+		6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreighCompanyTableViewController.m; sourceTree = "<group>"; };
 		6CA6030119DF7F3100A09EAC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1/Parse.framework"; sourceTree = "<group>"; };
 		6CA6030319DF7F4100A09EAC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
 		6CB0FE001A6B242100BE9B61 /* VehiclesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehiclesViewController.h; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				6C28B03118F83FB000B3EC49 /* InitialViewController.m */,
 				6C28B03318F8411300B3EC49 /* LoginViewController.h */,
 				6C28B03418F8411300B3EC49 /* LoginViewController.m */,
+				6C9A09321A7C43960033E895 /* FreighCompanyTableViewController.h */,
+				6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */,
 				BD5059801A7A464300624119 /* ForgotPasswordViewController.h */,
 				BD5059811A7A464300624119 /* ForgotPasswordViewController.m */,
 				6C2663CF18F885090004373D /* HomeViewController.h */,
@@ -494,6 +499,7 @@
 				6C22B13E190716740094F4A1 /* MapViewController.m in Sources */,
 				6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */,
 				6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */,
+				6C9A09341A7C43960033E895 /* FreighCompanyTableViewController.m in Sources */,
 				6C54CA561A1EA422002671B3 /* FreightListViewController.m in Sources */,
 				6C7FA0F11A154DF600E8E298 /* CategoryViewController.m in Sources */,
 				BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */,
