@@ -120,10 +120,10 @@
 		6C3248BF18EDBF2A00F7FE8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6C3248C118EDBF2A00F7FE8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6C3248C318EDBF2A00F7FE8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6C3248C718EDBF2A00F7FE8C /* tenhoDesconto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tenhoDesconto-Info.plist"; sourceTree = "<group>"; };
+		6C3248C718EDBF2A00F7FE8C /* FreteList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreteList-Info.plist"; sourceTree = "<group>"; };
 		6C3248C918EDBF2A00F7FE8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C3248CB18EDBF2A00F7FE8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6C3248CD18EDBF2A00F7FE8C /* tenhoDesconto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tenhoDesconto-Prefix.pch"; sourceTree = "<group>"; };
+		6C3248CD18EDBF2A00F7FE8C /* FreteList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FreteList-Prefix.pch"; sourceTree = "<group>"; };
 		6C3248CE18EDBF2A00F7FE8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C3248CF18EDBF2A00F7FE8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C3248D218EDBF2A00F7FE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -292,10 +292,10 @@
 			isa = PBXGroup;
 			children = (
 				6CDF6B301A21390F00A2B0DF /* Icon.png */,
-				6C3248C718EDBF2A00F7FE8C /* tenhoDesconto-Info.plist */,
+				6C3248C718EDBF2A00F7FE8C /* FreteList-Info.plist */,
 				6C3248C818EDBF2A00F7FE8C /* InfoPlist.strings */,
 				6C3248CB18EDBF2A00F7FE8C /* main.m */,
-				6C3248CD18EDBF2A00F7FE8C /* tenhoDesconto-Prefix.pch */,
+				6C3248CD18EDBF2A00F7FE8C /* FreteList-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -588,8 +588,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: br.com.tenhoDesconto.tenhoDescontoV2";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: br.com.tenhoDesconto.tenhoDescontoV2";
+				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: FreteList.FreteList";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Production IOS Push Services: FreteList.FreteList";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -629,8 +629,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: br.com.tenhoDesconto.tenhoDescontoV2";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: br.com.tenhoDesconto.tenhoDescontoV2";
+				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: FreteList.FreteList";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Production IOS Push Services: FreteList.FreteList";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
