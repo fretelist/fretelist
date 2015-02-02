@@ -68,6 +68,7 @@
 		BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059811A7A464300624119 /* ForgotPasswordViewController.m */; };
 		BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059841A7A972100624119 /* ContactUsViewController.m */; };
 		BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5059861A7A999600624119 /* MessageUI.framework */; };
+		BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,8 @@
 		BD5059831A7A972100624119 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		BD5059841A7A972100624119 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		BD5059861A7A999600624119 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BD754D821A7FD4B5002F1177 /* NormalUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalUserTableViewController.h; sourceTree = "<group>"; };
+		BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalUserTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +358,8 @@
 				6C28B03418F8411300B3EC49 /* LoginViewController.m */,
 				6C9A09321A7C43960033E895 /* FreighCompanyTableViewController.h */,
 				6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */,
+				BD754D821A7FD4B5002F1177 /* NormalUserTableViewController.h */,
+				BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */,
 				BD5059801A7A464300624119 /* ForgotPasswordViewController.h */,
 				BD5059811A7A464300624119 /* ForgotPasswordViewController.m */,
 				6C2663CF18F885090004373D /* HomeViewController.h */,
@@ -511,6 +516,7 @@
 				6C3248CC18EDBF2A00F7FE8C /* main.m in Sources */,
 				6C2663B818F87E910004373D /* Ofertas.m in Sources */,
 				BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */,
+				BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */,
 				6C1C9A8A18FD874C000A80FB /* MyAccountViewController.m in Sources */,
 				6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */,
 				6C28B03218F83FB000B3EC49 /* InitialViewController.m in Sources */,
