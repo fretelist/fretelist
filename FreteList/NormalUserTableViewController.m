@@ -55,7 +55,10 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
-            
+            //Something bad has ocurred
+            NSString *successString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+            UIAlertView *successAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:successString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [successAlertView show];
             
             [self dismissViewControllerAnimated:YES completion:nil];
             
