@@ -115,6 +115,17 @@
     
 }
 
+- (IBAction)addUserPhoto:(id)sender {
+    
+    UIActionSheet *showUploadOptions = [[UIActionSheet alloc]initWithTitle:@"Photo"
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Cancel"
+                                                    destructiveButtonTitle:nil
+                                                         otherButtonTitles:@"From Camera",@"From Library", nil];
+    [showUploadOptions showInView:self.view];
+    
+}
+
 
 - (PFUser*)setUpFreightUser:(id)sender {
     
@@ -169,6 +180,8 @@
         
     }
     
+    [user setObject:self.txtViewDescription.text forKey:@"freightDescription"];
+    
     
     
     return user;
@@ -176,7 +189,49 @@
     
 }
 
+#pragma mark - UIImagePickerDelegate
 
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    UIImage *freighUserImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.imgViewUserPhoto.image = freighUserImage;
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
+
+#pragma mark - UIActionSheetDelegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    switch (buttonIndex) {
+        case 0:{
+            
+            break;
+        }
+        case 1:{
+            UIImagePickerController *Libray = [[UIImagePickerController alloc]init];
+            Libray.delegate = self;
+            Libray.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:Libray animated:YES completion:nil];
+            
+            break;
+        }
+        case 2:{
+            UIImagePickerController *Camera = [[UIImagePickerController alloc]init];
+            Camera.delegate = self;
+            Camera.sourceType = UIImagePickerControllerSourceTypeCamera;
+            [self presentViewController:Camera animated:YES completion:nil];
+            
+            break;
+        }
+        
+        default:
+            break;
+    }
+    
+    
+}
 
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FreighCompanyTableViewController : UITableViewController<UITextFieldDelegate>
+@interface FreighCompanyTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;
@@ -23,11 +23,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldCity;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedState;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedCompanyType;
+@property (weak, nonatomic) IBOutlet UITextView *txtViewDescription;
+@property (weak, nonatomic) IBOutlet UIImageView *imgViewUserPhoto;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnNext;
 
 - (IBAction)cancelSignUp:(id)sender;
 - (IBAction)chooseVehicleType:(id)sender;
+- (IBAction)addUserPhoto:(id)sender;
 
 @end

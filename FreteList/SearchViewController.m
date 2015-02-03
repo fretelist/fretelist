@@ -78,6 +78,16 @@
     
 }
 
+-(void)loadObjects{
+    
+    
+    if ([self.search.text isEqualToString:@""]) {
+        [super loadObjects];
+    }
+    
+    
+}
+
 
 #pragma mark - PFQueryTableViewController
 

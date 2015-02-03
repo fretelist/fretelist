@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -1360,7 +1360,7 @@
             <objects>
                 <tableViewController id="rAe-ts-e8P" customClass="FreighCompanyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BNV-Yd-tkd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1378,6 +1378,26 @@
                                                         <segment title="Private"/>
                                                     </segments>
                                                 </segmentedControl>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="100" id="eu6-6W-08D">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eu6-6W-08D" id="yku-Ca-Kc2">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWH-Mj-5Q6">
+                                                    <rect key="frame" x="8" y="1" width="85" height="91"/>
+                                                    <state key="normal" title="Add Image">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addUserPhoto:" destination="rAe-ts-e8P" eventType="touchUpInside" id="PXY-L9-DCP"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLJ-v3-6jv">
+                                                    <rect key="frame" x="128" y="8" width="84" height="84"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1535,6 +1555,26 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="100" id="o9q-8z-GuI">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9q-8z-GuI" id="LXE-KF-KEC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyC-7I-51H">
+                                                    <rect key="frame" x="8" y="14" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iih-wD-OeM">
+                                                    <rect key="frame" x="124" y="15" width="188" height="77"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1543,6 +1583,7 @@
                             <outlet property="delegate" destination="rAe-ts-e8P" id="luJ-Z9-gxK"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Cadastro Empresa" id="AyK-4D-dxk">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="4vS-ae-5B2">
                             <connections>
@@ -1558,6 +1599,7 @@
                     <connections>
                         <outlet property="btnCancel" destination="4vS-ae-5B2" id="ChC-LI-esC"/>
                         <outlet property="btnNext" destination="sqs-Ai-suh" id="bLe-10-igP"/>
+                        <outlet property="imgViewUserPhoto" destination="aLJ-v3-6jv" id="v4G-6S-IeL"/>
                         <outlet property="segmentedCompanyType" destination="4HK-on-CjE" id="vXE-B5-mRB"/>
                         <outlet property="segmentedState" destination="h24-kw-v5g" id="flQ-R2-2aE"/>
                         <outlet property="txtFieldCel1" destination="TDg-7d-SYQ" id="6Te-op-DPi"/>
@@ -1567,11 +1609,12 @@
                         <outlet property="txtFieldName" destination="Whs-V2-bH4" id="ZZy-lF-o1K"/>
                         <outlet property="txtFieldPassword" destination="kwA-Xm-VUK" id="60a-7S-19e"/>
                         <outlet property="txtFieldTel" destination="4NC-uE-hO9" id="Bbw-ft-W33"/>
+                        <outlet property="txtViewDescription" destination="Iih-wD-OeM" id="0EQ-gx-zqn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwo-1X-V5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-537" y="1284"/>
+            <point key="canvasLocation" x="-537" y="1150"/>
         </scene>
         <!--Cadastro Usuário-->
         <scene sceneID="ZZ6-qT-Fg9">
