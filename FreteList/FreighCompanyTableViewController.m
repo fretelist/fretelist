@@ -24,11 +24,50 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.txtFieldName.delegate =
+    self.txtFieldEmail.delegate =
+    self.txtFieldPassword.delegate =
+    self.txtFieldTel.delegate =
+    self.txtFieldCel1.delegate =
+    self.txtFieldCel2.delegate =
+    self.txtFieldCity.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    if (textField == self.txtFieldName) {
+        [self.txtFieldEmail becomeFirstResponder];
+    }
+    else if (textField == self.txtFieldEmail) {
+        [self.txtFieldPassword becomeFirstResponder];
+    }
+    else if (textField == self.txtFieldPassword) {
+        [self.txtFieldTel becomeFirstResponder];
+    }
+    else if (textField == self.txtFieldTel) {
+        [self.txtFieldCel1 becomeFirstResponder];
+    }
+    else if (textField == self.txtFieldCel1) {
+        
+        [self.txtFieldCel2 becomeFirstResponder];
+    }
+    else if (textField == self.txtFieldCel2){
+        
+        [self.txtFieldCity becomeFirstResponder];
+    }
+    else if (textField == self.txtFieldCity){
+        [self.txtFieldCity resignFirstResponder];
+    }
+    
+    return YES;
 }
 
 

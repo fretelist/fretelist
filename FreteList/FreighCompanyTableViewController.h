@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FreighCompanyTableViewController : UITableViewController
+@interface FreighCompanyTableViewController : UITableViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;

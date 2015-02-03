@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NormalUserTableViewController : UITableViewController
+@interface NormalUserTableViewController : UITableViewController<UITextFieldDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserName;

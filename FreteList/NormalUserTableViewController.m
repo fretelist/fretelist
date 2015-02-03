@@ -28,10 +28,42 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.txtNormalUserName.delegate =
+    self.txtNormalUserEmail.delegate =
+    self.txtNormalUserPsswd.delegate =
+    self.txtNormalUserCity.delegate =
+    self.txtNormalUserState.delegate = self;
+    
 }
 
 
-
+#pragma mark - UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    if (textField == self.txtNormalUserName) {
+        [self.txtNormalUserEmail becomeFirstResponder];
+    }
+    else if (textField == self.txtNormalUserEmail) {
+        [self.txtNormalUserPsswd becomeFirstResponder];
+    }
+    else if (textField == self.txtNormalUserPsswd) {
+        [self.txtNormalUserCity becomeFirstResponder];
+    }
+    else if (textField == self.txtNormalUserCity) {
+        [self.txtNormalUserState becomeFirstResponder];
+        
+    }
+    else if (textField == self.txtNormalUserState){
+        
+        [self.txtNormalUserState resignFirstResponder];
+        
+        //        NSIndexPath *path = [NSIndexPath indexPathForRow:2 inSection:1];
+        //        [self.tableView selectRowAtIndexPath:path animated:true scrollPosition:UITableViewScrollPositionBottom];
+        //        [self displayGenderPicker];
+        
+    }
+        return YES;
+}
 
 
 
