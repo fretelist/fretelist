@@ -181,7 +181,7 @@
     }
     
     [user setObject:self.txtViewDescription.text forKey:@"freightDescription"];
-    
+    //[user setObject:self.imgViewUserPhoto forKey:@"userPhoto"];
     
     
     return user;
@@ -195,6 +195,7 @@
     
     UIImage *freighUserImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     self.imgViewUserPhoto.image = freighUserImage;
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
     
@@ -207,6 +208,11 @@
     switch (buttonIndex) {
         case 0:{
             
+            UIImagePickerController *Camera = [[UIImagePickerController alloc]init];
+            Camera.delegate = self;
+            Camera.sourceType = UIImagePickerControllerSourceTypeCamera;
+            [self presentViewController:Camera animated:YES completion:nil];
+            
             break;
         }
         case 1:{
@@ -218,10 +224,7 @@
             break;
         }
         case 2:{
-            UIImagePickerController *Camera = [[UIImagePickerController alloc]init];
-            Camera.delegate = self;
-            Camera.sourceType = UIImagePickerControllerSourceTypeCamera;
-            [self presentViewController:Camera animated:YES completion:nil];
+            
             
             break;
         }
