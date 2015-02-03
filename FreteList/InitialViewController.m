@@ -81,14 +81,16 @@
 #pragma mark - AlertView Delegates
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    switch (buttonIndex) {
-        case 0:
+    switch (buttonIndex){
+        case 0:{
             NSLog(@"NO");
             
+            UINavigationController *normalUserRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"UserSignUpControllerNav"];
             
+            [self presentViewController:normalUserRegistration animated:YES completion:nil];
             
             break;
-        
+        }
         case 1:{
             NSLog(@"YES");
             
@@ -98,6 +100,7 @@
             
             break;
         }
+            
         default:
             break;
             

@@ -55,9 +55,10 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
-            //Something bad has ocurred
-            NSString *successString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
-            UIAlertView *successAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:successString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            //SignUp Successful
+//            NSString *successString = [[error userInfo] objectForKey:@"Sucesso"];
+            
+            UIAlertView *successAlertView = [[UIAlertView alloc] initWithTitle:@"Sucesso:" message:@"Confirme o seu e-mail e realize o Login." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [successAlertView show];
             
             [self dismissViewControllerAnimated:YES completion:nil];
@@ -68,8 +69,8 @@
         } else {
             
             //Something bad has ocurred
-            NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
-            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            //NSString *errorString = [[error userInfo] objectForKey:@"Erro"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro:" message:@"Tente Novamente!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
         }
     }];
@@ -99,6 +100,12 @@
     user.username = self.txtNormalUserEmail.text;
     user.password = self.txtNormalUserPsswd.text;
     user.email = self.txtNormalUserEmail.text;
+    
+    [user setObject:self.txtNormalUserName.text forKey:@"name"];
+    [user setObject:self.txtNormalUserCity.text forKey:@"city"];
+    [user setObject:self.txtNormalUserState.text forKey:@"state"];
+    [user setObject:@"Cliente" forKey:@"freightUserType"];
+
     
     return user;
     
