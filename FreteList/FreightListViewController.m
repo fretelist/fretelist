@@ -182,6 +182,10 @@
     cell.labelState.text = [object objectForKey:@"state"];
     cell.labelTelephone.text = [object objectForKey:@"telephone"];
     
+    PFFile *thumbnail = [object objectForKey:@"userPhoto"];
+    cell.imgUserPhoto.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
+    cell.imgUserPhoto.file = thumbnail;
+    [cell.imgUserPhoto loadInBackground];
     
     //Offer Photo
 //    PFFile *thumbnail = [object objectForKey:@"freightPhoto"];
