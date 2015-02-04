@@ -184,7 +184,7 @@
     
     //Handle image upload
     NSData *imageData = UIImageJPEGRepresentation(self.imgViewUserPhoto.image, 0.8);
-    NSString *filename = [NSString stringWithFormat:@"%@.png", self.txtFieldEmail.text];
+    NSString *filename = [NSString stringWithFormat:@"userPhoto.png"];
     PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
     [user setObject:imageFile forKey:@"userPhoto"];
     

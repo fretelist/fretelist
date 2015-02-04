@@ -81,9 +81,9 @@
 -(void)loadObjects{
     
     
-    if (![self.search.text isEqualToString:@""]) {
-        [super loadObjects];
-    }
+//    if (![self.search.text isEqualToString:@""]) {
+//        [super loadObjects];
+//    }
     
     
 }
