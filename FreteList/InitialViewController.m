@@ -129,10 +129,10 @@
     
     
     UIAlertView *userType = [[UIAlertView alloc]initWithTitle:@"FreteList"
-                                                      message:@"Are you a freight company?"
+                                                      message:@"Você é um fretista?"
                                                     delegate:self
-                                            cancelButtonTitle:@"No"
-                                            otherButtonTitles:@"Yes", nil];
+                                            cancelButtonTitle:@"Não"
+                                            otherButtonTitles:@"Sim", nil];
     
     [userType show];
 

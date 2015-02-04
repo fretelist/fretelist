@@ -175,26 +175,26 @@
         cell = [[FreightCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    //Offer Title
+    //Freights Information
     cell.labelName.text = [object objectForKey:@"name"];
     cell.labelDescription.text = [object objectForKey:@"freightDescription"];
     cell.labelCity.text = [object objectForKey:@"city"];
     cell.labelState.text = [object objectForKey:@"state"];
     cell.labelTelephone.text = [object objectForKey:@"telephone"];
+    cell.labelCompanyType.text = [object objectForKey:@"companyType"];
     
+    //Vehicle Types
+//    NSArray *arrayOfTypes = [NSArray arrayWithObject:[object objectForKey:@"vehicleType"]];
+//    //NSString *stringOfTypes = [arrayOfTypes componentsJoinedByString:@""];
+//    cell.labelType.text = [arrayOfTypes componentsJoinedByString:@""];
+    
+    //Freights Photos
     PFFile *thumbnail = [object objectForKey:@"userPhoto"];
     cell.imgUserPhoto.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
     cell.imgUserPhoto.file = thumbnail;
     [cell.imgUserPhoto loadInBackground];
     
-    //Offer Photo
-//    PFFile *thumbnail = [object objectForKey:@"freightPhoto"];
-//    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-//    thumbnailImageView.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
-//    thumbnailImageView.file = thumbnail;
-//    [thumbnailImageView loadInBackground];
-    //
-    
+    NSLog(@"%@",[object objectForKey:@"vehicleType"]);
     return cell;
     
 }

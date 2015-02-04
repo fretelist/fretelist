@@ -156,7 +156,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-me-mQH">
-                                            <rect key="frame" x="83" y="5" width="217" height="21"/>
+                                            <rect key="frame" x="83" y="5" width="144" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -188,8 +188,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6j-0V-LCw">
-                                            <rect key="frame" x="166" y="114" width="134" height="21"/>
+                                            <rect key="frame" x="179" y="114" width="121" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-4Y-Tg7">
+                                            <rect key="frame" x="235" y="5" width="77" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -198,6 +204,7 @@
                                 <connections>
                                     <outlet property="imgUserPhoto" destination="Baz-LY-SHk" id="8Qv-h1-uQC"/>
                                     <outlet property="labelCity" destination="G76-qd-hHy" id="w96-zw-5Tw"/>
+                                    <outlet property="labelCompanyType" destination="rjp-4Y-Tg7" id="MgF-AH-Ove"/>
                                     <outlet property="labelDescription" destination="pbf-R8-kFo" id="vu4-Tb-t1w"/>
                                     <outlet property="labelName" destination="Lz8-me-mQH" id="xwJ-OP-zTY"/>
                                     <outlet property="labelState" destination="Bph-1v-k31" id="9eJ-uQ-qly"/>
@@ -1567,12 +1574,13 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" text="                                   Descreva aqui o seu frete!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iih-wD-OeM">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" text="Descreva aqui o seu frete!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iih-wD-OeM">
                                                     <rect key="frame" x="124" y="15" width="188" height="77"/>
                                                     <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
