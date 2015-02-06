@@ -110,7 +110,7 @@
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query orderByAscending:@"name"];
     
-    [query includeKey:@"categories"];
+    [query includeKey:@"vehicleType"];
     
     [query whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
     
@@ -183,8 +183,22 @@
     cell.labelTelephone.text = [object objectForKey:@"telephone"];
     cell.labelCompanyType.text = [object objectForKey:@"companyType"];
     
+    
     //Vehicle Types
-//    NSArray *arrayOfTypes = [NSArray arrayWithObject:[object objectForKey:@"vehicleType"]];
+    NSArray *arrayOfTypes = [object objectForKey:@"vehicleType"];
+    NSString *labeltTypeString = @"";
+    
+    for (id vehicleType in arrayOfTypes) {
+        
+        [vehicleType fetchIfNeeded];
+        
+        NSLog(@"%@",vehicleType);
+        NSString *test = [NSString stringWithFormat:@"%@,",vehicleType[@"categories"]];
+        labeltTypeString = [labeltTypeString stringByAppendingString:test];
+    }
+    
+    cell.labelType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+    
 //    //NSString *stringOfTypes = [arrayOfTypes componentsJoinedByString:@""];
 //    cell.labelType.text = [arrayOfTypes componentsJoinedByString:@""];
     
