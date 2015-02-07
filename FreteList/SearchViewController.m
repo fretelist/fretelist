@@ -78,15 +78,6 @@
     
 }
 
-//-(void)loadObjects{
-//    
-//    
-////    if (![self.search.text isEqualToString:@""]) {
-////        [super loadObjects];
-////    }
-//    
-//    
-//}
 
 
 #pragma mark - PFQueryTableViewController
@@ -105,31 +96,43 @@
         
  
         PFQuery *nameQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+        
+        [nameQuery whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
+        
         [nameQuery whereKey:@"name" matchesRegex:regexString modifiers:@"i"];
 
 
         PFQuery *companyCityQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+        [companyCityQuery whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
         [companyCityQuery whereKey:@"city" matchesRegex:regexString modifiers:@"i"];
 
         
         PFQuery *companyStateQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+        [companyStateQuery whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
         [companyStateQuery whereKey:@"state" matchesRegex:regexString modifiers:@"i"];
 
         
         PFQuery *descriptionQuery = [[PFQuery alloc] initWithClassName:@"_User"];
+        [descriptionQuery whereKey:@"freightUserType" equalTo:@"Prestador de Serv."];
         [descriptionQuery whereKey:@"freightDescription" matchesRegex:regexString modifiers:@"i"];
+        
         
         
         NSLog(@"%@", self.search.text);
     
     
     PFQuery *searchQuery = [PFQuery orQueryWithSubqueries:@[nameQuery,companyCityQuery,companyStateQuery, descriptionQuery]];
+        
+    
        
         return  searchQuery;
     }
     
+    PFQuery *emptyQuery = [[PFQuery alloc] initWithClassName:@"_User"];
     
-    return [[PFQuery alloc] initWithClassName:@"_User"];
+    [emptyQuery whereKey:@"name" equalTo:@""];
+    
+    return emptyQuery;
 }
 
 -(PFTableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{

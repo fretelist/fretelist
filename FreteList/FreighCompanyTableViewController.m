@@ -79,7 +79,24 @@
 - (IBAction)chooseVehicleType:(id)sender {
     
     
+    if (self.imgViewUserPhoto.image == nil) {
+       
+        UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Select an image!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [errorAlertView show];
+        
+    
+        
+    
+    } else if (self.txtFieldName.text.length == 0 || self.txtFieldPassword.text.length == 0) {
+            //        NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Preencha os campos em branco!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+    } else {
+        
+    
     PFUser *user = [self setUpFreightUser:sender];
+    
+    
     
     // Show an alert for success or error - Write user Keys to Parse
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -109,7 +126,9 @@
             [errorAlertView show];
         }
     }];
-    
+        
+        
+    }
 
     
     
@@ -129,16 +148,13 @@
 
 - (PFUser*)setUpFreightUser:(id)sender {
     
+    
     // Instanciate user class and its atributes
     PFUser *user = [PFUser user];
     //PFObject *freights = [PFObject objectWithClassName:@"Freights"];
     
     // Show an alert if user or password fields are left in blank
-    if (self.txtFieldName.text.length == 0 || self.txtFieldPassword.text.length == 0) {
-        //        NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
-        UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Preencha os campos em branco!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [errorAlertView show];
-    }
+    
     
     
     // Create a User for normal users or freight companies

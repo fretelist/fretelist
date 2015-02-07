@@ -186,16 +186,6 @@
     
     //Vehicle Types
     NSArray *arrayOfTypes = [object objectForKey:@"vehicleType"];
-    NSString *labeltTypeString = @"";
-    
-    for (id vehicleType in arrayOfTypes) {
-        
-        [vehicleType fetchIfNeeded];
-        
-        NSLog(@"%@",vehicleType);
-        NSString *test = [NSString stringWithFormat:@"%@,",vehicleType[@"categories"]];
-        labeltTypeString = [labeltTypeString stringByAppendingString:test];
-    }
     
     cell.labelType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
     
