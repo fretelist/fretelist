@@ -35,6 +35,7 @@
     
     self.txtFieldTelephone.text = [[PFUser currentUser] objectForKey:@"telephone"];
     self.txtFieldMob1.text = [[PFUser currentUser] objectForKey:@"mobile1"];
+    self.txtFieldMob2.text = [[PFUser currentUser] objectForKey:@"mobile2"];
     self.txtFieldCity.text = [[PFUser currentUser] objectForKey:@"city"];
     self.txtFieldState.text = [[PFUser currentUser] objectForKey:@"state"];
     self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
@@ -114,6 +115,11 @@
 }
 */
 
+- (IBAction)performLogout:(id)sender {
+    
+    [PFUser logOut];
+}
+
 - (IBAction)changePhoto:(id)sender {
     
     UIActionSheet *showUploadOptions = [[UIActionSheet alloc]initWithTitle:@"Photo"
@@ -137,6 +143,7 @@
         currentUser.password = self.txtFieldPsswd.text;
         [currentUser setObject:self.txtFieldTelephone.text forKey:@"telephone"];
         [currentUser setObject:self.txtFieldMob1.text forKey:@"mobile1"];
+        [currentUser setObject:self.txtFieldMob2.text forKey:@"mobile2"];
         [currentUser setObject:self.txtFieldCity.text forKey:@"city"];
         [currentUser setObject:self.txtFieldDescription.text forKey:@"freightDescription"];
         
@@ -174,6 +181,7 @@
         self.txtFieldPsswd.enabled = YES;
         self.txtFieldTelephone.enabled = YES;
         self.txtFieldMob1.enabled = YES;
+        self.txtFieldMob2.enabled = YES;
         self.txtFieldCity.enabled = YES;
         self.txtFieldState.enabled = YES;
         self.txtFieldDescription.enabled = YES;
@@ -204,6 +212,7 @@
     self.txtFieldPsswd.enabled = NO;
     self.txtFieldTelephone.enabled = NO;
     self.txtFieldMob1.enabled = NO;
+    self.txtFieldMob2.enabled = NO;
     self.txtFieldCity.enabled = NO;
     self.txtFieldState.enabled = NO;
     self.txtFieldDescription.enabled = NO;

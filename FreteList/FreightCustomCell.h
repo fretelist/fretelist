@@ -17,6 +17,8 @@
 @property(nonatomic, weak) IBOutlet UILabel *labelTelephone;
 @property (weak, nonatomic) IBOutlet UILabel *labelCompanyType;
 
+@property (weak, nonatomic) IBOutlet UITextView *txtViewTelephone;
+
 @property (weak, nonatomic) IBOutlet UILabel *labelType;
 @property (weak, nonatomic) IBOutlet PFImageView *imgUserPhoto;
 

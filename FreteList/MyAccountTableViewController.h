@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldVehicle;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTelephone;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob1;
+@property (weak, nonatomic) IBOutlet UITextField *txtFieldMob2;
+
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldCity;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldState;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
@@ -23,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSave;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedSatate;
+- (IBAction)performLogout:(id)sender;
 
 - (IBAction)changePhoto:(id)sender;
 
