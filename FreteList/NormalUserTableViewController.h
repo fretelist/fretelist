@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NormalUserTableViewController : UITableViewController<UITextFieldDelegate>
+@interface NormalUserTableViewController : UITableViewController<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserName;
@@ -16,7 +16,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserPsswd;
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserCity;
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserState;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerState;
 
+//Arrays
+@property (nonatomic, strong) NSArray *userStatesArray;
+
+//Strings
+@property (nonatomic, strong) NSString *pickerSelectedString;
 
 - (IBAction)cancelNormalUserSignUp:(id)sender;
 - (IBAction)sendNormalUserSignUp:(id)sender;

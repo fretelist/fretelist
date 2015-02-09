@@ -2023,20 +2023,20 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="4N0-Xr-cOD">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="59" id="4N0-Xr-cOD">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4N0-Xr-cOD" id="fqm-jc-IBc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <pickerView contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-R6-NUg">
+                                                    <rect key="frame" x="178" y="-52" width="96" height="96"/>
+                                                </pickerView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eb-yk-akm">
-                                                    <rect key="frame" x="8" y="11" width="73" height="21"/>
+                                                    <rect key="frame" x="8" y="19" width="73" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-R6-NUg">
-                                                    <rect key="frame" x="128" y="-59" width="184" height="162"/>
-                                                </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2061,6 +2061,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pickerState" destination="nU6-R6-NUg" id="Kqs-fZ-B2l"/>
                         <outlet property="txtNormalUserCity" destination="IlW-bJ-YW2" id="N3M-mb-Mef"/>
                         <outlet property="txtNormalUserEmail" destination="A7h-iU-0FD" id="4WN-YF-2nt"/>
                         <outlet property="txtNormalUserName" destination="KSh-fi-hGJ" id="gqC-mb-MgD"/>

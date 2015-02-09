@@ -34,6 +34,12 @@
     self.txtNormalUserCity.delegate =
     self.txtNormalUserState.delegate = self;
     
+    //Connect Picker's data
+    self.pickerState.delegate = self;
+    self.pickerState.dataSource = self;
+    
+    self.userStatesArray = @[@"AC",@"AL",@"AM",@"AP",@"BA",@"CE",@"DF",@"ES",@"GO",@"MA",@"MS",@"MT",@"MG",@"PA",@"PR",@"PE",@"PI",@"RJ",@"RN",@"RS",@"RO",@"RR",@"SC",@"SP",@"SE",@"TO"];
+    
 }
 
 
@@ -68,9 +74,36 @@
 
 
 
+#pragma mark - UIPickerViewDelegate
+// Number of columns of data
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+// Number of rows of data
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
+    return [self.userStatesArray count];
+}
 
 
+// The Data to return for the row and component(column) that's being passed in
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    return [self.userStatesArray objectAtIndex:row];
+}
 
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
+    //Store the selected State in a String Variable
+    self.pickerSelectedString = [self.userStatesArray objectAtIndex:row];
+    
+    NSLog(@"Selected State: %@",[NSString stringWithFormat:@"%@",self.pickerSelectedString]);
+        
+}
+
+
+#pragma mark - My Actions
 
 
 - (IBAction)cancelNormalUserSignUp:(id)sender {
@@ -114,6 +147,7 @@
 }
 
 
+#pragma mark - Parse SignUp
 
 -(PFUser*) setUpFreightUser:(id)sender{
     
@@ -136,6 +170,7 @@
     [user setObject:self.txtNormalUserName.text forKey:@"name"];
     [user setObject:self.txtNormalUserCity.text forKey:@"city"];
     [user setObject:self.txtNormalUserState.text forKey:@"state"];
+    [user setObject:self.pickerSelectedString forKey:@"state"];
     [user setObject:@"Cliente" forKey:@"freightUserType"];
 
     
