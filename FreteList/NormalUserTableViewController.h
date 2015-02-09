@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserPsswd;
 @property (weak, nonatomic) IBOutlet UITextField *txtNormalUserCity;
-@property (weak, nonatomic) IBOutlet UITextField *txtNormalUserState;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerState;
 
 //Arrays

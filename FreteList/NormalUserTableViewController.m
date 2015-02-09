@@ -31,8 +31,8 @@
     self.txtNormalUserName.delegate =
     self.txtNormalUserEmail.delegate =
     self.txtNormalUserPsswd.delegate =
-    self.txtNormalUserCity.delegate =
-    self.txtNormalUserState.delegate = self;
+    self.txtNormalUserCity.delegate = self;
+    
     
     //Connect Picker's data
     self.pickerState.delegate = self;
@@ -56,18 +56,14 @@
         [self.txtNormalUserCity becomeFirstResponder];
     }
     else if (textField == self.txtNormalUserCity) {
-        [self.txtNormalUserState becomeFirstResponder];
-        
-    }
-    else if (textField == self.txtNormalUserState){
-        
-        [self.txtNormalUserState resignFirstResponder];
+        [self.txtNormalUserCity resignFirstResponder];
         
         //        NSIndexPath *path = [NSIndexPath indexPathForRow:2 inSection:1];
         //        [self.tableView selectRowAtIndexPath:path animated:true scrollPosition:UITableViewScrollPositionBottom];
         //        [self displayGenderPicker];
         
     }
+    
         return YES;
 }
 
@@ -169,7 +165,7 @@
     
     [user setObject:self.txtNormalUserName.text forKey:@"name"];
     [user setObject:self.txtNormalUserCity.text forKey:@"city"];
-    [user setObject:self.txtNormalUserState.text forKey:@"state"];
+    //[user setObject:self.txtNormalUserState.text forKey:@"state"];
     [user setObject:self.pickerSelectedString forKey:@"state"];
     [user setObject:@"Cliente" forKey:@"freightUserType"];
 
