@@ -1376,7 +1376,7 @@
             <objects>
                 <tableViewController id="1Rh-Ti-Bb2" customClass="MyAccountTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P3m-ss-Fj2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1561,7 +1561,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
+                                                <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
                                                     <rect key="frame" x="161" y="-52" width="96" height="96"/>
                                                 </pickerView>
                                             </subviews>
@@ -1597,8 +1597,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHu-ru-tMT">
-                                                    <rect key="frame" x="262" y="-3" width="50" height="50"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHu-ru-tMT">
+                                                    <rect key="frame" x="272" y="2" width="40" height="40"/>
                                                     <state key="normal" image="Logout">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1618,6 +1618,7 @@
                             <outlet property="delegate" destination="1Rh-Ti-Bb2" id="70K-b3-Pht"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="WDA-tX-3NT">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="tNG-mc-1pc">
                             <connections>
@@ -1633,6 +1634,7 @@
                     <connections>
                         <outlet property="btnCancel" destination="tNG-mc-1pc" id="Mx1-wp-GSN"/>
                         <outlet property="btnChangePhoto" destination="6Ft-3n-zHw" id="VeW-V7-u5M"/>
+                        <outlet property="btnLogout" destination="wHu-ru-tMT" id="1NM-NB-WKI"/>
                         <outlet property="btnSave" destination="2Zj-4k-2mI" id="xIo-8Y-879"/>
                         <outlet property="imgViewUserPhoto" destination="Bpp-Vx-9wN" id="Se4-vs-rWw"/>
                         <outlet property="pickerMyAccountState" destination="5LJ-hY-PDr" id="Irq-0w-0xc"/>

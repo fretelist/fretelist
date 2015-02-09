@@ -212,6 +212,7 @@
         self.txtFieldState.enabled = YES;
         self.txtFieldDescription.enabled = YES;
         self.btnChangePhoto.enabled = YES;
+        self.btnLogout.enabled = YES;
         self.pickerMyAccountState.userInteractionEnabled = YES;
         [self.btnCancel setEnabled:YES];
         [self.segmentedSatate setEnabled:YES];
@@ -244,6 +245,7 @@
     self.txtFieldState.enabled = NO;
     self.txtFieldDescription.enabled = NO;
     self.btnChangePhoto.enabled = NO;
+    self.btnLogout.enabled = NO;
     [self.btnCancel setEnabled:NO];
     [self.segmentedSatate setEnabled:NO];
     self.pickerMyAccountState.userInteractionEnabled = NO;

@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSave;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedSatate;
+@property (weak, nonatomic) IBOutlet UIButton *btnLogout;
 
 //Strings
 @property (nonatomic, strong) NSString *pickerSelectedNewString;
