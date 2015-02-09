@@ -76,8 +76,10 @@
             
             [resetSuccess show];
             
-            //Dismiss View
-            [self dismissViewControllerAnimated:YES completion:nil];
+            //Present Login View
+            UINavigationController *backToLogin = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"LoginControllerNav"];
+            
+            [self presentViewController:backToLogin animated:YES completion:nil];
             
         }else{
             

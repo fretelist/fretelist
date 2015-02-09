@@ -118,6 +118,10 @@
 - (IBAction)performLogout:(id)sender {
     
     [PFUser logOut];
+    
+    UINavigationController *backToInitial = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    
+    [self presentViewController:backToInitial animated:YES completion:nil];
 }
 
 - (IBAction)changePhoto:(id)sender {
