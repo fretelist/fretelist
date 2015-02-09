@@ -1376,7 +1376,7 @@
             <objects>
                 <tableViewController id="1Rh-Ti-Bb2" customClass="MyAccountTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P3m-ss-Fj2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1550,7 +1550,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="59" id="Al8-y3-3Qe">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="Al8-y3-3Qe">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Al8-y3-3Qe" id="Yh2-ax-mYb">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1618,6 +1618,7 @@
                             <outlet property="delegate" destination="1Rh-Ti-Bb2" id="70K-b3-Pht"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="WDA-tX-3NT">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="tNG-mc-1pc">
                             <connections>
@@ -1636,6 +1637,10 @@
                         <outlet property="btnLogout" destination="wHu-ru-tMT" id="1NM-NB-WKI"/>
                         <outlet property="btnSave" destination="2Zj-4k-2mI" id="xIo-8Y-879"/>
                         <outlet property="imgViewUserPhoto" destination="Bpp-Vx-9wN" id="Se4-vs-rWw"/>
+                        <outlet property="labelMob1" destination="6FU-8a-Szr" id="aRI-8L-xxB"/>
+                        <outlet property="labelMob2" destination="nTb-MY-xbs" id="AJk-fD-4bF"/>
+                        <outlet property="labelTelephone" destination="MBX-yL-ftW" id="Ars-Ou-nad"/>
+                        <outlet property="labelVehicleType" destination="xhK-p6-qNR" id="deY-ph-z1H"/>
                         <outlet property="pickerMyAccountState" destination="5LJ-hY-PDr" id="Irq-0w-0xc"/>
                         <outlet property="txtFieldCity" destination="m0q-jJ-Uf5" id="hB5-oH-FZa"/>
                         <outlet property="txtFieldDescription" destination="L92-0Y-GXN" id="HLC-yh-U37"/>

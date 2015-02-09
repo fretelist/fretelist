@@ -23,6 +23,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountState;
+@property (weak, nonatomic) IBOutlet UILabel *labelTelephone;
+@property (weak, nonatomic) IBOutlet UILabel *labelMob1;
+@property (weak, nonatomic) IBOutlet UILabel *labelMob2;
+@property (weak, nonatomic) IBOutlet UILabel *labelVehicleType;
+
+
+
 
 //Arrays
 @property (nonatomic, strong) NSMutableArray *myAccountStateData;
@@ -38,6 +45,8 @@
 
 //Strings
 @property (nonatomic, strong) NSString *pickerSelectedNewString;
+
+@property (nonatomic, assign) BOOL isCliente;
 
 //Actions
 - (IBAction)performLogout:(id)sender;

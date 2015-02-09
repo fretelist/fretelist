@@ -32,6 +32,7 @@
     
     self.myAccountFreightUserStateArray = @[@"RJ",@"SP"];
     
+    self.isCliente = [[[PFUser currentUser] objectForKey:@"freightUserType"] isEqualToString:@"Cliente"];
     
     // Set cancel button disabled - enable only if edit is pressed
     [self.btnCancel setEnabled:NO];
@@ -51,7 +52,16 @@
     self.pickerSelectedNewString = [[PFUser currentUser] objectForKey:@"state"];
     
     
-    if ([[[PFUser currentUser] objectForKey:@"freightUserType"] isEqualToString:@"Cliente"]) {
+    if (self.isCliente) {
+        
+        self.txtFieldTelephone.hidden = YES;
+        self.txtFieldMob1.hidden = YES;
+        self.txtFieldMob2.hidden = YES;
+        self.labelTelephone.hidden = YES;
+        self.labelMob1.hidden = YES;
+        self.labelVehicleType.hidden = YES;
+        self.labelMob2.hidden = YES;
+        
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountUserStateArray] ;
         [self.pickerMyAccountState reloadAllComponents];
     } else {
@@ -81,9 +91,34 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableViewDelegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PFUser *currentUser = [PFUser currentUser];
+    
+    BOOL isClient = [[currentUser objectForKey:@"freightUserType"] isEqualToString:@"Cliente"];
+    BOOL isCompanyCell = (indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7);
+    
+    if (isCompanyCell && isClient) {
+        return 0;
+    } else if (indexPath.row == 0){
+        return 105;
+    } else if (indexPath.row == 9){
+        return 105;
+    }
+    
+    return 44;
 }
 
 #pragma mark - Table view data source
@@ -268,7 +303,20 @@
 // The Data to return for the row and component(column) that's being passed in
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    return [self.myAccountStateData objectAtIndex:row];
+    PFUser *currentUser = [PFUser currentUser];
+    
+    NSString *userState = [currentUser objectForKey:@"state"];
+    
+    NSString *currentState = [self.myAccountStateData objectAtIndex:row];
+    
+    if ([userState isEqualToString:currentState]) {
+        
+        [pickerView selectRow:row inComponent:component animated:YES];
+    }
+    
+    
+    
+    return currentState;
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
