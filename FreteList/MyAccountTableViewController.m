@@ -24,6 +24,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    //Picker load
+    self.pickerMyAccountState.delegate = self;
+    self.pickerMyAccountState.dataSource = self;
+    
+    self.myAccountUserStateArray = @[@"AC",@"AL",@"AM",@"AP",@"BA",@"CE",@"DF",@"ES",@"GO",@"MA",@"MS",@"MT",@"MG",@"PA",@"PR",@"PE",@"PI",@"RJ",@"RN",@"RS",@"RO",@"RR",@"SC",@"SP",@"SE",@"TO"];
+    
+    self.myAccountFreightUserStateArray = @[@"RJ",@"SP"];
+    
     
     // Set cancel button disabled - enable only if edit is pressed
     [self.btnCancel setEnabled:NO];
@@ -40,11 +48,20 @@
     self.txtFieldState.text = [[PFUser currentUser] objectForKey:@"state"];
     self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
     [self.segmentedSatate setEnabled:NO];
-    if ([[[PFUser currentUser] objectForKey:@"state"] isEqualToString:@"RJ"]) {
-        self.segmentedSatate.selectedSegmentIndex = 0;
+    
+    if ([[[PFUser currentUser] objectForKey:@"freightUserType"] isEqualToString:@"Cliente"]) {
+        self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountUserStateArray] ;
+        [self.pickerMyAccountState reloadAllComponents];
     } else {
-        self.segmentedSatate.selectedSegmentIndex = 1;
+        self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountFreightUserStateArray];
+        [self.pickerMyAccountState reloadAllComponents];
     }
+    
+//    if ([[[PFUser currentUser] objectForKey:@"state"] isEqualToString:@"RJ"]) {
+//        self.segmentedSatate.selectedSegmentIndex = 0;
+//    } else {
+//        self.segmentedSatate.selectedSegmentIndex = 1;
+//    }
     
     PFFile *userImageFile = [[PFUser currentUser] objectForKey:@"userPhoto"];
     [userImageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -115,6 +132,8 @@
 }
 */
 
+#pragma mark - My Actions
+
 - (IBAction)performLogout:(id)sender {
     
     [PFUser logOut];
@@ -150,13 +169,16 @@
         [currentUser setObject:self.txtFieldMob2.text forKey:@"mobile2"];
         [currentUser setObject:self.txtFieldCity.text forKey:@"city"];
         [currentUser setObject:self.txtFieldDescription.text forKey:@"freightDescription"];
+        [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
         
-        if (self.segmentedSatate.selectedSegmentIndex == 0) {
-            [currentUser setObject:@"RJ" forKey:@"state"];
-            
-        } else {
-            [currentUser setObject:@"SP" forKey:@"state"];
-        }
+        
+        
+//        if (self.segmentedSatate.selectedSegmentIndex == 0) {
+//            [currentUser setObject:@"RJ" forKey:@"state"];
+//            
+//        } else {
+//            [currentUser setObject:@"SP" forKey:@"state"];
+//        }
         
         NSData *newUserData = UIImageJPEGRepresentation(self.imgViewUserPhoto.image, 0.8);
         PFFile *newUserFile = [PFFile fileWithName:@"userPhoto.jpeg" data:newUserData];
@@ -190,6 +212,7 @@
         self.txtFieldState.enabled = YES;
         self.txtFieldDescription.enabled = YES;
         self.btnChangePhoto.enabled = YES;
+        self.pickerMyAccountState.userInteractionEnabled = YES;
         [self.btnCancel setEnabled:YES];
         [self.segmentedSatate setEnabled:YES];
         [self.btnCancel setTintColor:[UIColor darkTextColor]];
@@ -223,11 +246,42 @@
     self.btnChangePhoto.enabled = NO;
     [self.btnCancel setEnabled:NO];
     [self.segmentedSatate setEnabled:NO];
+    self.pickerMyAccountState.userInteractionEnabled = NO;
     [self.btnCancel setTintColor:[UIColor clearColor]];
     [self.btnSave setTitle:@"Edit"];
     
     
 }
+
+#pragma mark - UIPickerViewDelegate
+// Number of columns of data
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+// Number of rows of data
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
+    return [self.myAccountStateData count];
+}
+
+// The Data to return for the row and component(column) that's being passed in
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    return [self.myAccountStateData objectAtIndex:row];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
+    //Store the selected State in a String Variable
+    self.pickerSelectedNewString = [self.myAccountStateData objectAtIndex:row];
+    
+    NSLog(@"Selected State: %@",[NSString stringWithFormat:@"%@",self.pickerSelectedNewString]);
+    
+    
+}
+
+
 
 
 

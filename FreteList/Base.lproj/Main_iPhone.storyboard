@@ -1550,24 +1550,20 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="7xj-9S-nOG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="59" id="Al8-y3-3Qe">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7xj-9S-nOG" id="Pwa-lQ-x5g">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Al8-y3-3Qe" id="Yh2-ax-mYb">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTh-bc-5IT">
-                                                    <rect key="frame" x="8" y="9" width="86" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-3h-CnS">
+                                                    <rect key="frame" x="8" y="11" width="86" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZL9-xw-XFN">
-                                                    <rect key="frame" x="112" y="9" width="200" height="29"/>
-                                                    <segments>
-                                                        <segment title="RJ"/>
-                                                        <segment title="SP"/>
-                                                    </segments>
-                                                </segmentedControl>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
+                                                    <rect key="frame" x="161" y="-52" width="96" height="96"/>
+                                                </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1639,7 +1635,7 @@
                         <outlet property="btnChangePhoto" destination="6Ft-3n-zHw" id="VeW-V7-u5M"/>
                         <outlet property="btnSave" destination="2Zj-4k-2mI" id="xIo-8Y-879"/>
                         <outlet property="imgViewUserPhoto" destination="Bpp-Vx-9wN" id="Se4-vs-rWw"/>
-                        <outlet property="segmentedSatate" destination="ZL9-xw-XFN" id="WT9-m1-Avl"/>
+                        <outlet property="pickerMyAccountState" destination="5LJ-hY-PDr" id="Irq-0w-0xc"/>
                         <outlet property="txtFieldCity" destination="m0q-jJ-Uf5" id="hB5-oH-FZa"/>
                         <outlet property="txtFieldDescription" destination="L92-0Y-GXN" id="HLC-yh-U37"/>
                         <outlet property="txtFieldEmail" destination="kVU-fG-fiA" id="GWu-Kh-wnQ"/>
