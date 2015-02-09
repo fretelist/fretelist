@@ -45,9 +45,11 @@
     self.txtFieldMob1.text = [[PFUser currentUser] objectForKey:@"mobile1"];
     self.txtFieldMob2.text = [[PFUser currentUser] objectForKey:@"mobile2"];
     self.txtFieldCity.text = [[PFUser currentUser] objectForKey:@"city"];
-    self.txtFieldState.text = [[PFUser currentUser] objectForKey:@"state"];
     self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
-    [self.segmentedSatate setEnabled:NO];
+    
+    //Pass the selected state, otherwise crash will occur, due to Parse understanding what is being saved as nil
+    self.pickerSelectedNewString = [[PFUser currentUser] objectForKey:@"state"];
+    
     
     if ([[[PFUser currentUser] objectForKey:@"freightUserType"] isEqualToString:@"Cliente"]) {
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountUserStateArray] ;
@@ -209,13 +211,11 @@
         self.txtFieldMob1.enabled = YES;
         self.txtFieldMob2.enabled = YES;
         self.txtFieldCity.enabled = YES;
-        self.txtFieldState.enabled = YES;
         self.txtFieldDescription.enabled = YES;
         self.btnChangePhoto.enabled = YES;
         self.btnLogout.enabled = YES;
         self.pickerMyAccountState.userInteractionEnabled = YES;
         [self.btnCancel setEnabled:YES];
-        [self.segmentedSatate setEnabled:YES];
         [self.btnCancel setTintColor:[UIColor darkTextColor]];
         [self.btnSave setTitle:@"Save"];
         
@@ -242,12 +242,10 @@
     self.txtFieldMob1.enabled = NO;
     self.txtFieldMob2.enabled = NO;
     self.txtFieldCity.enabled = NO;
-    self.txtFieldState.enabled = NO;
     self.txtFieldDescription.enabled = NO;
     self.btnChangePhoto.enabled = NO;
     self.btnLogout.enabled = NO;
     [self.btnCancel setEnabled:NO];
-    [self.segmentedSatate setEnabled:NO];
     self.pickerMyAccountState.userInteractionEnabled = NO;
     [self.btnCancel setTintColor:[UIColor clearColor]];
     [self.btnSave setTitle:@"Edit"];

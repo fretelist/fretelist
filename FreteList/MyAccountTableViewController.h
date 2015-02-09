@@ -20,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob2;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldCity;
-@property (weak, nonatomic) IBOutlet UITextField *txtFieldState;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountState;
@@ -35,7 +34,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnChangePhoto;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSave;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedSatate;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogout;
 
 //Strings
