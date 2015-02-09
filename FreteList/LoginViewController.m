@@ -87,18 +87,20 @@
 // Hides Keyboard when the user press return
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     
-    
-    // Check which field got focus
-    if (textField == self.passwordTextField || textField == self.loginTextField) {
-       
-        
-        [textField resignFirstResponder];
-        
-        
+    if (textField == self.loginTextField) {
+        [self.passwordTextField becomeFirstResponder];
     }
     
-    // Return the Scroll Content
-    [self.loginScrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+    // Check which field got focus
+    if (textField == self.passwordTextField) {
+       
+        [textField resignFirstResponder];
+        
+        // Return the Scroll Content
+        [self.loginScrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+    }
+    
+    
     
     return YES;
     
