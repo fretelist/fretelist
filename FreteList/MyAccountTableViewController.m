@@ -98,6 +98,17 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     
+    PFUser *currentUser = [PFUser currentUser];
+    
+    NSString *userState = [currentUser objectForKey:@"state"];
+    
+    
+    if (userState) {
+        
+        [self.pickerMyAccountState selectRow:[self.myAccountStateData indexOfObject:userState] inComponent:0 animated:YES];
+        
+    }
+    
     
 }
 
@@ -305,20 +316,20 @@
 // The Data to return for the row and component(column) that's being passed in
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    PFUser *currentUser = [PFUser currentUser];
-    
-    NSString *userState = [currentUser objectForKey:@"state"];
-    
+//    PFUser *currentUser = [PFUser currentUser];
+//    
+//    NSString *userState = [currentUser objectForKey:@"state"];
+//    
     NSString *currentState = [self.myAccountStateData objectAtIndex:row];
-    
-    if ([userState isEqualToString:currentState]) {
-    
-        [pickerView selectRow:row inComponent:component animated:YES];
-        
-    }
-    
-    
-    
+//    
+//    if (userState) {
+//    
+//        [pickerView selectRow:[self.myAccountStateData indexOfObject:userState] inComponent:component animated:YES];
+//        
+//    }
+//    
+//    
+//    
     return currentState;
 }
 
