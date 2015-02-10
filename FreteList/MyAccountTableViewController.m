@@ -67,7 +67,9 @@
         
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountUserStateArray] ;
         [self.pickerMyAccountState reloadAllComponents];
+        
     } else {
+        
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountFreightUserStateArray];
         [self.pickerMyAccountState reloadAllComponents];
     }
@@ -310,14 +312,16 @@
     NSString *currentState = [self.myAccountStateData objectAtIndex:row];
     
     if ([userState isEqualToString:currentState]) {
-        
+    
         [pickerView selectRow:row inComponent:component animated:YES];
+        
     }
     
     
     
     return currentState;
 }
+
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
