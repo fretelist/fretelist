@@ -212,18 +212,15 @@
         [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
         
         
-        
-//        if (self.segmentedSatate.selectedSegmentIndex == 0) {
-//            [currentUser setObject:@"RJ" forKey:@"state"];
-//            
-//        } else {
-//            [currentUser setObject:@"SP" forKey:@"state"];
-//        }
-        
-        NSData *newUserData = UIImageJPEGRepresentation(self.imgViewUserPhoto.image, 0.8);
-        PFFile *newUserFile = [PFFile fileWithName:@"userPhoto.jpeg" data:newUserData];
-        
-        [currentUser setObject:newUserFile forKey:@"userPhoto"];
+        // If it is not a normal user, save Photo. If it is a normal user, do not save, otherwise it will crash, as the field is disabled
+        if (!self.isCliente) {
+            
+            NSData *newUserData = UIImageJPEGRepresentation(self.imgViewUserPhoto.image, 0.8);
+            PFFile *newUserFile = [PFFile fileWithName:@"userPhoto.jpeg" data:newUserData];
+            
+            [currentUser setObject:newUserFile forKey:@"userPhoto"];
+        }
+       
         
         [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
