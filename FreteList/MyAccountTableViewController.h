@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelMob1;
 @property (weak, nonatomic) IBOutlet UILabel *labelMob2;
 @property (weak, nonatomic) IBOutlet UILabel *labelVehicleType;
+@property (weak, nonatomic) IBOutlet UILabel *labelDescription;
 
 
 

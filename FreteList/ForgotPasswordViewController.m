@@ -77,9 +77,9 @@
             [resetSuccess show];
             
             //Present Login View
-            UINavigationController *backToLogin = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"LoginControllerNav"];
+            UINavigationController *backToInitial = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
             
-            [self presentViewController:backToLogin animated:YES completion:nil];
+            [self presentViewController:backToInitial animated:YES completion:nil];
             
         }else{
             

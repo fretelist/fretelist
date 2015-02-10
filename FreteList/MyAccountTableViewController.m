@@ -57,10 +57,13 @@
         self.txtFieldTelephone.hidden = YES;
         self.txtFieldMob1.hidden = YES;
         self.txtFieldMob2.hidden = YES;
+        self.txtFieldDescription.hidden = YES;
+        self.btnChangePhoto.hidden = YES;
         self.labelTelephone.hidden = YES;
         self.labelMob1.hidden = YES;
         self.labelVehicleType.hidden = YES;
         self.labelMob2.hidden = YES;
+        self.labelDescription.hidden = YES;
         
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountUserStateArray] ;
         [self.pickerMyAccountState reloadAllComponents];
@@ -107,10 +110,10 @@
     
     PFUser *currentUser = [PFUser currentUser];
     
-    BOOL isClient = [[currentUser objectForKey:@"freightUserType"] isEqualToString:@"Cliente"];
-    BOOL isCompanyCell = (indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7);
+    BOOL isCliente = [[currentUser objectForKey:@"freightUserType"] isEqualToString:@"Cliente"];
+    BOOL isNormalUserCell = (indexPath.row == 0|| indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 || indexPath.row == 10);
     
-    if (isCompanyCell && isClient) {
+    if (isNormalUserCell && isCliente) {
         return 0;
     } else if (indexPath.row == 0){
         return 105;

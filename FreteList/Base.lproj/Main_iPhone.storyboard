@@ -1376,7 +1376,7 @@
             <objects>
                 <tableViewController id="1Rh-Ti-Bb2" customClass="MyAccountTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P3m-ss-Fj2">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1460,7 +1460,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O96-an-GMy" id="kCb-Sz-wzf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Uh-c7d">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escolha uma nova senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Uh-c7d">
                                                     <rect key="frame" x="107" y="5" width="205" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1479,7 +1479,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rFW-fV-xo9" id="8gG-Px-QPB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-ma-hAU">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0xx + Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-ma-hAU">
                                                     <rect key="frame" x="107" y="5" width="205" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1498,7 +1498,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lD0-gD-Sds" id="g2o-6e-qG5">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uru-Th-nc7">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0xx + Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uru-Th-nc7">
                                                     <rect key="frame" x="107" y="7" width="205" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1517,7 +1517,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vrg-o2-Cci" id="REV-ci-Ul0">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxX-8G-mK2">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0xx + Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxX-8G-mK2">
                                                     <rect key="frame" x="107" y="7" width="205" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1618,7 +1618,6 @@
                             <outlet property="delegate" destination="1Rh-Ti-Bb2" id="70K-b3-Pht"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="WDA-tX-3NT">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="tNG-mc-1pc">
                             <connections>
@@ -1637,6 +1636,7 @@
                         <outlet property="btnLogout" destination="wHu-ru-tMT" id="1NM-NB-WKI"/>
                         <outlet property="btnSave" destination="2Zj-4k-2mI" id="xIo-8Y-879"/>
                         <outlet property="imgViewUserPhoto" destination="Bpp-Vx-9wN" id="Se4-vs-rWw"/>
+                        <outlet property="labelDescription" destination="kAB-zl-9q2" id="7pD-P2-MXv"/>
                         <outlet property="labelMob1" destination="6FU-8a-Szr" id="aRI-8L-xxB"/>
                         <outlet property="labelMob2" destination="nTb-MY-xbs" id="AJk-fD-4bF"/>
                         <outlet property="labelTelephone" destination="MBX-yL-ftW" id="Ars-Ou-nad"/>
@@ -1661,7 +1661,7 @@
             <objects>
                 <tableViewController id="rAe-ts-e8P" customClass="FreighCompanyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BNV-Yd-tkd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1770,7 +1770,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NC-uE-hO9">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0xx + Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NC-uE-hO9">
                                                     <rect key="frame" x="128" y="7" width="184" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
@@ -1789,7 +1789,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-7d-SYQ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0xx + Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-7d-SYQ">
                                                     <rect key="frame" x="128" y="7" width="184" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
@@ -1808,7 +1808,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-qk-0YH">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0xx + Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-qk-0YH">
                                                     <rect key="frame" x="128" y="9" width="184" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
@@ -1886,7 +1886,6 @@
                             <outlet property="delegate" destination="rAe-ts-e8P" id="luJ-Z9-gxK"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Cadastro Empresa" id="AyK-4D-dxk">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="4vS-ae-5B2">
                             <connections>
