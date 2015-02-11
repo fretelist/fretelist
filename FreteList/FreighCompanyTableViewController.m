@@ -183,7 +183,7 @@
     if (self.segmentedCompanyType.selectedSegmentIndex == 0) {
         
         // Set previously selected segmented on its class
-        [user setObject:@"Corporate" forKey:@"companyType"];
+        [user setObject:@"Empresa" forKey:@"companyType"];
         
     }
     
@@ -191,7 +191,7 @@
     // Set Freight users
     if (self.segmentedCompanyType.selectedSegmentIndex == 1) {
         
-        [user setObject:@"Private" forKey:@"companyType"];
+        [user setObject:@"Autônomo" forKey:@"companyType"];
         
         
     }

@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.companyTypes = [[NSArray alloc]initWithObjects:@"Private",@"Corporate", nil];
+    self.companyTypes = [[NSArray alloc]initWithObjects:@"Autônomo",@"Empresa", nil];
     
 }
 

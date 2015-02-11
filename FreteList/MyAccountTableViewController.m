@@ -198,11 +198,11 @@
 
 - (IBAction)changePhoto:(id)sender {
     
-    UIActionSheet *showUploadOptions = [[UIActionSheet alloc]initWithTitle:@"Photo"
+    UIActionSheet *showUploadOptions = [[UIActionSheet alloc]initWithTitle:@"Foto"
                                                                   delegate:self
                                                          cancelButtonTitle:@"Cancel"
                                                     destructiveButtonTitle:nil
-                                                         otherButtonTitles:@"From Camera",@"From Library", nil];
+                                                         otherButtonTitles:@"Câmera",@"Biblioteca", nil];
     [showUploadOptions showInView:self.view];
     
     
@@ -265,7 +265,7 @@
         self.pickerMyAccountState.userInteractionEnabled = YES;
         [self.btnCancel setEnabled:YES];
         [self.btnCancel setTintColor:[UIColor darkTextColor]];
-        [self.btnSave setTitle:@"Save"];
+        [self.btnSave setTitle:@"Salvar"];
         
     }
     
@@ -296,7 +296,7 @@
     [self.btnCancel setEnabled:NO];
     self.pickerMyAccountState.userInteractionEnabled = NO;
     [self.btnCancel setTintColor:[UIColor clearColor]];
-    [self.btnSave setTitle:@"Edit"];
+    [self.btnSave setTitle:@"Editar"];
     
     
 }

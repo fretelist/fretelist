@@ -1656,7 +1656,7 @@
             </objects>
             <point key="canvasLocation" x="1166" y="323"/>
         </scene>
-        <!--Cadastro Empresa-->
+        <!--Cadstro Fretes-->
         <scene sceneID="xal-C5-l7j">
             <objects>
                 <tableViewController id="rAe-ts-e8P" customClass="FreighCompanyTableViewController" sceneMemberID="viewController">
@@ -1675,8 +1675,8 @@
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4HK-on-CjE">
                                                     <rect key="frame" x="11" y="8" width="298" height="29"/>
                                                     <segments>
-                                                        <segment title="Corporate"/>
-                                                        <segment title="Private"/>
+                                                        <segment title="Empresa"/>
+                                                        <segment title="Autônomo"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>
@@ -1887,13 +1887,13 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Cadastro Empresa" id="AyK-4D-dxk">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="4vS-ae-5B2">
+                    <navigationItem key="navigationItem" title="Cadstro Fretes" id="AyK-4D-dxk">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="4vS-ae-5B2">
                             <connections>
                                 <action selector="cancelSignUp:" destination="rAe-ts-e8P" id="QdF-6x-JT2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="sqs-Ai-suh">
+                        <barButtonItem key="rightBarButtonItem" title="Próxima" id="sqs-Ai-suh">
                             <connections>
                                 <action selector="chooseVehicleType:" destination="rAe-ts-e8P" id="zoo-3I-wDY"/>
                             </connections>
