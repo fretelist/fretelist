@@ -1137,7 +1137,7 @@
             </objects>
             <point key="canvasLocation" x="915" y="1164"/>
         </scene>
-        <!--Search-->
+        <!--Busca-->
         <scene sceneID="Ydf-WA-pHr">
             <objects>
                 <tableViewController id="kkA-67-1e7" customClass="SearchViewController" sceneMemberID="viewController">
@@ -1170,7 +1170,7 @@
                             <outlet property="delegate" destination="kkA-67-1e7" id="Fry-zs-mIM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="wip-Tl-pSi"/>
+                    <navigationItem key="navigationItem" title="Busca" id="wip-Tl-pSi"/>
                     <connections>
                         <outlet property="search" destination="bzp-DL-Mzm" id="G2x-xM-Jew"/>
                     </connections>
@@ -1371,7 +1371,7 @@
             </objects>
             <point key="canvasLocation" x="1578" y="529"/>
         </scene>
-        <!--My Account Table View Controller-->
+        <!--Minha Conta-->
         <scene sceneID="lpB-AO-Yar">
             <objects>
                 <tableViewController id="1Rh-Ti-Bb2" customClass="MyAccountTableViewController" sceneMemberID="viewController">
@@ -1618,13 +1618,13 @@
                             <outlet property="delegate" destination="1Rh-Ti-Bb2" id="70K-b3-Pht"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WDA-tX-3NT">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="tNG-mc-1pc">
+                    <navigationItem key="navigationItem" title="Minha Conta" id="WDA-tX-3NT">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="tNG-mc-1pc">
                             <connections>
                                 <action selector="cancelInfos:" destination="1Rh-Ti-Bb2" id="JFC-is-fOZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="2Zj-4k-2mI">
+                        <barButtonItem key="rightBarButtonItem" title="Editar" id="2Zj-4k-2mI">
                             <connections>
                                 <action selector="editInfos:" destination="1Rh-Ti-Bb2" id="s4z-8j-EEc"/>
                             </connections>
