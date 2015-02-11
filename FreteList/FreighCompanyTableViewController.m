@@ -81,7 +81,7 @@
     
     if (self.imgViewUserPhoto.image == nil) {
        
-        UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Select an image!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Selecione uma foto!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [errorAlertView show];
         
     
@@ -136,11 +136,11 @@
 
 - (IBAction)addUserPhoto:(id)sender {
     
-    UIActionSheet *showUploadOptions = [[UIActionSheet alloc]initWithTitle:@"Photo"
+    UIActionSheet *showUploadOptions = [[UIActionSheet alloc]initWithTitle:@"Foto"
                                                                   delegate:self
-                                                         cancelButtonTitle:@"Cancel"
+                                                         cancelButtonTitle:@"Cancelar"
                                                     destructiveButtonTitle:nil
-                                                         otherButtonTitles:@"From Camera",@"From Library", nil];
+                                                         otherButtonTitles:@"Câmera",@"Biblioteca", nil];
     [showUploadOptions showInView:self.view];
     
 }

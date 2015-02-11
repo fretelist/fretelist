@@ -107,7 +107,7 @@
     //Create a cell object
     CategoriesCell *categoriesCell =(CategoriesCell*)[tableView cellForRowAtIndexPath:indexPath];
 
-    
+    // Compare the array with which object was clicked(categorySelected)
     if ([self.categoriesSelected containsObject:categorySelected]) {
         
         categoriesCell.accessoryType = UITableViewCellAccessoryNone;
