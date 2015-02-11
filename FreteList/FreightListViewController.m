@@ -62,7 +62,7 @@
     }];
     
     
-    self.tableView.estimatedRowHeight = 140.0;
+    self.tableView.estimatedRowHeight = 150.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     
@@ -190,6 +190,7 @@
     NSArray *arrayOfTypes = [object objectForKey:@"vehicleType"];
     
     cell.labelType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+    cell.labelCity.numberOfLines = 6;
     
 //    //NSString *stringOfTypes = [arrayOfTypes componentsJoinedByString:@""];
 //    cell.labelType.text = [arrayOfTypes componentsJoinedByString:@""];
