@@ -14,7 +14,7 @@
 @property(nonatomic, weak) IBOutlet UILabel *labelDescription;
 @property(nonatomic, weak) IBOutlet UILabel *labelCity;
 @property(nonatomic, weak) IBOutlet UILabel *labelState;
-@property(nonatomic, weak) IBOutlet UILabel *labelTelephone;
+//@property(nonatomic, weak) IBOutlet UILabel *labelTelephone;
 @property (weak, nonatomic) IBOutlet UILabel *labelCompanyType;
 
 @property (weak, nonatomic) IBOutlet UITextView *txtViewTelephone;

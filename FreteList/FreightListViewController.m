@@ -62,7 +62,8 @@
     }];
     
     
-    
+    self.tableView.estimatedRowHeight = 140.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     
         
@@ -180,7 +181,7 @@
     cell.labelDescription.text = [object objectForKey:@"freightDescription"];
     cell.labelCity.text = [object objectForKey:@"city"];
     cell.labelState.text = [object objectForKey:@"state"];
-    cell.labelTelephone.text = [object objectForKey:@"telephone"];
+//    cell.labelTelephone.text = [object objectForKey:@"telephone"];
     cell.txtViewTelephone.text = [object objectForKey:@"telephone"];
     cell.labelCompanyType.text = [object objectForKey:@"companyType"];
     
