@@ -86,6 +86,12 @@
     infoCell.vehicleInfoTitle.text = [object objectForKey:@"categories"];
     infoCell.vehicleInfoDescription.text = [object objectForKey:@"categoryDescription"];
     
+    //Freights Photos
+    PFFile *thumbnail = [object objectForKey:@"categoryPhoto"];
+    infoCell.imgViewVehicleInfo.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
+    infoCell.imgViewVehicleInfo.file = thumbnail;
+    [infoCell.imgViewVehicleInfo loadInBackground];
+    
     return infoCell;
     
 }

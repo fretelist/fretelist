@@ -614,7 +614,7 @@
             </objects>
             <point key="canvasLocation" x="2482" y="197"/>
         </scene>
-        <!--Descrião dos Veículos-->
+        <!--Descrição dos Veículos-->
         <scene sceneID="rVg-07-O9O">
             <objects>
                 <tableViewController storyboardIdentifier="VehicleInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibQ-Zx-ppe" customClass="VehicleInfoTableViewController" sceneMemberID="viewController">
@@ -623,32 +623,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VehiclesInfoCell" textLabel="VcS-AD-Jv7" detailTextLabel="exu-gQ-fC9" imageView="bAJ-qN-fpK" style="IBUITableViewCellStyleSubtitle" id="AK0-rO-ZzI" customClass="VehicleInfoCustomCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VehiclesInfoCell" id="AK0-rO-ZzI" customClass="VehicleInfoCustomCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AK0-rO-ZzI" id="miy-r4-y3S">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VcS-AD-Jv7">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-it-V8S" customClass="PFImageView">
+                                            <rect key="frame" x="8" y="0.0" width="44" height="43.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-mF-fvp">
+                                            <rect key="frame" x="60" y="22" width="252" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="promotion_logo_placeholder" id="bAJ-qN-fpK">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="exu-gQ-fC9">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxe-4f-WxI">
+                                            <rect key="frame" x="60" y="8" width="252" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="vehicleInfoDescription" destination="exu-gQ-fC9" id="UHW-kl-u6Y"/>
-                                    <outlet property="vehicleInfoTitle" destination="VcS-AD-Jv7" id="L4w-Fx-Mxx"/>
-                                    <outlet property="vehicleInfoView" destination="bAJ-qN-fpK" id="Mex-nv-hu9"/>
+                                    <outlet property="imgViewVehicleInfo" destination="vRf-it-V8S" id="v1x-In-sqw"/>
+                                    <outlet property="vehicleInfoDescription" destination="2Wc-mF-fvp" id="ItI-sC-ziB"/>
+                                    <outlet property="vehicleInfoTitle" destination="Bxe-4f-WxI" id="R3K-5s-c35"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -657,7 +657,7 @@
                             <outlet property="delegate" destination="ibQ-Zx-ppe" id="n20-pq-l3O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Descrião dos Veículos" id="C6C-ns-zLd">
+                    <navigationItem key="navigationItem" title="Descrição dos Veículos" id="C6C-ns-zLd">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="fUk-yE-6jD">
                             <connections>
                                 <action selector="closeInfo:" destination="ibQ-Zx-ppe" id="OEe-NR-8EX"/>
@@ -2193,7 +2193,6 @@
         <image name="logoFreteListTarja_1.0" width="2538" height="608"/>
         <image name="map" width="20" height="30"/>
         <image name="organization-50" width="50" height="50"/>
-        <image name="promotion_logo_placeholder" width="70" height="70"/>
         <image name="search_38" width="38" height="38"/>
         <image name="visible-50" width="50" height="50"/>
     </resources>

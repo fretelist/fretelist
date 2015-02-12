@@ -9,7 +9,8 @@
 #import <Parse/Parse.h>
 
 @interface VehicleInfoCustomCell : PFTableViewCell
-@property (weak, nonatomic) IBOutlet UIView *vehicleInfoView;
+
+@property (weak, nonatomic) IBOutlet PFImageView *imgViewVehicleInfo;
 @property (weak, nonatomic) IBOutlet UILabel *vehicleInfoTitle;
 @property (weak, nonatomic) IBOutlet UILabel *vehicleInfoDescription;
 
