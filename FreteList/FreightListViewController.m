@@ -62,8 +62,8 @@
     }];
     
     
-    self.tableView.estimatedRowHeight = 150.0;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    self.tableView.estimatedRowHeight = 150.0;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     
         
@@ -190,7 +190,7 @@
     NSArray *arrayOfTypes = [object objectForKey:@"vehicleType"];
     
     cell.labelType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
-    cell.labelCity.numberOfLines = 6;
+//    cell.labelCity.numberOfLines = 6;
     
 //    //NSString *stringOfTypes = [arrayOfTypes componentsJoinedByString:@""];
 //    cell.labelType.text = [arrayOfTypes componentsJoinedByString:@""];
