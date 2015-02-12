@@ -246,6 +246,11 @@
 }
 
 - (IBAction)showVehiclesInfo:(id)sender {
+    
+    UINavigationController *vehicleInfoView = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleInfoNav"];
+    
+    [self presentViewController:vehicleInfoView animated:YES completion:nil];
+    
 }
 
 

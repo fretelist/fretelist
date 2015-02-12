@@ -70,6 +70,8 @@
 		BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059841A7A972100624119 /* ContactUsViewController.m */; };
 		BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5059861A7A999600624119 /* MessageUI.framework */; };
 		BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */; };
+		BDB7F3781A8CDC380057065C /* VehicleInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7F3771A8CDC380057065C /* VehicleInfoTableViewController.m */; };
+		BDB7F37B1A8CDE370057065C /* VehicleInfoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7F37A1A8CDE370057065C /* VehicleInfoCustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +179,10 @@
 		BD5059861A7A999600624119 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BD754D821A7FD4B5002F1177 /* NormalUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalUserTableViewController.h; sourceTree = "<group>"; };
 		BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalUserTableViewController.m; sourceTree = "<group>"; };
+		BDB7F3761A8CDC380057065C /* VehicleInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleInfoTableViewController.h; sourceTree = "<group>"; };
+		BDB7F3771A8CDC380057065C /* VehicleInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleInfoTableViewController.m; sourceTree = "<group>"; };
+		BDB7F3791A8CDE370057065C /* VehicleInfoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleInfoCustomCell.h; sourceTree = "<group>"; };
+		BDB7F37A1A8CDE370057065C /* VehicleInfoCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleInfoCustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +343,8 @@
 				BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */,
 				6CFA657A1A705AC400F2BFE0 /* FreightCustomCell.h */,
 				6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */,
+				BDB7F3791A8CDE370057065C /* VehicleInfoCustomCell.h */,
+				BDB7F37A1A8CDE370057065C /* VehicleInfoCustomCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -391,6 +399,8 @@
 				6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */,
 				6CB0FE001A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.h */,
 				6CB0FE011A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m */,
+				BDB7F3761A8CDC380057065C /* VehicleInfoTableViewController.h */,
+				BDB7F3771A8CDC380057065C /* VehicleInfoTableViewController.m */,
 				BD5059831A7A972100624119 /* ContactUsViewController.h */,
 				BD5059841A7A972100624119 /* ContactUsViewController.m */,
 			);
@@ -504,8 +514,10 @@
 				6C28B03518F8411300B3EC49 /* LoginViewController.m in Sources */,
 				6C3248D018EDBF2A00F7FE8C /* AppDelegate.m in Sources */,
 				6C28B02F18F83F4C00B3EC49 /* SignUpViewController.m in Sources */,
+				BDB7F3781A8CDC380057065C /* VehicleInfoTableViewController.m in Sources */,
 				6CB0FE021A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m in Sources */,
 				6C152B361A20DA7B009C759E /* DetailViewController.m in Sources */,
+				BDB7F37B1A8CDE370057065C /* VehicleInfoCustomCell.m in Sources */,
 				6C22B13E190716740094F4A1 /* MapViewController.m in Sources */,
 				6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */,
 				6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */,
