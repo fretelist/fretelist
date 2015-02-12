@@ -245,6 +245,9 @@
     
 }
 
+- (IBAction)showVehiclesInfo:(id)sender {
+}
+
 
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{

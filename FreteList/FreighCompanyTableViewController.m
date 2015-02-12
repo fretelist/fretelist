@@ -7,7 +7,7 @@
 //
 
 #import "FreighCompanyTableViewController.h"
-#import "VehiclesViewController.h"
+#import "VehicleTypeSignUpTableViewController.h"
 #import <Parse/Parse.h>
 
 @interface FreighCompanyTableViewController ()
@@ -109,7 +109,7 @@
                 UINavigationController *vehicleTypeCheck = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleTypeController"];
                 
                 // Check the vehicle type for the specific user
-                VehiclesViewController *vehicleType = (VehiclesViewController*)[vehicleTypeCheck.viewControllers objectAtIndex:0];
+                VehicleTypeSignUpTableViewController *vehicleType = (VehicleTypeSignUpTableViewController*)[vehicleTypeCheck.viewControllers objectAtIndex:0];
                 vehicleType .freightUser = user;
                 
                 // Present categories to be chosen

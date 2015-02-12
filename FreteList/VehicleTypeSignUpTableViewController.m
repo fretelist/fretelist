@@ -7,14 +7,14 @@
 //
 
 #import "InitialViewController.h"
-#import "VehiclesViewController.h"
+#import "VehicleTypeSignUpTableViewController.h"
 #import "CategoriesCell.h"
 
-@interface VehiclesViewController ()
+@interface VehicleTypeSignUpTableViewController ()
 
 @end
 
-@implementation VehiclesViewController
+@implementation VehicleTypeSignUpTableViewController
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

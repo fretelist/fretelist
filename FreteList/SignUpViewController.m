@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SignUpViewController.h"
 #import "HomeViewController.h"
-#import "VehiclesViewController.h"
+#import "VehicleTypeSignUpTableViewController.h"
 #import "InitialViewController.h"
 
 @interface SignUpViewController ()
@@ -656,7 +656,7 @@
                 UINavigationController *vehicleTypeCheck = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleTypeController"];
                 
                 // Check the vehicle type for the specific user
-                VehiclesViewController *vehicleType = (VehiclesViewController*)[vehicleTypeCheck.viewControllers objectAtIndex:0];
+                VehicleTypeSignUpTableViewController *vehicleType = (VehicleTypeSignUpTableViewController*)[vehicleTypeCheck.viewControllers objectAtIndex:0];
                 vehicleType .freightUser = user;
                 
                 // Present categories to be chosen

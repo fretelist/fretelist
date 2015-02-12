@@ -28,5 +28,6 @@
 @property (nonatomic, strong)NSString *companyType;
 
 - (IBAction)showFilter:(id)sender;
+- (IBAction)showVehiclesInfo:(id)sender;
 
 @end

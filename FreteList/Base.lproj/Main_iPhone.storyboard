@@ -226,7 +226,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Fretes" id="iqD-Cx-gwW">
-                        <barButtonItem key="leftBarButtonItem" image="info20" id="Ydm-k5-hG4"/>
+                        <barButtonItem key="leftBarButtonItem" image="info20" id="Ydm-k5-hG4">
+                            <connections>
+                                <action selector="showVehiclesInfo:" destination="TpO-rx-I3D" id="NBb-xn-rdH"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="filter_20x20" style="done" id="FOc-BG-va6">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -515,7 +519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HO7-xX-fBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856" y="-463"/>
+            <point key="canvasLocation" x="2972" y="-475"/>
         </scene>
         <!--Veículos-->
         <scene sceneID="9Vw-FA-9HW">
@@ -609,6 +613,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wA9-AD-yQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2482" y="197"/>
+        </scene>
+        <!--Descrião dos Veículos-->
+        <scene sceneID="rVg-07-O9O">
+            <objects>
+                <tableViewController id="ibQ-Zx-ppe" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IsI-eL-hnM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AK0-rO-ZzI">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AK0-rO-ZzI" id="miy-r4-y3S">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ibQ-Zx-ppe" id="lam-wS-glZ"/>
+                            <outlet property="delegate" destination="ibQ-Zx-ppe" id="n20-pq-l3O"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Descrião dos Veículos" id="C6C-ns-zLd">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="fUk-yE-6jD"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFt-bi-Q3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2529" y="835"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ua2-Pl-4c8">
+            <objects>
+                <navigationController id="IM7-4W-sfn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aZc-r8-mCb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ibQ-Zx-ppe" kind="relationship" relationship="rootViewController" id="4PL-Fk-dHm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wR9-Yq-tf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989" y="835"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u0p-Ix-Utl">
@@ -1071,7 +1120,7 @@
         <!--Cadastro de Veículos-->
         <scene sceneID="9H1-Yv-bhC">
             <objects>
-                <tableViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="pageSheet" id="9ho-7i-uW1" customClass="VehiclesViewController" sceneMemberID="viewController">
+                <tableViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="pageSheet" id="9ho-7i-uW1" customClass="VehicleTypeSignUpTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8cc-UT-15b">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

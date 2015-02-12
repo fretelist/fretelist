@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface VehiclesViewController : PFQueryTableViewController
+@interface VehicleTypeSignUpTableViewController : PFQueryTableViewController
 
 @property(nonatomic, strong)PFUser *freightUser;
 @property(nonatomic, strong)NSMutableArray *categoriesSelected;

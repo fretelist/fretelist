@@ -10,7 +10,7 @@
 #import "FreightListViewController.h"
 #import "SignUpViewController.h"
 #import "MapViewController.h"
-#import "VehiclesViewController.h"
+#import "VehicleTypeSignUpTableViewController.h"
 
 @interface InitialViewController ()
 
