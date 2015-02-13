@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VehicleTypeFilterViewController.h"
 
-@interface MyAccountTableViewController : UITableViewController<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+@interface MyAccountTableViewController : UITableViewController<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource,vehicleTypeFilterDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;
@@ -28,11 +29,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelMob2;
 @property (weak, nonatomic) IBOutlet UILabel *labelVehicleType;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescription;
+@property (weak, nonatomic) IBOutlet UIButton *btnChangeVehicleType;
 
 
 
 
 //Arrays
+@property (nonatomic, strong) NSMutableArray *myAccountVehicleTypes;
 @property (nonatomic, strong) NSMutableArray *myAccountStateData;
 @property (nonatomic, strong) NSArray *myAccountUserStateArray;
 @property (nonatomic, strong) NSArray *myAccountFreightUserStateArray;
@@ -54,5 +57,6 @@
 - (IBAction)changePhoto:(id)sender;
 - (IBAction)editInfos:(id)sender;
 - (IBAction)cancelInfos:(id)sender;
+- (IBAction)showMyAccountVehicleTypes:(id)sender;
 
 @end

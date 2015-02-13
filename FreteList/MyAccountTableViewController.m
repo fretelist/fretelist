@@ -7,6 +7,7 @@
 //
 
 #import "MyAccountTableViewController.h"
+#import "VehicleTypeFilterViewController.h"
 #import <Parse/Parse.h>
 
 @interface MyAccountTableViewController ()
@@ -48,6 +49,9 @@
     self.txtFieldCity.text = [[PFUser currentUser] objectForKey:@"city"];
     self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
     
+    //
+    
+    
     //Pass the selected state, otherwise crash will occur, due to Parse understanding what is being saved as nil
     self.pickerSelectedNewString = [[PFUser currentUser] objectForKey:@"state"];
     
@@ -69,6 +73,21 @@
         [self.pickerMyAccountState reloadAllComponents];
         
     } else {
+        
+        PFUser *userMyAccountCategories = [PFUser currentUser];
+        [userMyAccountCategories fetch];
+        
+        NSArray *arrayOfCategories = [userMyAccountCategories objectForKey:@"vehicleType"];
+        self.myAccountVehicleTypes = [[NSMutableArray alloc]init];
+        
+        for (PFObject *category in arrayOfCategories) {
+            [category fetch];
+            
+            [self.myAccountVehicleTypes addObject:category];
+        }
+        
+        NSString *result = [[self.myAccountVehicleTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+        self.labelVehicleType.text = result;
         
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountFreightUserStateArray];
         [self.pickerMyAccountState reloadAllComponents];
@@ -110,6 +129,16 @@
     }
     
     
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    if (self.isCliente == NO) {
+        NSString *result = [[self.myAccountVehicleTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+        self.labelVehicleType.text = result;
+    }
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -223,7 +252,7 @@
         [currentUser setObject:self.txtFieldCity.text forKey:@"city"];
         [currentUser setObject:self.txtFieldDescription.text forKey:@"freightDescription"];
         [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
-        
+        [currentUser setObject:self.myAccountVehicleTypes forKey:@"vehicleType"];
         
         // If it is not a normal user, save Photo. If it is a normal user, do not save, otherwise it will crash, as the field is disabled
         if (!self.isCliente) {
@@ -277,6 +306,26 @@
     
     [self disableEdit];
 
+    
+    
+}
+
+- (IBAction)showMyAccountVehicleTypes:(id)sender {
+    
+    //Cast FilterViewController
+    UINavigationController *navigationView = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"VehicleTypeFilterNav" ];
+    
+    VehicleTypeFilterViewController *filterView = (VehicleTypeFilterViewController*)[navigationView.viewControllers objectAtIndex:0];
+    
+    
+    //Init with an empty array, as I have not selected anything yet
+    
+    filterView.vehicleTypeFilter = [[NSMutableArray alloc] initWithArray:self.myAccountVehicleTypes];
+    filterView.delegate = self;
+    
+    
+    [self presentViewController:navigationView animated:YES completion:nil];
+    
     
     
 }
@@ -395,7 +444,16 @@
     
 }
 
+#pragma mark - VehicleTypeFilterDelegate
 
+-(void)sendVehicleTypeFiltersToMainController:(NSArray *)arrayOfVehicleTypes{
+    
+    NSMutableArray *myAccountTemp = [[NSMutableArray alloc]initWithArray:arrayOfVehicleTypes];
+    self.myAccountVehicleTypes = myAccountTemp;
+    
+    
+    
+}
 
 @end
 

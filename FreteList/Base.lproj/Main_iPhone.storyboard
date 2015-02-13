@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -156,7 +156,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-me-mQH">
-                                            <rect key="frame" x="86" y="10" width="141" height="15.5"/>
+                                            <rect key="frame" x="86" y="10" width="141" height="16"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -182,7 +182,7 @@
                                             <rect key="frame" x="8" y="8" width="70" height="70"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-4Y-Tg7">
-                                            <rect key="frame" x="235" y="10" width="77" height="15.5"/>
+                                            <rect key="frame" x="235" y="10" width="77" height="16"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -556,7 +556,7 @@
                                 <action selector="closeVehicleType:" destination="U1m-pq-UIE" id="43T-cA-QCg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="6g3-U7-2uQ">
+                        <barButtonItem key="rightBarButtonItem" title="Apply" id="6g3-U7-2uQ">
                             <connections>
                                 <action selector="applyVehicleType:" destination="U1m-pq-UIE" id="NYe-WP-sHU"/>
                             </connections>
@@ -629,7 +629,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-it-V8S" customClass="PFImageView">
-                                            <rect key="frame" x="8" y="0.0" width="44" height="43.5"/>
+                                            <rect key="frame" x="8" y="0.0" width="44" height="44"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-mF-fvp">
                                             <rect key="frame" x="60" y="22" width="252" height="21"/>
@@ -1482,8 +1482,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pZB-AR-SEQ" id="eZr-tc-20q">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27x-ag-wDl">
+                                                    <rect key="frame" x="8" y="9" width="158" height="30"/>
+                                                    <state key="normal" title="Update Vehicle Types">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showMyAccountVehicleTypes:" destination="1Rh-Ti-Bb2" eventType="touchUpInside" id="O7G-Fc-dlS"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-p6-qNR">
-                                                    <rect key="frame" x="8" y="11" width="126" height="21"/>
+                                                    <rect key="frame" x="186" y="11" width="126" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1707,6 +1716,7 @@
                     <connections>
                         <outlet property="btnCancel" destination="tNG-mc-1pc" id="Mx1-wp-GSN"/>
                         <outlet property="btnChangePhoto" destination="6Ft-3n-zHw" id="VeW-V7-u5M"/>
+                        <outlet property="btnChangeVehicleType" destination="27x-ag-wDl" id="UuB-54-c5w"/>
                         <outlet property="btnLogout" destination="wHu-ru-tMT" id="1NM-NB-WKI"/>
                         <outlet property="btnSave" destination="2Zj-4k-2mI" id="xIo-8Y-879"/>
                         <outlet property="imgViewUserPhoto" destination="Bpp-Vx-9wN" id="Se4-vs-rWw"/>
@@ -1728,7 +1738,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5j-Yi-Rdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="323"/>
+            <point key="canvasLocation" x="1166" y="321"/>
         </scene>
         <!--Cadstro Fretes-->
         <scene sceneID="xal-C5-l7j">
