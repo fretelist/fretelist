@@ -63,6 +63,7 @@
         self.txtFieldMob2.hidden = YES;
         self.txtFieldDescription.hidden = YES;
         self.btnChangePhoto.hidden = YES;
+        self.btnChangeVehicleType.hidden = YES;
         self.labelTelephone.hidden = YES;
         self.labelMob1.hidden = YES;
         self.labelVehicleType.hidden = YES;
@@ -290,6 +291,7 @@
         self.txtFieldCity.enabled = YES;
         self.txtFieldDescription.enabled = YES;
         self.btnChangePhoto.enabled = YES;
+        self.btnChangeVehicleType.enabled = YES;
         self.btnLogout.enabled = YES;
         self.pickerMyAccountState.userInteractionEnabled = YES;
         [self.btnCancel setEnabled:YES];
@@ -341,6 +343,7 @@
     self.txtFieldCity.enabled = NO;
     self.txtFieldDescription.enabled = NO;
     self.btnChangePhoto.enabled = NO;
+    self.btnChangeVehicleType.enabled = NO;
     self.btnLogout.enabled = NO;
     [self.btnCancel setEnabled:NO];
     self.pickerMyAccountState.userInteractionEnabled = NO;
