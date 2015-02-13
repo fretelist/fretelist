@@ -556,7 +556,7 @@
                                 <action selector="closeVehicleType:" destination="U1m-pq-UIE" id="43T-cA-QCg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Apply" id="6g3-U7-2uQ">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="6g3-U7-2uQ">
                             <connections>
                                 <action selector="applyVehicleType:" destination="U1m-pq-UIE" id="NYe-WP-sHU"/>
                             </connections>
@@ -1477,23 +1477,24 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pZB-AR-SEQ">
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="10" id="pZB-AR-SEQ">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pZB-AR-SEQ" id="eZr-tc-20q">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27x-ag-wDl">
-                                                    <rect key="frame" x="8" y="9" width="158" height="30"/>
-                                                    <state key="normal" title="Update Vehicle Types">
+                                                    <rect key="frame" x="8" y="8" width="158" height="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Alterar Tipo de Veículo">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="showMyAccountVehicleTypes:" destination="1Rh-Ti-Bb2" eventType="touchUpInside" id="O7G-Fc-dlS"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-p6-qNR">
-                                                    <rect key="frame" x="186" y="11" width="126" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Type" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-p6-qNR">
+                                                    <rect key="frame" x="174" y="8" width="83" height="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1543,7 +1544,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O96-an-GMy" id="kCb-Sz-wzf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Uh-c7d">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alterar Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Uh-c7d">
                                                     <rect key="frame" x="107" y="5" width="205" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1738,7 +1739,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5j-Yi-Rdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="321"/>
+            <point key="canvasLocation" x="1166" y="318"/>
         </scene>
         <!--Cadstro Fretes-->
         <scene sceneID="xal-C5-l7j">
