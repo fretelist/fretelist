@@ -70,6 +70,7 @@
 		BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059841A7A972100624119 /* ContactUsViewController.m */; };
 		BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5059861A7A999600624119 /* MessageUI.framework */; };
 		BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */; };
+		BD9D9E771A8E066B001FA599 /* CityTypeFilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9E761A8E066B001FA599 /* CityTypeFilterTableViewController.m */; };
 		BDB7F3781A8CDC380057065C /* VehicleInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7F3771A8CDC380057065C /* VehicleInfoTableViewController.m */; };
 		BDB7F37B1A8CDE370057065C /* VehicleInfoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7F37A1A8CDE370057065C /* VehicleInfoCustomCell.m */; };
 /* End PBXBuildFile section */
@@ -179,6 +180,8 @@
 		BD5059861A7A999600624119 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BD754D821A7FD4B5002F1177 /* NormalUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalUserTableViewController.h; sourceTree = "<group>"; };
 		BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalUserTableViewController.m; sourceTree = "<group>"; };
+		BD9D9E751A8E066B001FA599 /* CityTypeFilterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTypeFilterTableViewController.h; sourceTree = "<group>"; };
+		BD9D9E761A8E066B001FA599 /* CityTypeFilterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTypeFilterTableViewController.m; sourceTree = "<group>"; };
 		BDB7F3761A8CDC380057065C /* VehicleInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleInfoTableViewController.h; sourceTree = "<group>"; };
 		BDB7F3771A8CDC380057065C /* VehicleInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleInfoTableViewController.m; sourceTree = "<group>"; };
 		BDB7F3791A8CDE370057065C /* VehicleInfoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleInfoCustomCell.h; sourceTree = "<group>"; };
@@ -397,6 +400,8 @@
 				6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */,
 				6CE7DD371A799D98007837D8 /* CompanyTypeFilterViewController.h */,
 				6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */,
+				BD9D9E751A8E066B001FA599 /* CityTypeFilterTableViewController.h */,
+				BD9D9E761A8E066B001FA599 /* CityTypeFilterTableViewController.m */,
 				6CB0FE001A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.h */,
 				6CB0FE011A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m */,
 				BDB7F3761A8CDC380057065C /* VehicleInfoTableViewController.h */,
@@ -520,6 +525,7 @@
 				BDB7F37B1A8CDE370057065C /* VehicleInfoCustomCell.m in Sources */,
 				6C22B13E190716740094F4A1 /* MapViewController.m in Sources */,
 				6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */,
+				BD9D9E771A8E066B001FA599 /* CityTypeFilterTableViewController.m in Sources */,
 				6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */,
 				6C9A09341A7C43960033E895 /* FreighCompanyTableViewController.m in Sources */,
 				6C54CA561A1EA422002671B3 /* FreightListViewController.m in Sources */,

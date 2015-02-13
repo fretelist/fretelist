@@ -12,6 +12,7 @@
 #import "FreightCustomCell.h"
 #import "VehicleTypeFilterViewController.h"
 #import "CompanyTypeFilterViewController.h"
+#import "CityTypeFilterTableViewController.h"
 
 @interface FreightListViewController ()
 
@@ -160,6 +161,17 @@
 }
 
 
+-(void)sendCityTypeFiltersToMainController:(NSString *)cityTypes{
+    
+    self.cityType = cityTypes;
+    
+    [self loadObjects];
+    
+    [self.tableView reloadData];
+    
+    
+}
+
 
 -(void)sendTypesToMainController:(NSArray *)arrayOfTypes{
     self.featTypes = arrayOfTypes;
@@ -238,7 +250,7 @@
                                                             delegate:self
                                                     cancelButtonTitle:@"Fechar"
                                                 destructiveButtonTitle:@"Limpar Filtros"
-                                                    otherButtonTitles:@"Filtrar por Tipo de Veículos",@"Filtrar por Tipo de Frete", nil];
+                                                    otherButtonTitles:@"Filtrar por Tipo de Veículos",@"Filtrar por Tipo de Frete",@"Filtrar por Cidade", nil];
     
     [filterOptions showInView:self.view];
     
@@ -300,7 +312,7 @@
            CompanyTypeFilterViewController *filterView = (CompanyTypeFilterViewController*)[navigationView.viewControllers objectAtIndex:0];
             
             
-            //Init with an empty array, as I have not selected anything yet
+            //Pass created Strings to the ones which will be selected
             
             filterView.companyTypeSelected = self.companyType;
             filterView.delegate = self;
@@ -310,6 +322,21 @@
 
             
             break;
+        }
+        case 3:{
+            
+            //Cast FilterViewController
+            UINavigationController *navigationView = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"CityTypeFilterNav" ];
+            CityTypeFilterTableViewController *filterView = (CityTypeFilterTableViewController*)[navigationView.viewControllers objectAtIndex:0];
+            
+            //Pass created Strings to the ones which will be selected
+            filterView.cityTypeSelected = self.cityType;
+            filterView.delegate = self;
+            
+            [self presentViewController:navigationView animated:YES completion:nil];
+            
+            break;
+            
         }
         default:
             break;

@@ -9,8 +9,9 @@
 #import <Parse/Parse.h>
 #import "VehicleTypeFilterViewController.h"
 #import "CompanyTypeFilterViewController.h"
+#import "CityTypeFilterTableViewController.h"
 
-@interface FreightListViewController : PFQueryTableViewController<vehicleTypeFilterDelegate,companyTypeFilterDelegate,UIActionSheetDelegate>
+@interface FreightListViewController : PFQueryTableViewController<vehicleTypeFilterDelegate,companyTypeFilterDelegate,cityTypeFilterDelegate,UIActionSheetDelegate>
 
 
 @property(nonatomic, strong) PFObject *clickedCell;
@@ -24,8 +25,11 @@
 //Create an Array for freight types
 @property (nonatomic, strong) NSArray *featTypes;
 
-//Creat an NSString for comapny types(you can only select one)
+//Create an NSString for comapny types(you can only select one)
 @property (nonatomic, strong)NSString *companyType;
+
+//Create an NSString for city types(you can only select one for now - in other versions change it to an Array)
+@property (nonatomic, strong)NSString *cityType;
 
 - (IBAction)showFilter:(id)sender;
 - (IBAction)showVehiclesInfo:(id)sender;
