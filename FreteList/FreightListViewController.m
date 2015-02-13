@@ -101,6 +101,8 @@
         self.featTypes = [[NSArray alloc]init];
         
         self.companyType = @"";
+        
+        self.cityType = @"";
     }
     return self;
 }
@@ -121,6 +123,9 @@
         [query whereKey:@"companyType" equalTo:self.companyType];
     }
     
+    if (![self.cityType isEqualToString:@""]) {
+        [query whereKey:@"city" equalTo:self.cityType];
+    }
     
     
     //Query all freights, but also query if the Array is greater than zero, which is related to the filter
@@ -274,6 +279,7 @@
             
             self.featCategories = [[NSArray alloc]init];
             self.companyType = @"";
+            self.cityType = @"";
             
             [self loadObjects];
             [self.tableView reloadData];
