@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C152B361A20DA7B009C759E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C152B351A20DA7B009C759E /* DetailViewController.m */; };
-		6C1C9A8A18FD874C000A80FB /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C9A8918FD874C000A80FB /* MyAccountViewController.m */; };
 		6C1EA05C19055E2900A82530 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C1EA05B19055E2900A82530 /* GoogleMaps.bundle */; };
 		6C22B13E190716740094F4A1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C22B13D190716740094F4A1 /* MapViewController.m */; };
 		6C2538BD190023E0009E7386 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2538BC190023E0009E7386 /* AVFoundation.framework */; };
@@ -88,8 +87,6 @@
 /* Begin PBXFileReference section */
 		6C152B341A20DA7B009C759E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		6C152B351A20DA7B009C759E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		6C1C9A8818FD874C000A80FB /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
-		6C1C9A8918FD874C000A80FB /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		6C1EA05B19055E2900A82530 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "GoogleMaps-iOS-1.7.2/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		6C22B13C190716740094F4A1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		6C22B13D190716740094F4A1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
@@ -380,8 +377,6 @@
 				BD5059811A7A464300624119 /* ForgotPasswordViewController.m */,
 				6C2663CF18F885090004373D /* HomeViewController.h */,
 				6C2663D018F885090004373D /* HomeViewController.m */,
-				6C1C9A8818FD874C000A80FB /* MyAccountViewController.h */,
-				6C1C9A8918FD874C000A80FB /* MyAccountViewController.m */,
 				6C824A561A866A2A0010BD39 /* MyAccountTableViewController.h */,
 				6C824A571A866A2A0010BD39 /* MyAccountTableViewController.m */,
 				6C22B13C190716740094F4A1 /* MapViewController.h */,
@@ -539,7 +534,6 @@
 				6C2663B818F87E910004373D /* Ofertas.m in Sources */,
 				BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */,
 				BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */,
-				6C1C9A8A18FD874C000A80FB /* MyAccountViewController.m in Sources */,
 				6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */,
 				6C28B03218F83FB000B3EC49 /* InitialViewController.m in Sources */,
 				6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */,
