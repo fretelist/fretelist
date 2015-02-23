@@ -307,11 +307,12 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tel" translatesAutoresizingMaskIntoConstraints="NO" id="dno-Rh-yzT">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Tel" translatesAutoresizingMaskIntoConstraints="NO" id="dno-Rh-yzT">
                                             <rect key="frame" x="61" y="156" width="136" height="28"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Celular 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-CQ-TO4">
                                             <rect key="frame" x="8" y="195" width="52" height="25"/>
@@ -319,11 +320,12 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Cel 1" translatesAutoresizingMaskIntoConstraints="NO" id="cF5-nq-14m">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Cel 1" translatesAutoresizingMaskIntoConstraints="NO" id="cF5-nq-14m">
                                             <rect key="frame" x="61" y="192" width="136" height="28"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Celular 2:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTJ-c7-sX4">
                                             <rect key="frame" x="8" y="231" width="52" height="25"/>
@@ -331,14 +333,26 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Cel 2" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-qA-nCP">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Cel 2" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-qA-nCP">
                                             <rect key="frame" x="61" y="228" width="136" height="28"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                         </textView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelCity" destination="Ojc-4n-II0" id="P2z-i0-HRT"/>
+                                    <outlet property="labelCompanyType" destination="ist-gJ-uUf" id="Zgm-zX-eDf"/>
+                                    <outlet property="labelDescription" destination="cky-O7-kH8" id="naM-HB-Ayh"/>
+                                    <outlet property="labelName" destination="P4h-L6-Ayv" id="dLC-Xs-r8K"/>
+                                    <outlet property="labelState" destination="6DO-ZN-QkH" id="zVH-RV-DHH"/>
+                                    <outlet property="labelVehicleType" destination="Q9e-60-XwK" id="J2G-Ml-Qr7"/>
+                                    <outlet property="txtViewMobile1" destination="cF5-nq-14m" id="phs-PW-jzH"/>
+                                    <outlet property="txtViewMobile2" destination="bjq-qA-nCP" id="xfV-qt-aHM"/>
+                                    <outlet property="txtViewTelephone" destination="dno-Rh-yzT" id="Qgh-Z0-I9h"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
