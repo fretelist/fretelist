@@ -59,7 +59,6 @@
 		6CDF6B311A21390F00A2B0DF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF6B301A21390F00A2B0DF /* Icon.png */; };
 		6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF6B331A218D5400A2B0DF /* SearchViewController.m */; };
 		6CE7DD391A799D98007837D8 /* CompanyTypeFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */; };
-		6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF14D451A12A88200F2A4BD /* OfferViewController.m */; };
 		6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */; };
 		BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */; };
 		BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059811A7A464300624119 /* ForgotPasswordViewController.m */; };
@@ -156,8 +155,6 @@
 		6CDF6B331A218D5400A2B0DF /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		6CE7DD371A799D98007837D8 /* CompanyTypeFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTypeFilterViewController.h; sourceTree = "<group>"; };
 		6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyTypeFilterViewController.m; sourceTree = "<group>"; };
-		6CF14D441A12A88200F2A4BD /* OfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferViewController.h; sourceTree = "<group>"; };
-		6CF14D451A12A88200F2A4BD /* OfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferViewController.m; sourceTree = "<group>"; };
 		6CFA657A1A705AC400F2BFE0 /* FreightCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreightCustomCell.h; sourceTree = "<group>"; };
 		6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightCustomCell.m; sourceTree = "<group>"; };
 		BD4EB7B71A6D6BCF0025237F /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
@@ -379,8 +376,6 @@
 				6C152B351A20DA7B009C759E /* DetailViewController.m */,
 				6CDF6B321A218D5400A2B0DF /* SearchViewController.h */,
 				6CDF6B331A218D5400A2B0DF /* SearchViewController.m */,
-				6CF14D441A12A88200F2A4BD /* OfferViewController.h */,
-				6CF14D451A12A88200F2A4BD /* OfferViewController.m */,
 				6CDAF9541A71B00B002D1D7A /* VehicleTypeFilterViewController.h */,
 				6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */,
 				6CE7DD371A799D98007837D8 /* CompanyTypeFilterViewController.h */,
@@ -522,7 +517,6 @@
 				6C2663B818F87E910004373D /* Ofertas.m in Sources */,
 				BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */,
 				BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */,
-				6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */,
 				6C28B03218F83FB000B3EC49 /* InitialViewController.m in Sources */,
 				6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */,
 				BD6B8E041A9B61EA0096414F /* FreightDetailCustomCell.m in Sources */,
