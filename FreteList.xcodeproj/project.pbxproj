@@ -69,6 +69,7 @@
 		BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059811A7A464300624119 /* ForgotPasswordViewController.m */; };
 		BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059841A7A972100624119 /* ContactUsViewController.m */; };
 		BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5059861A7A999600624119 /* MessageUI.framework */; };
+		BD6B8E041A9B61EA0096414F /* FreightDetailCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6B8E031A9B61EA0096414F /* FreightDetailCustomCell.m */; };
 		BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */; };
 		BD9D9E771A8E066B001FA599 /* CityTypeFilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9E761A8E066B001FA599 /* CityTypeFilterTableViewController.m */; };
 		BDB7F3781A8CDC380057065C /* VehicleInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7F3771A8CDC380057065C /* VehicleInfoTableViewController.m */; };
@@ -178,6 +179,8 @@
 		BD5059831A7A972100624119 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		BD5059841A7A972100624119 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		BD5059861A7A999600624119 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BD6B8E021A9B61EA0096414F /* FreightDetailCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreightDetailCustomCell.h; sourceTree = "<group>"; };
+		BD6B8E031A9B61EA0096414F /* FreightDetailCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightDetailCustomCell.m; sourceTree = "<group>"; };
 		BD754D821A7FD4B5002F1177 /* NormalUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalUserTableViewController.h; sourceTree = "<group>"; };
 		BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalUserTableViewController.m; sourceTree = "<group>"; };
 		BD9D9E751A8E066B001FA599 /* CityTypeFilterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTypeFilterTableViewController.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */,
 				BDB7F3791A8CDE370057065C /* VehicleInfoCustomCell.h */,
 				BDB7F37A1A8CDE370057065C /* VehicleInfoCustomCell.m */,
+				BD6B8E021A9B61EA0096414F /* FreightDetailCustomCell.h */,
+				BD6B8E031A9B61EA0096414F /* FreightDetailCustomCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				6CF14D461A12A88200F2A4BD /* OfferViewController.m in Sources */,
 				6C28B03218F83FB000B3EC49 /* InitialViewController.m in Sources */,
 				6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */,
+				BD6B8E041A9B61EA0096414F /* FreightDetailCustomCell.m in Sources */,
 				6C824A581A866A2A0010BD39 /* MyAccountTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
