@@ -33,7 +33,7 @@
     if (self) {
         
         // The className to query on
-        self.parseClassName = @"Deals_Details";
+        self.parseClassName = @"_User";
         
         // The key of the PFObject to display in the label of the default cell style
         //self.textKey = @"Name";
@@ -65,7 +65,7 @@
 
 -(PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
     
-    static NSString *simpleTableIdentifier = @"DetailCardCell";
+    static NSString *simpleTableIdentifier = @"FreightDetailCell";
     
     
     PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
