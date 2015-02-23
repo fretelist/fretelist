@@ -8,7 +8,6 @@
 
 #import "FreightListViewController.h"
 #import "DetailViewController.h"
-#import "FilterViewController.h"
 #import "FreightCustomCell.h"
 #import "VehicleTypeFilterViewController.h"
 #import "CompanyTypeFilterViewController.h"
