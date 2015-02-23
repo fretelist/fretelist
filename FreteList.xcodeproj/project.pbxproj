@@ -27,7 +27,6 @@
 		6C2663CA18F884270004373D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2663C918F884270004373D /* Security.framework */; };
 		6C2663CC18F884310004373D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2663CB18F884310004373D /* StoreKit.framework */; };
 		6C2663CE18F8843E0004373D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2663CD18F8843E0004373D /* SystemConfiguration.framework */; };
-		6C2663D118F885090004373D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2663D018F885090004373D /* HomeViewController.m */; };
 		6C28B02F18F83F4C00B3EC49 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28B02E18F83F4C00B3EC49 /* SignUpViewController.m */; };
 		6C28B03218F83FB000B3EC49 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28B03118F83FB000B3EC49 /* InitialViewController.m */; };
 		6C28B03518F8411300B3EC49 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28B03418F8411300B3EC49 /* LoginViewController.m */; };
@@ -109,8 +108,6 @@
 		6C2663C918F884270004373D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6C2663CB18F884310004373D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		6C2663CD18F8843E0004373D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		6C2663CF18F885090004373D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		6C2663D018F885090004373D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		6C28B02D18F83F4C00B3EC49 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		6C28B02E18F83F4C00B3EC49 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		6C28B03018F83FB000B3EC49 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
@@ -372,8 +369,6 @@
 				BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */,
 				BD5059801A7A464300624119 /* ForgotPasswordViewController.h */,
 				BD5059811A7A464300624119 /* ForgotPasswordViewController.m */,
-				6C2663CF18F885090004373D /* HomeViewController.h */,
-				6C2663D018F885090004373D /* HomeViewController.m */,
 				6C824A561A866A2A0010BD39 /* MyAccountTableViewController.h */,
 				6C824A571A866A2A0010BD39 /* MyAccountTableViewController.m */,
 				6C22B13C190716740094F4A1 /* MapViewController.h */,
@@ -521,7 +516,6 @@
 				6C54CA561A1EA422002671B3 /* FreightListViewController.m in Sources */,
 				BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */,
 				6CE7DD391A799D98007837D8 /* CompanyTypeFilterViewController.m in Sources */,
-				6C2663D118F885090004373D /* HomeViewController.m in Sources */,
 				6C37BD1B18F736010096D8E3 /* Users.m in Sources */,
 				BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */,
 				6C3248CC18EDBF2A00F7FE8C /* main.m in Sources */,
