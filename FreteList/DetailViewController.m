@@ -54,13 +54,18 @@
     
     //Creates a relation based on a clicked cell at CategoryViewController and what the Relation is pointing at on Parse
 //    PFRelation *detailsRelation = [self.clickedDealDetail relationForKey:@"detailRelation"];
+    
+    PFQuery *clickedFreight = [PFQuery queryWithClassName:self.parseClassName];
+    
+    if (self.clickedFreightDetail) {
+        [self.clickedFreightDetail objectForKey:@"objectId"];
+    }
 
-    PFQuery *freightDetail = [PFQuery queryWithClassName:@"_User"];
-    [freightDetail whereKey:@"objectID" equalTo:self.clickedFreightDetail];
+    
     
 //    return [detailsRelation query];
     
-    return freightDetail;
+    return clickedFreight;
     
     
 }
