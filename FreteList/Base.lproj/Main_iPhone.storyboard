@@ -343,6 +343,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgUserPhoto" destination="wPm-Mu-D2E" id="aZU-S1-ayu"/>
                                     <outlet property="labelCity" destination="Ojc-4n-II0" id="P2z-i0-HRT"/>
                                     <outlet property="labelCompanyType" destination="ist-gJ-uUf" id="Zgm-zX-eDf"/>
                                     <outlet property="labelDescription" destination="cky-O7-kH8" id="naM-HB-Ayh"/>

@@ -225,7 +225,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     // Recognizes touched Freight
-    self.clickedDeal = [self objectAtIndexPath:indexPath];
+    self.clickedFreight = [self objectAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"detail" sender:self];
     
 }
@@ -240,7 +240,7 @@
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"detail"]) {
         DetailViewController *destinationDetail = segue.destinationViewController;
-        destinationDetail.clickedDealDetail = self.clickedDeal;
+        destinationDetail.clickedFreightDetail = self.clickedFreight;
     }
 }
 

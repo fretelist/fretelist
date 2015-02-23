@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *txtViewTelephone;
 @property (weak, nonatomic) IBOutlet UITextView *txtViewMobile1;
 @property (weak, nonatomic) IBOutlet UITextView *txtViewMobile2;
+@property (weak, nonatomic) IBOutlet PFImageView *imgUserPhoto;
 
 
 

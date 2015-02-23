@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "FreightDetailCustomCell.h"
 
 @interface DetailViewController ()
 
@@ -52,11 +53,14 @@
 -(PFQuery *)queryForTable{
     
     //Creates a relation based on a clicked cell at CategoryViewController and what the Relation is pointing at on Parse
-    PFRelation *detailsRelation = [self.clickedDealDetail relationForKey:@"detailRelation"];
+//    PFRelation *detailsRelation = [self.clickedDealDetail relationForKey:@"detailRelation"];
 
+    PFQuery *freightDetail = [PFQuery queryWithClassName:@"_User"];
+    [freightDetail whereKey:@"objectID" equalTo:self.clickedFreightDetail];
     
+//    return [detailsRelation query];
     
-    return [detailsRelation query];
+    return freightDetail;
     
     
 }
@@ -68,39 +72,33 @@
     static NSString *simpleTableIdentifier = @"FreightDetailCell";
     
     
-    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    FreightDetailCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[FreightDetailCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
         
-    //Offer Title
-    UILabel* title = (UILabel*)[cell viewWithTag:110];
-    title.text = [object objectForKey:@"offerTitle"];
-    //cell.textLabel.text = [object objectForKey:@"companyName"];
-        
-    //Offer Description
-    UILabel* dealDescription = (UILabel*)[cell viewWithTag:111];
-    dealDescription.text = [object objectForKey:@"deal_description"];
-    
-//    //Offer Link
-    UILabel* dealLink = (UILabel*)[cell viewWithTag:112];
-    dealLink.text = [object objectForKey:@"offerLink"];
-    
-    //Card Photo
-    PFFile *thumbnail = [object objectForKey:@"cardPhoto"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:109];
-    thumbnailImageView.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    //
-
+    //Freights Information
+    cell.labelName.text = [object objectForKey:@"name"];
+    cell.labelDescription.text = [object objectForKey:@"freightDescription"];
+    cell.labelCity.text = [object objectForKey:@"city"];
+    cell.labelState.text = [object objectForKey:@"state"];
+    cell.txtViewTelephone.text = [object objectForKey:@"telephone"];
+    cell.labelCompanyType.text = [object objectForKey:@"companyType"];
     
     
+    //Vehicle Types
+    NSArray *arrayOfTypes = [object objectForKey:@"vehicleType"];
     
-
-//    cell.textLabel.text = [object objectForKey:@"deal_description"];
+    cell.labelCompanyType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
     
+    //Freights Photos
+    PFFile *thumbnail = [object objectForKey:@"userPhoto"];
+    cell.imgUserPhoto.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
+    cell.imgUserPhoto.file = thumbnail;
+    [cell.imgUserPhoto loadInBackground];
+    
+    NSLog(@"%@",[object objectForKey:@"vehicleType"]);
     
     return cell;
     

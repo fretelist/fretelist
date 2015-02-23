@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
-#import "HomeViewController.h"
 #import <Parse/Parse.h>
 
 @implementation AppDelegate
