@@ -25,6 +25,7 @@
     // Do any additional setup after loading the view.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
@@ -44,6 +45,7 @@
         
         // Whether the built-in pagination is enabled
         self.paginationEnabled = YES;
+        
     }
     return self;
 }
@@ -55,17 +57,22 @@
     //Creates a relation based on a clicked cell at CategoryViewController and what the Relation is pointing at on Parse
 //    PFRelation *detailsRelation = [self.clickedDealDetail relationForKey:@"detailRelation"];
     
-    PFQuery *clickedFreight = [PFQuery queryWithClassName:self.parseClassName];
+    PFQuery *clickedFreightQuery = [[PFQuery alloc]initWithClassName:self.parseClassName];
     
-    if (self.clickedFreightDetail) {
-        [self.clickedFreightDetail objectForKey:@"objectId"];
-    }
+    [clickedFreightQuery whereKey:@"objectId" equalTo:self.clickedFreightDetail];
 
+
+//    if (self.clickedFreightDetail) {
+//        
+//        [self.clickedFreightDetail objectForKey:@"name"];
+//        [self.clickedFreightDetail objectForKey:@"freightDescription"];
+//        
+//    }
+
+ 
+    //    return [detailsRelation query];
     
-    
-//    return [detailsRelation query];
-    
-    return clickedFreight;
+    return clickedFreightQuery;
     
     
 }
@@ -84,7 +91,7 @@
     }
         
     //Freights Information
-    cell.labelName.text = [object objectForKey:@"name"];
+    cell.labelName.text = [self.clickedFreightDetail objectForKey:@"name"];
     cell.labelDescription.text = [object objectForKey:@"freightDescription"];
     cell.labelCity.text = [object objectForKey:@"city"];
     cell.labelState.text = [object objectForKey:@"state"];
