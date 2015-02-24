@@ -10,17 +10,17 @@
 
 @interface FreightDetailCustomCell : PFTableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *labelName;
-@property (weak, nonatomic) IBOutlet UILabel *labelCompanyType;
-@property (weak, nonatomic) IBOutlet UILabel *labelDescription;
-@property (weak, nonatomic) IBOutlet UILabel *labelVehicleType;
-@property (weak, nonatomic) IBOutlet UILabel *labelCity;
-@property (weak, nonatomic) IBOutlet UILabel *labelState;
+@property (weak, nonatomic) IBOutlet UILabel *labelDetailName;
+@property (weak, nonatomic) IBOutlet UILabel *labelDetailCompanyType;
+@property (weak, nonatomic) IBOutlet UILabel *labelDetailDescription;
+@property (weak, nonatomic) IBOutlet UILabel *labelDetailVehicleType;
+@property (weak, nonatomic) IBOutlet UILabel *labelDetailCity;
+@property (weak, nonatomic) IBOutlet UILabel *labelDetailState;
 
-@property (weak, nonatomic) IBOutlet UITextView *txtViewTelephone;
-@property (weak, nonatomic) IBOutlet UITextView *txtViewMobile1;
-@property (weak, nonatomic) IBOutlet UITextView *txtViewMobile2;
-@property (weak, nonatomic) IBOutlet PFImageView *imgUserPhoto;
+@property (weak, nonatomic) IBOutlet UITextView *txtViewDetailTelephone;
+@property (weak, nonatomic) IBOutlet UITextView *txtViewDetailMobile1;
+@property (weak, nonatomic) IBOutlet UITextView *txtViewDetailMobile2;
+@property (weak, nonatomic) IBOutlet PFImageView *imgDetailUserPhoto;
 
 
 

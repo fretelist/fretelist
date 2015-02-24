@@ -60,17 +60,8 @@
     PFQuery *clickedFreightQuery = [[PFQuery alloc]initWithClassName:self.parseClassName];
     
     [clickedFreightQuery whereKey:@"objectId" equalTo:self.clickedFreightDetail];
-
-
-//    if (self.clickedFreightDetail) {
-//        
-//        [self.clickedFreightDetail objectForKey:@"name"];
-//        [self.clickedFreightDetail objectForKey:@"freightDescription"];
-//        
-//    }
-
- 
-    //    return [detailsRelation query];
+    
+    NSLog(@"clicked Freight: %@",self.clickedFreightDetail);
     
     return clickedFreightQuery;
     
@@ -84,35 +75,36 @@
     static NSString *simpleTableIdentifier = @"FreightDetailCell";
     
     
-    FreightDetailCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    FreightDetailCustomCell *detailCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (cell == nil) {
-        cell = [[FreightDetailCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    if (detailCell == nil) {
+        detailCell = [[FreightDetailCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
         
     //Freights Information
-    cell.labelName.text = [self.clickedFreightDetail objectForKey:@"name"];
-    cell.labelDescription.text = [object objectForKey:@"freightDescription"];
-    cell.labelCity.text = [object objectForKey:@"city"];
-    cell.labelState.text = [object objectForKey:@"state"];
-    cell.txtViewTelephone.text = [object objectForKey:@"telephone"];
-    cell.labelCompanyType.text = [object objectForKey:@"companyType"];
+    detailCell.labelDetailName.text = [object objectForKey:@"name"];
+    detailCell.labelDetailDescription.text = [object objectForKey:@"freightDescription"];
+    detailCell.labelDetailCity.text = [object objectForKey:@"city"];
+    detailCell.labelDetailState.text = [object objectForKey:@"state"];
+    detailCell.txtViewDetailTelephone.text = [object objectForKey:@"telephone"];
+    detailCell.labelDetailCompanyType.text = [object objectForKey:@"companyType"];
     
+    NSLog(@"object: %@",object);
     
     //Vehicle Types
     NSArray *arrayOfTypes = [object objectForKey:@"vehicleType"];
     
-    cell.labelCompanyType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+    detailCell.labelDetailCompanyType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
     
     //Freights Photos
     PFFile *thumbnail = [object objectForKey:@"userPhoto"];
-    cell.imgUserPhoto.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
-    cell.imgUserPhoto.file = thumbnail;
-    [cell.imgUserPhoto loadInBackground];
+    detailCell.imgDetailUserPhoto.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
+    detailCell.imgDetailUserPhoto.file = thumbnail;
+    [detailCell.imgDetailUserPhoto loadInBackground];
     
-    NSLog(@"%@",[object objectForKey:@"vehicleType"]);
+    NSLog(@"Cell objects: %@",[object objectForKey:@"vehicleType"]);
     
-    return cell;
+    return detailCell;
     
 }
 

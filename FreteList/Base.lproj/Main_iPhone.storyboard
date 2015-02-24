@@ -258,7 +258,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FreightDetailCell" rowHeight="260" id="D36-PM-HKB" customClass="FreightDetailCustomCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" reuseIdentifier="FreightDetailCell" rowHeight="260" id="D36-PM-HKB" customClass="FreightDetailCustomCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D36-PM-HKB" id="Qtm-WJ-6Sh">
@@ -343,13 +343,23 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgDetailUserPhoto" destination="wPm-Mu-D2E" id="SHM-pc-4wo"/>
                                     <outlet property="imgUserPhoto" destination="wPm-Mu-D2E" id="aZU-S1-ayu"/>
                                     <outlet property="labelCity" destination="Ojc-4n-II0" id="P2z-i0-HRT"/>
                                     <outlet property="labelCompanyType" destination="ist-gJ-uUf" id="Zgm-zX-eDf"/>
                                     <outlet property="labelDescription" destination="cky-O7-kH8" id="naM-HB-Ayh"/>
+                                    <outlet property="labelDetailCity" destination="Ojc-4n-II0" id="aNb-3y-89k"/>
+                                    <outlet property="labelDetailCompanyType" destination="ist-gJ-uUf" id="mly-vi-1gS"/>
+                                    <outlet property="labelDetailDescription" destination="cky-O7-kH8" id="rD2-4S-Did"/>
+                                    <outlet property="labelDetailName" destination="P4h-L6-Ayv" id="15W-N6-ltV"/>
+                                    <outlet property="labelDetailState" destination="6DO-ZN-QkH" id="0hN-1m-43T"/>
+                                    <outlet property="labelDetailVehicleType" destination="Q9e-60-XwK" id="PFb-ct-gxz"/>
                                     <outlet property="labelName" destination="P4h-L6-Ayv" id="dLC-Xs-r8K"/>
                                     <outlet property="labelState" destination="6DO-ZN-QkH" id="zVH-RV-DHH"/>
                                     <outlet property="labelVehicleType" destination="Q9e-60-XwK" id="J2G-Ml-Qr7"/>
+                                    <outlet property="txtViewDetailMobile1" destination="cF5-nq-14m" id="Tae-aX-7Ba"/>
+                                    <outlet property="txtViewDetailMobile2" destination="bjq-qA-nCP" id="A9V-WR-fZk"/>
+                                    <outlet property="txtViewDetailTelephone" destination="dno-Rh-yzT" id="JEp-ij-dEC"/>
                                     <outlet property="txtViewMobile1" destination="cF5-nq-14m" id="phs-PW-jzH"/>
                                     <outlet property="txtViewMobile2" destination="bjq-qA-nCP" id="xfV-qt-aHM"/>
                                     <outlet property="txtViewTelephone" destination="dno-Rh-yzT" id="Qgh-Z0-I9h"/>
