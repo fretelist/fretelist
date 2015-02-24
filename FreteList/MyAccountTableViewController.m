@@ -39,16 +39,8 @@
     [self.btnCancel setEnabled:NO];
     [self.btnCancel setTintColor:[UIColor clearColor]];
     
-    self.txtFieldName.text = [[PFUser currentUser] objectForKey:@"name"];
-    self.txtFieldEmail.text = [[PFUser currentUser] objectForKey:@"email"];
-    self.txtFieldPsswd.text = [[PFUser currentUser] objectForKey:@"password"];
     
-    self.txtFieldTelephone.text = [[PFUser currentUser] objectForKey:@"telephone"];
-    self.txtFieldMob1.text = [[PFUser currentUser] objectForKey:@"mobile1"];
-    self.txtFieldMob2.text = [[PFUser currentUser] objectForKey:@"mobile2"];
-    self.txtFieldCity.text = [[PFUser currentUser] objectForKey:@"city"];
-    self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
-    
+    [self loadSavedDataFromUser];
     //
     
     
@@ -75,23 +67,12 @@
         
     } else {
         
-        PFUser *userMyAccountCategories = [PFUser currentUser];
-        [userMyAccountCategories fetch];
-        
-        NSArray *arrayOfCategories = [userMyAccountCategories objectForKey:@"vehicleType"];
-        self.myAccountVehicleTypes = [[NSMutableArray alloc]init];
-        
-        for (PFObject *category in arrayOfCategories) {
-            [category fetch];
-            
-            [self.myAccountVehicleTypes addObject:category];
-        }
-        
-        NSString *result = [[self.myAccountVehicleTypes valueForKey:@"categories"] componentsJoinedByString:@","];
-        self.labelVehicleType.text = result;
+        [self loadSavedVehicleTypes];
         
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountFreightUserStateArray];
         [self.pickerMyAccountState reloadAllComponents];
+        
+        
     }
     
 //    if ([[[PFUser currentUser] objectForKey:@"state"] isEqualToString:@"RJ"]) {
@@ -307,8 +288,12 @@
 - (IBAction)cancelInfos:(id)sender {
     
     [self disableEdit];
-
     
+    [self loadSavedDataFromUser];
+    
+    if (!self.isCliente) {
+        [self loadSavedVehicleTypes];
+    }
     
 }
 
@@ -349,6 +334,43 @@
     self.pickerMyAccountState.userInteractionEnabled = NO;
     [self.btnCancel setTintColor:[UIColor clearColor]];
     [self.btnSave setTitle:@"Editar"];
+    
+    
+}
+
+-(void)loadSavedDataFromUser{
+    
+    
+    self.txtFieldName.text = [[PFUser currentUser] objectForKey:@"name"];
+    self.txtFieldEmail.text = [[PFUser currentUser] objectForKey:@"email"];
+    self.txtFieldPsswd.text = [[PFUser currentUser] objectForKey:@"password"];
+    
+    self.txtFieldTelephone.text = [[PFUser currentUser] objectForKey:@"telephone"];
+    self.txtFieldMob1.text = [[PFUser currentUser] objectForKey:@"mobile1"];
+    self.txtFieldMob2.text = [[PFUser currentUser] objectForKey:@"mobile2"];
+    self.txtFieldCity.text = [[PFUser currentUser] objectForKey:@"city"];
+    self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
+    
+    
+}
+
+-(void)loadSavedVehicleTypes{
+    
+    PFUser *userMyAccountCategories = [PFUser currentUser];
+    [userMyAccountCategories fetch];
+    
+    NSArray *arrayOfCategories = [userMyAccountCategories objectForKey:@"vehicleType"];
+    self.myAccountVehicleTypes = [[NSMutableArray alloc]init];
+    
+    for (PFObject *category in arrayOfCategories) {
+        [category fetch];
+        
+        [self.myAccountVehicleTypes addObject:category];
+    }
+    
+    NSString *result = [[self.myAccountVehicleTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+    self.labelVehicleType.text = result;
+    
     
     
 }
