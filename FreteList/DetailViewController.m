@@ -30,11 +30,14 @@
     self.labelDetailDescription.text = [self.clickedFreightDetail objectForKey:@"freightDescription"];
     self.labelDetailCity.text = [self.clickedFreightDetail objectForKey:@"city"];
     self.labelDetailState.text = [self.clickedFreightDetail objectForKey:@"state"];
+    self.txtViewDetailTelefone.text = [self.clickedFreightDetail objectForKey:@"telephone"];
+    self.txtViewDetailMob1.text = [self.clickedFreightDetail objectForKey:@"mobile1"];
+    self.txtViewDetailMob2.text = [self.clickedFreightDetail objectForKey:@"mobile2"];
     
     
     //Vehicle Types
     NSArray *arrayOfTypes = [self.clickedFreightDetail objectForKey:@"vehicleType"];
-    self.labelDetailVehicleType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+    self.labelDetailVehicleType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@" / "];
     
     //Photos
     PFFile *thumbnail = [self.clickedFreightDetail objectForKey:@"userPhoto"];
