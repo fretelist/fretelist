@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "DetailViewController.h"
 
 @interface SearchViewController ()
 @property(strong, nonatomic)IBOutlet UISearchBar *search;
@@ -118,6 +119,8 @@
         
         
         
+        
+        
         NSLog(@"%@", self.search.text);
     
     
@@ -149,29 +152,36 @@
         
     cell.textLabel.text = [object objectForKey:@"name"];
    
-//   if ([[nameObject objectForKey:@"freightUserType"] isEqualToString:@"Prestador de Serv."]) {
-    
-    
-    
-//    }
-    
     
     return cell;
     
     
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.clickedSearch = [self objectAtIndexPath:indexPath];
+    
+    [self performSegueWithIdentifier:@"fromSearchToDetail" sender:self];
+    
+}
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"fromSearchToDetail"]) {
+        DetailViewController *destinationDetail = segue.destinationViewController;
+        destinationDetail.clickedFreightDetail = self.clickedSearch;
+    }
+    
 }
-*/
+
 
 @end
 

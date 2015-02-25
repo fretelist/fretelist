@@ -24,6 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSLog(@"ClickedData: %@",self.clickedFreightDetail);
+    
     //Texts
     self.labelDetailName.text = [self.clickedFreightDetail objectForKey:@"name"];
     self.labelDetailCompanyType.text = [self.clickedFreightDetail objectForKey:@"companyType"];
@@ -33,6 +35,7 @@
     self.txtViewDetailTelefone.text = [self.clickedFreightDetail objectForKey:@"telephone"];
     self.txtViewDetailMob1.text = [self.clickedFreightDetail objectForKey:@"mobile1"];
     self.txtViewDetailMob2.text = [self.clickedFreightDetail objectForKey:@"mobile2"];
+    
     
     
     //Vehicle Types

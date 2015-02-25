@@ -10,4 +10,8 @@
 
 @interface SearchViewController : PFQueryTableViewController<UISearchBarDelegate, UITextFieldDelegate>
 
+
+@property(nonatomic, strong) PFObject *clickedSearch;
+
+
 @end
