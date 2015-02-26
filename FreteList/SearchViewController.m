@@ -21,12 +21,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    
-//    if ([self.search isFirstResponder]) {
-//        [self performSelector:@selector(searchBarSearchButtonClicked:)];
-//    }
-    
+
     self.search.delegate = self;
     
+    for (UIView *view in self.search.subviews)
+    {
+        for (id subview in view.subviews)
+        {
+            if ( [subview isKindOfClass:[UIButton class]] )
+            {
+                // customize cancel button
+                UIButton* cancelBtn = (UIButton*)subview;
+                [cancelBtn setTitle:@"Cancelar" forState:UIControlStateNormal];
+                [cancelBtn setEnabled:YES];
+                break;
+            }
+        }
+    }
     
     
 }
@@ -58,16 +69,12 @@
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
     
     
-    
-    
-    
 }
 
 -(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
     [self clear];
     
 }
-
 
 
 -(void)viewWillAppear:(BOOL)animated{
