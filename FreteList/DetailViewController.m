@@ -26,6 +26,8 @@
     
     NSLog(@"ClickedData: %@",self.clickedFreightDetail);
     
+    self.navigationItem.title = [self.clickedFreightDetail objectForKey:@"name"];
+    
     //Texts
     self.labelDetailName.text = [self.clickedFreightDetail objectForKey:@"name"];
     self.labelDetailCompanyType.text = [self.clickedFreightDetail objectForKey:@"companyType"];
