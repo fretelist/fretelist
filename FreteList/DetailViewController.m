@@ -38,11 +38,24 @@
     self.txtViewDetailMob1.text = [self.clickedFreightDetail objectForKey:@"mobile1"];
     self.txtViewDetailMob2.text = [self.clickedFreightDetail objectForKey:@"mobile2"];
     
-    
+    //
     
     //Vehicle Types
     NSArray *arrayOfTypes = [self.clickedFreightDetail objectForKey:@"vehicleType"];
-    self.labelDetailVehicleType.text = [[arrayOfTypes valueForKey:@"categories"] componentsJoinedByString:@" / "];
+    self.arrayOfVehicleTypesFromSearch = [[NSMutableArray alloc]init];
+    
+    for (PFObject *categories in arrayOfTypes) {
+        [categories fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            [self.arrayOfVehicleTypesFromSearch addObject:categories];
+            
+            self.labelDetailVehicleType.text = [[self.arrayOfVehicleTypesFromSearch valueForKey:@"categories"] componentsJoinedByString:@" / "];
+        }];
+    }
+    
+    
+    
+    
+    //
     
     //Photos
     PFFile *thumbnail = [self.clickedFreightDetail objectForKey:@"userPhoto"];

@@ -254,7 +254,7 @@
                                                             delegate:self
                                                     cancelButtonTitle:@"Fechar"
                                                 destructiveButtonTitle:@"Limpar Filtros"
-                                                    otherButtonTitles:@"Filtrar por Tipo de Veículos",@"Filtrar por Tipo de Frete",@"Filtrar por Cidade", nil];
+                                                    otherButtonTitles:@"Filtrar por Tipo de Veículo",@"Filtrar por Tipo de Frete",@"Filtrar por Cidade", nil];
     
     [filterOptions showInView:self.view];
     

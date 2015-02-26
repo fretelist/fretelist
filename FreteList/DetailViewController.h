@@ -27,4 +27,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *txtViewDetailMob1;
 @property (weak, nonatomic) IBOutlet UITextView *txtViewDetailMob2;
 
+@property (nonatomic, strong)NSMutableArray *arrayOfVehicleTypesFromSearch;
+
 @end

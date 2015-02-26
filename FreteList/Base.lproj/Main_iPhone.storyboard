@@ -717,7 +717,7 @@
                         <viewControllerLayoutGuide type="bottom" id="x6r-T1-eVJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5b6-94-w7U">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="109" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPm-Mu-D2E" customClass="PFImageView">
@@ -734,7 +734,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="112" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-60-XwK">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="112" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-60-XwK">
                                 <rect key="frame" x="16" y="147" width="292" height="49"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <nil key="highlightedColor"/>
@@ -1363,11 +1363,12 @@
                     <navigationItem key="navigationItem" title="Busca" id="wip-Tl-pSi"/>
                     <connections>
                         <outlet property="search" destination="bzp-DL-Mzm" id="G2x-xM-Jew"/>
+                        <segue destination="mbY-nG-QZS" kind="push" identifier="fromSearchToDetail" id="P8t-xc-CQQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKL-LB-9hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1433" y="1148"/>
+            <point key="canvasLocation" x="1587" y="418"/>
         </scene>
         <!--Contato-->
         <scene sceneID="sDZ-5T-c92">
@@ -2202,4 +2203,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="P8t-xc-CQQ"/>
+    </inferredMetricsTieBreakers>
 </document>
