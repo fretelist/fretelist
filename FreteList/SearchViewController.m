@@ -33,7 +33,7 @@
                 // customize cancel button
                 UIButton* cancelBtn = (UIButton*)subview;
                 [cancelBtn setTitle:@"Cancelar" forState:UIControlStateNormal];
-                [cancelBtn setEnabled:YES];
+//                [cancelBtn setEnabled:YES];
                 break;
             }
         }
