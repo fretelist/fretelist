@@ -635,17 +635,14 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AK0-rO-ZzI" id="miy-r4-y3S">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-it-V8S" customClass="PFImageView">
-                                            <rect key="frame" x="8" y="0.0" width="44" height="44"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-mF-fvp">
-                                            <rect key="frame" x="60" y="22" width="252" height="21"/>
+                                            <rect key="frame" x="8" y="22" width="304" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxe-4f-WxI">
-                                            <rect key="frame" x="60" y="8" width="252" height="21"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -653,7 +650,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imgViewVehicleInfo" destination="vRf-it-V8S" id="v1x-In-sqw"/>
                                     <outlet property="vehicleInfoDescription" destination="2Wc-mF-fvp" id="ItI-sC-ziB"/>
                                     <outlet property="vehicleInfoTitle" destination="Bxe-4f-WxI" id="R3K-5s-c35"/>
                                 </connections>
