@@ -21,6 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
+    [self.tabBarController.tabBar setBarTintColor:[UIColor redColor]];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     // Do any additional setup after loading the view.
     PFQuery *queryPaidOffer = [PFQuery queryWithClassName:@"Paid_Offers"];
     NSLog(@"query: %@",queryPaidOffer);

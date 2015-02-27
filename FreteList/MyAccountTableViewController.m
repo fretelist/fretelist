@@ -25,6 +25,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     //Picker load
     self.pickerMyAccountState.delegate = self;
     self.pickerMyAccountState.dataSource = self;

@@ -22,6 +22,10 @@
     // Do any additional setup after loading the view.
 //    
 
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     self.search.delegate = self;
     
     for (UIView *view in self.search.subviews)
