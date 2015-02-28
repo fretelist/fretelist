@@ -59,6 +59,7 @@
 		6CDF6B311A21390F00A2B0DF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF6B301A21390F00A2B0DF /* Icon.png */; };
 		6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF6B331A218D5400A2B0DF /* SearchViewController.m */; };
 		6CE7DD391A799D98007837D8 /* CompanyTypeFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */; };
+		6CF170FA1AA1364600F11C64 /* HowToFreightList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF170F91AA1364600F11C64 /* HowToFreightList.xib */; };
 		6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */; };
 		BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */; };
 		BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5059811A7A464300624119 /* ForgotPasswordViewController.m */; };
@@ -156,6 +157,7 @@
 		6CDF6B331A218D5400A2B0DF /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		6CE7DD371A799D98007837D8 /* CompanyTypeFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTypeFilterViewController.h; sourceTree = "<group>"; };
 		6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyTypeFilterViewController.m; sourceTree = "<group>"; };
+		6CF170F91AA1364600F11C64 /* HowToFreightList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HowToFreightList.xib; sourceTree = "<group>"; };
 		6CFA657A1A705AC400F2BFE0 /* FreightCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreightCustomCell.h; sourceTree = "<group>"; };
 		6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightCustomCell.m; sourceTree = "<group>"; };
 		BD4EB7B71A6D6BCF0025237F /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				6C3248D118EDBF2A00F7FE8C /* Main_iPhone.storyboard */,
 				6C3248D418EDBF2A00F7FE8C /* Main_iPad.storyboard */,
+				6CF170F91AA1364600F11C64 /* HowToFreightList.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				6CDF6B311A21390F00A2B0DF /* Icon.png in Resources */,
 				6C3248D618EDBF2A00F7FE8C /* Main_iPad.storyboard in Resources */,
 				6C3248DB18EDBF2A00F7FE8C /* Images.xcassets in Resources */,
+				6CF170FA1AA1364600F11C64 /* HowToFreightList.xib in Resources */,
 				6C3248D318EDBF2A00F7FE8C /* Main_iPhone.storyboard in Resources */,
 				6C3248CA18EDBF2A00F7FE8C /* InfoPlist.strings in Resources */,
 				6C1EA05C19055E2900A82530 /* GoogleMaps.bundle in Resources */,

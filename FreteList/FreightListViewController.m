@@ -22,11 +22,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL isFirstTimeLoad = [defaults boolForKey:@"isFirstTimeLoad"];
+    if (isFirstTimeLoad == NO){
+        
+        UIViewController *howToController = [self.storyboard instantiateViewControllerWithIdentifier:@"howToTimeline"];
+        [self.view addSubview:howToController.view];
+        
+        //show the tutorial
+        [defaults setBool:YES forKey:@"isFirstTimeLoad"];
+        [defaults synchronize];
+    }
+    
+//    UIBUtton nextButton = (UIButton *)[howToController.view viewForTag:1];
+//    [nextButton addTarget: @selector()]
+    
+    //Set View Collors
     self.navigationController.navigationBar.barTintColor = [UIColor redColor];
     self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
     [self.tabBarController.tabBar setBarTintColor:[UIColor redColor]];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    
     
     // Do any additional setup after loading the view.
     PFQuery *queryPaidOffer = [PFQuery queryWithClassName:@"Paid_Offers"];
@@ -252,6 +270,7 @@
 }
 
 #pragma mark - Actions
+
 
 
 - (IBAction)showFilter:(id)sender {
