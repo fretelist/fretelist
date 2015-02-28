@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "VehicleTypeFilterViewController.h"
 
-@interface MyAccountTableViewController : UITableViewController<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource,vehicleTypeFilterDelegate>
+@interface MyAccountTableViewController : UITableViewController<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITabBarControllerDelegate,vehicleTypeFilterDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;

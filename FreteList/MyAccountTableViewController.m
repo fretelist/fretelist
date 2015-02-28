@@ -32,6 +32,7 @@
     //Picker load
     self.pickerMyAccountState.delegate = self;
     self.pickerMyAccountState.dataSource = self;
+    self.tabBarController.delegate = self;
     
     self.myAccountUserStateArray = @[@"AC",@"AL",@"AM",@"AP",@"BA",@"CE",@"DF",@"ES",@"GO",@"MA",@"MS",@"MT",@"MG",@"PA",@"PR",@"PE",@"PI",@"RJ",@"RN",@"RS",@"RO",@"RR",@"SC",@"SP",@"SE",@"TO"];
     
@@ -127,9 +128,38 @@
 
 }
 
+
+-(void)viewDidUnload{
+    
+    [self disableEdit];
+    
+    [self loadSavedDataFromUser];
+    
+    if (!self.isCliente) {
+        [self loadSavedVehicleTypes];
+    }
+    
+    
+}
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITabBarControllerDelegate
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    
+    [self disableEdit];
+    
+    [self loadSavedDataFromUser];
+    
+    if (!self.isCliente) {
+        [self loadSavedVehicleTypes];
+    }
+    
 }
 
 #pragma mark - UITableViewDelegate
