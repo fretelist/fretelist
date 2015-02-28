@@ -129,19 +129,6 @@
 }
 
 
--(void)viewDidUnload{
-    
-    [self disableEdit];
-    
-    [self loadSavedDataFromUser];
-    
-    if (!self.isCliente) {
-        [self loadSavedVehicleTypes];
-    }
-    
-    
-}
-
 
 
 - (void)didReceiveMemoryWarning {
