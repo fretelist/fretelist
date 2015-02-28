@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
 //    
 
-    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     

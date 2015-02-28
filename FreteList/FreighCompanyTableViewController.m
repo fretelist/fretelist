@@ -32,12 +32,16 @@
     self.txtFieldCel1.delegate =
     self.txtFieldCel2.delegate =
     self.txtFieldCity.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UITextViewDelegate
+
 
 #pragma mark - UITextFieldDelegate
 

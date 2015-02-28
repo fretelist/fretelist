@@ -38,9 +38,9 @@
 //    [nextButton addTarget: @selector()]
     
     //Set View Collors
-    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
     self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
-    [self.tabBarController.tabBar setBarTintColor:[UIColor redColor]];
+    [self.tabBarController.tabBar setBarTintColor:[UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0]];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
