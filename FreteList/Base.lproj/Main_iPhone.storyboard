@@ -668,6 +668,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnCancel" destination="fUk-yE-6jD" id="vp1-EM-kO2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFt-bi-Q3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

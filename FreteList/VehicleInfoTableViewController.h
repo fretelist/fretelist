@@ -9,6 +9,9 @@
 #import <Parse/Parse.h>
 
 @interface VehicleInfoTableViewController : PFQueryTableViewController
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
+
 - (IBAction)closeInfo:(id)sender;
 
 @end
