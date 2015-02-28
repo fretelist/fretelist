@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view.
 //    
 
+//    self.search.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -56,6 +57,7 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     
+    
     [self loadObjects];
     
 }
@@ -71,6 +73,14 @@
 }
 
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    
+    
+    
+    // customize cancel button
+    [[UIButton appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
+    
+    
+    
     
     
 }

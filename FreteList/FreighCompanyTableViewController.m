@@ -32,6 +32,7 @@
     self.txtFieldCel1.delegate =
     self.txtFieldCel2.delegate =
     self.txtFieldCity.delegate = self;
+    self.txtViewDescription.delegate = self;
     
 }
 
@@ -41,7 +42,35 @@
 }
 
 #pragma mark - UITextViewDelegate
+-(void)textViewDidBeginEditing:(UITextView *)textView{
+    
+    self.txtViewDescription.text = nil;
+    
+}
 
+-(void)textViewDidChange:(UITextView *)textView{
+    
+    NSUInteger length;
+    length = [self.txtViewDescription.text length];
+    
+    NSString * last = [NSString stringWithFormat:@"%lu", 70 - length];
+    
+    [self.labelWordCount setText:[NSString stringWithFormat:@"%@",last]];
+    
+    NSLog(@"%@" , last);
+    
+}
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    
+    if(range.length + range.location > self.txtViewDescription.text.length)
+    {
+        return NO;
+    }
+    
+    NSUInteger newLength = [self.txtViewDescription.text length] + [text length] - range.length;
+    return (newLength > 160) ? NO : YES;
+    
+}
 
 #pragma mark - UITextFieldDelegate
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FreighCompanyTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface FreighCompanyTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;
@@ -28,6 +28,8 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnNext;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelWordCount;
 
 - (IBAction)cancelSignUp:(id)sender;
 - (IBAction)chooseVehicleType:(id)sender;
