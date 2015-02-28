@@ -662,6 +662,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Descrição dos Veículos" id="C6C-ns-zLd">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="fUk-yE-6jD">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="closeInfo:" destination="ibQ-Zx-ppe" id="OEe-NR-8EX"/>
                             </connections>

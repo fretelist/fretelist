@@ -280,7 +280,8 @@
         self.btnLogout.enabled = YES;
         self.pickerMyAccountState.userInteractionEnabled = YES;
         [self.btnCancel setEnabled:YES];
-        [self.btnCancel setTintColor:self.view.tintColor];
+        [self.btnCancel setTintColor:[UIColor whiteColor]];
+        //[self.btnCancel setTintColor:self.view.tintColor];
         [self.btnSave setTitle:@"Salvar"];
         
     }

@@ -20,11 +20,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+    
     NSLog(@"ClickedData: %@",self.clickedFreightDetail);
+    
+    
     
     self.navigationItem.title = [self.clickedFreightDetail objectForKey:@"name"];
     
