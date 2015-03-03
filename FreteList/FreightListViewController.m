@@ -15,6 +15,8 @@
 
 @interface FreightListViewController ()
 
+@property(nonatomic, strong) UIView *currentHowToView;
+
 @end
 
 @implementation FreightListViewController
@@ -26,8 +28,19 @@
     BOOL isFirstTimeLoad = [defaults boolForKey:@"isFirstTimeLoad"];
     if (isFirstTimeLoad == NO){
         
+        //Handle the view Tutorial
         UIViewController *howToController = [self.storyboard instantiateViewControllerWithIdentifier:@"howToTimeline"];
-        [self.view addSubview:howToController.view];
+        self.currentHowToView = howToController.view;
+        
+        UIButton *closeButton = (UIButton*)[self.currentHowToView viewWithTag:2];
+        
+        [closeButton addTarget:self action:@selector(btnClosePress:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIButton *nextButton = (UIButton*)[self.currentHowToView viewWithTag:1];
+        
+        [nextButton addTarget:self action:@selector(btnNextPress:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:self.currentHowToView];
         
         //show the tutorial
         [defaults setBool:YES forKey:@"isFirstTimeLoad"];
@@ -375,8 +388,29 @@
     
 }
 
+#pragma mark - HowToFunctions
+-(void)btnClosePress:(id)sender{
+    
+    [self.currentHowToView removeFromSuperview];
+    
+}
 
+-(void)btnNextPress:(id)sender{
+    
+    [self.currentHowToView removeFromSuperview];
+    
+    UIViewController *secondView = [self.storyboard instantiateViewControllerWithIdentifier:@"secondHowTo"];
+    
+    self.currentHowToView = secondView.view;
+    
+    UIButton *closeButton = (UIButton*)[self.currentHowToView viewWithTag:2];
+    
+    [closeButton addTarget:self action:@selector(btnClosePress:) forControlEvents:UIControlEventTouchUpInside];
+    
 
+    [self.view addSubview:self.currentHowToView];
+    
+}
 
 @end
 

@@ -43,7 +43,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgViewUserPhoto;
 @property (weak, nonatomic) IBOutlet UIButton *btnChangePhoto;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSave;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogout;
 

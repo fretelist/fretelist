@@ -43,7 +43,7 @@
     // Set cancel button disabled - enable only if edit is pressed
     [self.btnCancel setEnabled:NO];
     [self.btnCancel setTintColor:[UIColor clearColor]];
-    
+    //self.navigationItem.leftBarButtonItem = nil;
     
     [self loadSavedDataFromUser];
     //
@@ -297,6 +297,7 @@
         [self.btnCancel setEnabled:YES];
         [self.btnCancel setTintColor:[UIColor whiteColor]];
         //[self.btnCancel setTintColor:self.view.tintColor];
+        //self.navigationItem.leftBarButtonItem = self.btnCancel;
         [self.btnSave setTitle:@"Salvar"];
         
     }
@@ -339,6 +340,8 @@
 
 -(void) disableEdit{
     
+    NSLog(@"disableEdit");
+    
     self.txtFieldName.enabled = NO;
     self.txtFieldEmail.enabled = NO;
     self.txtFieldPsswd.enabled = NO;
@@ -353,6 +356,7 @@
     [self.btnCancel setEnabled:NO];
     self.pickerMyAccountState.userInteractionEnabled = NO;
     [self.btnCancel setTintColor:[UIColor clearColor]];
+    //self.navigationItem.leftBarButtonItem = nil;
     [self.btnSave setTitle:@"Editar"];
     
     
