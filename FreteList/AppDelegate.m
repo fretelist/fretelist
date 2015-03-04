@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
+#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,9 @@
     
     //[GMSServices provideAPIKey:@"AIzaSyC6SaZZvFgJCrHhR8mp3xX1CXLzVWVLneA"];
 //
+    
+    //init Flurry
+    [Flurry startSession:@"TGSNSHRQG474TMW58G56"];
     
     // Register for Push Notitications, if running iOS 8
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {

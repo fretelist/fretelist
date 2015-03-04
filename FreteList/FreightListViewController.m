@@ -12,10 +12,12 @@
 #import "VehicleTypeFilterViewController.h"
 #import "CompanyTypeFilterViewController.h"
 #import "CityTypeFilterTableViewController.h"
+#import "Flurry.h"
 
 @interface FreightListViewController ()
 
 @property(nonatomic, strong) UIView *currentHowToView;
+@property FlurryAdInterstitial* adInterstitial;
 
 @end
 

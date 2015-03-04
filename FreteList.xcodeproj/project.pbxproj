@@ -68,6 +68,7 @@
 		BD5ECF361A9DF4C100FEA3A6 /* SearchCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5ECF351A9DF4C100FEA3A6 /* SearchCustomCell.m */; };
 		BD6B8E041A9B61EA0096414F /* FreightDetailCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6B8E031A9B61EA0096414F /* FreightDetailCustomCell.m */; };
 		BD754D841A7FD4B5002F1177 /* NormalUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */; };
+		BD76869B1AA733B500B51883 /* libFlurry_6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD76869A1AA733B500B51883 /* libFlurry_6.2.0.a */; };
 		BD9D9E771A8E066B001FA599 /* CityTypeFilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9E761A8E066B001FA599 /* CityTypeFilterTableViewController.m */; };
 		BDB7F3781A8CDC380057065C /* VehicleInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7F3771A8CDC380057065C /* VehicleInfoTableViewController.m */; };
 		BDB7F37B1A8CDE370057065C /* VehicleInfoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7F37A1A8CDE370057065C /* VehicleInfoCustomCell.m */; };
@@ -173,6 +174,8 @@
 		BD6B8E031A9B61EA0096414F /* FreightDetailCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightDetailCustomCell.m; sourceTree = "<group>"; };
 		BD754D821A7FD4B5002F1177 /* NormalUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalUserTableViewController.h; sourceTree = "<group>"; };
 		BD754D831A7FD4B5002F1177 /* NormalUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalUserTableViewController.m; sourceTree = "<group>"; };
+		BD7686991AA733B500B51883 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		BD76869A1AA733B500B51883 /* libFlurry_6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.2.0.a; sourceTree = "<group>"; };
 		BD9D9E751A8E066B001FA599 /* CityTypeFilterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTypeFilterTableViewController.h; sourceTree = "<group>"; };
 		BD9D9E761A8E066B001FA599 /* CityTypeFilterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTypeFilterTableViewController.m; sourceTree = "<group>"; };
 		BDB7F3761A8CDC380057065C /* VehicleInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleInfoTableViewController.h; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 				6C702AFA19018E2B000FB43A /* libc++.dylib in Frameworks */,
 				6C2538C91900243D009E7386 /* libicucore.dylib in Frameworks */,
 				6C2663C418F884040004373D /* libz.dylib in Frameworks */,
+				BD76869B1AA733B500B51883 /* libFlurry_6.2.0.a in Frameworks */,
 				6CA6030419DF7F4100A09EAC /* Bolts.framework in Frameworks */,
 				6C2663C618F8840F0004373D /* MobileCoreServices.framework in Frameworks */,
 				6CA6030219DF7F3100A09EAC /* Parse.framework in Frameworks */,
@@ -249,6 +253,7 @@
 		6C3248BE18EDBF2A00F7FE8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD7686981AA733B500B51883 /* Flurry */,
 				BD5059861A7A999600624119 /* MessageUI.framework */,
 				6CA6030319DF7F4100A09EAC /* Bolts.framework */,
 				6CA6030119DF7F3100A09EAC /* Parse.framework */,
@@ -398,6 +403,15 @@
 				BD5059841A7A972100624119 /* ContactUsViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		BD7686981AA733B500B51883 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				BD7686991AA733B500B51883 /* Flurry.h */,
+				BD76869A1AA733B500B51883 /* libFlurry_6.2.0.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -681,6 +695,10 @@
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FreteListTests/FreteListTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2/GoogleMaps.framework/GoogleMaps",
@@ -708,6 +726,10 @@
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FreteListTests/FreteListTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2/GoogleMaps.framework/GoogleMaps",
