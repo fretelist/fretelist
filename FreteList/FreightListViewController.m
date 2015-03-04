@@ -22,7 +22,7 @@
 
 @end
 
-NSString *adSpaceName = @"INTERSTITIAL_MAIN_VIEW";
+NSString *adSpaceName = @"FreteList";
 
 @implementation FreightListViewController
 
@@ -115,19 +115,6 @@ NSString *adSpaceName = @"INTERSTITIAL_MAIN_VIEW";
 
 -(void)viewDidAppear:(BOOL)animated{
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL isFirstTimeLoad = [defaults boolForKey:@"isFirstTimeLoad"];
-    if (isFirstTimeLoad == NO){
-        // Fetch interstitial ads early when a later display is likely. For
-        // example, at the beginning of a level.
-        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:adSpaceName] ;
-        self.adInterstitial.adDelegate = self;
-        [self.adInterstitial fetchAd];
-        
-        //show the Ad
-        [defaults setBool:YES forKey:@"isFirstTimeLoad"];
-        [defaults synchronize];
-    }
     
     
 }
@@ -416,6 +403,28 @@ NSString *adSpaceName = @"INTERSTITIAL_MAIN_VIEW";
 -(void)btnClosePress:(id)sender{
     
     [self.currentHowToView removeFromSuperview];
+    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    BOOL isFirstTimeLoad = [defaults boolForKey:@"isFirstTimeLoad"];
+//    if (isFirstTimeLoad == NO){
+        // Fetch interstitial ads early when a later display is likely. For
+        // example, at the beginning of a level.
+        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:adSpaceName] ;
+        self.adInterstitial.adDelegate = self;
+        [self.adInterstitial fetchAd];
+        
+        //show the Ad
+//        [defaults setBool:YES forKey:@"isFirstTimeLoad"];
+//        [defaults synchronize];
+//    }
+    
+    // Check if ad is ready. If so, display the ad
+    if ([self.adInterstitial ready]) {
+        [self.adInterstitial presentWithViewController:self];
+    } else {
+        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:@"FreteList"];
+        [self.adInterstitial fetchAd];
+    }
     
 }
 

@@ -606,7 +606,7 @@
                                 <action selector="closeVehicleType:" destination="U1m-pq-UIE" id="43T-cA-QCg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="6g3-U7-2uQ">
+                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="6g3-U7-2uQ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="applyVehicleType:" destination="U1m-pq-UIE" id="NYe-WP-sHU"/>
@@ -626,6 +626,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="companyTypeCell" textLabel="T7M-10-gcn" style="IBUITableViewCellStyleDefault" id="AWC-JY-GqS">
                                 <autoresizingMask key="autoresizingMask"/>

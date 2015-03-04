@@ -57,7 +57,7 @@
     NSLog(@"TabBAr: %@",tabBarBackground);
     
     //Change Navigation Bar Color
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationLogo"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_centerLogo"] forBarMetrics:UIBarMetricsDefault];
     
     
 
