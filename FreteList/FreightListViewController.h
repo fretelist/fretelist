@@ -10,8 +10,9 @@
 #import "VehicleTypeFilterViewController.h"
 #import "CompanyTypeFilterViewController.h"
 #import "CityTypeFilterTableViewController.h"
+#import "FlurryAdInterstitialDelegate.h"
 
-@interface FreightListViewController : PFQueryTableViewController<vehicleTypeFilterDelegate,companyTypeFilterDelegate,cityTypeFilterDelegate,UIActionSheetDelegate>
+@interface FreightListViewController : PFQueryTableViewController<vehicleTypeFilterDelegate,companyTypeFilterDelegate,cityTypeFilterDelegate,UIActionSheetDelegate, FlurryAdInterstitialDelegate>
 
 
 @property(nonatomic, strong) PFObject *clickedCell;

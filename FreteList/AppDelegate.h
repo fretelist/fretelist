@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlurryAdInterstitial.h"
+#import "FlurryAdInterstitialDelegate.h"
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,FlurryAdInterstitialDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+
 
 @end

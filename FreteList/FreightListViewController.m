@@ -12,14 +12,17 @@
 #import "VehicleTypeFilterViewController.h"
 #import "CompanyTypeFilterViewController.h"
 #import "CityTypeFilterTableViewController.h"
-#import "Flurry.h"
+#import "FlurryAdInterstitial.h"
+#import "FlurryAdInterstitialDelegate.h"
 
 @interface FreightListViewController ()
 
 @property(nonatomic, strong) UIView *currentHowToView;
-@property FlurryAdInterstitial* adInterstitial;
+@property (nonatomic, strong)FlurryAdInterstitial* adInterstitial;
 
 @end
+
+NSString *adSpaceName = @"INTERSTITIAL_MAIN_VIEW";
 
 @implementation FreightListViewController
 
@@ -108,8 +111,24 @@
 //    self.tableView.estimatedRowHeight = 150.0;
 //    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
+}
+
+-(void)viewDidAppear:(BOOL)animated{
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL isFirstTimeLoad = [defaults boolForKey:@"isFirstTimeLoad"];
+    if (isFirstTimeLoad == NO){
+        // Fetch interstitial ads early when a later display is likely. For
+        // example, at the beginning of a level.
+        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:adSpaceName] ;
+        self.adInterstitial.adDelegate = self;
+        [self.adInterstitial fetchAd];
         
+        //show the Ad
+        [defaults setBool:YES forKey:@"isFirstTimeLoad"];
+        [defaults synchronize];
+    }
+    
     
 }
 
