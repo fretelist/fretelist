@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL isFirstTimeLoad = [defaults boolForKey:@"isFirstTimeLoad"];
     if (isFirstTimeLoad == NO){
         
@@ -51,9 +51,12 @@
 //    [nextButton addTarget: @selector()]
     
     //Set View Collors
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
-    self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
-    [self.tabBarController.tabBar setBarTintColor:[UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0]];
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigationLogo"]];
+
+//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
+    //self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
+//    [self.tabBarController.tabBar setBarTintColor:[UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0]];
+    
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     

@@ -167,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="1635" y="-1265"/>
         </scene>
-        <!--Fretes-->
+        <!--Freight List View Controller-->
         <scene sceneID="1HY-bp-L45">
             <objects>
                 <tableViewController id="TpO-rx-I3D" customClass="FreightListViewController" sceneMemberID="viewController">
@@ -242,7 +242,7 @@
                             <outlet property="delegate" destination="TpO-rx-I3D" id="3O9-cv-dld"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fretes" id="iqD-Cx-gwW">
+                    <navigationItem key="navigationItem" id="iqD-Cx-gwW">
                         <barButtonItem key="leftBarButtonItem" image="infoButton" id="Ydm-k5-hG4">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -490,7 +490,7 @@
             </objects>
             <point key="canvasLocation" x="2972" y="-475"/>
         </scene>
-        <!--Cidades-->
+        <!--City Type Filter Table View Controller-->
         <scene sceneID="IRn-rb-qH3">
             <objects>
                 <tableViewController id="ie4-29-woY" customClass="CityTypeFilterTableViewController" sceneMemberID="viewController">
@@ -519,30 +519,34 @@
                             <outlet property="delegate" destination="ie4-29-woY" id="YNs-4d-yK5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cidades" id="HnC-8B-Zde">
+                    <navigationItem key="navigationItem" id="HnC-8B-Zde">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="GNk-RB-cNo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I2c-Tz-i0a">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancelar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="closeCityTypeFilter:" destination="ie4-29-woY" eventType="touchUpInside" id="Q6O-tk-Gle"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FRJ-yC-BeN">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ftF-sI-9qr">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Filtrar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="applyCityTypeFilter:" destination="ie4-29-woY" eventType="touchUpInside" id="zau-hp-3iA"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -566,7 +570,7 @@
             </objects>
             <point key="canvasLocation" x="2003" y="-1115"/>
         </scene>
-        <!--Veículos-->
+        <!--Vehicle Type Filter View Controller-->
         <scene sceneID="9Vw-FA-9HW">
             <objects>
                 <tableViewController id="U1m-pq-UIE" customClass="VehicleTypeFilterViewController" sceneMemberID="viewController">
@@ -595,13 +599,15 @@
                             <outlet property="delegate" destination="U1m-pq-UIE" id="wrz-nf-G3e"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Veículos" id="jGQ-z4-Imy">
+                    <navigationItem key="navigationItem" id="jGQ-z4-Imy">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="Q0K-Jy-AD0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="closeVehicleType:" destination="U1m-pq-UIE" id="43T-cA-QCg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="6g3-U7-2uQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="applyVehicleType:" destination="U1m-pq-UIE" id="NYe-WP-sHU"/>
                             </connections>
@@ -612,7 +618,7 @@
             </objects>
             <point key="canvasLocation" x="2446" y="-463"/>
         </scene>
-        <!--Tipos de Frete-->
+        <!--Company Type Filter View Controller-->
         <scene sceneID="yf4-pw-GOg">
             <objects>
                 <tableViewController id="hsL-8I-TJA" customClass="CompanyTypeFilterViewController" sceneMemberID="viewController">
@@ -642,13 +648,15 @@
                             <outlet property="delegate" destination="hsL-8I-TJA" id="K6X-s0-A2M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tipos de Frete" id="BJR-92-CK2">
+                    <navigationItem key="navigationItem" id="BJR-92-CK2">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="BKb-M7-K83">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="closeCompanyTypeFilter:" destination="hsL-8I-TJA" id="fSP-9f-1c7"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Filtrar" id="ucA-e8-cok">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="applyCompanyTypeFilter:" destination="hsL-8I-TJA" id="nxw-oq-eAX"/>
                             </connections>
@@ -659,7 +667,7 @@
             </objects>
             <point key="canvasLocation" x="2482" y="197"/>
         </scene>
-        <!--Descrição dos Veículos-->
+        <!--Vehicle Info Table View Controller-->
         <scene sceneID="rVg-07-O9O">
             <objects>
                 <tableViewController storyboardIdentifier="VehicleInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibQ-Zx-ppe" customClass="VehicleInfoTableViewController" sceneMemberID="viewController">
@@ -698,7 +706,7 @@
                             <outlet property="delegate" destination="ibQ-Zx-ppe" id="n20-pq-l3O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Descrição dos Veículos" id="C6C-ns-zLd">
+                    <navigationItem key="navigationItem" id="C6C-ns-zLd">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="fUk-yE-6jD">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -871,7 +879,7 @@
             </objects>
             <point key="canvasLocation" x="1995" y="-435"/>
         </scene>
-        <!--Login-->
+        <!--Login View Controller-->
         <scene sceneID="QkZ-zP-rR8">
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="pSL-mr-JIk" customClass="LoginViewController" sceneMemberID="viewController">
@@ -886,6 +894,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUh-yb-Ixp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TELA INICIAL" translatesAutoresizingMaskIntoConstraints="NO" id="azF-7x-Uwh">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aka-5B-SG8">
                                         <rect key="frame" x="91" y="360" width="155" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -898,19 +909,21 @@
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT6-px-Yj9">
                                         <rect key="frame" x="20" y="364" width="62" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqC-xO-3P9">
                                         <rect key="frame" x="20" y="402" width="62" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yen-JG-k6p">
                                         <rect key="frame" x="80" y="430" width="152" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Esqueci minha senha">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -920,22 +933,21 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3G8-hz-Y6T">
                                         <rect key="frame" x="254" y="401" width="46" height="30"/>
                                         <state key="normal" title="Enviar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="performLogin:" destination="pSL-mr-JIk" eventType="touchUpInside" id="LsV-R5-eDq"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoFreteListTarja_1.0" translatesAutoresizingMaskIntoConstraints="NO" id="azF-7x-Uwh">
-                                        <rect key="frame" x="8" y="100" width="304" height="128"/>
-                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="dwV-iF-xYq">
+                    <navigationItem key="navigationItem" id="dwV-iF-xYq">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="FfN-5X-63C">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelLogin:" destination="pSL-mr-JIk" id="Veb-rW-h97"/>
                             </connections>
@@ -1291,22 +1303,22 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FO7-nW-gQD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TELA INICIAL" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Zt-thu">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-J4-3Pk">
                                         <rect key="frame" x="166" y="406" width="103" height="51"/>
                                         <state key="normal" title="Cadastre-se">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="btnSignUp:" destination="bl5-AO-xfk" eventType="touchUpInside" id="7JN-v4-Mef"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoFreteListTarja_1.0" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Zt-thu">
-                                        <rect key="frame" x="8" y="100" width="304" height="128"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcS-ao-BA7">
                                         <rect key="frame" x="51" y="406" width="56" height="51"/>
                                         <state key="normal" title="Login">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="btnLogin:" destination="bl5-AO-xfk" eventType="touchUpInside" id="mPz-uY-flM"/>
@@ -1341,7 +1353,7 @@
             </objects>
             <point key="canvasLocation" x="785" y="1890"/>
         </scene>
-        <!--Cadastro de Veículos-->
+        <!--Vehicle Type Sign Up Table View Controller-->
         <scene sceneID="9H1-Yv-bhC">
             <objects>
                 <tableViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="pageSheet" id="9ho-7i-uW1" customClass="VehicleTypeSignUpTableViewController" sceneMemberID="viewController">
@@ -1373,7 +1385,7 @@
                             <outlet property="delegate" destination="9ho-7i-uW1" id="WGB-kl-YKO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cadastro de Veículos" id="JG1-6f-Fg7">
+                    <navigationItem key="navigationItem" id="JG1-6f-Fg7">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="esa-fQ-ZHe">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ivv-ep-zGd">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
@@ -1409,7 +1421,7 @@
             </objects>
             <point key="canvasLocation" x="915" y="1164"/>
         </scene>
-        <!--Busca-->
+        <!--Search View Controller-->
         <scene sceneID="Ydf-WA-pHr">
             <objects>
                 <tableViewController id="kkA-67-1e7" customClass="SearchViewController" sceneMemberID="viewController">
@@ -1422,7 +1434,6 @@
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="barTintColor" red="0.89803921568627454" green="0.082352941176470587" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <scopeButtonTitles>
                                 <string>Title</string>
@@ -1445,7 +1456,7 @@
                             <outlet property="delegate" destination="kkA-67-1e7" id="Fry-zs-mIM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Busca" id="wip-Tl-pSi"/>
+                    <navigationItem key="navigationItem" id="wip-Tl-pSi"/>
                     <connections>
                         <outlet property="search" destination="bzp-DL-Mzm" id="G2x-xM-Jew"/>
                         <segue destination="mbY-nG-QZS" kind="push" identifier="fromSearchToDetail" id="P8t-xc-CQQ"/>
@@ -1498,7 +1509,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contato" image="comment_full" id="bHz-OU-Fty"/>
-                    <navigationItem key="navigationItem" title="Contato" id="7R0-lE-rPn"/>
+                    <navigationItem key="navigationItem" id="7R0-lE-rPn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceM-as-yJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1521,7 +1532,7 @@
             </objects>
             <point key="canvasLocation" x="733" y="428"/>
         </scene>
-        <!--Minha Conta-->
+        <!--My Account Table View Controller-->
         <scene sceneID="lpB-AO-Yar">
             <objects>
                 <tableViewController id="1Rh-Ti-Bb2" customClass="MyAccountTableViewController" sceneMemberID="viewController">
@@ -1778,7 +1789,7 @@
                             <outlet property="delegate" destination="1Rh-Ti-Bb2" id="70K-b3-Pht"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Minha Conta" id="WDA-tX-3NT">
+                    <navigationItem key="navigationItem" id="WDA-tX-3NT">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="tNG-mc-1pc">
                             <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -2279,6 +2290,7 @@
     </scenes>
     <resources>
         <image name="Logout" width="512" height="512"/>
+        <image name="TELA INICIAL" width="1140" height="2023"/>
         <image name="comment_full" width="24" height="22"/>
         <image name="config" width="26" height="26"/>
         <image name="filterButton" width="20" height="21"/>
@@ -2286,7 +2298,6 @@
         <image name="infoButton" width="20" height="20"/>
         <image name="interstate_truck-50" width="50" height="50"/>
         <image name="location48" width="48" height="48"/>
-        <image name="logoFreteListTarja_1.0" width="2538" height="608"/>
         <image name="map" width="20" height="30"/>
         <image name="organization-50" width="50" height="50"/>
         <image name="search_38" width="38" height="38"/>

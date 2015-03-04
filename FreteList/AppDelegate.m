@@ -39,6 +39,16 @@
                                                          UIUserNotificationTypeAlert |
                                                          UIUserNotificationTypeSound)];
     }
+    
+    //Change TabBar Color
+    UIImage *tabBarBackground = [UIImage imageNamed:@"tabBarBlue"];
+    [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+    NSLog(@"TabBAr: %@",tabBarBackground);
+    
+    //Change Navigation Bar Color
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationLogo"] forBarMetrics:UIBarMetricsDefault];
+    
+    
 
     
     //

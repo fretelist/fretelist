@@ -24,9 +24,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:354.0 saturation:90.0 brightness:89.0 alpha:1.0];
+//    [self.navigationController.navigationBar
+//     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     
 }
@@ -53,6 +53,7 @@
 
 - (IBAction)sendMessage:(id)sender {
     
+    
     NSString *emailTitle = @"";
     
     NSString *emailMessage = @"";
@@ -62,6 +63,8 @@
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     
     mc.mailComposeDelegate = self;
+    mc.navigationItem.title = @"";
+    mc.topViewController.navigationItem.title = nil;
     [mc setSubject:emailTitle];
     [mc setMessageBody:emailMessage isHTML:NO];
     [mc setToRecipients:toRecipients];
