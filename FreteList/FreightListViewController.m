@@ -13,16 +13,18 @@
 #import "CompanyTypeFilterViewController.h"
 #import "CityTypeFilterTableViewController.h"
 #import "FlurryAdInterstitial.h"
+#import "FlurryAds.h"
+#import "Flurry.h"
 #import "FlurryAdInterstitialDelegate.h"
 
 @interface FreightListViewController ()
 
 @property(nonatomic, strong) UIView *currentHowToView;
-@property (nonatomic, strong)FlurryAdInterstitial* adInterstitial;
+//@property (nonatomic, strong)FlurryAdInterstitial* adInterstitial;
 
 @end
 
-NSString *adSpaceName = @"FreteList";
+//NSString *adSpaceName = @"FreteList";
 
 @implementation FreightListViewController
 
@@ -409,22 +411,29 @@ NSString *adSpaceName = @"FreteList";
 //    if (isFirstTimeLoad == NO){
         // Fetch interstitial ads early when a later display is likely. For
         // example, at the beginning of a level.
-        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:adSpaceName] ;
-        self.adInterstitial.adDelegate = self;
-        [self.adInterstitial fetchAd];
-        
+//        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:adSpaceName] ;
+//        self.adInterstitial.adDelegate = self;
+//        [self.adInterstitial fetchAd];
+    
         //show the Ad
 //        [defaults setBool:YES forKey:@"isFirstTimeLoad"];
 //        [defaults synchronize];
 //    }
     
     // Check if ad is ready. If so, display the ad
-    if ([self.adInterstitial ready]) {
-        [self.adInterstitial presentWithViewController:self];
-    } else {
-        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:@"FreteList"];
-        [self.adInterstitial fetchAd];
-    }
+//    if ([self.adInterstitial ready]) {
+//        [self.adInterstitial presentWithViewController:self];
+//    } else {
+//        self.adInterstitial = [[FlurryAdInterstitial alloc] initWithSpace:@"FreteList"];
+//        [self.adInterstitial fetchAd];
+//    }
+//    
+//    [Flurry setDebugLogEnabled:YES];
+//    
+//    [FlurryAds setAdDelegate:self];
+    
+    //set this on to see if test ads appear, make sure to turn it off once the test ads appear
+    //[FlurryAds enableTestAds:YES];
     
 }
 
@@ -444,6 +453,20 @@ NSString *adSpaceName = @"FreteList";
     [self.view addSubview:self.currentHowToView];
     
 }
+
+
+/*
+#pragma mark - Flurry callbacks
+- (void)spaceDidReceiveAd:(NSString *)adSpace {
+    NSLog(@"=========== Ad Space [%@] Did Receive Ad ================ ", adSpace);
+    
+}
+
+- (void)spaceDidFailToReceiveAd:(NSString *)adSpace error:(NSError *)error {
+    NSLog(@"=========== Ad Space [%@] Did Fail to Receive Ad with error [%@] ================ ", adSpace, error);
+    
+}
+ */
 
 @end
 

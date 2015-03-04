@@ -10,6 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
 #import "Flurry.h"
+#import "FlurryAds.h"
 #import "FlurryAdInterstitialDelegate.h"
 #import "FlurryAdInterstitial.h"
 
