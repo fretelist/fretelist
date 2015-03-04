@@ -520,33 +520,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="HnC-8B-Zde">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="GNk-RB-cNo">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I2c-Tz-i0a">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancelar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeCityTypeFilter:" destination="ie4-29-woY" eventType="touchUpInside" id="Q6O-tk-Gle"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="gAb-mR-XJA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="closeCityTypeFilter:" destination="ie4-29-woY" id="cM0-Jg-SZI"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="FRJ-yC-BeN">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ftF-sI-9qr">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Filtrar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="applyCityTypeFilter:" destination="ie4-29-woY" eventType="touchUpInside" id="zau-hp-3iA"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="npR-fl-Mah">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="applyCityTypeFilter:" destination="ie4-29-woY" id="aya-gM-O8h"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
