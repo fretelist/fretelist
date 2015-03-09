@@ -1698,7 +1698,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OI1-6i-ZIY">
+                                                <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OI1-6i-ZIY">
                                                     <rect key="frame" x="161" y="-52" width="96" height="96"/>
                                                 </pickerView>
                                             </subviews>
@@ -1715,7 +1715,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
+                                                <pickerView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
                                                     <rect key="frame" x="161" y="-52" width="96" height="96"/>
                                                 </pickerView>
                                             </subviews>

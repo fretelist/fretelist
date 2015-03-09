@@ -421,7 +421,15 @@
 // Number of rows of data
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
-    return [self.myAccountStateData count];
+    if (pickerView.tag == 1) {
+        return [self.myAccountCityData count];
+        
+    } else {
+        
+        return [self.myAccountStateData count];
+    }
+    
+
 }
 
 // The Data to return for the row and component(column) that's being passed in
@@ -430,8 +438,19 @@
 //    PFUser *currentUser = [PFUser currentUser];
 //    
 //    NSString *userState = [currentUser objectForKey:@"state"];
-//    
-    NSString *currentState = [self.myAccountStateData objectAtIndex:row];
+    
+    if (pickerView.tag == 1) {
+        NSString *currentCity = [self.myAccountCityData objectAtIndex:row];
+        return currentCity;
+    }
+    
+//
+    else {
+        NSString *currentState = [self.myAccountStateData objectAtIndex:row];
+        return currentState;
+    }
+    
+    
 //    
 //    if (userState) {
 //    
@@ -440,17 +459,28 @@
 //    }
 //    
 //    
-//    
-    return currentState;
+//
+
 }
 
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
-    //Store the selected State in a String Variable
-    self.pickerSelectedNewString = [self.myAccountStateData objectAtIndex:row];
+    if (pickerView.tag == 1) {
+        //Store the selected State in a String Variable
+        self.pickerSelectedNewCity = [self.myAccountCityData objectAtIndex:row];
+        NSLog(@"Selected City: %@",[NSString stringWithFormat:@"%@",self.pickerSelectedNewCity]);
+        
+    } else {
+        
+        //Store the selected State in a String Variable
+        self.pickerSelectedNewString = [self.myAccountStateData objectAtIndex:row];
+        NSLog(@"Selected State: %@",[NSString stringWithFormat:@"%@",self.pickerSelectedNewString]);
+    }
     
-    NSLog(@"Selected State: %@",[NSString stringWithFormat:@"%@",self.pickerSelectedNewString]);
+    
+    
+    
     
     
 }
