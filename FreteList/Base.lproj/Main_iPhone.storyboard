@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -1986,11 +1986,13 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnC-0p-lzY">
-                                                    <rect key="frame" x="128" y="7" width="184" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-uo-U3f">
+                                                    <rect key="frame" x="128" y="8" width="184" height="29"/>
+                                                    <segments>
+                                                        <segment title="Rio de Janeiro"/>
+                                                        <segment title="São Paulo"/>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2069,11 +2071,11 @@
                         <outlet property="btnNext" destination="sqs-Ai-suh" id="bLe-10-igP"/>
                         <outlet property="imgViewUserPhoto" destination="aLJ-v3-6jv" id="v4G-6S-IeL"/>
                         <outlet property="labelWordCount" destination="SMp-Fc-U35" id="cmw-5B-DA8"/>
+                        <outlet property="segmentedCity" destination="wfw-uo-U3f" id="nei-AR-KDc"/>
                         <outlet property="segmentedCompanyType" destination="4HK-on-CjE" id="vXE-B5-mRB"/>
                         <outlet property="segmentedState" destination="h24-kw-v5g" id="flQ-R2-2aE"/>
                         <outlet property="txtFieldCel1" destination="TDg-7d-SYQ" id="6Te-op-DPi"/>
                         <outlet property="txtFieldCel2" destination="C5K-qk-0YH" id="oIB-dI-HHk"/>
-                        <outlet property="txtFieldCity" destination="qnC-0p-lzY" id="3pH-aR-xyB"/>
                         <outlet property="txtFieldEmail" destination="1Sg-or-DPB" id="OTs-0T-BZS"/>
                         <outlet property="txtFieldName" destination="Whs-V2-bH4" id="ZZy-lF-o1K"/>
                         <outlet property="txtFieldPassword" destination="kwA-Xm-VUK" id="60a-7S-19e"/>

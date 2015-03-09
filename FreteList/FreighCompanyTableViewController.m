@@ -30,8 +30,7 @@
     self.txtFieldPassword.delegate =
     self.txtFieldTel.delegate =
     self.txtFieldCel1.delegate =
-    self.txtFieldCel2.delegate =
-    self.txtFieldCity.delegate = self;
+    self.txtFieldCel2.delegate = self;
     self.txtViewDescription.delegate = self;
     
 }
@@ -94,10 +93,7 @@
     }
     else if (textField == self.txtFieldCel2){
         
-        [self.txtFieldCity becomeFirstResponder];
-    }
-    else if (textField == self.txtFieldCity){
-        [self.txtFieldCity resignFirstResponder];
+        [self.txtFieldCel2 resignFirstResponder];
     }
     
     return YES;
@@ -200,8 +196,16 @@
     [user setObject:self.txtFieldTel.text forKey:@"telephone"];
     [user setObject:self.txtFieldCel1.text forKey:@"mobile1"];
     [user setObject:self.txtFieldCel2.text forKey:@"mobile2"];
-    [user setObject:self.txtFieldCity.text forKey:@"city"];
     [user setObject:@"Prestador de Serv." forKey:@"freightUserType"];
+    
+    // Set City
+    if (self.segmentedCity.selectedSegmentIndex == 0) {
+        [user setObject:@"Rio de Janeiro" forKey:@"city"];
+    }
+    
+    if (self.segmentedCity.selectedSegmentIndex == 1) {
+        [user setObject:@"São Paulo" forKey:@"city"];
+    }
     
     // Set State
     if (self.segmentedState.selectedSegmentIndex == 0) {

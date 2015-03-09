@@ -19,8 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldCel1;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldCel2;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedCity;
 
-@property (weak, nonatomic) IBOutlet UITextField *txtFieldCity;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedState;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedCompanyType;
 @property (weak, nonatomic) IBOutlet UITextView *txtViewDescription;
