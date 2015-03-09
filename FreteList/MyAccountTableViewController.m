@@ -415,7 +415,14 @@
 #pragma mark - UIPickerViewDelegate
 // Number of columns of data
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
+    
+    if (pickerView.tag == 1) {
+        return 1;
+    } else {
+        
+        return 1;
+    }
+    
 }
 
 // Number of rows of data
