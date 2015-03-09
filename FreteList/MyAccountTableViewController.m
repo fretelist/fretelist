@@ -32,8 +32,14 @@
     //Picker load
     self.pickerMyAccountState.delegate = self;
     self.pickerMyAccountState.dataSource = self;
+    self.pickerMyAccountCity.delegate = self;
+    self.pickerMyAccountCity.delegate = self;
     self.tabBarController.delegate = self;
     
+    //City Array for Freight User only
+    self.myAccountFreightUserCityArray = @[@"Rio de Janeiro",@"São Paulo"];
+    
+    //States Array for User and Freight User
     self.myAccountUserStateArray = @[@"AC",@"AL",@"AM",@"AP",@"BA",@"CE",@"DF",@"ES",@"GO",@"MA",@"MS",@"MT",@"MG",@"PA",@"PR",@"PE",@"PI",@"RJ",@"RN",@"RS",@"RO",@"RR",@"SC",@"SP",@"SE",@"TO"];
     
     self.myAccountFreightUserStateArray = @[@"RJ",@"SP"];
@@ -51,7 +57,7 @@
     
     //Pass the selected state, otherwise crash will occur, due to Parse understanding what is being saved as nil
     self.pickerSelectedNewString = [[PFUser currentUser] objectForKey:@"state"];
-    
+    self.pickerSelectedNewCity = [[PFUser currentUser] objectForKey:@"city"];
     
     if (self.isCliente) {
         
@@ -74,6 +80,11 @@
         
         [self loadSavedVehicleTypes];
         
+        //If City User reload Cities
+        self.myAccountCityData = [NSMutableArray arrayWithArray:self.myAccountFreightUserCityArray];
+        [self.pickerMyAccountCity reloadAllComponents];
+        
+        //If Freight User reload States
         self.myAccountStateData = [NSMutableArray arrayWithArray:self.myAccountFreightUserStateArray];
         [self.pickerMyAccountState reloadAllComponents];
         
@@ -107,7 +118,7 @@
     PFUser *currentUser = [PFUser currentUser];
     
     NSString *userState = [currentUser objectForKey:@"state"];
-    
+    NSString *userCity = [currentUser objectForKey:@"city"];
     
     if (userState) {
         
@@ -115,6 +126,9 @@
         
     }
     
+    if (userCity) {
+        [self.pickerMyAccountCity selectRow:[self.myAccountCityData indexOfObject:userCity] inComponent:0 animated:YES];
+    }
     
 }
 
@@ -250,7 +264,7 @@
         [currentUser setObject:self.txtFieldTelephone.text forKey:@"telephone"];
         [currentUser setObject:self.txtFieldMob1.text forKey:@"mobile1"];
         [currentUser setObject:self.txtFieldMob2.text forKey:@"mobile2"];
-        [currentUser setObject:self.txtFieldCity.text forKey:@"city"];
+        [currentUser setObject:self.pickerSelectedNewCity forKey:@"city"];
         [currentUser setObject:self.txtFieldDescription.text forKey:@"freightDescription"];
         [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
         [currentUser setObject:self.myAccountVehicleTypes forKey:@"vehicleType"];
@@ -288,7 +302,7 @@
         self.txtFieldTelephone.enabled = YES;
         self.txtFieldMob1.enabled = YES;
         self.txtFieldMob2.enabled = YES;
-        self.txtFieldCity.enabled = YES;
+        self.pickerMyAccountCity.userInteractionEnabled = YES;
         self.txtFieldDescription.enabled = YES;
         self.btnChangePhoto.enabled = YES;
         self.btnChangeVehicleType.enabled = YES;
@@ -348,7 +362,7 @@
     self.txtFieldTelephone.enabled = NO;
     self.txtFieldMob1.enabled = NO;
     self.txtFieldMob2.enabled = NO;
-    self.txtFieldCity.enabled = NO;
+    self.pickerMyAccountCity.userInteractionEnabled = NO;
     self.txtFieldDescription.enabled = NO;
     self.btnChangePhoto.enabled = NO;
     self.btnChangeVehicleType.enabled = NO;
@@ -372,7 +386,6 @@
     self.txtFieldTelephone.text = [[PFUser currentUser] objectForKey:@"telephone"];
     self.txtFieldMob1.text = [[PFUser currentUser] objectForKey:@"mobile1"];
     self.txtFieldMob2.text = [[PFUser currentUser] objectForKey:@"mobile2"];
-    self.txtFieldCity.text = [[PFUser currentUser] objectForKey:@"city"];
     self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
     
     

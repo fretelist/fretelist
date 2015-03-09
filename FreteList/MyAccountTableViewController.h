@@ -19,10 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTelephone;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob1;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob2;
-
-@property (weak, nonatomic) IBOutlet UITextField *txtFieldCity;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
-
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountCity;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountState;
 @property (weak, nonatomic) IBOutlet UILabel *labelTelephone;
 @property (weak, nonatomic) IBOutlet UILabel *labelMob1;
@@ -37,8 +35,10 @@
 //Arrays
 @property (nonatomic, strong) NSMutableArray *myAccountVehicleTypes;
 @property (nonatomic, strong) NSMutableArray *myAccountStateData;
+@property (nonatomic, strong) NSMutableArray *myAccountCityData;
 @property (nonatomic, strong) NSArray *myAccountUserStateArray;
 @property (nonatomic, strong) NSArray *myAccountFreightUserStateArray;
+@property (nonatomic, strong) NSArray *myAccountFreightUserCityArray;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgViewUserPhoto;
@@ -49,6 +49,7 @@
 
 //Strings
 @property (nonatomic, strong) NSString *pickerSelectedNewString;
+@property (nonatomic, strong) NSString *pickerSelectedNewCity;
 
 @property (nonatomic, assign) BOOL isCliente;
 
