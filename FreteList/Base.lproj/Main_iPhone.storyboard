@@ -1835,7 +1835,7 @@
             </objects>
             <point key="canvasLocation" x="1166" y="317"/>
         </scene>
-        <!--Cadastro Fretes-->
+        <!--Freigh Company Table View Controller-->
         <scene sceneID="xal-C5-l7j">
             <objects>
                 <tableViewController id="rAe-ts-e8P" customClass="FreighCompanyTableViewController" sceneMemberID="viewController">
@@ -2074,13 +2074,15 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Cadastro Fretes" id="AyK-4D-dxk">
+                    <navigationItem key="navigationItem" id="AyK-4D-dxk">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="4vS-ae-5B2">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelSignUp:" destination="rAe-ts-e8P" id="QdF-6x-JT2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Próxima" id="sqs-Ai-suh">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="chooseVehicleType:" destination="rAe-ts-e8P" id="zoo-3I-wDY"/>
                             </connections>
@@ -2107,7 +2109,7 @@
             </objects>
             <point key="canvasLocation" x="-540" y="1164"/>
         </scene>
-        <!--Cadastro Usuário-->
+        <!--Normal User Table View Controller-->
         <scene sceneID="ZZ6-qT-Fg9">
             <objects>
                 <tableViewController id="zGH-jI-NXG" customClass="NormalUserTableViewController" sceneMemberID="viewController">
@@ -2219,13 +2221,15 @@
                             <outlet property="delegate" destination="zGH-jI-NXG" id="QS1-sE-bPk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cadastro Usuário" id="zBc-e4-DsD">
+                    <navigationItem key="navigationItem" id="zBc-e4-DsD">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="dhm-Q7-zc1">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelNormalUserSignUp:" destination="zGH-jI-NXG" id="ZT9-PR-uUZ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Enviar" id="vlw-fj-hz2">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="sendNormalUserSignUp:" destination="zGH-jI-NXG" id="I5M-bg-UnD"/>
                             </connections>
