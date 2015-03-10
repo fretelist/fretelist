@@ -1687,7 +1687,26 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Flx-Si-F1V">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="mKe-vZ-Sg0">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mKe-vZ-Sg0" id="8kw-7B-JEi">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cidade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsJ-MR-J79">
+                                                    <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hkn-yM-lDc">
+                                                    <rect key="frame" x="107" y="7" width="205" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="59" id="Flx-Si-F1V">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Flx-Si-F1V" id="uY8-wt-B4c">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1715,7 +1734,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
+                                                <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
                                                     <rect key="frame" x="161" y="-52" width="96" height="96"/>
                                                 </pickerView>
                                             </subviews>
@@ -1793,6 +1812,8 @@
                         <outlet property="btnLogout" destination="wHu-ru-tMT" id="1NM-NB-WKI"/>
                         <outlet property="btnSave" destination="2Zj-4k-2mI" id="xIo-8Y-879"/>
                         <outlet property="imgViewUserPhoto" destination="Bpp-Vx-9wN" id="Se4-vs-rWw"/>
+                        <outlet property="labelCityFreightUser" destination="fb9-mu-TBR" id="tdN-vC-7aA"/>
+                        <outlet property="labelCityNormalUser" destination="GsJ-MR-J79" id="SUo-11-dPe"/>
                         <outlet property="labelDescription" destination="kAB-zl-9q2" id="urK-ZB-h5L"/>
                         <outlet property="labelMob1" destination="6FU-8a-Szr" id="GpI-uA-HEJ"/>
                         <outlet property="labelMob2" destination="nTb-MY-xbs" id="yn2-Y6-D6s"/>
@@ -1800,6 +1821,7 @@
                         <outlet property="labelVehicleType" destination="xhK-p6-qNR" id="a5o-e6-WFY"/>
                         <outlet property="pickerMyAccountCity" destination="OI1-6i-ZIY" id="MLg-cN-1CJ"/>
                         <outlet property="pickerMyAccountState" destination="5LJ-hY-PDr" id="Irq-0w-0xc"/>
+                        <outlet property="txtFieldCityNormalUser" destination="Hkn-yM-lDc" id="ger-Eh-93Q"/>
                         <outlet property="txtFieldDescription" destination="L92-0Y-GXN" id="HLC-yh-U37"/>
                         <outlet property="txtFieldEmail" destination="kVU-fG-fiA" id="GWu-Kh-wnQ"/>
                         <outlet property="txtFieldMob1" destination="Uru-Th-nc7" id="O3b-Q0-piw"/>

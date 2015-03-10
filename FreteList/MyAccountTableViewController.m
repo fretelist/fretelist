@@ -64,6 +64,8 @@
         self.txtFieldTelephone.hidden = YES;
         self.txtFieldMob1.hidden = YES;
         self.txtFieldMob2.hidden = YES;
+        self.labelCityFreightUser.hidden = YES;
+        self.pickerMyAccountCity.hidden = YES;
         self.txtFieldDescription.hidden = YES;
         self.btnChangePhoto.hidden = YES;
         self.btnChangeVehicleType.hidden = YES;
@@ -168,13 +170,15 @@
     PFUser *currentUser = [PFUser currentUser];
     
     BOOL isCliente = [[currentUser objectForKey:@"freightUserType"] isEqualToString:@"Cliente"];
-    BOOL isNormalUserCell = (indexPath.row == 0|| indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 || indexPath.row == 10);
+    BOOL isNormalUserCell = (indexPath.row == 0|| indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 ||indexPath.row == 9 || indexPath.row == 11);
     
     if (isNormalUserCell && isCliente) {
         return 0;
     } else if (indexPath.row == 0){
         return 105;
     } else if (indexPath.row == 9){
+        return 105;
+    } else if (indexPath.row == 10){
         return 105;
     }
     
@@ -264,6 +268,7 @@
         [currentUser setObject:self.txtFieldTelephone.text forKey:@"telephone"];
         [currentUser setObject:self.txtFieldMob1.text forKey:@"mobile1"];
         [currentUser setObject:self.txtFieldMob2.text forKey:@"mobile2"];
+        [currentUser setObject:self.txtFieldCityNormalUser.text forKey:@"city"];
         [currentUser setObject:self.pickerSelectedNewCity forKey:@"city"];
         [currentUser setObject:self.txtFieldDescription.text forKey:@"freightDescription"];
         [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
@@ -302,6 +307,7 @@
         self.txtFieldTelephone.enabled = YES;
         self.txtFieldMob1.enabled = YES;
         self.txtFieldMob2.enabled = YES;
+        self.txtFieldCityNormalUser.enabled = YES;
         self.pickerMyAccountCity.userInteractionEnabled = YES;
         self.txtFieldDescription.enabled = YES;
         self.btnChangePhoto.enabled = YES;
@@ -362,6 +368,7 @@
     self.txtFieldTelephone.enabled = NO;
     self.txtFieldMob1.enabled = NO;
     self.txtFieldMob2.enabled = NO;
+    self.txtFieldCityNormalUser.enabled = NO;
     self.pickerMyAccountCity.userInteractionEnabled = NO;
     self.txtFieldDescription.enabled = NO;
     self.btnChangePhoto.enabled = NO;
@@ -382,7 +389,7 @@
     self.txtFieldName.text = [[PFUser currentUser] objectForKey:@"name"];
     self.txtFieldEmail.text = [[PFUser currentUser] objectForKey:@"email"];
     self.txtFieldPsswd.text = [[PFUser currentUser] objectForKey:@"password"];
-    
+    self.txtFieldCityNormalUser.text = [[PFUser currentUser] objectForKey:@"city"];
     self.txtFieldTelephone.text = [[PFUser currentUser] objectForKey:@"telephone"];
     self.txtFieldMob1.text = [[PFUser currentUser] objectForKey:@"mobile1"];
     self.txtFieldMob2.text = [[PFUser currentUser] objectForKey:@"mobile2"];

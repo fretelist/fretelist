@@ -19,12 +19,16 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTelephone;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob1;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob2;
+@property (weak, nonatomic) IBOutlet UITextField *txtFieldCityNormalUser;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountCity;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountState;
 @property (weak, nonatomic) IBOutlet UILabel *labelTelephone;
 @property (weak, nonatomic) IBOutlet UILabel *labelMob1;
 @property (weak, nonatomic) IBOutlet UILabel *labelMob2;
+@property (weak, nonatomic) IBOutlet UILabel *labelCityNormalUser;
+@property (weak, nonatomic) IBOutlet UILabel *labelCityFreightUser;
+
 @property (weak, nonatomic) IBOutlet UILabel *labelVehicleType;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescription;
 @property (weak, nonatomic) IBOutlet UIButton *btnChangeVehicleType;
