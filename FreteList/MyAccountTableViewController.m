@@ -82,6 +82,9 @@
         
         [self loadSavedVehicleTypes];
         
+        self.labelCityNormalUser.hidden = YES;
+        self.txtFieldCityNormalUser.hidden = YES;
+        
         //If City User reload Cities
         self.myAccountCityData = [NSMutableArray arrayWithArray:self.myAccountFreightUserCityArray];
         [self.pickerMyAccountCity reloadAllComponents];
@@ -176,6 +179,8 @@
         return 0;
     } else if (indexPath.row == 0){
         return 105;
+    }else if (indexPath.row == 8){
+        return 0;
     } else if (indexPath.row == 9){
         return 105;
     } else if (indexPath.row == 10){
