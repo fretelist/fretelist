@@ -425,7 +425,11 @@
 -(void)loadSavedVehicleTypes{
     
     PFUser *userMyAccountCategories = [PFUser currentUser];
-    [userMyAccountCategories fetch];
+    
+    //
+    [userMyAccountCategories fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        //
+    }];
     
     NSArray *arrayOfCategories = [userMyAccountCategories objectForKey:@"vehicleType"];
     self.myAccountVehicleTypes = [[NSMutableArray alloc]init];

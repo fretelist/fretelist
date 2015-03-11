@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<UINavigationControllerDelegate>
 
 @property(nonatomic, strong) PFObject *clickedFreightDetail;
 @property (weak, nonatomic) IBOutlet PFImageView *imgViewDetailPhoto;
