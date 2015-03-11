@@ -337,6 +337,23 @@
     
     [self loadSavedDataFromUser];
     
+    // Reload selecteds state and city on both pickers
+    PFUser *currentUser = [PFUser currentUser];
+    
+    NSString *userState = [currentUser objectForKey:@"state"];
+    NSString *userCity = [currentUser objectForKey:@"city"];
+    
+    if (userState) {
+        
+        [self.pickerMyAccountState selectRow:[self.myAccountStateData indexOfObject:userState] inComponent:0 animated:YES];
+        
+    }
+    
+    if (userCity) {
+        [self.pickerMyAccountCity selectRow:[self.myAccountCityData indexOfObject:userCity] inComponent:0 animated:YES];
+    }
+
+    // Reload saved vehicles
     if (!self.isCliente) {
         [self loadSavedVehicleTypes];
     }
