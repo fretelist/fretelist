@@ -77,31 +77,39 @@
         
         if (!error) {
             
+            for (PFObject *object in objects) {
+                
+                NSLog(@"%@",objects);
+                
+                //Offer Photo
+                PFFile *thumbnail = object[@"paidOfferPhoto"];
+                NSLog(@"Thumbnail: %@",thumbnail);
+
+                
+                [thumbnail getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                    if (!error) {
+                        //self.paidOfferImageView = [[PFImageView alloc]initWithImage:[UIImage imageWithData:data]];
+                        //                    UIImage *paidOfferImage = [UIImage imageWithData:data];
+                        NSLog(@"PaidOfferImageView: %@",self.paidOfferImageView);
+                        self.paidOfferImageView.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
+                        self.paidOfferImageView.file = thumbnail;
+                        
+                        NSLog(@"Thumbnail: %@",self.paidOfferImageView);
+                        
+                        //[paidOfferImageView viewWithTag:200];
+                        self.paidOfferView = self.paidOfferImageView;
+                        [self.paidOfferImageView setImage:[UIImage imageNamed:@"promotion_logo_placeholder.png"]];
+                        [self.paidOfferImageView loadInBackground];
+                        
+                    }
+                }];
+            
+            }
+            
             //PFObject *paidOfferObject = [PFObject objectWithClassName:@"Paid_Offers"];
             
-            NSLog(@"%@",objects);
+
             
-            //Offer Photo
-            PFFile *thumbnail = [[queryPaidOffer getFirstObject] objectForKey:@"paidOfferPhoto"];
-            NSLog(@"Thumbnail: %@",thumbnail);
-            
-            [thumbnail getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                if (!error) {
-                    //self.paidOfferImageView = [[PFImageView alloc]initWithImage:[UIImage imageWithData:data]];
-//                    UIImage *paidOfferImage = [UIImage imageWithData:data];
-                    NSLog(@"PaidOfferImageView: %@",self.paidOfferImageView);
-                    self.paidOfferImageView.image = [UIImage imageNamed:@"promotion_logo_placeholder.png"];
-                    self.paidOfferImageView.file = thumbnail;
-                    
-                    NSLog(@"Thumbnail: %@",self.paidOfferImageView);
-                    
-                    //[paidOfferImageView viewWithTag:200];
-                    self.paidOfferView = self.paidOfferImageView;
-                    [self.paidOfferImageView setImage:[UIImage imageNamed:@"promotion_logo_placeholder.png"]];
-                    [self.paidOfferImageView loadInBackground];
-                    
-                }
-            }];
             
            
         }

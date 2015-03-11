@@ -427,7 +427,7 @@
     PFUser *userMyAccountCategories = [PFUser currentUser];
     
     //
-    [userMyAccountCategories fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+    [userMyAccountCategories fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         //
     }];
     
@@ -435,13 +435,17 @@
     self.myAccountVehicleTypes = [[NSMutableArray alloc]init];
     
     for (PFObject *category in arrayOfCategories) {
-        [category fetch];
+        [category fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            [self.myAccountVehicleTypes addObject:category];
+            
+            NSString *result = [[self.myAccountVehicleTypes valueForKey:@"categories"] componentsJoinedByString:@","];
+            self.labelVehicleType.text = result;
+        }];
         
-        [self.myAccountVehicleTypes addObject:category];
+        
     }
     
-    NSString *result = [[self.myAccountVehicleTypes valueForKey:@"categories"] componentsJoinedByString:@","];
-    self.labelVehicleType.text = result;
+    
     
     
     
