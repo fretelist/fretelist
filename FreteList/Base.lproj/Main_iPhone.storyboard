@@ -966,7 +966,7 @@
             </objects>
             <point key="canvasLocation" x="-828" y="-851"/>
         </scene>
-        <!--Esqueci Minha Senha-->
+        <!--Forgot Password View Controller-->
         <scene sceneID="D9w-AI-GjZ">
             <objects>
                 <viewController id="79W-ye-p6h" customClass="ForgotPasswordViewController" sceneMemberID="viewController">
@@ -999,13 +999,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Esqueci Minha Senha" id="Vrb-ZZ-B17">
+                    <navigationItem key="navigationItem" id="Vrb-ZZ-B17">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="hd3-yI-oWY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelForgotPassword:" destination="79W-ye-p6h" id="OMH-3v-CJs"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Enviar" id="mZK-M5-ngL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="resetPassword:" destination="79W-ye-p6h" id="tgw-64-IIW"/>
                             </connections>
@@ -1371,17 +1373,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="JG1-6f-Fg7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="esa-fQ-ZHe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ivv-ep-zGd">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Salvar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveVehicleTypes:" destination="9ho-7i-uW1" eventType="touchUpInside" id="xgD-hB-j35"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Zne-WK-vfm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveVehicleTypes:" destination="9ho-7i-uW1" id="1ba-Xg-v35"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
