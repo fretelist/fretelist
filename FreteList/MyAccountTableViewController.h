@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "VehicleTypeFilterViewController.h"
 
-@interface MyAccountTableViewController : UITableViewController<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITabBarControllerDelegate,vehicleTypeFilterDelegate>
+@interface MyAccountTableViewController : UITableViewController<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITabBarControllerDelegate,vehicleTypeFilterDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;
@@ -20,7 +20,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob1;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob2;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldCityNormalUser;
-@property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
+//@property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
+@property (weak, nonatomic) IBOutlet UITextView *txtViewDescription;
+
+
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountCity;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountState;
 @property (weak, nonatomic) IBOutlet UILabel *labelTelephone;
@@ -31,6 +34,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelVehicleType;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescription;
+@property (weak, nonatomic) IBOutlet UILabel *labelMyAccountWordCount;
 @property (weak, nonatomic) IBOutlet UIButton *btnChangeVehicleType;
 
 

@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self disableEdit];
+    //[self disableEdit];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -36,6 +36,7 @@
     self.pickerMyAccountState.dataSource = self;
     self.pickerMyAccountCity.delegate = self;
     self.pickerMyAccountCity.delegate = self;
+    self.txtViewDescription.delegate = self;
     self.tabBarController.delegate = self;
     
     //City Array for Freight User only
@@ -68,7 +69,7 @@
         self.txtFieldMob2.hidden = YES;
         self.labelCityFreightUser.hidden = YES;
         self.pickerMyAccountCity.hidden = YES;
-        self.txtFieldDescription.hidden = YES;
+        self.txtViewDescription.hidden = YES;
         self.btnChangePhoto.hidden = YES;
         self.btnChangeVehicleType.hidden = YES;
         self.labelTelephone.hidden = YES;
@@ -187,6 +188,8 @@
         return 105;
     } else if (indexPath.row == 10){
         return 105;
+    } else if (indexPath.row == 11){
+        return 110;
     }
     
     return 44;
@@ -240,6 +243,42 @@
 }
 */
 
+#pragma mark - UITextViewDelegate
+
+-(void)textViewDidBeginEditing:(UITextView *)textView{
+    
+    self.txtViewDescription.text = nil;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 300.0, 0);
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:11 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+    
+}
+
+-(void)textViewDidChange:(UITextView *)textView{
+    
+    NSUInteger length;
+    length = [self.txtViewDescription.text length];
+    
+    NSString * last = [NSString stringWithFormat:@"%lu", 70 - length];
+    
+    [self.labelMyAccountWordCount setText:[NSString stringWithFormat:@"%@",last]];
+    
+    NSLog(@"%@" , last);
+    
+}
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    
+    if(range.length + range.location > self.txtViewDescription.text.length)
+    {
+        return NO;
+    }
+    
+    NSUInteger newLength = [self.txtViewDescription.text length] + [text length] - range.length;
+    return (newLength > 160) ? NO : YES;
+    
+}
+
+
+
 #pragma mark - My Actions
 
 - (IBAction)performLogout:(id)sender {
@@ -277,7 +316,7 @@
         [currentUser setObject:self.txtFieldMob2.text forKey:@"mobile2"];
         [currentUser setObject:self.txtFieldCityNormalUser.text forKey:@"city"];
         [currentUser setObject:self.pickerSelectedNewCity forKey:@"city"];
-        [currentUser setObject:self.txtFieldDescription.text forKey:@"freightDescription"];
+        [currentUser setObject:self.txtViewDescription.text forKey:@"freightDescription"];
         [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
         [currentUser setObject:self.myAccountVehicleTypes forKey:@"vehicleType"];
         
@@ -315,8 +354,9 @@
         self.txtFieldMob1.enabled = YES;
         self.txtFieldMob2.enabled = YES;
         self.txtFieldCityNormalUser.enabled = YES;
+        self.txtViewDescription.selectable = YES;
+        self.txtViewDescription.userInteractionEnabled = YES;
         self.pickerMyAccountCity.userInteractionEnabled = YES;
-        self.txtFieldDescription.enabled = YES;
         self.btnChangePhoto.enabled = YES;
         self.btnChangeVehicleType.enabled = YES;
         self.btnLogout.enabled = YES;
@@ -394,7 +434,8 @@
     self.txtFieldMob2.enabled = NO;
     self.txtFieldCityNormalUser.enabled = NO;
     self.pickerMyAccountCity.userInteractionEnabled = NO;
-    self.txtFieldDescription.enabled = NO;
+    self.txtViewDescription.userInteractionEnabled = NO;
+    self.txtViewDescription.selectable = NO;
     self.btnChangePhoto.enabled = NO;
     self.btnChangeVehicleType.enabled = NO;
     self.btnLogout.enabled = NO;
@@ -403,6 +444,7 @@
     [self.btnCancel setTintColor:[UIColor clearColor]];
     //self.navigationItem.leftBarButtonItem = nil;
     [self.btnSave setTitle:@"Editar"];
+    self.tableView.contentInset = UIEdgeInsetsMake(50, 0, 50, 0);
     
     
 }
@@ -417,7 +459,7 @@
     self.txtFieldTelephone.text = [[PFUser currentUser] objectForKey:@"telephone"];
     self.txtFieldMob1.text = [[PFUser currentUser] objectForKey:@"mobile1"];
     self.txtFieldMob2.text = [[PFUser currentUser] objectForKey:@"mobile2"];
-    self.txtFieldDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
+    self.txtViewDescription.text = [[PFUser currentUser] objectForKey:@"freightDescription"];
     
     
 }

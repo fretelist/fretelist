@@ -1714,7 +1714,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OI1-6i-ZIY">
-                                                    <rect key="frame" x="137" y="-30" width="120" height="96"/>
+                                                    <rect key="frame" x="113" y="-41" width="170" height="96"/>
                                                 </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1731,24 +1731,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LJ-hY-PDr">
-                                                    <rect key="frame" x="137" y="-30" width="120" height="96"/>
+                                                    <rect key="frame" x="137" y="-41" width="120" height="96"/>
                                                 </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="dzX-2G-ob8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="120" id="dzX-2G-ob8">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dzX-2G-ob8" id="yNa-0R-kxI">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L92-0Y-GXN">
-                                                    <rect key="frame" x="107" y="7" width="205" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAB-zl-9q2">
-                                                    <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="86" height="26"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndx-53-cvi">
+                                                    <rect key="frame" x="124" y="15" width="188" height="77"/>
+                                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-dv-WVQ">
+                                                    <rect key="frame" x="270" y="90" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1761,7 +1768,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTK-Wc-0LH">
-                                                    <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="86" height="23"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1813,18 +1820,19 @@
                         <outlet property="labelDescription" destination="kAB-zl-9q2" id="urK-ZB-h5L"/>
                         <outlet property="labelMob1" destination="6FU-8a-Szr" id="GpI-uA-HEJ"/>
                         <outlet property="labelMob2" destination="nTb-MY-xbs" id="yn2-Y6-D6s"/>
+                        <outlet property="labelMyAccountWordCount" destination="ehR-dv-WVQ" id="9C7-Uq-YWf"/>
                         <outlet property="labelTelephone" destination="MBX-yL-ftW" id="wls-2D-1OM"/>
                         <outlet property="labelVehicleType" destination="xhK-p6-qNR" id="a5o-e6-WFY"/>
                         <outlet property="pickerMyAccountCity" destination="OI1-6i-ZIY" id="MLg-cN-1CJ"/>
                         <outlet property="pickerMyAccountState" destination="5LJ-hY-PDr" id="Irq-0w-0xc"/>
                         <outlet property="txtFieldCityNormalUser" destination="Hkn-yM-lDc" id="ger-Eh-93Q"/>
-                        <outlet property="txtFieldDescription" destination="L92-0Y-GXN" id="HLC-yh-U37"/>
                         <outlet property="txtFieldEmail" destination="kVU-fG-fiA" id="GWu-Kh-wnQ"/>
                         <outlet property="txtFieldMob1" destination="Uru-Th-nc7" id="O3b-Q0-piw"/>
                         <outlet property="txtFieldMob2" destination="dxX-8G-mK2" id="qeC-xs-RGH"/>
                         <outlet property="txtFieldName" destination="Nkk-d2-w41" id="2p2-8K-bJi"/>
                         <outlet property="txtFieldPsswd" destination="Hx6-Uh-c7d" id="ACO-6T-ynN"/>
                         <outlet property="txtFieldTelephone" destination="AMR-ma-hAU" id="Gfk-jX-gNJ"/>
+                        <outlet property="txtViewDescription" destination="ndx-53-cvi" id="58X-vM-LOo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5j-Yi-Rdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2297,7 +2305,7 @@
     </scenes>
     <resources>
         <image name="Logout" width="512" height="512"/>
-        <image name="TELA INICIAL" width="1140" height="2023"/>
+        <image name="TELA INICIAL" width="640" height="960"/>
         <image name="comment_full" width="24" height="22"/>
         <image name="config" width="26" height="26"/>
         <image name="filterButton" width="20" height="21"/>
