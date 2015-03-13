@@ -142,6 +142,11 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     
+    if (self.btnCancel.enabled == YES) {
+        [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+        
+    }
+    
     if (self.isCliente == NO) {
         NSString *result = [[self.myAccountVehicleTypes valueForKey:@"categories"] componentsJoinedByString:@","];
         self.labelVehicleType.text = result;
@@ -150,6 +155,10 @@
 
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -347,6 +356,7 @@
         
     } else {
         
+        
         self.txtFieldName.enabled = YES;
         self.txtFieldEmail.enabled = YES;
         self.txtFieldPsswd.enabled = YES;
@@ -362,7 +372,13 @@
         self.btnLogout.enabled = YES;
         self.pickerMyAccountState.userInteractionEnabled = YES;
         [self.btnCancel setEnabled:YES];
+        
+    
+        UIBarButtonItem *btn = self.navigationItem.leftBarButtonItem;
+        
         [self.btnCancel setTintColor:[UIColor whiteColor]];
+        UIColor *color1 = self.btnCancel.tintColor;
+        UIColor *color2 = self.navigationItem.leftBarButtonItem.tintColor;
         //[self.btnCancel setTintColor:self.view.tintColor];
         //self.navigationItem.leftBarButtonItem = self.btnCancel;
         [self.btnSave setTitle:@"Salvar"];
