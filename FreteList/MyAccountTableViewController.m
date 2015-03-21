@@ -455,6 +455,7 @@
     self.txtFieldCityNormalUser.enabled = NO;
     self.pickerMyAccountCity.userInteractionEnabled = NO;
     self.txtViewDescription.userInteractionEnabled = NO;
+    //self.txtViewDescription.selectable = NO;
     self.btnChangePhoto.enabled = NO;
     self.btnChangeVehicleType.enabled = NO;
     self.btnLogout.enabled = NO;
