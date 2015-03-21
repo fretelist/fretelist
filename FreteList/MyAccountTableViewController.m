@@ -287,7 +287,6 @@
 }
 
 
-
 #pragma mark - My Actions
 
 - (IBAction)performLogout:(id)sender {
@@ -313,6 +312,7 @@
 
 - (IBAction)editInfos:(id)sender {
     
+    
     if (self.btnCancel.enabled == YES) {
         
         PFUser *currentUser = [PFUser currentUser];
@@ -328,6 +328,8 @@
         [currentUser setObject:self.txtViewDescription.text forKey:@"freightDescription"];
         [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
         [currentUser setObject:self.myAccountVehicleTypes forKey:@"vehicleType"];
+        
+        
         
         // If it is not a normal user, save Photo. If it is a normal user, do not save, otherwise it will crash, as the field is disabled
         if (!self.isCliente) {
@@ -395,6 +397,8 @@
     
     [self loadSavedDataFromUser];
     
+    [self.txtViewDescription resignFirstResponder];
+    
     // Reload selecteds state and city on both pickers
     PFUser *currentUser = [PFUser currentUser];
     
@@ -451,7 +455,6 @@
     self.txtFieldCityNormalUser.enabled = NO;
     self.pickerMyAccountCity.userInteractionEnabled = NO;
     self.txtViewDescription.userInteractionEnabled = NO;
-    self.txtViewDescription.selectable = NO;
     self.btnChangePhoto.enabled = NO;
     self.btnChangeVehicleType.enabled = NO;
     self.btnLogout.enabled = NO;
