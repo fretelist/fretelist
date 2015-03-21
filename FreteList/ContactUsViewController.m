@@ -45,6 +45,10 @@
 #pragma mark - MFMailComposeDelegate
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
     
+    //Change Navigation Bar Color
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_centerLogo"] forBarMetrics:UIBarMetricsDefault];
+
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -53,6 +57,8 @@
 
 - (IBAction)sendMessage:(id)sender {
     
+    //Change Navigation Bar Color
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@""] forBarMetrics:UIBarMetricsDefault];
     
     NSString *emailTitle = @"";
     
