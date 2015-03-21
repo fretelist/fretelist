@@ -78,7 +78,7 @@
     
     
     // customize cancel button
-    [[UIButton appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
+    //[[UIButton appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
     
     
     

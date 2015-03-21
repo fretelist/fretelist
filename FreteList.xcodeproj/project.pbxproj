@@ -49,6 +49,7 @@
 		6C702AF919017A03000FB43A /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C702AF819017A03000FB43A /* GoogleMaps.framework */; };
 		6C702AFA19018E2B000FB43A /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2538C61900242E009E7386 /* libc++.dylib */; };
 		6C702AFE19018F66000FB43A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C702AFD19018F66000FB43A /* MapKit.framework */; };
+		6C769DDA1ABDD2710038C69C /* NewSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C769DD91ABDD2710038C69C /* NewSearchViewController.m */; };
 		6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */; };
 		6C824A581A866A2A0010BD39 /* MyAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C824A571A866A2A0010BD39 /* MyAccountTableViewController.m */; };
 		6C9A09341A7C43960033E895 /* FreighCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */; };
@@ -144,6 +145,8 @@
 		6C702AF819017A03000FB43A /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "GoogleMaps-iOS-1.7.2/GoogleMaps.framework"; sourceTree = "<group>"; };
 		6C702AFB19018E5C000FB43A /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; };
 		6C702AFD19018F66000FB43A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6C769DD81ABDD2710038C69C /* NewSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewSearchViewController.h; sourceTree = "<group>"; };
+		6C769DD91ABDD2710038C69C /* NewSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewSearchViewController.m; sourceTree = "<group>"; };
 		6C79EEDA18F44A3A00C8DA24 /* Cartoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cartoes.h; sourceTree = "<group>"; };
 		6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cartoes.m; sourceTree = "<group>"; };
 		6C824A561A866A2A0010BD39 /* MyAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountTableViewController.h; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 				6C152B351A20DA7B009C759E /* DetailViewController.m */,
 				6CDF6B321A218D5400A2B0DF /* SearchViewController.h */,
 				6CDF6B331A218D5400A2B0DF /* SearchViewController.m */,
+				6C769DD81ABDD2710038C69C /* NewSearchViewController.h */,
+				6C769DD91ABDD2710038C69C /* NewSearchViewController.m */,
 				6CDAF9541A71B00B002D1D7A /* VehicleTypeFilterViewController.h */,
 				6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */,
 				6CE7DD371A799D98007837D8 /* CompanyTypeFilterViewController.h */,
@@ -621,6 +626,7 @@
 				6CE7DD391A799D98007837D8 /* CompanyTypeFilterViewController.m in Sources */,
 				6C37BD1B18F736010096D8E3 /* Users.m in Sources */,
 				BD5059851A7A972100624119 /* ContactUsViewController.m in Sources */,
+				6C769DDA1ABDD2710038C69C /* NewSearchViewController.m in Sources */,
 				6C3248CC18EDBF2A00F7FE8C /* main.m in Sources */,
 				6C2663B818F87E910004373D /* Ofertas.m in Sources */,
 				BD5059821A7A464300624119 /* ForgotPasswordViewController.m in Sources */,

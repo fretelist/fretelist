@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d6v-ht-8EW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -723,6 +723,54 @@
             </objects>
             <point key="canvasLocation" x="1989" y="835"/>
         </scene>
+        <!--New Search View Controller-->
+        <scene sceneID="bWX-vD-mVn">
+            <objects>
+                <viewController id="xbp-2L-5FF" customClass="NewSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Th-5H-GE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="HkA-Io-lBT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lYe-4r-C0X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Lf-rf-qV0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xbp-2L-5FF" id="cZv-fG-ryt"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="chi-7Q-qn1">
+                                <rect key="frame" x="0.0" y="108" width="320" height="411"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IUe-Sg-asQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IUe-Sg-asQ" id="GJJ-Vp-y7u">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xbp-2L-5FF" id="l7H-mc-15n"/>
+                                    <outlet property="delegate" destination="xbp-2L-5FF" id="yOU-I4-vEF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jeb-Hx-WOd"/>
+                    <connections>
+                        <outlet property="search" destination="0Lf-rf-qV0" id="J9J-y1-Hqo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="din-ch-OBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="1102"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="u0p-Ix-Utl">
             <objects>
@@ -1395,7 +1443,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kkA-67-1e7" kind="relationship" relationship="rootViewController" id="biU-70-YAP"/>
+                        <segue destination="kkA-67-1e7" kind="relationship" relationship="rootViewController" id="oX2-on-Fr8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlw-zs-ARE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1420,9 +1468,6 @@
                                 <string>Title</string>
                                 <string>Title</string>
                             </scopeButtonTitles>
-                            <connections>
-                                <outlet property="delegate" destination="kkA-67-1e7" id="dsf-bU-ZIJ"/>
-                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="VE1-rb-xLc">

@@ -236,7 +236,7 @@
     [user setObject:self.txtViewDescription.text forKey:@"freightDescription"];
     
     //Handle image upload
-    NSData *imageData = UIImageJPEGRepresentation(self.imgViewUserPhoto.image, 0.8);
+    NSData *imageData = UIImageJPEGRepresentation(self.imgViewUserPhoto.image, 0.4);
     NSString *filename = [NSString stringWithFormat:@"userPhoto.png"];
     PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
     [user setObject:imageFile forKey:@"userPhoto"];
