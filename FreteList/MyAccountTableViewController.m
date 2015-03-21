@@ -374,11 +374,11 @@
         [self.btnCancel setEnabled:YES];
         
     
-        UIBarButtonItem *btn = self.navigationItem.leftBarButtonItem;
+        //UIBarButtonItem *btn = self.navigationItem.leftBarButtonItem;
         
         [self.btnCancel setTintColor:[UIColor whiteColor]];
-        UIColor *color1 = self.btnCancel.tintColor;
-        UIColor *color2 = self.navigationItem.leftBarButtonItem.tintColor;
+        //UIColor *color1 = self.btnCancel.tintColor;
+        //UIColor *color2 = self.navigationItem.leftBarButtonItem.tintColor;
         //[self.btnCancel setTintColor:self.view.tintColor];
         //self.navigationItem.leftBarButtonItem = self.btnCancel;
         [self.btnSave setTitle:@"Salvar"];
