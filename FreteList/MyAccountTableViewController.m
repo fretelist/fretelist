@@ -262,6 +262,12 @@
     
 }
 
+//-(void)textViewDidEndEditing:(UITextView *)textView{
+//    
+//    //self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0.0, 0);
+//    
+//}
+
 -(void)textViewDidChange:(UITextView *)textView{
     
     NSUInteger length;
@@ -455,7 +461,7 @@
     self.txtFieldCityNormalUser.enabled = NO;
     self.pickerMyAccountCity.userInteractionEnabled = NO;
     self.txtViewDescription.userInteractionEnabled = NO;
-    //self.txtViewDescription.selectable = NO;
+    self.txtViewDescription.selectable = NO;
     self.btnChangePhoto.enabled = NO;
     self.btnChangeVehicleType.enabled = NO;
     self.btnLogout.enabled = NO;
