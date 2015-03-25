@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldMob2;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldCityNormalUser;
 //@property (weak, nonatomic) IBOutlet UITextField *txtFieldDescription;
-@property (weak, nonatomic) IBOutlet UITextView *txtViewDescription;
+@property (strong, nonatomic) IBOutlet UITextView *txtViewDescription;
 
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerMyAccountCity;

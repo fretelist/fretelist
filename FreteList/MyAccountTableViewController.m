@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //[self disableEdit];
+    [self disableEdit];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -372,8 +372,9 @@
         self.txtFieldMob1.enabled = YES;
         self.txtFieldMob2.enabled = YES;
         self.txtFieldCityNormalUser.enabled = YES;
-        self.txtViewDescription.selectable = YES;
         self.txtViewDescription.userInteractionEnabled = YES;
+        self.txtViewDescription.editable = YES;
+        
         self.pickerMyAccountCity.userInteractionEnabled = YES;
         self.btnChangePhoto.enabled = YES;
         self.btnChangeVehicleType.enabled = YES;
@@ -461,7 +462,7 @@
     self.txtFieldCityNormalUser.enabled = NO;
     self.pickerMyAccountCity.userInteractionEnabled = NO;
     self.txtViewDescription.userInteractionEnabled = NO;
-    self.txtViewDescription.selectable = NO;
+    self.txtViewDescription.editable = NO;
     self.btnChangePhoto.enabled = NO;
     self.btnChangeVehicleType.enabled = NO;
     self.btnLogout.enabled = NO;
