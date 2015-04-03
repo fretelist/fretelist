@@ -58,7 +58,9 @@
     NSLog(@"TabBAr: %@",tabBarBackground);
     
     //Change TabBar button Color
-    [[UITabBar appearance] setTintColor:[UIColor orangeColor]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.98 green:0.647 blue:0.106 alpha:1]];
+    
+    //www.touch-code-magazine.com/web-color-to-uicolor-convertor - FAA51B/
     
     //Change Navigation Bar Color
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_centerLogo"] forBarMetrics:UIBarMetricsDefault];
