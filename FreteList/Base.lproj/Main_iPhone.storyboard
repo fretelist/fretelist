@@ -46,7 +46,7 @@
             <objects>
                 <navigationController title="Freight List" definesPresentationContext="YES" id="Ei3-tt-ZMI" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Fretes" image="home" id="J9b-8T-EMG"/>
+                    <tabBarItem key="tabBarItem" title="Fretes" image="homeTrucks" id="J9b-8T-EMG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kfh-k5-m0W">
                         <autoresizingMask key="autoresizingMask"/>
@@ -2308,7 +2308,7 @@
         <image name="config" width="26" height="26"/>
         <image name="filterButton" width="20" height="21"/>
         <image name="filtrar" width="360" height="309"/>
-        <image name="home" width="26" height="26"/>
+        <image name="homeTrucks" width="26" height="26"/>
         <image name="info" width="360" height="309"/>
         <image name="infoButton" width="20" height="20"/>
         <image name="interstate_truck-50" width="50" height="50"/>
