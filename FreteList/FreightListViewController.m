@@ -455,6 +455,9 @@
     
     self.currentHowToView = secondView.view;
     
+    UIImageView *imgViewInfo2 = (UIImageView*)[self.currentHowToView viewWithTag:4];
+    [self.currentHowToView addSubview:imgViewInfo2];
+    
     UIButton *closeButton = (UIButton*)[self.currentHowToView viewWithTag:2];
     
     [closeButton addTarget:self action:@selector(btnClosePress:) forControlEvents:UIControlEventTouchUpInside];
