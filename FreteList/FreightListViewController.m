@@ -38,6 +38,8 @@
         //Handle the view Tutorial
         UIViewController *howToController = [self.storyboard instantiateViewControllerWithIdentifier:@"howToTimeline"];
         self.currentHowToView = howToController.view;
+        UIImageView *imgViewInfo = (UIImageView*)[self.currentHowToView viewWithTag:3];
+        [self.currentHowToView addSubview:imgViewInfo];
         
         UIButton *closeButton = (UIButton*)[self.currentHowToView viewWithTag:2];
         
