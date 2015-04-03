@@ -1293,22 +1293,22 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TELA INICIAL" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Zt-thu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-J4-3Pk">
-                                        <rect key="frame" x="166" y="406" width="103" height="51"/>
-                                        <state key="normal" title="Cadastre-se">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnSignUp:" destination="bl5-AO-xfk" eventType="touchUpInside" id="7JN-v4-Mef"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcS-ao-BA7">
-                                        <rect key="frame" x="51" y="406" width="56" height="51"/>
-                                        <state key="normal" title="Login">
+                                        <rect key="frame" x="53" y="406" width="70" height="70"/>
+                                        <state key="normal" image="btnLoginCircle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="btnLogin:" destination="bl5-AO-xfk" eventType="touchUpInside" id="mPz-uY-flM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-J4-3Pk">
+                                        <rect key="frame" x="197" y="406" width="70" height="70"/>
+                                        <state key="normal" image="btnSignUpCircle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSignUp:" destination="bl5-AO-xfk" eventType="touchUpInside" id="7JN-v4-Mef"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2303,6 +2303,8 @@
     <resources>
         <image name="Logout" width="512" height="512"/>
         <image name="TELA INICIAL" width="640" height="960"/>
+        <image name="btnLoginCircle" width="163" height="163"/>
+        <image name="btnSignUpCircle" width="163" height="163"/>
         <image name="comment_full" width="24" height="22"/>
         <image name="config" width="26" height="26"/>
         <image name="filterButton" width="20" height="21"/>
