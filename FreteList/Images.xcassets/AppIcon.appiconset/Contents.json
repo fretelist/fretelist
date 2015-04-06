@@ -3,7 +3,7 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "freteList_logo_29.png",
+      "filename" : "freteListBlue29.png",
       "scale" : "1x"
     },
     {
@@ -19,7 +19,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "freteList_logo_80.png",
+      "filename" : "fretelistBlue80.png",
       "scale" : "2x"
     },
     {
@@ -30,7 +30,7 @@
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "freteList_logo_57.png",
+      "filename" : "fretelistBlue57.png",
       "scale" : "1x"
     },
     {
@@ -41,19 +41,19 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "freteList_logo_120-1.png",
+      "filename" : "fretelistBlue60.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "freteList_logo_180-1.png",
+      "filename" : "fretelistBlue60-1.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "freteList_logo_29-1.png",
+      "filename" : "fretelistBlue29_1.png",
       "scale" : "1x"
     },
     {
@@ -64,7 +64,7 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "freteList_logo_40-1.png",
+      "filename" : "fretelistBlue40_1.png",
       "scale" : "1x"
     },
     {
@@ -75,7 +75,7 @@
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "freteList_logo_50.png",
+      "filename" : "fretelistBlue50.png",
       "scale" : "1x"
     },
     {
@@ -86,7 +86,7 @@
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "freteList_logo_72.png",
+      "filename" : "fretelistBlue72.png",
       "scale" : "1x"
     },
     {
@@ -97,13 +97,13 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "freteList_logo_76.png",
+      "filename" : "fretelistBlue76.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "freteList_logo_152-1.png",
+      "filename" : "fretelistBlue76-1.png",
       "scale" : "2x"
     },
     {
