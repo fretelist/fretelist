@@ -312,11 +312,11 @@
 - (IBAction)showFilter:(id)sender {
     
     
-    UIActionSheet *filterOptions = [[UIActionSheet alloc]initWithTitle:@"Filtro"
+    UIActionSheet *filterOptions = [[UIActionSheet alloc]initWithTitle:@"Filtros"
                                                             delegate:self
                                                     cancelButtonTitle:@"Fechar"
                                                 destructiveButtonTitle:@"Limpar Filtros"
-                                                    otherButtonTitles:@"Filtrar por Tipo de Veículo",@"Filtrar por Tipo de Frete",@"Filtrar por Cidade", nil];
+                                                    otherButtonTitles:@"Filtrar por Porte do Veículo",@"Filtrar por Tipo de Prestador",@"Filtrar por Estado", nil];
     
     [filterOptions showInView:self.view];
     
