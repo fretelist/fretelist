@@ -1458,21 +1458,54 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sE8-ps-Rn1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="632"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFb-8b-c9i">
-                                        <rect key="frame" x="16" y="97" width="296" height="104"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFb-8b-c9i">
+                                        <rect key="frame" x="16" y="97" width="296" height="212"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="O FreteList acredita na colaboração entre todos na internet e a sua opinião é muito importante para nós:">
+                                            <fragment>
+                                                <string key="content">Envie-nos um e-mail com suas dúvidas, sugestões, reclamações ou qualquer outro assunto clicando no link abaixo.
+Lembre-se que você também pode contatar nossa central de relacionamento e vendas através de nosso website </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="charWrapping" baseWritingDirection="natural"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="www.fretelist.com.b">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.062745098039215685" green="0.23529411764705882" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <url key="NSLink" string="http://www.fretelist.com.br/"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.062745098039215685" green="0.23529411764705882" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                    <color key="NSUnderlineColor" red="0.062745098039215685" green="0.23529411764705882" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="r">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.062745098039215685" green="0.23529411764705882" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.062745098039215685" green="0.23529411764705882" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                    <color key="NSUnderlineColor" red="0.062745098039215685" green="0.23529411764705882" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-n5-baj">
-                                        <rect key="frame" x="98" y="209" width="124" height="30"/>
+                                        <rect key="frame" x="98" y="338" width="124" height="30"/>
                                         <state key="normal" title="Enviar Mensagem">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2308,7 +2341,7 @@
         <image name="config" width="26" height="26"/>
         <image name="filterButton" width="20" height="21"/>
         <image name="filtrar" width="360" height="309"/>
-        <image name="homeTrucks" width="26" height="26"/>
+        <image name="homeTrucks" width="30" height="24"/>
         <image name="info" width="360" height="309"/>
         <image name="infoButton" width="20" height="20"/>
         <image name="interstate_truck-50" width="50" height="50"/>
