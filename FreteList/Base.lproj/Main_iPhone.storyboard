@@ -746,7 +746,7 @@
                         <viewControllerLayoutGuide type="bottom" id="x6r-T1-eVJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5b6-94-w7U">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="109" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPm-Mu-D2E" customClass="PFImageView">
@@ -2357,6 +2357,6 @@ Lembre-se que você também pode contactar nossa central de relacionamento e ven
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="P8t-xc-CQQ"/>
+        <segue reference="uXD-GU-AcX"/>
     </inferredMetricsTieBreakers>
 </document>
