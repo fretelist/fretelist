@@ -71,8 +71,8 @@
     
     
     
-    // Do any additional setup after loading the view.
-    PFQuery *queryPaidOffer = [PFQuery queryWithClassName:@"Paid_Offers"];
+    // Paid Offer - Override when company strategy is defined for that
+    /*PFQuery *queryPaidOffer = [PFQuery queryWithClassName:@"Paid_Offers"];
     NSLog(@"query: %@",queryPaidOffer);
     
     [queryPaidOffer findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -109,16 +109,12 @@
             }
             
             //PFObject *paidOfferObject = [PFObject objectWithClassName:@"Paid_Offers"];
-            
-
-            
-            
-           
+    
         }
         
         
     }];
-    
+    */
     
 //    self.tableView.estimatedRowHeight = 150.0;
 //    self.tableView.rowHeight = UITableViewAutomaticDimension;

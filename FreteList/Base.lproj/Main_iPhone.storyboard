@@ -174,16 +174,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" tag="200" contentMode="scaleToFill" id="Vve-oh-2py">
-                            <rect key="frame" x="0.0" y="64" width="320" height="70"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfF-RD-N99" customClass="PFImageView">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="redraw" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DealsCell" rowHeight="91" id="eby-QI-9uc" customClass="FreightCustomCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="118"/>
@@ -257,8 +247,6 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
-                        <outlet property="paidOfferImageView" destination="PfF-RD-N99" id="tuQ-lY-GP8"/>
-                        <outlet property="paidOfferView" destination="Vve-oh-2py" id="R5t-bb-a2b"/>
                         <segue destination="mbY-nG-QZS" kind="push" identifier="detail" id="uXD-GU-AcX"/>
                     </connections>
                 </tableViewController>

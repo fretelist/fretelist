@@ -17,8 +17,10 @@
 
 @property(nonatomic, strong) PFObject *clickedCell;
 @property(nonatomic, strong) PFObject *clickedFreight;
-@property (weak, nonatomic) IBOutlet PFImageView *paidOfferImageView;
-@property (weak, nonatomic) IBOutlet UIView *paidOfferView;
+
+//Add a view and an ImageView to it in Storyboard after strategy is defined
+//@property (weak, nonatomic) IBOutlet PFImageView *paidOfferImageView;
+//@property (weak, nonatomic) IBOutlet UIView *paidOfferView;
 
 // Created an Array for featuredCategories
 @property (nonatomic, strong) NSArray *featCategories;
