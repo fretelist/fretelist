@@ -349,14 +349,14 @@
         
         [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
-                UIAlertView *alertUpdate = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Infos Updated" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                UIAlertView *alertUpdate = [[UIAlertView alloc]initWithTitle:@"Sucesso" message:@"Informações atualizadas com sucesso." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
                 [alertUpdate show];
                 
                 [self disableEdit];
                 
             } else {
                 
-                UIAlertView *alertUpdateError = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Try again" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                UIAlertView *alertUpdateError = [[UIAlertView alloc]initWithTitle:@"Erro" message:@"Tente Novamente." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
                 [alertUpdateError show];
                 
             }
