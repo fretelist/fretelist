@@ -16,19 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyk-BR-WnA">
-                                <rect key="frame" x="133" y="259" width="71" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Fechar">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyk-BR-WnA">
+                                <rect key="frame" x="144" y="319" width="70" height="70"/>
+                                <state key="normal" image="buttonCloseBlueWhite">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1t-4C-jRB">
-                                <rect key="frame" x="40" y="46" width="237" height="234"/>
+                            <view alpha="0.0" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1t-4C-jRB">
+                                <rect key="frame" x="67" y="-6" width="237" height="234"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="filtrar" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-rJ-fut">
-                                        <rect key="frame" x="18" y="-34" width="260" height="268"/>
+                                    <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="infoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-rJ-fut">
+                                        <rect key="frame" x="-49" y="-34" width="260" height="268"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1175,31 +1174,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyI-sa-ajU">
-                                <rect key="frame" x="69" y="264" width="82" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Próxima">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJr-Q0-sMq">
+                                <rect key="frame" x="188" y="319" width="70" height="70"/>
+                                <state key="normal" image="buttonCloseBlueWhite">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NyO-lq-JKm">
-                                <rect key="frame" x="56" y="46" width="237" height="234"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyI-sa-ajU">
+                                <rect key="frame" x="118" y="319" width="70" height="70"/>
+                                <state key="normal" image="buttonNextBlueWhite">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view alpha="0.0" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NyO-lq-JKm">
+                                <rect key="frame" x="67" y="-6" width="237" height="234"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Yfc-0A-m3c">
-                                        <rect key="frame" x="-23" y="-34" width="260" height="268"/>
+                                    <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="filtrarBlue" translatesAutoresizingMaskIntoConstraints="NO" id="Yfc-0A-m3c">
+                                        <rect key="frame" x="-2" y="-38" width="260" height="268"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJr-Q0-sMq">
-                                <rect key="frame" x="213" y="264" width="71" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Fechar">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                     </view>
@@ -2325,12 +2322,14 @@ Lembre-se que você também pode contactar nossa central de relacionamento e ven
         <image name="TELA INICIAL" width="640" height="960"/>
         <image name="btnLoginCircle" width="163" height="163"/>
         <image name="btnSignUpCircle" width="163" height="163"/>
+        <image name="buttonCloseBlueWhite" width="77" height="77"/>
+        <image name="buttonNextBlueWhite" width="77" height="77"/>
         <image name="comment_full" width="24" height="22"/>
         <image name="config" width="26" height="26"/>
         <image name="filterButton" width="20" height="21"/>
-        <image name="filtrar" width="360" height="309"/>
+        <image name="filtrarBlue" width="367" height="373"/>
         <image name="homeTrucks" width="30" height="24"/>
-        <image name="info" width="360" height="309"/>
+        <image name="infoBlue" width="369" height="376"/>
         <image name="infoButton" width="20" height="20"/>
         <image name="interstate_truck-50" width="50" height="50"/>
         <image name="location48" width="48" height="48"/>
