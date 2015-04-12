@@ -31,6 +31,11 @@
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
+    
+    //TextField Delegate
+    self.txtFieldCityNormalUser.delegate = self;
+    
+    
     //Picker load
     self.pickerMyAccountState.delegate = self;
     self.pickerMyAccountState.dataSource = self;
@@ -185,7 +190,7 @@
     PFUser *currentUser = [PFUser currentUser];
     
     BOOL isCliente = [[currentUser objectForKey:@"freightUserType"] isEqualToString:@"Cliente"];
-    BOOL isNormalUserCell = (indexPath.row == 0|| indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 ||indexPath.row == 9 || indexPath.row == 11);
+    BOOL isNormalUserCell = (indexPath.row == 0|| indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 ||indexPath.row == 8 || indexPath.row == 11);
     
     if (isNormalUserCell && isCliente) {
         return 0;
@@ -326,19 +331,22 @@
         
         currentUser.email = self.txtFieldEmail.text;
         currentUser.password = self.txtFieldPsswd.text;
-        [currentUser setObject:self.txtFieldTelephone.text forKey:@"telephone"];
-        [currentUser setObject:self.txtFieldMob1.text forKey:@"mobile1"];
-        [currentUser setObject:self.txtFieldMob2.text forKey:@"mobile2"];
         [currentUser setObject:self.txtFieldCityNormalUser.text forKey:@"city"];
-        [currentUser setObject:self.pickerSelectedNewCity forKey:@"city"];
-        [currentUser setObject:self.txtViewDescription.text forKey:@"freightDescription"];
         [currentUser setObject:self.pickerSelectedNewString forKey:@"state"];
-        [currentUser setObject:self.myAccountVehicleTypes forKey:@"vehicleType"];
         
         
         
         // If it is not a normal user, save Photo. If it is a normal user, do not save, otherwise it will crash, as the field is disabled
         if (!self.isCliente) {
+            
+            [currentUser setObject:self.txtFieldTelephone.text forKey:@"telephone"];
+            [currentUser setObject:self.txtFieldMob1.text forKey:@"mobile1"];
+            [currentUser setObject:self.txtFieldMob2.text forKey:@"mobile2"];
+            [currentUser setObject:self.pickerSelectedNewCity forKey:@"city"];
+            
+            [currentUser setObject:self.txtViewDescription.text forKey:@"freightDescription"];
+            [currentUser setObject:self.myAccountVehicleTypes forKey:@"vehicleType"];
+
             
             NSData *newUserData = UIImageJPEGRepresentation(self.imgViewUserPhoto.image, 0.8);
             PFFile *newUserFile = [PFFile fileWithName:@"userPhoto.jpeg" data:newUserData];
