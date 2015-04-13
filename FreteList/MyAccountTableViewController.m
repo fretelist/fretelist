@@ -190,14 +190,14 @@
     PFUser *currentUser = [PFUser currentUser];
     
     BOOL isCliente = [[currentUser objectForKey:@"freightUserType"] isEqualToString:@"Cliente"];
-    BOOL isNormalUserCell = (indexPath.row == 0|| indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 ||indexPath.row == 8 || indexPath.row == 11);
+    BOOL isNormalUserCell = (indexPath.row == 0|| indexPath.row == 1 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 || indexPath.row == 9 ||  indexPath.row == 11);
     
     if (isNormalUserCell && isCliente) {
         return 0;
     } else if (indexPath.row == 0){
         return 105;
     }else if (indexPath.row == 8){
-        return 0;
+        return 105;
     } else if (indexPath.row == 9){
         return 105;
     } else if (indexPath.row == 10){

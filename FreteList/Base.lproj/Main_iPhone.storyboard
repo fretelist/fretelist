@@ -1702,17 +1702,17 @@ Lembre-se que você também pode contactar nossa central de relacionamento e ven
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mKe-vZ-Sg0" id="8kw-7B-JEi">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hkn-yM-lDc">
-                                                    <rect key="frame" x="107" y="7" width="205" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cidade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsJ-MR-J79">
                                                     <rect key="frame" x="8" y="11" width="86" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMw-Od-KK8">
+                                                    <rect key="frame" x="107" y="5" width="205" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1839,7 +1839,7 @@ Lembre-se que você também pode contactar nossa central de relacionamento e ven
                         <outlet property="labelVehicleType" destination="xhK-p6-qNR" id="a5o-e6-WFY"/>
                         <outlet property="pickerMyAccountCity" destination="OI1-6i-ZIY" id="MLg-cN-1CJ"/>
                         <outlet property="pickerMyAccountState" destination="5LJ-hY-PDr" id="Irq-0w-0xc"/>
-                        <outlet property="txtFieldCityNormalUser" destination="Hkn-yM-lDc" id="ger-Eh-93Q"/>
+                        <outlet property="txtFieldCityNormalUser" destination="eMw-Od-KK8" id="jEd-Ls-D05"/>
                         <outlet property="txtFieldEmail" destination="kVU-fG-fiA" id="GWu-Kh-wnQ"/>
                         <outlet property="txtFieldMob1" destination="Uru-Th-nc7" id="O3b-Q0-piw"/>
                         <outlet property="txtFieldMob2" destination="dxX-8G-mK2" id="qeC-xs-RGH"/>
@@ -1851,7 +1851,7 @@ Lembre-se que você também pode contactar nossa central de relacionamento e ven
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5j-Yi-Rdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="317"/>
+            <point key="canvasLocation" x="1170" y="204"/>
         </scene>
         <!--Freigh Company Table View Controller-->
         <scene sceneID="xal-C5-l7j">
