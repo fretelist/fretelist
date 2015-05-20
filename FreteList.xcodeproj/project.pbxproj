@@ -52,13 +52,19 @@
 		6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */; };
 		6C824A581A866A2A0010BD39 /* MyAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C824A571A866A2A0010BD39 /* MyAccountTableViewController.m */; };
 		6C9A09341A7C43960033E895 /* FreighCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */; };
-		6CA6030219DF7F3100A09EAC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030119DF7F3100A09EAC /* Parse.framework */; };
-		6CA6030419DF7F4100A09EAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA6030319DF7F4100A09EAC /* Bolts.framework */; };
 		6CB0FE021A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0FE011A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m */; };
 		6CDAF9561A71B00B002D1D7A /* VehicleTypeFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */; };
 		6CDF6B311A21390F00A2B0DF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF6B301A21390F00A2B0DF /* Icon.png */; };
 		6CDF6B341A218D5400A2B0DF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF6B331A218D5400A2B0DF /* SearchViewController.m */; };
 		6CE7DD391A799D98007837D8 /* CompanyTypeFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */; };
+		6CEE4BA11B0CDFF9005876EF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BA01B0CDFF9005876EF /* Bolts.framework */; };
+		6CEE4BA31B0CE00D005876EF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BA21B0CE00D005876EF /* Parse.framework */; };
+		6CEE4BA51B0CE041005876EF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BA41B0CE041005876EF /* ParseCrashReporting.framework */; };
+		6CEE4BA71B0CE316005876EF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BA61B0CE316005876EF /* ParseUI.framework */; };
+		6CEE4BA91B0CE5A5005876EF /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BA81B0CE5A5005876EF /* libstdc++.6.dylib */; };
+		6CEE4BAB1B0CEB88005876EF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BAA1B0CEB88005876EF /* Accounts.framework */; };
+		6CEE4BAD1B0CEB91005876EF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BAC1B0CEB91005876EF /* Social.framework */; };
+		6CEE4BAF1B0CEC34005876EF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEE4BAE1B0CEC34005876EF /* libsqlite3.dylib */; };
 		6CF170FA1AA1364600F11C64 /* HowToFreightList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF170F91AA1364600F11C64 /* HowToFreightList.xib */; };
 		6CFA657C1A705AC400F2BFE0 /* FreightCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */; };
 		BD4EB7B91A6D6BCF0025237F /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4EB7B81A6D6BCF0025237F /* CategoriesCell.m */; };
@@ -150,8 +156,6 @@
 		6C824A571A866A2A0010BD39 /* MyAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountTableViewController.m; sourceTree = "<group>"; };
 		6C9A09321A7C43960033E895 /* FreighCompanyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreighCompanyTableViewController.h; sourceTree = "<group>"; };
 		6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreighCompanyTableViewController.m; sourceTree = "<group>"; };
-		6CA6030119DF7F3100A09EAC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1/Parse.framework"; sourceTree = "<group>"; };
-		6CA6030319DF7F4100A09EAC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
 		6CB0FE001A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleTypeSignUpTableViewController.h; sourceTree = "<group>"; };
 		6CB0FE011A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleTypeSignUpTableViewController.m; sourceTree = "<group>"; };
 		6CDAF9541A71B00B002D1D7A /* VehicleTypeFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleTypeFilterViewController.h; sourceTree = "<group>"; };
@@ -161,6 +165,14 @@
 		6CDF6B331A218D5400A2B0DF /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		6CE7DD371A799D98007837D8 /* CompanyTypeFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTypeFilterViewController.h; sourceTree = "<group>"; };
 		6CE7DD381A799D98007837D8 /* CompanyTypeFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyTypeFilterViewController.m; sourceTree = "<group>"; };
+		6CEE4BA01B0CDFF9005876EF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.7.3/Bolts.framework"; sourceTree = "<group>"; };
+		6CEE4BA21B0CE00D005876EF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.7.3/Parse.framework"; sourceTree = "<group>"; };
+		6CEE4BA41B0CE041005876EF /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.7.3/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		6CEE4BA61B0CE316005876EF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.7.3/ParseUI.framework"; sourceTree = "<group>"; };
+		6CEE4BA81B0CE5A5005876EF /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		6CEE4BAA1B0CEB88005876EF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6CEE4BAC1B0CEB91005876EF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6CEE4BAE1B0CEC34005876EF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6CF170F91AA1364600F11C64 /* HowToFreightList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HowToFreightList.xib; sourceTree = "<group>"; };
 		6CFA657A1A705AC400F2BFE0 /* FreightCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreightCustomCell.h; sourceTree = "<group>"; };
 		6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightCustomCell.m; sourceTree = "<group>"; };
@@ -207,10 +219,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEE4BAF1B0CEC34005876EF /* libsqlite3.dylib in Frameworks */,
+				6CEE4BAD1B0CEB91005876EF /* Social.framework in Frameworks */,
+				6CEE4BAB1B0CEB88005876EF /* Accounts.framework in Frameworks */,
+				6CEE4BA71B0CE316005876EF /* ParseUI.framework in Frameworks */,
+				6CEE4BA11B0CDFF9005876EF /* Bolts.framework in Frameworks */,
+				6CEE4BA91B0CE5A5005876EF /* libstdc++.6.dylib in Frameworks */,
 				BD7686B31AA7396200B51883 /* AdSupport.framework in Frameworks */,
+				6CEE4BA51B0CE041005876EF /* ParseCrashReporting.framework in Frameworks */,
 				BD7686B11AA7395700B51883 /* MediaPlayer.framework in Frameworks */,
 				BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */,
 				6C702AFE19018F66000FB43A /* MapKit.framework in Frameworks */,
+				6CEE4BA31B0CE00D005876EF /* Parse.framework in Frameworks */,
 				6C2538BD190023E0009E7386 /* AVFoundation.framework in Frameworks */,
 				6C2663C018F883C20004373D /* AudioToolbox.framework in Frameworks */,
 				6C2663C218F883D10004373D /* CFNetwork.framework in Frameworks */,
@@ -226,9 +246,7 @@
 				6C2538C91900243D009E7386 /* libicucore.dylib in Frameworks */,
 				6C2663C418F884040004373D /* libz.dylib in Frameworks */,
 				BD76869B1AA733B500B51883 /* libFlurry_6.2.0.a in Frameworks */,
-				6CA6030419DF7F4100A09EAC /* Bolts.framework in Frameworks */,
 				6C2663C618F8840F0004373D /* MobileCoreServices.framework in Frameworks */,
-				6CA6030219DF7F3100A09EAC /* Parse.framework in Frameworks */,
 				BD7686AF1AA7368900B51883 /* libFlurryAds_6.2.0.a in Frameworks */,
 				6C2538CB1900244F009E7386 /* OpenGLES.framework in Frameworks */,
 				6C2663C818F8841B0004373D /* QuartzCore.framework in Frameworks */,
@@ -274,16 +292,22 @@
 		6C3248BE18EDBF2A00F7FE8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CEE4BAE1B0CEC34005876EF /* libsqlite3.dylib */,
+				6CEE4BAC1B0CEB91005876EF /* Social.framework */,
+				6CEE4BAA1B0CEB88005876EF /* Accounts.framework */,
+				6CEE4BA81B0CE5A5005876EF /* libstdc++.6.dylib */,
+				6CEE4BA61B0CE316005876EF /* ParseUI.framework */,
 				BD7686B21AA7396200B51883 /* AdSupport.framework */,
 				BD7686B01AA7395700B51883 /* MediaPlayer.framework */,
 				BD76869C1AA7368900B51883 /* FlurryAds */,
 				BD7686981AA733B500B51883 /* Flurry */,
 				BD5059861A7A999600624119 /* MessageUI.framework */,
-				6CA6030319DF7F4100A09EAC /* Bolts.framework */,
-				6CA6030119DF7F3100A09EAC /* Parse.framework */,
+				6CEE4BA21B0CE00D005876EF /* Parse.framework */,
+				6CEE4BA01B0CDFF9005876EF /* Bolts.framework */,
 				6C1EA05B19055E2900A82530 /* GoogleMaps.bundle */,
 				6C702AFD19018F66000FB43A /* MapKit.framework */,
 				6C702AFB19018E5C000FB43A /* libc++abi.dylib */,
+				6CEE4BA41B0CE041005876EF /* ParseCrashReporting.framework */,
 				6C702AF819017A03000FB43A /* GoogleMaps.framework */,
 				6C2538CA1900244F009E7386 /* OpenGLES.framework */,
 				6C2538C81900243D009E7386 /* libicucore.dylib */,
@@ -773,7 +797,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2",
-					"$(PROJECT_DIR)/parse-library-1",
+					"$(PROJECT_DIR)/parse-library-1.7.3",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
@@ -806,7 +830,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2",
-					"$(PROJECT_DIR)/parse-library-1",
+					"$(PROJECT_DIR)/parse-library-1.7.3",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";

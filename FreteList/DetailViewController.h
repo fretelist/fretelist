@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 tenhoDesconto. All rights reserved.
 //
 
+#import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 
 @interface DetailViewController : UIViewController<UINavigationControllerDelegate>

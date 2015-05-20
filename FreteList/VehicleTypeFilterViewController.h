@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 FreteList. All rights reserved.
 //
 
-#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 @protocol vehicleTypeFilterDelegate <NSObject>
 
