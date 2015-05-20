@@ -173,6 +173,11 @@
 		6CEE4BAA1B0CEB88005876EF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6CEE4BAC1B0CEB91005876EF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6CEE4BAE1B0CEC34005876EF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6CEE4BB01B0CF781005876EF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		6CEE4BB11B0CF782005876EF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main_iPhone.strings"; sourceTree = "<group>"; };
+		6CEE4BB21B0CF782005876EF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main_iPad.strings"; sourceTree = "<group>"; };
+		6CEE4BB31B0CF782005876EF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		6CEE4BBA1B0CFB98005876EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
 		6CF170F91AA1364600F11C64 /* HowToFreightList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HowToFreightList.xib; sourceTree = "<group>"; };
 		6CFA657A1A705AC400F2BFE0 /* FreightCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreightCustomCell.h; sourceTree = "<group>"; };
 		6CFA657B1A705AC400F2BFE0 /* FreightCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreightCustomCell.m; sourceTree = "<group>"; };
@@ -584,6 +589,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 6C3248B318EDBF2A00F7FE8C;
 			productRefGroup = 6C3248BD18EDBF2A00F7FE8C /* Products */;
@@ -679,6 +685,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C3248C918EDBF2A00F7FE8C /* en */,
+				6CEE4BB01B0CF781005876EF /* pt-BR */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -687,6 +694,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C3248D218EDBF2A00F7FE8C /* Base */,
+				6CEE4BB11B0CF782005876EF /* pt-BR */,
+				6CEE4BBA1B0CFB98005876EF /* en */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -695,6 +704,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C3248D518EDBF2A00F7FE8C /* Base */,
+				6CEE4BB21B0CF782005876EF /* pt-BR */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
@@ -703,6 +713,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C3248EB18EDBF2A00F7FE8C /* en */,
+				6CEE4BB31B0CF782005876EF /* pt-BR */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
