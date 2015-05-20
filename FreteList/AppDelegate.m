@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
+#import <ParseCrashReporting/ParseCrashReporting.h>
 #import "Flurry.h"
 #import "FlurryAds.h"
 #import "FlurryAdInterstitialDelegate.h"
@@ -22,9 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-//
-    
+    // Enable Crash Reporting
+    //[ParseCrashReporting enable];
     
     [Parse setApplicationId:@"SugGbA8zng2b8C3dH5SCgHwV5Anock00tj2N3vyn"
                   clientKey:@"xcLyhMCdN1OVwVRDCayNhxBsfREDyDr25tdwPv1A"];

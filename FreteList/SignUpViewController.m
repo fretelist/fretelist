@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 tenhoDesconto. All rights reserved.
 //
 
+#import <ParseUI/ParseUI.h>
 #import <UIKit/UIKit.h>
 #import "SignUpViewController.h"
 #import "VehicleTypeSignUpTableViewController.h"

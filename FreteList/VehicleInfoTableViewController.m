@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 FreteList. All rights reserved.
 //
 
+#import <ParseUI/ParseUI.h>
+#import <Parse/Parse.h>
 #import "VehicleInfoTableViewController.h"
 #import "VehicleInfoCustomCell.h"
 

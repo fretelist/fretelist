@@ -282,6 +282,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    // Make sure subclass behaves the same as PFQueryTableViewController
     if ((indexPath.row + 1) > [self.objects count]) {
         
         return[super tableView:tableView didSelectRowAtIndexPath:indexPath];
