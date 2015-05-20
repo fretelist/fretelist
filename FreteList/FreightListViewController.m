@@ -242,6 +242,7 @@
 
 -(PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
     
+    
     static NSString *simpleTableIdentifier = @"DealsCell";
     
     FreightCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -280,6 +281,16 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if ((indexPath.row + 1) > [self.objects count]) {
+        
+        return[super tableView:tableView didSelectRowAtIndexPath:indexPath];
+        //rest of didSelectRowAtIndexPath doesn't run because of return;
+    }
+    
+    
+    
+    
     
     // Recognizes touched Freight
     self.clickedFreight = [self objectAtIndexPath:indexPath];
