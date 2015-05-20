@@ -150,8 +150,8 @@
         } else {
             
             //Something bad has ocurred
-            NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
-            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            //NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Cadastro já existe, verifique também os outros campos preenchidos ou tente novamente mais tarde." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
         }
     }];
