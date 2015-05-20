@@ -150,7 +150,7 @@
         } else {
             
             //Something bad has ocurred
-            //NSString *errorString = [[error userInfo] objectForKey:@"Confira os seus dados!"];
+            //Inform users that it is already registered or some other error occurred.
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Cadastro já existe, verifique também os outros campos preenchidos ou tente novamente mais tarde." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
         }
