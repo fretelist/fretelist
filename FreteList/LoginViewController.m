@@ -138,7 +138,8 @@
     // Peforms login whith what was typed in both textFields
     
     [PFUser logInWithUsernameInBackground:self.loginTextField.text password:self.passwordTextField.text block:^(PFUser *user, NSError *error) {
-        if (user) {
+        
+        if (![[user objectForKey:@"emailVerified"] boolValue] == false) {
             
             UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
             //HomeViewController *home = [storyboard instantiateViewControllerWithIdentifier:@"HomeTab"];
@@ -154,8 +155,8 @@
             
         } else {
             //Something bad has ocurred
-            NSString *errorString = [[error userInfo] objectForKey:@"error"];
-            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            //NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Verifique o seu e-mail e tente novamente." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
         }
     }];
