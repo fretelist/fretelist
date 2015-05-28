@@ -14,12 +14,13 @@
 #import "FlurryAds.h"
 #import "FlurryAdInterstitialDelegate.h"
 #import "FlurryAdInterstitial.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 
 
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -65,12 +66,20 @@
     //Change Navigation Bar Color
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_centerLogo"] forBarMetrics:UIBarMetricsDefault];
     
-    
-
+    // Override point for customization after application launch.
+    [FBSDKLoginButton class];
     
     //
     
     return YES;
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -105,6 +114,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    //Facebook activation
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

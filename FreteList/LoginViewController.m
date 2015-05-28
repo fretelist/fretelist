@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "MapViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface LoginViewController ()
 
@@ -48,6 +50,11 @@
     self.gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard:)];
     
     [self.loginScrollView addGestureRecognizer:self.gestureRecognizer];
+    
+    //Facebook Login
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc]init];
+    loginButton.center = self.view.center;
+    [self.view addSubview:loginButton];
     
 }
 

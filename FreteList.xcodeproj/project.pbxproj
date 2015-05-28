@@ -52,6 +52,9 @@
 		6C79EEDC18F44A3A00C8DA24 /* Cartoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79EEDB18F44A3A00C8DA24 /* Cartoes.m */; };
 		6C824A581A866A2A0010BD39 /* MyAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C824A571A866A2A0010BD39 /* MyAccountTableViewController.m */; };
 		6C9A09341A7C43960033E895 /* FreighCompanyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */; };
+		6C9F91D71B178B73008686B1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9F91D61B178B73008686B1 /* FBSDKCoreKit.framework */; };
+		6C9F91D91B178BA1008686B1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9F91D81B178BA1008686B1 /* FBSDKLoginKit.framework */; };
+		6C9F91DB1B178BB5008686B1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9F91DA1B178BB5008686B1 /* FBSDKShareKit.framework */; };
 		6CB0FE021A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0FE011A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m */; };
 		6CDAF9561A71B00B002D1D7A /* VehicleTypeFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDAF9551A71B00B002D1D7A /* VehicleTypeFilterViewController.m */; };
 		6CDF6B311A21390F00A2B0DF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF6B301A21390F00A2B0DF /* Icon.png */; };
@@ -156,6 +159,9 @@
 		6C824A571A866A2A0010BD39 /* MyAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountTableViewController.m; sourceTree = "<group>"; };
 		6C9A09321A7C43960033E895 /* FreighCompanyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreighCompanyTableViewController.h; sourceTree = "<group>"; };
 		6C9A09331A7C43960033E895 /* FreighCompanyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreighCompanyTableViewController.m; sourceTree = "<group>"; };
+		6C9F91D61B178B73008686B1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		6C9F91D81B178BA1008686B1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		6C9F91DA1B178BB5008686B1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		6CB0FE001A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleTypeSignUpTableViewController.h; sourceTree = "<group>"; };
 		6CB0FE011A6B242100BE9B61 /* VehicleTypeSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleTypeSignUpTableViewController.m; sourceTree = "<group>"; };
 		6CDAF9541A71B00B002D1D7A /* VehicleTypeFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleTypeFilterViewController.h; sourceTree = "<group>"; };
@@ -229,7 +235,9 @@
 				6CEE4BA51B0CE041005876EF /* ParseCrashReporting.framework in Frameworks */,
 				BD7686B11AA7395700B51883 /* MediaPlayer.framework in Frameworks */,
 				BD5059871A7A999600624119 /* MessageUI.framework in Frameworks */,
+				6C9F91D91B178BA1008686B1 /* FBSDKLoginKit.framework in Frameworks */,
 				6C702AFE19018F66000FB43A /* MapKit.framework in Frameworks */,
+				6C9F91DB1B178BB5008686B1 /* FBSDKShareKit.framework in Frameworks */,
 				6CEE4BA31B0CE00D005876EF /* Parse.framework in Frameworks */,
 				6C2538BD190023E0009E7386 /* AVFoundation.framework in Frameworks */,
 				6C2663C018F883C20004373D /* AudioToolbox.framework in Frameworks */,
@@ -244,6 +252,7 @@
 				6C2538C51900241B009E7386 /* ImageIO.framework in Frameworks */,
 				6C702AFA19018E2B000FB43A /* libc++.dylib in Frameworks */,
 				6C2538C91900243D009E7386 /* libicucore.dylib in Frameworks */,
+				6C9F91D71B178B73008686B1 /* FBSDKCoreKit.framework in Frameworks */,
 				6C2663C418F884040004373D /* libz.dylib in Frameworks */,
 				BD76869B1AA733B500B51883 /* libFlurry_6.2.0.a in Frameworks */,
 				6C2663C618F8840F0004373D /* MobileCoreServices.framework in Frameworks */,
@@ -308,10 +317,13 @@
 				6C702AFD19018F66000FB43A /* MapKit.framework */,
 				6C702AFB19018E5C000FB43A /* libc++abi.dylib */,
 				6CEE4BA41B0CE041005876EF /* ParseCrashReporting.framework */,
+				6C9F91D61B178B73008686B1 /* FBSDKCoreKit.framework */,
 				6C702AF819017A03000FB43A /* GoogleMaps.framework */,
 				6C2538CA1900244F009E7386 /* OpenGLES.framework */,
 				6C2538C81900243D009E7386 /* libicucore.dylib */,
 				6C2538C61900242E009E7386 /* libc++.dylib */,
+				6C9F91DA1B178BB5008686B1 /* FBSDKShareKit.framework */,
+				6C9F91D81B178BA1008686B1 /* FBSDKLoginKit.framework */,
 				6C2538C41900241B009E7386 /* ImageIO.framework */,
 				6C2538C21900240C009E7386 /* GLKit.framework */,
 				6C2538C019002400009E7386 /* CoreText.framework */,
@@ -798,6 +810,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2",
 					"$(PROJECT_DIR)/parse-library-1.7.3",
+					/Users/joaopaulo/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
@@ -831,6 +844,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/GoogleMaps-iOS-1.7.2",
 					"$(PROJECT_DIR)/parse-library-1.7.3",
+					/Users/joaopaulo/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreteList/FreteList-Prefix.pch";
