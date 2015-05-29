@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface LoginViewController : UIViewController<PFLogInViewControllerDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate>
 
@@ -24,6 +26,7 @@
 
 
 @property (nonatomic, strong) UITapGestureRecognizer *gestureRecognizer;
+
 
 - (IBAction)cancelLogin:(id)sender;
 

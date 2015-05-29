@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface InitialViewController : UIViewController<UIAlertViewDelegate>
 - (IBAction)btnLogin:(id)sender;
 
 - (IBAction)btnSignUp:(id)sender;
+
 
 @end

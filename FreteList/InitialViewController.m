@@ -11,6 +11,8 @@
 #import "SignUpViewController.h"
 #import "MapViewController.h"
 #import "VehicleTypeSignUpTableViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface InitialViewController ()
 
@@ -40,11 +42,6 @@
 {
     [super viewDidLoad];
     
-//    UINavigationController *initialNavigation = [[UINavigationController alloc]init];
-    
-    
-    
-    
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         // do stuff with the user
@@ -64,12 +61,12 @@
         
         
     }
-
-    
     
     
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,6 +107,7 @@
 }
 
 #pragma mark - My Actions
+
 
 - (IBAction)btnLogin:(id)sender {
     

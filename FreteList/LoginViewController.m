@@ -37,6 +37,12 @@
 {
     [super viewDidLoad];
     
+    //Facebook Login
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc]init];
+    loginButton.frame = CGRectMake(65.0, 492.0, 190.0, 34.0);
+    [self.view addSubview:loginButton];
+    
+
     // Set the navigation hidden
     self.navigationController.navigationBarHidden = NO;
     
@@ -51,10 +57,6 @@
     
     [self.loginScrollView addGestureRecognizer:self.gestureRecognizer];
     
-    //Facebook Login
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc]init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
     
 }
 
