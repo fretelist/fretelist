@@ -82,6 +82,28 @@
     }
 }
 
+// Hides Keyboard when the user press return
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if (textField == self.txtFieldFreightLogin) {
+        [self.txtFieldFreightPsswdLogin becomeFirstResponder];
+    }
+    
+    // Check which field got focus
+    if (textField == self.txtFieldFreightPsswdLogin) {
+        
+        [textField resignFirstResponder];
+        
+        // Return the Scroll Content
+        [self.scrFreightLogin setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+    }
+    
+    
+    return YES;
+    
+}
+
+
 
 #pragma mark - My Actions
 // Hide Keyboard when Tapped
