@@ -1317,6 +1317,10 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="WGe-S6-gDE"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="GcS-ao-BA7" id="pe0-i3-gJE"/>
+                        <outlet property="btnSignUp" destination="BHF-J4-3Pk" id="O2g-ef-6xP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pU8-gZ-kjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

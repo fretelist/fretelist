@@ -16,6 +16,9 @@
 
 @interface InitialViewController ()
 
+@property(nonatomic,strong)UIAlertView *alertOne;
+@property(nonatomic,strong)UIAlertView *alertTwo;
+
 @end
 
 @implementation InitialViewController
@@ -78,31 +81,62 @@
 #pragma mark - AlertView Delegates
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    switch (buttonIndex){
-        case 0:{
-            NSLog(@"NO");
-            
-            UINavigationController *normalUserRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"UserSignUpControllerNav"];
-            
-            [self presentViewController:normalUserRegistration animated:YES completion:nil];
-            
-            break;
+    //Check which button was clicked
+    if (alertView == self.alertOne) {
+        switch (buttonIndex){
+            case 0:{
+                NSLog(@"NO");
+                
+                UINavigationController *normalUserLogin = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"LoginControllerNav"];
+                
+                [self presentViewController:normalUserLogin animated:YES completion:nil];
+                
+                break;
+            }
+            case 1:{
+                NSLog(@"YES");
+                
+                UINavigationController *companyRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"FreightControllerNav"];
+                
+                [self presentViewController:companyRegistration animated:YES completion:nil];
+                
+                break;
+            }
+                
+            default:
+                break;
+                
         }
-        case 1:{
-            NSLog(@"YES");
-            
-            UINavigationController *companyRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"SignUpControllerNav"];
-            
-            [self presentViewController:companyRegistration animated:YES completion:nil];
-            
-            break;
-        }
-            
-        default:
-            break;
-            
+        
+    //Load SignUp for SignUp clicked
+    } else if(alertView == self.alertTwo){
+        
+            switch (buttonIndex){
+                case 0:{
+                    NSLog(@"NO");
+                    
+                    UINavigationController *normalUserRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"UserSignUpControllerNav"];
+                    
+                    [self presentViewController:normalUserRegistration animated:YES completion:nil];
+                    
+                    break;
+                }
+                case 1:{
+                    NSLog(@"YES");
+                    
+                    UINavigationController *companyRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"SignUpControllerNav"];
+                    
+                    [self presentViewController:companyRegistration animated:YES completion:nil];
+                    
+                    break;
+                }
+                    
+                default:
+                    break;
+                    
+            }
+        
     }
-    
     
 }
 
@@ -112,12 +146,20 @@
 - (IBAction)btnLogin:(id)sender {
     
 
-    UINavigationController *loginNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"LoginControllerNav"];
+    self.alertOne = [[UIAlertView alloc]initWithTitle:@"FreteList"
+                                                      message:@"Você é um fretista?"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Não"
+                                            otherButtonTitles:@"Sim", nil];
     
-    //    SignUpViewController *signUpView = (SignUpViewController*)[signUpNav.viewControllers objectAtIndex:0];
+    [self.alertOne show];
     
-    
-    [self presentViewController:loginNav animated:YES completion:nil];
+//    UINavigationController *loginNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"LoginControllerNav"];
+//    
+//    //    SignUpViewController *signUpView = (SignUpViewController*)[signUpNav.viewControllers objectAtIndex:0];
+//    
+//    
+//    [self presentViewController:loginNav animated:YES completion:nil];
     
     
 }
@@ -126,13 +168,13 @@
     
     
     
-    UIAlertView *userType = [[UIAlertView alloc]initWithTitle:@"FreteList"
+    self.alertTwo = [[UIAlertView alloc]initWithTitle:@"FreteList"
                                                       message:@"Você é um fretista?"
                                                     delegate:self
                                             cancelButtonTitle:@"Não"
                                             otherButtonTitles:@"Sim", nil];
     
-    [userType show];
+    [self.alertTwo show];
 
     
     

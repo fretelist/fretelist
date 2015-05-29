@@ -11,6 +11,11 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface InitialViewController : UIViewController<UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *btnLogin;
+@property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
+
+
 - (IBAction)btnLogin:(id)sender;
 
 - (IBAction)btnSignUp:(id)sender;
