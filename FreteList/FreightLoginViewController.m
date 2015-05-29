@@ -62,6 +62,27 @@
 }
 */
 
+#pragma mark - UITextFieldDelegate
+// Triggered when the user starts typing on a textField
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+    // Só pega o de baixo, o tamanho do de baixo já vale para os dois.
+    if (textField == self.txtFieldFreightPsswdLogin || textField == self.txtFieldFreightLogin) {
+        
+        // Define new Scroll Area
+        // Keyboard size on portrait mode is 216 pixels.
+        self.scrFreightLogin.contentSize = CGSizeMake(0.0, 460.0 + 216.0);
+        
+        // Control for Scroll position
+        [self.scrFreightLogin setContentOffset:CGPointMake(0.0, 210.0) animated:YES];
+        
+        // Disable Scroll
+        self.scrFreightLogin.scrollEnabled = NO;
+        
+    }
+}
+
+
 #pragma mark - My Actions
 // Hide Keyboard when Tapped
 -(void) freightLoginHideKeyboard: (id) sender {
