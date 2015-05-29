@@ -9,6 +9,7 @@
 #import "FreightLoginViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "FreightListViewController.h"
 
 @interface FreightLoginViewController ()
 
@@ -127,9 +128,10 @@
 
 - (IBAction)btnForgotPsswdFreightLogin:(id)sender {
     
+    //Instatiante ForgotPasswordViewController
     UINavigationController *forgotPsswdNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
     
-    
+    //Present ForgotPasswordViewController
     [self presentViewController:forgotPsswdNav animated:YES completion:nil];
     
 }
@@ -143,6 +145,33 @@
 - (IBAction)btnPerformFreightLogin:(id)sender {
     
     
+    // Peforms login whith what was typed in both textFields
+    
+    [PFUser logInWithUsernameInBackground:self.txtFieldFreightLogin.text password:self.txtFieldFreightPsswdLogin.text block:^(PFUser *user, NSError *error) {
+        
+        if (![[user objectForKey:@"emailVerified"] boolValue] == false) {
+            
+            //Create a storyboard object
+            UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+            
+            //Instantiate homeTab
+            FreightListViewController *timeLine = [storyboard instantiateViewControllerWithIdentifier:@"HomeTab"];
+            
+            
+            [self  presentViewController:timeLine animated:YES completion:nil];
+            //[self  presentViewController:home animated:YES completion:nil];
+            
+            self.txtFieldFreightLogin.text =
+            self.txtFieldFreightPsswdLogin.text = nil;
+            
+            
+        } else {
+            //Something bad has ocurred
+            //NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Erro" message:@"Verifique o seu e-mail e tente novamente." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+        }
+    }];
     
 }
 @end
