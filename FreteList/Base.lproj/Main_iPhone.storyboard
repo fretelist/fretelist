@@ -1243,6 +1243,39 @@
             </objects>
             <point key="canvasLocation" x="95" y="529"/>
         </scene>
+        <!--Freight Login View Controller-->
+        <scene sceneID="sP4-Vu-SbA">
+            <objects>
+                <viewController id="fdN-cS-deE" customClass="FreightLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Utg-1H-wVb"/>
+                        <viewControllerLayoutGuide type="bottom" id="AUK-Eu-8yU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ygt-qO-ahe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yga-Xw-7wR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TELA INICIAL" translatesAutoresizingMaskIntoConstraints="NO" id="wDm-9L-Q9y">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KjH-9h-634">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="aTk-OS-zUE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3Q-Na-TcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1426" y="-187"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="LgS-Jm-7mO">
             <objects>
@@ -1257,6 +1290,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jt8-3Q-A8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1149" y="524"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pzx-8z-wNY">
+            <objects>
+                <navigationController storyboardIdentifier="FreightLoginControllerNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qRT-yt-hNj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JfY-UM-oMp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fdN-cS-deE" kind="relationship" relationship="rootViewController" id="GTp-U5-PD0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKP-oR-lgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1854" y="-187"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iQr-Tp-wce">

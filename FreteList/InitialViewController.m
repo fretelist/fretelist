@@ -96,7 +96,7 @@
             case 1:{
                 NSLog(@"YES");
                 
-                UINavigationController *companyRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"FreightControllerNav"];
+                UINavigationController *companyRegistration = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"FreightLoginControllerNav"];
                 
                 [self presentViewController:companyRegistration animated:YES completion:nil];
                 
