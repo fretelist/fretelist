@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
+#import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface FreightLoginViewController : UIViewController
+@interface FreightLoginViewController : UIViewController<PFLogInViewControllerDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldFreightLogin;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldFreightPsswdLogin;
 @property (weak, nonatomic) IBOutlet UIButton *btnForgotPsswdFreightLogin;
