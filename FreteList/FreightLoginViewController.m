@@ -127,6 +127,10 @@
 
 - (IBAction)btnForgotPsswdFreightLogin:(id)sender {
     
+    UINavigationController *forgotPsswdNav = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
+    
+    
+    [self presentViewController:forgotPsswdNav animated:YES completion:nil];
     
 }
 
@@ -137,6 +141,9 @@
 }
 
 - (IBAction)btnPerformFreightLogin:(id)sender {
+    
+    
+    
 }
 @end
 
