@@ -45,8 +45,9 @@
 {
     [super viewDidLoad];
     
+
     PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
+    if (currentUser || [FBSDKAccessToken currentAccessToken]) {
         // do stuff with the user
         
         UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
