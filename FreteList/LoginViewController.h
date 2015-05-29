@@ -12,7 +12,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface LoginViewController : UIViewController<PFLogInViewControllerDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate>
+@interface LoginViewController : UIViewController<PFLogInViewControllerDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate,FBSDKLoginButtonDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *loginTextField;

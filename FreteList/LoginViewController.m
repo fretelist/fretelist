@@ -10,6 +10,7 @@
 #import "MapViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "FreightListViewController.h"
 
 @interface LoginViewController ()
 
@@ -37,10 +38,12 @@
 {
     [super viewDidLoad];
     
+    
+    
     //Facebook Login
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc]init];
     loginButton.frame = CGRectMake(65.0, 492.0, 190.0, 34.0);
-    [self.view addSubview:loginButton];
+    //[self.view addSubview:loginButton];
     
 
     // Set the navigation hidden
@@ -61,6 +64,29 @@
 }
 
 
+-(void)viewWillLayoutSubviews{
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser || [FBSDKAccessToken currentAccessToken]) {
+        // do stuff with the user
+        
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        //HomeViewController *home = [storyboard instantiateViewControllerWithIdentifier:@"HomeTab"];
+        UITabBarController *freightList = [storyboard instantiateViewControllerWithIdentifier:@"HomeTab"];
+        
+        [self  presentViewController:freightList animated:YES completion:nil];
+        
+        
+    } else {
+        
+        // show Initial view
+        //[self loadView];
+        
+    }
+    
+}
+
+
 // Clears both textFields
 - (void)viewDidUnload
 {
@@ -69,6 +95,18 @@
     // Clears textFields
     self.loginTextField = nil;
     self.passwordTextField = nil;
+}
+
+#pragma mark - FBSDKLoginButtonDelegate
+//Handle Login results
+-(void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error{
+    
+    
+}
+
+//Handle Logout results
+-(void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+    
 }
 
 
