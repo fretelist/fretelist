@@ -1246,7 +1246,7 @@
         <!--Freight Login View Controller-->
         <scene sceneID="sP4-Vu-SbA">
             <objects>
-                <viewController id="fdN-cS-deE" customClass="FreightLoginViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="fdN-cS-deE" customClass="FreightLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Utg-1H-wVb"/>
                         <viewControllerLayoutGuide type="bottom" id="AUK-Eu-8yU"/>
