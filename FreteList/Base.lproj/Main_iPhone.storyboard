@@ -1261,6 +1261,51 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TELA INICIAL" translatesAutoresizingMaskIntoConstraints="NO" id="wDm-9L-Q9y">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZg-zF-ykN">
+                                        <rect key="frame" x="83" y="360" width="154" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-eD-EVD">
+                                        <rect key="frame" x="83" y="398" width="154" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUy-Nk-Kfl">
+                                        <rect key="frame" x="20" y="364" width="62" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-bn-AZd">
+                                        <rect key="frame" x="20" y="402" width="62" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6r-RM-8BZ">
+                                        <rect key="frame" x="83" y="436" width="154" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Esqueci minha senha">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnForgotPsswdFreightLogin:" destination="fdN-cS-deE" eventType="touchUpInside" id="nhx-2N-2Po"/>
+                                            <action selector="performPsswdReset:" destination="pSL-mr-JIk" eventType="touchUpInside" id="mne-QP-L7m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-7L-ebg">
+                                        <rect key="frame" x="254" y="401" width="46" height="30"/>
+                                        <state key="normal" title="Enviar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPerformFreightLogin:" destination="fdN-cS-deE" eventType="touchUpInside" id="efc-7H-mwd"/>
+                                            <action selector="performLogin:" destination="pSL-mr-JIk" eventType="touchUpInside" id="Sqx-Iw-QMA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1269,8 +1314,18 @@
                     <navigationItem key="navigationItem" id="KjH-9h-634">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="aTk-OS-zUE">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="btnCancelFreightLogin:" destination="fdN-cS-deE" id="8eJ-wU-5eK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="btnForgotPsswdFreightLogin" destination="l6r-RM-8BZ" id="5r4-3O-XMX"/>
+                        <outlet property="scrFreightLogin" destination="Yga-Xw-7wR" id="xJt-eY-PTK"/>
+                        <outlet property="txtFieldFreightLogin" destination="vZg-zF-ykN" id="lWZ-9O-LkE"/>
+                        <outlet property="txtFieldFreightPsswdLogin" destination="TKz-eD-EVD" id="hum-qv-KkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3Q-Na-TcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

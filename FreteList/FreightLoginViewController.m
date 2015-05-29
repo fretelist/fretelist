@@ -34,4 +34,12 @@
 }
 */
 
+- (IBAction)btnForgotPsswdFreightLogin:(id)sender {
+}
+
+- (IBAction)btnCancelFreightLogin:(id)sender {
+}
+
+- (IBAction)btnPerformFreightLogin:(id)sender {
+}
 @end
