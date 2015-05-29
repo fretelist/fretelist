@@ -16,6 +16,7 @@
 #import "FlurryAdInterstitial.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 
 
@@ -30,8 +31,13 @@
     [Parse setApplicationId:@"SugGbA8zng2b8C3dH5SCgHwV5Anock00tj2N3vyn"
                   clientKey:@"xcLyhMCdN1OVwVRDCayNhxBsfREDyDr25tdwPv1A"];
     
+    //Google Framework Key
     //[GMSServices provideAPIKey:@"AIzaSyC6SaZZvFgJCrHhR8mp3xX1CXLzVWVLneA"];
-//
+
+    //Parse Facebook initialization
+    [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
+    [FBSDKLoginButton class];
+    
     
     //init Flurry
     [Flurry startSession:@"TGSNSHRQG474TMW58G56"];
@@ -66,12 +72,10 @@
     //Change Navigation Bar Color
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_centerLogo"] forBarMetrics:UIBarMetricsDefault];
     
-    // Override point for customization after application launch.
-    [FBSDKLoginButton class];
-    
     //
     
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
