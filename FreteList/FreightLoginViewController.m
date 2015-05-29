@@ -36,6 +36,17 @@
     
 }
 
+// Clears both textFields
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    
+    // Clears textFields
+    self.txtFieldFreightLogin = nil;
+    self.txtFieldFreightPsswdLogin = nil;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
